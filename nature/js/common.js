@@ -307,63 +307,63 @@ function changeCount(event) {
 ///////////////////////////////////////////////////////////////////////
 var sectionObj2 = [
 	{
-		leftSrc: '/img/images/berries/malina1.jpg',
-		rightSRC: '/img/images/berries/malina2.jpg',
+		leftSrc: 'img/images/berries/malina1.jpg',
+		rightSRC: 'img/images/berries/malina2.jpg',
 		centerTxt: 'Малина'
 	},
 	{
-		leftSrc: '/img/images/berries/ejevika1.jpg',
-		rightSRC: '/img/images/berries/ejevika2.jpg',
+		leftSrc: 'img/images/berries/ejevika1.jpg',
+		rightSRC: 'img/images/berries/ejevika2.jpg',
 		centerTxt: 'Ежевика'
 	},
 	{
-		leftSrc: '/img/images/berries/zemlyanika1.jpg',
-		rightSRC: '/img/images/berries/zemlyanika2.jpg',
+		leftSrc: 'img/images/berries/zemlyanika1.jpg',
+		rightSRC: 'img/images/berries/zemlyanika2.jpg',
 		centerTxt: 'Земляника'
 	},
 	{
-		leftSrc: '/img/images/berries/krijovnik1.jpg',
-		rightSRC: '/img/images/berries/krijovnik2.jpg',
+		leftSrc: 'img/images/berries/krijovnik1.jpg',
+		rightSRC: 'img/images/berries/krijovnik2.jpg',
 		centerTxt: 'Крыжовник'
 	},
 	{
-		leftSrc: '/img/images/berries/klubnika1.jpg',
-		rightSRC: '/img/images/berries/klubnika2.jpg',
+		leftSrc: 'img/images/berries/klubnika1.jpg',
+		rightSRC: 'img/images/berries/klubnika2.jpg',
 		centerTxt: 'Клубника'
 	},
 	{
-		leftSrc: '/img/images/berries/smorodina1.jpg',
-		rightSRC: '/img/images/berries/smorodina2.jpg',
+		leftSrc: 'img/images/berries/smorodina1.jpg',
+		rightSRC: 'img/images/berries/smorodina2.jpg',
 		centerTxt: 'Смородина'
 	},
 	{
-		leftSrc: '/img/images/berries/chernika1.jpg',
-		rightSRC: '/img/images/berries/chernika2.jpg',
+		leftSrc: 'img/images/berries/chernika1.jpg',
+		rightSRC: 'img/images/berries/chernika2.jpg',
 		centerTxt: 'Черника'
 	},
 	{
-		leftSrc: '/img/images/berries/vishnya1.jpg',
-		rightSRC: '/img/images/berries/vishnya2.jpg',
+		leftSrc: 'img/images/berries/vishnya1.jpg',
+		rightSRC: 'img/images/berries/vishnya2.jpg',
 		centerTxt: 'Вишня'
 	},
 	{
-		leftSrc: '/img/images/berries/golubika1.jpg',
-		rightSRC: '/img/images/berries/golubika2.jpg',
+		leftSrc: 'img/images/berries/golubika1.jpg',
+		rightSRC: 'img/images/berries/golubika2.jpg',
 		centerTxt: 'Голубика'
 	},
 	{
-		leftSrc: '/img/images/berries/chereshnya1.jpg',
-		rightSRC: '/img/images/berries/chereshnya2.jpg',
+		leftSrc: 'img/images/berries/chereshnya1.jpg',
+		rightSRC: 'img/images/berries/chereshnya2.jpg',
 		centerTxt: 'Черешня'
 	},
 	{
-		leftSrc: '/img/images/berries/brusnika1.jpg',
-		rightSRC: '/img/images/berries/brusnika2.jpg',
+		leftSrc: 'img/images/berries/brusnika1.jpg',
+		rightSRC: 'img/images/berries/brusnika2.jpg',
 		centerTxt: 'Брусника'
 	},
 	{
-		leftSrc: '/img/images/berries/vinograd1.jpg',
-		rightSRC: '/img/images/berries/vinograd2.jpg',
+		leftSrc: 'img/images/berries/vinograd1.jpg',
+		rightSRC: 'img/images/berries/vinograd2.jpg',
 		centerTxt: 'Виноград'
 	}
 ];
@@ -620,60 +620,60 @@ var anyArr = [];
 	// img Obj path for imgs
 var locationObj = {
 	numbers: [
-		'/img/images/numbers/1.png',
-		'/img/images/numbers/2.png',
-		'/img/images/numbers/3.png',
-		'/img/images/numbers/4.png',
-		'/img/images/numbers/5.png'
+		'img/images/numbers/1.png',
+		'img/images/numbers/2.png',
+		'img/images/numbers/3.png',
+		'img/images/numbers/4.png',
+		'img/images/numbers/5.png'
 	],
 	rivers: [
-		'/img/images/rivers/1.png',
-		'/img/images/rivers/2.png',
-		'/img/images/rivers/3.png',
-		'/img/images/rivers/4.png',
-		'/img/images/rivers/5.png'
+		'img/images/rivers/1.png',
+		'img/images/rivers/2.png',
+		'img/images/rivers/3.png',
+		'img/images/rivers/4.png',
+		'img/images/rivers/5.png'
 	],
 	forest: [
-		'/img/images/forest/1.png',
-		'/img/images/forest/2.png',
-		'/img/images/forest/3.png',
-		'/img/images/forest/4.png',
-		'/img/images/forest/5.png'
+		'img/images/forest/1.png',
+		'img/images/forest/2.png',
+		'img/images/forest/3.png',
+		'img/images/forest/4.png',
+		'img/images/forest/5.png'
 	],
 	mountain: [
-		'/img/images/mountain/1.png',
-		'/img/images/mountain/2.png',
-		'/img/images/mountain/3.png',
-		'/img/images/mountain/4.png',
-		'/img/images/mountain/5.png'
+		'img/images/mountain/1.png',
+		'img/images/mountain/2.png',
+		'img/images/mountain/3.png',
+		'img/images/mountain/4.png',
+		'img/images/mountain/5.png'
 	],
 	fields: [
-		'/img/images/fields/1.png',
-		'/img/images/fields/2.png',
-		'/img/images/fields/3.png',
-		'/img/images/fields/4.png',
-		'/img/images/fields/5.png'
+		'img/images/fields/1.png',
+		'img/images/fields/2.png',
+		'img/images/fields/3.png',
+		'img/images/fields/4.png',
+		'img/images/fields/5.png'
 	],
 	seas: [
-		'/img/images/seas/1.png',
-		'/img/images/seas/2.png',
-		'/img/images/seas/3.png',
-		'/img/images/seas/4.png',
-		'/img/images/seas/5.png'
+		'img/images/seas/1.png',
+		'img/images/seas/2.png',
+		'img/images/seas/3.png',
+		'img/images/seas/4.png',
+		'img/images/seas/5.png'
 	],
 	deserts: [
-		'/img/images/deserts/1.png',
-		'/img/images/deserts/2.png',
-		'/img/images/deserts/3.png',
-		'/img/images/deserts/4.png',
-		'/img/images/deserts/5.png'
+		'img/images/deserts/1.png',
+		'img/images/deserts/2.png',
+		'img/images/deserts/3.png',
+		'img/images/deserts/4.png',
+		'img/images/deserts/5.png'
 	],
 	jungles: [
-		'/img/images/jungles/1.png',
-		'/img/images/jungles/2.png',
-		'/img/images/jungles/3.png',
-		'/img/images/jungles/4.png',
-		'/img/images/jungles/5.png'
+		'img/images/jungles/1.png',
+		'img/images/jungles/2.png',
+		'img/images/jungles/3.png',
+		'img/images/jungles/4.png',
+		'img/images/jungles/5.png'
 	]
 	}
 	var index = 0;
