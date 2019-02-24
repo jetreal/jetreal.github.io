@@ -1,29 +1,18 @@
-
 'use strict'
-
 
 $(document).ready(function() {
 	setTimeout(function() {
 		$(window).trigger('resize');
-	},200);
+	},250);
 });
-		
-// jQuery.event.special.onmousewheel = {
-//     setup: function( _, ns, handle ){
-//         if ( ns.includes("noPreventDefault") ) {
-//             this.addEventListener("mousewheel", handle, { passive: false });
-//         } else {
-//             this.addEventListener("mousewheel", handle, { passive: true });
-//         }
-//     }
-// };
-////////////////////////////////////////////////////////////////////////
 
+
+////////////////////////////////////////////////////////////////////////
 
 // magnific Popup
 jQuery(document).ready(function(){
 	jQuery('.test-popup-link').magnificPopup({
-		type: 'image' ,
+		type: 'image',
 		gallery : {
 		enabled : true,
 		closeBtnInside: true,
@@ -34,7 +23,6 @@ jQuery(document).ready(function(){
 	},
 	removalDelay: 300,
 	mainClass: 'mfp-fade mfp-with-zoom'
-// other options
 	});
 });
 
@@ -49,16 +37,10 @@ $('.popup-modal2').magnificPopup({
 		},
 		zoom: {
 			enabled: true,
-			duration: 300 // don't foget to change the duration also in CSS
+			// duration: 300 // don't foget to change the duration also in CSS
 		}
 	});
-// $()
-// $(document).on('click', '', function(e) {
-//     e.preventDefault();
-//     $.magnificPopup.close();
-// });
 /////////////////////////////////////////////////////////////
-
 // forest section
 
 // nice scroll
@@ -100,6 +82,7 @@ var flagi = false;
 
 var timerHeader1, timerHeader2, timerHeader3, timerHeader4, timerHeader5;
 function headerAnime(iDivDataObj) {
+	// change the state
 	timerHeader1 = setTimeout(function() {
 		wind(lDivDataObj.wind.text, lDivDataObj.wind.img);
 	},0);
@@ -135,21 +118,18 @@ function offTimerHeader() {
 }
 function wind(txt,img) {
 	$('#bDivTextP').text(txt);
-
-		$('.wrapperImg').css('background-image', img);
-		// start css animation
-		$('#bDivTextP').addClass('anima');
-		
+	$('.wrapperImg').css('background-image', img);
+	// start css animation
+	$('#bDivTextP').addClass('anima');
 	setTimeout(function() {
 		$('.wrapperImg').fadeIn(1000);
 	},3300);
 	setTimeout(function() {
 		$('.wrapperImg').fadeOut(1000);
-		// $('.wr17 .into03').fadeIn({'background-image': 'url(tri.jpg)'});
 		$('#bDivTextP').removeClass('anima');
 	},7000);
 }
-
+// button toggle function 
 function mDown() {
 	switch (true) {
 		case (flagi == false ) :
@@ -183,67 +163,58 @@ function mDown() {
 }
 // start function
 $('.circleImg').mousedown(mDown);
-// hide/changeSideImgw button
 
-	var fl = 0;
+// hide button on resize
+
+var fl = 0;
 $(document).ready(function() {
 	$(window).on('resize load', hidechangeSideImgwButton);
 });
+
 function hidechangeSideImgwButton () {
-	 if ($('html').outerWidth() < 700 && flagi == false){
+	if ($('html').outerWidth() < 700 && flagi == false){
  		fl = 0;
+	 	$('.wrapCircleImg').click(function() {
+	 		$('.wr17').css({'transform': 'scale(.0,.0)'});
 
-  	 	$('.wrapCircleImg').click(function() {
-  	 		// $('.wr17').css({'width': '0px','height': '0px'});
-  	 		$('.wr17').css({'transform': 'scale(.0,.0)'});
-  	 		// $('.bDiv').css({'grid-template-columns': 'auto 0px','grid-gap': '0px'});
-  	 		setTimeout(function() {
-  	 			flagi = 0;
-  	 			fl = 0;
-	  	 		// $('.bDiv').css('grid-template-columns', 'auto 75px');
-		 			$('.wr17').css({'transform': 'scale(.7,.7)'});
-  	 		}, 32000);
-  	 	});
-    } else if ($('html').outerWidth() < 700 && flagi == true) {
-    		$('.wrapCircleImg').one('click', function() {
-    			$(window).trigger('resize');
+	 		setTimeout(function() {
+	 			flagi = 0;
+	 			fl = 0;
+	 			$('.wr17').css({'transform': 'scale(.7,.7)'});
+	 		}, 32000);
 
-    		});
-    		// $('.wrapCircleImg').click(function() {
-  	 		// 	$('.wr17').css({'transform': 'scale(.0,.0)'});
-		    // });
-    	} else if ($('html').outerWidth() > 700 && flagi == true) {
-	    	$('.wrapCircleImg').one('click', function() {
-    			$(window).trigger('resize');
-    		});
-	    	$('.wrapCircleImg').off('click');	
-    		
-    		if (fl == 0) {
-		    	$('.wr17').css({'transform': 'scale(.7,.7)'});
-		    	fl++;
-    		}
+	 	});
 
-    	
-    	  
-			} 
+  } else if ($('html').outerWidth() < 700 && flagi == true) {
+		$('.wrapCircleImg').one('click', function() {
+			$(window).trigger('resize');
+		});
 
-  
+	} else if ($('html').outerWidth() > 700 && flagi == true) {
+  	$('.wrapCircleImg').one('click', function() {
+			$(window).trigger('resize');
+		});
+  	$('.wrapCircleImg').off('click');	
+		if (fl == 0) {
+    	$('.wr17').css({'transform': 'scale(.7,.7)'});
+    	fl++;
+		}
+	} 
 }
 ///////////////////////////////////////////////////////////
 // replace red TopLine at forest section  
 function replaceTopLine() {
-$(document).ready(function() {
-	if ($(window).outerWidth() <= 992) {
-		$('.theLostRiverText3').css({position:'relative',bottom:'116px',zIndex: '11'}).appendTo($('.wrapVItem'));
-		// $('.theLostRiverText2')
-	}	else {
-		$('.theLostRiverText3').css({position:'relative',bottom:'8px',zIndex: '11'}).insertAfter($('.theLostRiverText2'));
-	}
-});
+	$(document).ready(function() {
+		if ($(window).outerWidth() <= 992) {
+			$('.theLostRiverText3').css({position:'relative',bottom:'116px',zIndex: '11'}).appendTo($('.wrapVItem'));
+		}	else {
+			$('.theLostRiverText3').css({position:'relative',bottom:'8px',zIndex: '11'}).insertAfter($('.theLostRiverText2'));
+		}
+	});
 }
 $(window).on('load resize', replaceTopLine);
 ///////////////////////////////////////////////////////////////////////
-//afterHeader section
+//afterHeader section change image
 var sectionObj = [
 	{
 		leftSrc: '/img/images/flowers/romashka1.jpg',
@@ -297,9 +268,9 @@ var sectionObj = [
 	}
 ];
 var indexO = 0;
-			
+// change number 
 function changeCount(event) {
-		switch(true) {
+	switch(true) {
 		case (event.target.className == 'duck') :
 			function changeSideImg(){
 				$('.duck').attr('src', sectionObj[indexO].leftSrc);
@@ -317,19 +288,19 @@ function changeCount(event) {
 				indexO = 1;
 				changeSideImg();
 			}
-			break;
-			case (event.target.className == 'duck2') :
-				if (indexO != 0) {
-						indexO--;
-						changeSideImg();
-						if (indexO == 0 ) {
-							indexO = sectionObj.length;
-						}
-					} else { 
-						indexO = sectionObj.length -1
-						changeSideImg();
-					}
-			break;
+		break;
+		case (event.target.className == 'duck2') :
+			if (indexO != 0) {
+				indexO--;
+				changeSideImg();
+				if (indexO == 0 ) {
+					indexO = sectionObj.length;
+				}
+			} else { 
+				indexO = sectionObj.length -1
+				changeSideImg();
+			}
+		break;
 	}
 }
 
@@ -396,8 +367,8 @@ var sectionObj2 = [
 		centerTxt: 'Виноград'
 	}
 ];
-var indexO2 = 0;
-			
+
+var indexO2 = 0;		
 function changeCount2(event) {
 	switch(true) {
 		case (event.target.className == 'ej') :
@@ -407,7 +378,6 @@ function changeCount2(event) {
 				$('.textEj p').text(sectionObj2[indexO2].centerTxt);
 				$('#textEjModal p:eq(0)').text(sectionObj2[indexO2].centerTxt);
 			}
-			
 			if (indexO2 != sectionObj2.length) {
 				indexO2++;
 				if (indexO2 == sectionObj2.length) {
@@ -418,19 +388,19 @@ function changeCount2(event) {
 				indexO2 = 1;
 				changeSideImg();
 			}
-			break;
-			case (event.target.className == 'ej2') :
-				if (indexO2 != 0) {
-					indexO2--;
-					changeSideImg();
-					if (indexO2 == 0 ) {
-						indexO2 = sectionObj2.length;
-					}
-				} else { 
-					indexO2 = sectionObj2.length -1
-					changeSideImg();
+		break;
+		case (event.target.className == 'ej2') :
+			if (indexO2 != 0) {
+				indexO2--;
+				changeSideImg();
+				if (indexO2 == 0 ) {
+					indexO2 = sectionObj2.length;
 				}
-			break;
+			} else { 
+				indexO2 = sectionObj2.length -1
+				changeSideImg();
+			}
+		break;
 	}
 }
 
@@ -498,7 +468,7 @@ var sectionObj3 = [
 	}
 ]
 var indexO3 = 0;
-			function changeCount3(event) {
+function changeCount3(event) {
 	switch(true) {
 		case (event.target.className == 'catsImg') :
 			function changeSideImg(){
@@ -517,150 +487,82 @@ var indexO3 = 0;
 				indexO3 = 1;
 				changeSideImg();
 			}
-
-			break;
-			case (event.target.className == 'catsImg2') :
-				if (indexO3 != 0) {
-					indexO3--;
-					changeSideImg();
-					if (indexO3 == 0 ) {
-						indexO3 = sectionObj3.length;
-					}
-				} else { 
-					indexO3 = sectionObj3.length -1
-					changeSideImg();
+		break;
+		case (event.target.className == 'catsImg2') :
+			if (indexO3 != 0) {
+				indexO3--;
+				changeSideImg();
+				if (indexO3 == 0 ) {
+					indexO3 = sectionObj3.length;
 				}
-			break;
+			} else { 
+				indexO3 = sectionObj3.length -1
+				changeSideImg();
+			}
+		break;
 	}
-	
 }
 
 
 ///////////////////////////////////////////////////////////////////////
 var fl = false;
 $(document).ready(function() {
-
-		$('.duck').on('click', function(event) {
-			if (fl == false) {
-				changeCount(event)
-				fl = true;
-				setTimeout(function() {
-					fl = false;
-				},150);
-			}
-		});
-		$('.duck2').on('click', function(event) {
-			if (fl == false) {
-				changeCount(event)
-				fl = true;
-				setTimeout(function() {
-					fl = false;
-				},150);
-			}	
-		});
-		$('.ej').on('click', function(event) {
-				if (fl == false) {
-				changeCount2(event)
-				fl = true;
-				setTimeout(function() {
-					fl = false;
-				},150);
-			}
-		});
-		$('.ej2').on('click', function(event) {
-				if (fl == false) {
-				changeCount2(event)
-				fl = true;
-				setTimeout(function() {
-					fl = false;
-				},150);
-			}
-		});
-		$('.catsImg').on('click', function(event) {
-				if (fl == false) {
-				changeCount3(event)
-				fl = true;
-				setTimeout(function() {
-					fl = false;
-				},150);
-			}
-		});
-		$('.catsImg2').on('click', function(event) {
-				if (fl == false) {
-				changeCount3(event)
-				fl = true;
-				setTimeout(function() {
-					fl = false;
-				},150);
-			}
-		});
+	$('.duck').on('click', function(event) {
+		if (fl == false) {
+			changeCount(event)
+			fl = true;
+			setTimeout(function() {
+				fl = false;
+			},150);
+		}
+	});
+	$('.duck2').on('click', function(event) {
+		if (fl == false) {
+			changeCount(event)
+			fl = true;
+			setTimeout(function() {
+				fl = false;
+			},150);
+		}	
+	});
+	$('.ej').on('click', function(event) {
+		if (fl == false) {
+			changeCount2(event)
+			fl = true;
+			setTimeout(function() {
+				fl = false;
+			},150);
+		}
+	});
+	$('.ej2').on('click', function(event) {
+		if (fl == false) {
+			changeCount2(event)
+			fl = true;
+			setTimeout(function() {
+				fl = false;
+			},150);
+		}
+	});
+	$('.catsImg').on('click', function(event) {
+		if (fl == false) {
+			changeCount3(event)
+			fl = true;
+			setTimeout(function() {
+				fl = false;
+			},150);
+		}
+	});
+	$('.catsImg2').on('click', function(event) {
+		if (fl == false) {
+			changeCount3(event)
+			fl = true;
+			setTimeout(function() {
+				fl = false;
+			},150);
+		}
+	});
 });
 ///////////////////////////////////////////////////////////////
-
-// function opacitySection3() {
-//   $(window).on('resize load', function() {
-//   	if ($('html').outerWidth() < 870) {
-//   	$(window).off('scroll');
-//   	$('.wrapCats').css('opacity', '1');
-//   	$('.conEj').css('opacity', '1');
-//   	$('.wrapDuckSec2').css('opacity', '1');
-//   } else {
-//   	switch(true) {
-//   		case ($(window).height() <= 950 && $(window).height() >= 861 && $('html').outerWidth() > 870) :
-//   	  	threeSectionHide('.wrapCats', 1520, 2335);
-//   	  	threeSectionHide('.conEj', 582, 1400);
-//   	  	threeSectionHide('.wrapDuckSec2', -51, 675);
-//   	  	break;
-//   		case ($(window).height() <= 860 && $(window).height() >= 761 && $('html').outerWidth() > 870) :
-//   	  	threeSectionHide('.wrapCats', 1590, 2335);
-//   	  	threeSectionHide('.conEj', 675, 1400);
-//   	  	threeSectionHide('.wrapDuckSec2', -51, 675);
-//   	  	break;
-//   		case ($(window).height() <= 760 && $(window).height() >= 661 && $('html').outerWidth() > 870) :
-//   	  	threeSectionHide('.wrapCats', 1710, 2335);
-//   	  	threeSectionHide('.conEj', 770, 1400);
-//   	  	threeSectionHide('.wrapDuckSec2', 51, 675);
-//   	  	break;
-//   		case ($(window).height() <= 660 && $(window).height() >= 561 && $('html').outerWidth() > 870) :
-//   	  	threeSectionHide('.wrapCats', 1780, 2335);
-//   	  	threeSectionHide('.conEj', 870, 1400);
-//   	  	threeSectionHide('.wrapDuckSec2', 150, 670);
-//   	 	break;
-//   	  case ($(window).height() <= 560 && $(window).height() >= 461 && $('html').outerWidth() > 870) :
-//   	  	threeSectionHide('.wrapCats', 1925, 2335);
-//   	  	threeSectionHide('.conEj', 974, 1400);
-//   	  	threeSectionHide('.wrapDuckSec2', 240, 670);
-//   	 	break;
-//   	  case ($(window).height() <= 460 && $('html').outerWidth() > 870) :
-//   	  	threeSectionHide('.wrapCats', 2015, 2335);
-//   	  	threeSectionHide('.conEj', 1075, 1400);
-//   	  	threeSectionHide('.wrapDuckSec2', 347, 670);
-//   	 	break;
-
-//   	 }	 
-//   }
-//   }); 
-// }
-// opacitySection3();
-
-///////////////////////////////////////////////////////////////////////////
-// var passiveIfSupported = false;
-
-// try {
-//   window.addEventListener("test", null, Object.defineProperty({}, "passive", { get: function() { passiveIfSupported = { passive: true }; } }));
-// } catch(err) {}
-
-// function threeSectionHide(clas, top, bottom) {
-// 	window.addEventListener('scroll', function() {
-// 		var scrolled = window.pageYOffset || document.documentElement.scrollTop;
-// 		if (scrolled > top && scrolled < bottom) {
-// 			$(clas).css('opacity', '1');
-// 		} else {
-// 			$(clas).css('opacity', '0.4');
-// 		}
-// 	},passiveIfSupported);
-// }
-
 //////////////////////////////////////////////////////////////////////////
 // display param
 
@@ -669,13 +571,12 @@ $(document).ready(function() {
 //   scrolled = window.pageYOffset || document.documentElement.scrollTop;
 //   document.getElementById('changeSideImgwScroll').innerHTML = scrolled + 'px';
 // }
-
-	$(window).resize(function(){
-	var width = $('html').outerWidth();
-	var height = $(window).height();
-	$('#width').html(width + 'px');
-	$('#height').html(height + 'px');
-});
+// 	$(window).resize(function(){
+// 	var width = $('html').outerWidth();
+// 	var height = $(window).height();
+// 	$('#width').html(width + 'px');
+// 	$('#height').html(height + 'px');
+// });
 ////////////////////////////////////////////////////////////////////////
 // var txt for display text
 var forestText = {
@@ -698,7 +599,7 @@ var forestText = {
 	В северных лесах пространство между деревьями достаточно обширное, в джунглях же, \
 	всё растёт очень плотно. Порой в джунглях невозможно пройти без мачете, необходимого для того, чтоб прорубить\
 	очень густую растительность. Джунгли поражают буйством красок и обилием живности.',
-	mountain: 'Миллионы туристов из разных уголков мира стремятся посетить различные горы,\
+	mountain: 'Миллионы туристов из разных уголков мира стремятся посетить различные возвышенности,\
 	чтобы полюбоваться потрясающей красотой удивительных пейзажей.\
 	 В этой подборке вы увидите замечательные горные пейзажи во всём своём многообразии. Мы собрали коллекцию самых потрясающих фотографий, на \
 	 которых запечатлены горы со всего мира.',
@@ -780,14 +681,14 @@ var locationObj = {
 $(document).ready(function() {
   function myCh() {
     function changeRiversContent() {
-		$('#imgContent').attr('src', '/img/images/rivers/1.png');
-		$('#imgContent2').attr('src', '/img/images/rivers/6.png');
-		$('#headerLeftSection p').text(fTxt.rivers);
-		// src for popup
-		var atrLeft = $('#imgContent2').attr('src');
-		var atrRight = $('#imgContent').attr('src');
-		$('#popupLeft').attr('href', atrLeft);
-		$('#popupRight').attr('href', atrRight);
+			$('#imgContent').attr('src', '/img/images/rivers/1.png');
+			$('#imgContent2').attr('src', '/img/images/rivers/6.png');
+			$('#headerLeftSection p').text(fTxt.rivers);
+			// src for popup
+			var atrLeft = $('#imgContent2').attr('src');
+			var atrRight = $('#imgContent').attr('src');
+			$('#popupLeft').attr('href', atrLeft);
+			$('#popupRight').attr('href', atrRight);
   	};
   	changeRiversContent();
   	index = 0;
@@ -799,7 +700,6 @@ $(document).ready(function() {
 		$('.into31 div:first-child')
 		.removeClass('bgImage2no bgImage3no bgImage4no bgImage5no bgImage6no bgImage7no');
 		$(this).addClass('bgImage1no');
-  
 		$('#forestTextContainer').text(forestText.river);
   	$(this).off('click');
   	$('.bgImage7').off('click').one('click', myCh2);
@@ -851,13 +751,13 @@ $(document).ready(function() {
 
   function myCh3() {
   	function changeMountainContent() {
-		$('#imgContent').attr('src', '/img/images/mountain/1.png');
-		$('#imgContent2').attr('src', '/img/images/mountain/6.png');
-		$('#headerLeftSection p').text(fTxt.mountains);
-		var atrLeft = $('#imgContent2').attr('src');
-		var atrRight = $('#imgContent').attr('src');
-		$('#popupLeft').attr('href', atrLeft);
-		$('#popupRight').attr('href', atrRight);
+			$('#imgContent').attr('src', '/img/images/mountain/1.png');
+			$('#imgContent2').attr('src', '/img/images/mountain/6.png');
+			$('#headerLeftSection p').text(fTxt.mountains);
+			var atrLeft = $('#imgContent2').attr('src');
+			var atrRight = $('#imgContent').attr('src');
+			$('#popupLeft').attr('href', atrLeft);
+			$('#popupRight').attr('href', atrRight);
   	};
   	changeMountainContent();
   	index = 0;
@@ -881,14 +781,14 @@ $(document).ready(function() {
 
   function myCh4() {
   	$('.bgImage3').addClass('bgImage3no');
-        function changeFieldsContent() {
-			$('#imgContent').attr('src', '/img/images/fields/1.png');
-			$('#imgContent2').attr('src', '/img/images/fields/6.png');
-			$('#headerLeftSection p').text(fTxt.fields);
-			var atrLeft = $('#imgContent2').attr('src');
-			var atrRight = $('#imgContent').attr('src');
-			$('#popupLeft').attr('href', atrLeft);
-			$('#popupRight').attr('href', atrRight);
+      function changeFieldsContent() {
+				$('#imgContent').attr('src', '/img/images/fields/1.png');
+				$('#imgContent2').attr('src', '/img/images/fields/6.png');
+				$('#headerLeftSection p').text(fTxt.fields);
+				var atrLeft = $('#imgContent2').attr('src');
+				var atrRight = $('#imgContent').attr('src');
+				$('#popupLeft').attr('href', atrLeft);
+				$('#popupRight').attr('href', atrRight);
   		};
   	changeFieldsContent();
   	index = 0;
@@ -911,13 +811,13 @@ $(document).ready(function() {
   };
   function myCh5() {
   	function changeSeasContent() {
-		$('#imgContent').attr('src', '/img/images/seas/1.png');
-		$('#imgContent2').attr('src', '/img/images/seas/6.png');
-		$('#headerLeftSection p').text(fTxt.seas);
-		var atrLeft = $('#imgContent2').attr('src');
-		var atrRight = $('#imgContent').attr('src');
-		$('#popupLeft').attr('href', atrLeft);
-		$('#popupRight').attr('href', atrRight);
+			$('#imgContent').attr('src', '/img/images/seas/1.png');
+			$('#imgContent2').attr('src', '/img/images/seas/6.png');
+			$('#headerLeftSection p').text(fTxt.seas);
+			var atrLeft = $('#imgContent2').attr('src');
+			var atrRight = $('#imgContent').attr('src');
+			$('#popupLeft').attr('href', atrLeft);
+			$('#popupRight').attr('href', atrRight);
   	};
   	changeSeasContent();
   	index = 0;
@@ -940,13 +840,13 @@ $(document).ready(function() {
   };
   function myCh6() {
   	function changeDesertsContent() {
-		$('#imgContent').attr('src', '/img/images/deserts/1.png');
-		$('#imgContent2').attr('src', '/img/images/deserts/6.png');
-		$('#headerLeftSection p').text(fTxt.deserts);
-		var atrLeft = $('#imgContent2').attr('src');
-		var atrRight = $('#imgContent').attr('src');
-		$('#popupLeft').attr('href', atrLeft);
-		$('#popupRight').attr('href', atrRight);
+			$('#imgContent').attr('src', '/img/images/deserts/1.png');
+			$('#imgContent2').attr('src', '/img/images/deserts/6.png');
+			$('#headerLeftSection p').text(fTxt.deserts);
+			var atrLeft = $('#imgContent2').attr('src');
+			var atrRight = $('#imgContent').attr('src');
+			$('#popupLeft').attr('href', atrLeft);
+			$('#popupRight').attr('href', atrRight);
   	};
   	changeDesertsContent();
   	index = 0;
@@ -969,13 +869,13 @@ $(document).ready(function() {
   };
   function myCh7() {
   	function changeJunlesContent() {
-		$('#imgContent').attr('src', '/img/images/jungles/1.png');
-		$('#imgContent2').attr('src', '/img/images/jungles/6.png');
-		$('#headerLeftSection p').text(fTxt.jungles);
-		var atrLeft = $('#imgContent2').attr('src');
-		var atrRight = $('#imgContent').attr('src');
-		$('#popupLeft').attr('href', atrLeft);
-		$('#popupRight').attr('href', atrRight);
+			$('#imgContent').attr('src', '/img/images/jungles/1.png');
+			$('#imgContent2').attr('src', '/img/images/jungles/6.png');
+			$('#headerLeftSection p').text(fTxt.jungles);
+			var atrLeft = $('#imgContent2').attr('src');
+			var atrRight = $('#imgContent').attr('src');
+			$('#popupLeft').attr('href', atrLeft);
+			$('#popupRight').attr('href', atrRight);
   	};
   	changeJunlesContent();
   	index = 0;
@@ -996,11 +896,11 @@ $(document).ready(function() {
   	$('.bgImage4').off('click').one('click', myCh5);
   	$('.bgImage5').off('click').one('click', myCh6);
   };
-// start functions
-		$('.bgImage7').one('click', myCh2);
-		$('.bgImage1').one('click', myCh);
-		$('.bgImage2').one('click', myCh3);
-		$('.bgImage3').one('click', myCh4);
+	// start functions
+	$('.bgImage7').one('click', myCh2);
+	$('.bgImage1').one('click', myCh);
+	$('.bgImage2').one('click', myCh3);
+	$('.bgImage3').one('click', myCh4);
 		////////////////////////////////////////////////////////
 		// start field function without flicker when reload page
 		$(window).on('load', function() {
@@ -1030,9 +930,9 @@ $(document).ready(function() {
   		$('.bgImage6').one('click', myCh7);
 		});
 		/////////////////////////////////////////////////////////
-		$('.bgImage4').one('click', myCh5);
-		$('.bgImage5').one('click', myCh6);
-		$('.bgImage6').one('click', myCh7);
+	$('.bgImage4').one('click', myCh5);
+	$('.bgImage5').one('click', myCh6);
+	$('.bgImage6').one('click', myCh7);
 });
 // forest slide and changeSideImgw counter
 $(document).ready(function() {	
@@ -1046,14 +946,12 @@ $(document).ready(function() {
 		var atrRight = $('#imgContent').attr('src');
 		$('#popupRight').attr('href', atrRight);
 		$('#num').attr('src', locationObj.numbers[index]);
-
 	});
 	$('.arrowLeft').click(function() {
-			index--;
+		index--;
 		if (index < 0) {
 			index = anyArr.length - 1;
 		}
-
 		$('#imgContent').attr("src", anyArr[index]);
 		var atrRight = $('#imgContent').attr('src');
 		$('#popupRight').attr('href', atrRight);
@@ -1064,12 +962,10 @@ $(document).ready(function() {
 // replace header text
 function replaceFText() {
 	if ($(window).outerWidth() <= '992') {
-		// $('#headerLeftSection').fadeOut();
 		replaceForestTextRight();
 	} else {
-	// if ($(window).outerWidth() > '992'){
 		replaceForestTextLeft();
-		}
+	}
 }
 function replaceForestTextRight() {
 	$('#headerLeftSection').insertAfter($('.galleryDeg1'));
@@ -1078,7 +974,7 @@ function replaceForestTextLeft(){
 	$('#headerLeftSection').insertBefore($('.galleryDeg1Left'));
 }
 
-	$(window).on('load resize', replaceFText);
+$(window).on('load resize', replaceFText);
 
 
 //animal section
@@ -1086,15 +982,12 @@ function replaceForestTextLeft(){
 $(document).ready(function() {
 	$('.animal').mouseenter(F_in);
 	$('.animal').mouseleave(F_out);
-
 	function F_in() {
-		$('.animal:hover p').css('transition', 'opacity 1s')
-		$('.animal:hover p').css('opacity', '0');
+		$('.animal:hover p').css({'transition': 'opacity .5s', 'opacity': '0'})
 	}
 	function F_out() {
 		$('.animal p').css('opacity', '1');
   }  
-	
 });
 //////////////////////////////////////////////////////
 //own Friends section
@@ -1102,8 +995,7 @@ $(document).ready(function() {
 	$('.afterGlacierHead').on('click load', changeCard);
 	$(window).on('resize', restoreImg);
 
-var counterImg = 1, arrObj = [
-
+	var counterImg = 1, arrObj = [
 		  {
 		  	url:'url(/img/images/ownFriends/bear.jpg',
 				headerText: 'Медведь',
@@ -1141,14 +1033,15 @@ var counterImg = 1, arrObj = [
 			counterImg++;
 			$('.lb img').attr('src', locationObj.numbers[0]);
 			$('.rb img').attr('src', locationObj.numbers[0]);
-		if (counterImg == arrObj.length) {
-	 		counterImg = 0;
-	 	  CountEagleL = 1, CountBearL = 1, CountWolfL = 1;
-		  CountEagleR = 1, CountBearR = 1, CountWolfR = 1;
-		}
+			if (counterImg == arrObj.length) {
+		 		counterImg = 0;
+		 	  CountEagleL = 1, CountBearL = 1, CountWolfL = 1;
+			  CountEagleR = 1, CountBearR = 1, CountWolfR = 1;
+			}
 		}
 	}
-function restoreImg() {
+	// restore Img on large display
+	function restoreImg() {
 		if ($(window).outerWidth() > '1150' || $(window).outerWidth() < '768') {
 		$('.angle12Center').css('background-image', arrObj[0].url);
 		$('.cardTextHead2').text(arrObj[0].headerText);
@@ -1163,161 +1056,162 @@ function restoreImg() {
 			$('.rb img').attr('src', locationObj.numbers[0]);
 		}
 	}
-var leftMiniDispArr = {
-	eagleLeft: [
-		'url(/img/images/ownFriends/bird/1.jpg)',
-		'url(/img/images/ownFriends/bird/2.jpg)',
-		'url(/img/images/ownFriends/bird/3.jpg)',
-		'url(/img/images/ownFriends/bird/4.jpg)',
-		'url(/img/images/ownFriends/bird/5.jpg)'
-	],
-	bearLeft: [
-		'url(/img/images/ownFriends/bear/1.jpg)',
-		'url(/img/images/ownFriends/bear/2.jpg)',
-		'url(/img/images/ownFriends/bear/3.jpg)',
-		'url(/img/images/ownFriends/bear/4.jpg)',
-		'url(/img/images/ownFriends/bear/5.jpg)'
-	],
-	wolfLeft: [
-		'url(/img/images/ownFriends/wolf/1.jpg)',
-		'url(/img/images/ownFriends/wolf/2.jpg)',
-		'url(/img/images/ownFriends/wolf/3.jpg)',
-		'url(/img/images/ownFriends/wolf/4.jpg)',
-		'url(/img/images/ownFriends/wolf/5.jpg)'
-	],
-	eagleRight: [
-		'url(/img/images/ownFriends/bird2/1.jpg)',
-		'url(/img/images/ownFriends/bird2/2.jpg)',
-		'url(/img/images/ownFriends/bird2/3.jpg)',
-		'url(/img/images/ownFriends/bird2/4.jpg)',
-		'url(/img/images/ownFriends/bird2/5.jpg)'
-	],
-	bearRight: [
-		'url(/img/images/ownFriends/bear2/1.jpg)',
-		'url(/img/images/ownFriends/bear2/2.jpg)',
-		'url(/img/images/ownFriends/bear2/3.jpg)',
-		'url(/img/images/ownFriends/bear2/4.jpg)',
-		'url(/img/images/ownFriends/bear2/5.jpg)'
-	],
-	wolfRight: [
-		'url(/img/images/ownFriends/wolf2/1.jpg)',
-		'url(/img/images/ownFriends/wolf2/2.jpg)',
-		'url(/img/images/ownFriends/wolf2/3.jpg)',
-		'url(/img/images/ownFriends/wolf2/4.jpg)',
-		'url(/img/images/ownFriends/wolf2/5.jpg)'
-	]
-};
+	var leftMiniDispArr = {
+		eagleLeft: [
+			'url(/img/images/ownFriends/bird/1.jpg)',
+			'url(/img/images/ownFriends/bird/2.jpg)',
+			'url(/img/images/ownFriends/bird/3.jpg)',
+			'url(/img/images/ownFriends/bird/4.jpg)',
+			'url(/img/images/ownFriends/bird/5.jpg)'
+		],
+		bearLeft: [
+			'url(/img/images/ownFriends/bear/1.jpg)',
+			'url(/img/images/ownFriends/bear/2.jpg)',
+			'url(/img/images/ownFriends/bear/3.jpg)',
+			'url(/img/images/ownFriends/bear/4.jpg)',
+			'url(/img/images/ownFriends/bear/5.jpg)'
+		],
+		wolfLeft: [
+			'url(/img/images/ownFriends/wolf/1.jpg)',
+			'url(/img/images/ownFriends/wolf/2.jpg)',
+			'url(/img/images/ownFriends/wolf/3.jpg)',
+			'url(/img/images/ownFriends/wolf/4.jpg)',
+			'url(/img/images/ownFriends/wolf/5.jpg)'
+		],
+		eagleRight: [
+			'url(/img/images/ownFriends/bird2/1.jpg)',
+			'url(/img/images/ownFriends/bird2/2.jpg)',
+			'url(/img/images/ownFriends/bird2/3.jpg)',
+			'url(/img/images/ownFriends/bird2/4.jpg)',
+			'url(/img/images/ownFriends/bird2/5.jpg)'
+		],
+		bearRight: [
+			'url(/img/images/ownFriends/bear2/1.jpg)',
+			'url(/img/images/ownFriends/bear2/2.jpg)',
+			'url(/img/images/ownFriends/bear2/3.jpg)',
+			'url(/img/images/ownFriends/bear2/4.jpg)',
+			'url(/img/images/ownFriends/bear2/5.jpg)'
+		],
+		wolfRight: [
+			'url(/img/images/ownFriends/wolf2/1.jpg)',
+			'url(/img/images/ownFriends/wolf2/2.jpg)',
+			'url(/img/images/ownFriends/wolf2/3.jpg)',
+			'url(/img/images/ownFriends/wolf2/4.jpg)',
+			'url(/img/images/ownFriends/wolf2/5.jpg)'
+		]
+	};
 
-var CountEagleL = 1, CountBearL = 1, CountWolfL = 1;
-var CountEagleR = 1, CountBearR = 1, CountWolfR = 1;
-function leftBtn() {
-$('.lb').on('mousedown', function() {
-	// chNum();
-	$(this).css('background-image', 'url(/img/favicon/click.png)');
-	if (counterImg == 1) {
-		$('.inImgLeft').css('background-image', leftMiniDispArr.bearLeft[CountBearL]);
-			CountBearL++;
-		$('.lb img').attr('src', locationObj.numbers[CountBearL - 1]);
-		if (CountBearL == leftMiniDispArr.bearLeft.length) {
-			CountBearL = 0;
+	var CountEagleL = 1, CountBearL = 1, CountWolfL = 1;
+	var CountEagleR = 1, CountBearR = 1, CountWolfR = 1;
+// change img mini display on medium display
+	function leftBtn() {
+	$('.lb').on('mousedown', function() {
+		$(this).css('background-image', 'url(/img/favicon/click.png)');
+		if (counterImg == 1) {
+			$('.inImgLeft').css('background-image', leftMiniDispArr.bearLeft[CountBearL]);
+				CountBearL++;
+			$('.lb img').attr('src', locationObj.numbers[CountBearL - 1]);
+			if (CountBearL == leftMiniDispArr.bearLeft.length) {
+				CountBearL = 0;
+			}
 		}
-	}
-	if (counterImg == 2) {
-		$('.inImgLeft').css('background-image', leftMiniDispArr.eagleLeft[CountEagleL]);
-			CountEagleL++;
-		$('.lb img').attr('src', locationObj.numbers[CountEagleL - 1]);
-		if (CountEagleL == leftMiniDispArr.eagleLeft.length) {
-			CountEagleL = 0;
+		if (counterImg == 2) {
+			$('.inImgLeft').css('background-image', leftMiniDispArr.eagleLeft[CountEagleL]);
+				CountEagleL++;
+			$('.lb img').attr('src', locationObj.numbers[CountEagleL - 1]);
+			if (CountEagleL == leftMiniDispArr.eagleLeft.length) {
+				CountEagleL = 0;
+			}
 		}
-	}
-	if (counterImg == 0) {
-		$('.inImgLeft').css('background-image', leftMiniDispArr.wolfLeft[CountWolfL]);
-			CountWolfL++;
-			$('.lb img').attr('src', locationObj.numbers[CountWolfL - 1]);
-		if (CountWolfL == leftMiniDispArr.wolfLeft.length) {
-			CountWolfL = 0;
+		if (counterImg == 0) {
+			$('.inImgLeft').css('background-image', leftMiniDispArr.wolfLeft[CountWolfL]);
+				CountWolfL++;
+				$('.lb img').attr('src', locationObj.numbers[CountWolfL - 1]);
+			if (CountWolfL == leftMiniDispArr.wolfLeft.length) {
+				CountWolfL = 0;
+			}
 		}
+	});
 	}
-});
-}
-leftBtn();
-function rightBtn() {
-$('.lb').on('mouseup', function() {
-	$(this).css('background-image', 'url(/img/favicon/btnUp.png)');
-});
+	leftBtn();
+	function rightBtn() {
+	$('.lb').on('mouseup', function() {
+		$(this).css('background-image', 'url(/img/favicon/btnUp.png)');
+	});
 
-$('.rb').on('mousedown', function() {
-	$(this).css('background-image', 'url(/img/favicon/click.png)');
-	if (counterImg == 1) {
-		$('.inImgRight').css('background-image', leftMiniDispArr.bearRight[CountBearR]);
-			CountBearR++;
-			$('.rb img').attr('src', locationObj.numbers[CountBearR - 1]);
-		if (CountBearR == leftMiniDispArr.bearRight.length) {
-			CountBearR = 0;
+	$('.rb').on('mousedown', function() {
+		$(this).css('background-image', 'url(/img/favicon/click.png)');
+		if (counterImg == 1) {
+			$('.inImgRight').css('background-image', leftMiniDispArr.bearRight[CountBearR]);
+				CountBearR++;
+				$('.rb img').attr('src', locationObj.numbers[CountBearR - 1]);
+			if (CountBearR == leftMiniDispArr.bearRight.length) {
+				CountBearR = 0;
+			}
 		}
-	}
-	if (counterImg == 2) {
-		$('.inImgRight').css('background-image', leftMiniDispArr.eagleRight[CountEagleR]);
-			CountEagleR++;
-			$('.rb img').attr('src', locationObj.numbers[CountEagleR - 1]);
-		if (CountEagleR == leftMiniDispArr.eagleRight.length) {
-			CountEagleR = 0;
+		if (counterImg == 2) {
+			$('.inImgRight').css('background-image', leftMiniDispArr.eagleRight[CountEagleR]);
+				CountEagleR++;
+				$('.rb img').attr('src', locationObj.numbers[CountEagleR - 1]);
+			if (CountEagleR == leftMiniDispArr.eagleRight.length) {
+				CountEagleR = 0;
+			}
 		}
-	}
-	if (counterImg == 0) {
-		$('.inImgRight').css('background-image', leftMiniDispArr.wolfRight[CountWolfR]);
-			CountWolfR++;
-			$('.rb img').attr('src', locationObj.numbers[CountWolfR - 1]);
-		if (CountWolfR == leftMiniDispArr.wolfRight.length) {
-			CountWolfR = 0;
+		if (counterImg == 0) {
+			$('.inImgRight').css('background-image', leftMiniDispArr.wolfRight[CountWolfR]);
+				CountWolfR++;
+				$('.rb img').attr('src', locationObj.numbers[CountWolfR - 1]);
+			if (CountWolfR == leftMiniDispArr.wolfRight.length) {
+				CountWolfR = 0;
+			}
 		}
+	});
 	}
-});
-}
-rightBtn();
-
-$('.rb').on('mouseup', function() {
-	$(this).css('background-image', 'url(/img/favicon/btnUp.png)');
-});
+	rightBtn();
+// for color button
+	$('.rb').on('mouseup', function() {
+		$(this).css('background-image', 'url(/img/favicon/btnUp.png)');
+	});
 
 // change btn color
-function oNafterGlacierHeadClick() {
-	if ($(window).outerWidth() < '1150') {
-		$('.afterGlacierHead').on('mousedown', function() {
-			$(this).css('background', 'linear-gradient(#2D2E30, #011A28)');
-		});
-		$('.afterGlacierHead').on('mouseup', function() {
-			$(this).css('background', 'linear-gradient(#596269, #3B434B)');
-		});
-	} 
-	
-}// off btn 
-function offafterGlacierHeadClick() {
-	if ($(window).outerWidth() > '1150'){
-		$('.afterGlacierHead').off('mousedown mouseup');
+	function oNafterGlacierHeadClick() {
+		if ($(window).outerWidth() < '1150') {
+			$('.afterGlacierHead').on('mousedown', function() {
+				$(this).css('background', 'linear-gradient(#2D2E30, #011A28)');
+			});
+			$('.afterGlacierHead').on('mouseup', function() {
+				$(this).css('background', 'linear-gradient(#596269, #3B434B)');
+			});
+		} 	
 	}
-}
-// hide Buttons
-function toggleButton() {
-	if ($(window).outerWidth() > '1150') {
-		$('.lb, .rb').fadeOut(1000);
-	} 
-	if ($(window).outerWidth() < '1150') {
-		$('.lb, .rb').fadeIn(1000);
+	// off btn on when large display
+	function offafterGlacierHeadClick() {
+		if ($(window).outerWidth() > '1150'){
+			$('.afterGlacierHead').off('mousedown mouseup');
+		}
 	}
-};
-// start btn function
-$(window).on('load resize', toggleButton);
-$(window).on('load resize', oNafterGlacierHeadClick);
-$(window).on('load resize', offafterGlacierHeadClick);
+	// hide Buttons
+	function toggleButton() {
+		if ($(window).outerWidth() > '1150') {
+			$('.lb, .rb').fadeOut(1000);
+		} 
+		if ($(window).outerWidth() < '1150') {
+			$('.lb, .rb').fadeIn(1000);
+		}
+	};
+	// start btn function
+	$(window).on('load resize', toggleButton);
+	$(window).on('load resize', oNafterGlacierHeadClick);
+	$(window).on('load resize', offafterGlacierHeadClick);
 });
 //////////////////////////////////////////////////////////////////////
 	
 
 // beach section //////////////////////////////////////////////////////////// 
-$(document).ready(function(){
-	var txt1 = {headerText: 'Мальдивские острова',
-							bodyText: "Если ваше представление о рае - это нетронутый тропический остров с раскачивающимися пальмами\
+$(document).ready(function() {
+	var txt1 = {
+		headerText: 'Мальдивские острова',
+		bodyText: "Если ваше представление о рае - это нетронутый тропический остров с раскачивающимися пальмами\
 							 и белоснежными пляжами, окруженными кристаллическими лагунами различных оттенков синего\
 							 - тогда Мальдивские острова наверняка будут отвечать всем требованиям. Неудивительно,\
 							 что большой процент туристов, которые приезжают на Мальдивы, являются постоянными посетителями - людьми,\
@@ -1326,68 +1220,83 @@ $(document).ready(function(){
 							 захватывающих занятий водными видами спорта, успокаивающих спа-салонов,\
 							 расслабляющих пляжей - все в роскошном комфорте современных удобств - вы обязательно захотите испытать это снова.<br>\
 							 Солнечные, уникальные и нетронутые, острова Мальдив предлагают вам солнце, независимо от того,\
-							 в какое время года вы решите посетить Мальдивы - острова, которые поистине являются раем на Земле."};
-	var txt2 = {headerText: 'Остров Дубай',
-							bodyText: "Дубай ежегодно принимает миллионы туристов и бизнесменов со всего мира.\
+							 в какое время года вы решите посетить Мальдивы - острова, которые поистине являются раем на Земле."
+	};
+	var txt2 = {
+		headerText: 'Остров Дубай',
+		bodyText: "Дубай ежегодно принимает миллионы туристов и бизнесменов со всего мира.\
 							 Он может похвастаться непревзойденными отелями, замечательной архитектурой,\
 							 а также развлекательными и спортивными мероприятиями мирового уровня. " + "<br>" + "\
 							 Дубай - это штат Объединенных Арабских Эмиратов (ОАЭ) расположен на восточном побережье Арабского полуострова,\
 							 в юго-западном углу Персидского залива. Известный во всем мире как быстро развивающийся центр международной торговли и инноваций,\
-							 Дубай быстро стал одним из самых популярных туристических направлений в мире. \
-							"};
-	var txt3 = {headerText: 'Канарские острова',
-							bodyText: "Не только круглогодичное солнце делает Канарские острова столь популярными,\
-							 но и и песчаные дюны, вулканы и самые современные произведения искусства.\
-							 Более 9 миллионов человек отдыхают на этих островах в Испании каждый год.<br>\
-							 Тенерифе принимает львиную долю посетителей, за которыми следуют Лансароте, Гран-Канария и Фуэртевентура.\
+							 Дубай быстро стал одним из самых популярных туристических направлений в мире." 
+							
+	};
+	var txt3 = {
+		headerText: 'Канарские острова',
+		bodyText: "Не только круглогодичное солнце делает Канарские острова столь популярными,\
+							но и и песчаные дюны, вулканы и самые современные произведения искусства.\
+						  Более 9 миллионов человек отдыхают на этих островах в Испании каждый год.<br>\
+							Тенерифе принимает львиную долю посетителей, за которыми следуют Лансароте, Гран-Канария и Фуэртевентура.\
 						  Ближайшая точка острова находится всего в 100 километрах от африканского побережья, и острова унаследовали\
-							 большую часть природных ресурсов континента.<br>\
-							 Тысячи лет вулканической активности оставили свое наследие на Канарских островах.\
-							 Лансароте, демонстрирует свое вулканическое наследие в национальном парке Тиманфайя.\
-							  В этом заповеднике на западном побережье острова находится более 100 вулканов.<br>\
+						  большую часть природных ресурсов континента.<br>\
+							Тысячи лет вулканической активности оставили свое наследие на Канарских островах.\
+							Лансароте, демонстрирует свое вулканическое наследие в национальном парке Тиманфайя.\
+							В этом заповеднике на западном побережье острова находится более 100 вулканов.<br>\
 							Вдали от шокирующих гор и вулканов, Канарские острова имеют более спокойную сторону.\
-							 Ла Гомера и Ла Пальма - сонные острова, для которых характерны нетронутые пляжи, сосновые леса и рыбацкие деревни. "};
-	var txt4 = {headerText: 'Сейшельские острова' ,
-							bodyText: "Когда-то Сейшельские острова были укрытием пиратов, в частности Анс Форбанс (Пиратская бухта) на Маэ и Кот-д'Ор на Праслине.<br>\
+							Ла Гомера и Ла Пальма - сонные острова, для которых характерны нетронутые пляжи, сосновые леса и рыбацкие деревни. "
+	};
+	var txt4 = {
+		headerText: 'Сейшельские острова',
+		bodyText: "Когда-то Сейшельские острова были укрытием пиратов, в частности Анс Форбанс (Пиратская бухта) на Маэ и Кот-д'Ор на Праслине.<br>\
 	             Считается, что знаменитый пират Оливье Левассер спрятал сокровище стоимостью более 160 000 долларов, которое так и осталось не найденным.<br>\
-	              На Птичьем острове живет самая тяжелая сухопутная черепаха, живущая в дикой природе, Эсмеральда, которая поднимает весы до 670 фунтов.<br>\
-				 				Остров Моенн в Морском национальном парке Святой Анны, как полагают, преследуется духом, который охраняет захороненные сокровища.<br>\
-				 				Coco de mer, обитающий на островах, производит самое большое семя в мире. Орех отчетливой формы может весить до 33 фунтов.<br>\
-				 				Виктория, столица Сейшельских островов, является самой маленькой в ​​мире, и ее можно легко изучить пешком менее чем за день.<br>\
-				 				На Сейшельских островах обитают одни из самых редких эндемичных птиц, в том числе голоногая сова Скопса, настолько редкая, что когда-то считалось, что её вид вымер, а затем был вновь открыт в 1959 году.<br>\
-				 				Хлебные фрукты очень популярны на Сейшельских островах и могут быть съедены различными способами от жареного до вареного. Легенда гласит, что кто-нибудь, кто ест его на островах, однажды вернется."};
-	var txt5 = {headerText: 'Гавайские острова',
-							bodyText: 'Гавайи не похожи ни на одно другое место на земле. Это единственный штат в Соединенных Штатах, состоящий исключительно из островов,\
+	             На Птичьем острове живет самая тяжелая сухопутная черепаха, живущая в дикой природе, Эсмеральда, которая поднимает весы до 670 фунтов.<br>\
+				 			 Остров Моенн в Морском национальном парке Святой Анны, как полагают, преследуется духом, который охраняет захороненные сокровища.<br>\
+				 			 Coco de mer, обитающий на островах, производит самое большое семя в мире. Орех отчетливой формы может весить до 33 фунтов.<br>\
+				 			 Виктория, столица Сейшельских островов, является самой маленькой в ​​мире, и ее можно легко изучить пешком менее чем за день.<br>\
+				 			 На Сейшельских островах обитают одни из самых редких эндемичных птиц, в том числе голоногая сова Скопса, настолько редкая, что когда-то считалось, что её вид вымер, а затем был вновь открыт в 1959 году.<br>\
+				 			 Хлебные фрукты очень популярны на Сейшельских островах и могут быть съедены различными способами от жареного до вареного. Легенда гласит, что кто-нибудь, кто ест его на островах, однажды вернется."
+	};
+	var txt5 = {
+		headerText: 'Гавайские острова',
+		bodyText: 'Гавайи не похожи ни на одно другое место на земле. Это единственный штат в Соединенных Штатах, состоящий исключительно из островов,\
 							 где находится один из самых активных вулканов и самая высокая в мире морская гора. Это также родина современного серфинга и хула.<br>\
 							 Гавайи состоит из 8 основных островов; Острова Кауаи, Оаху, Молокаи, Ланаи, Мауи, Ниихау, Кахулаве и Гавайи (Большой остров). Каждый остров имеет свою отличительную индивидуальность и предлагает свои приключения,\
-							  развлечения и достопримечательности. Гонолулу является столицей Гавайев и находится на острове Оаху.<br>\
-							  Тростниковый сахар, ананасы, цветы и продукция питомниководства являются основными отраслями промышленности. Гавайи также выращивают кофейные зерна, бананы и орехи макадамия.\
-							   Туристическая индустрия является крупнейшим источником внешних доходов на Гавайях.' };
-	var txt6 = {headerText: 'Остров Бали',
-							bodyText: 'Бали является самым популярным островным местом отдыха на индонезийском архипелаге.\
+							 развлечения и достопримечательности. Гонолулу является столицей Гавайев и находится на острове Оаху.<br>\
+							 Тростниковый сахар, ананасы, цветы и продукция питомниководства являются основными отраслями промышленности. Гавайи также выращивают кофейные зерна, бананы и орехи макадамия.\
+							 Туристическая индустрия является крупнейшим источником внешних доходов на Гавайях.' 
+	};
+	var txt6 = {
+		headerText: 'Остров Бали',
+		bodyText: 'Бали является самым популярным островным местом отдыха на индонезийском архипелаге.\
 							 Остров является домом для древней культуры, которая известна своим теплым гостеприимством.\
-							  Экзотические храмы и дворцы на фоне потрясающих природных фонов - вот некоторые из его главных достопримечательностей.\
+							 Экзотические храмы и дворцы на фоне потрясающих природных фонов - вот некоторые из его главных достопримечательностей.\
 							 Обед на Бали представляет бесконечный выбор местной кухни.<br>\
 							 В дальнем Восточном Бали и северном регионе Бали вы найдете несколько мест для дайвинга мирового класса со спокойными заливами.\
-							  Они являются домом для нетронутых коралловых садов, изобилующих красочным морским биоразнообразием.'}
-
+							 Они являются домом для нетронутых коралловых садов, изобилующих красочным морским биоразнообразием.'
+	}
 	function maldivesClick () {
+		// change hilight buttons
 		$('.wrapItem3 *, .item6 *').css('box-shadow','');
 		$('.maldivesMin1, .maldivesMin2')
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
-
+		// change img
 		$('#contentImg1').css('box-shadow', 'none').fadeOut('fast', function() {
-			$('#contentImg1').attr('src', '/img/images/maldives2.jpg').fadeIn(500);
+			$('#contentImg1').attr('src', '/img/images/maldives1.jpg').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', '/img/images/maldives1.jpg').fadeIn(500);
+				$('#contentImg2').attr('src', '/img/images/maldives2.jpg').fadeIn(500);
 			});
+		} else {
+			$('#contentImg2').attr('src', '/img/images/maldives2.jpg')
 		}
-		$('#contentText, .item1 p').fadeOut('fast', function(){
+		// change text
+		$('#contentText, .item1 p').fadeOut('fast', function() {
 			$('#contentText').html(txt1.bodyText).fadeIn(500);
 			$('.item1 p').text(txt1.headerText).fadeIn(500);
 		});
+		// off this and on others
 		$(this).off('click');
 		$('.kanariMin1').off('click').on('click onload', kanariClick);
 		$('.dubayMin1').off('click').on('click onload', dubayClick);
@@ -1395,8 +1304,8 @@ $(document).ready(function(){
 		$('.gavaiMin1').off('click').on('click onload', gavaiClick);
 		$('.baliMin1').off('click').on('click onload', baliClick);
 	};
- 		$('.maldivesMin1').on('click onload', maldivesClick);
-
+	// start function
+ 	$('.maldivesMin1').on('click onload', maldivesClick);
 
   function kanariClick () {
   	$('.wrapItem3 *, .item6 *').css('box-shadow','');
@@ -1407,10 +1316,12 @@ $(document).ready(function(){
 			$('#contentImg1').attr('src', '/img/images/kanari2.jpg').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
-		$('#contentImg2').fadeOut('fast', function() {
-			$('#contentImg2').attr('src', '/img/images/kanari1.jpg').fadeIn(500);
-		});
-	}
+			$('#contentImg2').fadeOut('fast', function() {
+				$('#contentImg2').attr('src', '/img/images/kanari1.jpg').fadeIn(500);
+			});
+		} else {
+			$('#contentImg2').attr('src', '/img/images/kanari1.jpg');
+		}
 		$('#contentText, .item1 p').fadeOut('fast', function(){
 			$('#contentText').html(txt3.bodyText).fadeIn(500);
 			$('.item1 p').text(txt3.headerText).fadeIn(500);
@@ -1422,7 +1333,7 @@ $(document).ready(function(){
 		$('.gavaiMin1').off('click').on('click onload', gavaiClick);
 		$('.baliMin1').off('click').on('click onload', baliClick);
 	};
-		$('.kanariMin1').on('click onload', kanariClick);
+	$('.kanariMin1').on('click onload', kanariClick);
 
 	function dubayClick () {
   	$('.wrapItem3 *, .item6 *').css('box-shadow','');
@@ -1433,10 +1344,12 @@ $(document).ready(function(){
 			$('#contentImg1').attr('src', '/img/images/dubay1.jpg').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
-		$('#contentImg2').fadeOut('fast',function() {
-			$('#contentImg2').attr('src', '/img/images/dubay2.jpg').fadeIn(500);
-		});
-	}
+			$('#contentImg2').fadeOut('fast', function() {
+				$('#contentImg2').attr('src', '/img/images/dubay2.jpg').fadeIn(500);
+			});
+		} else {
+			$('#contentImg2').attr('src', '/img/images/dubay2.jpg');
+		}
 		$('#contentText, .item1 p').fadeOut('fast', function(){
 			$('#contentText').html(txt2.bodyText).fadeIn(500);
 			$('.item1 p').text(txt2.headerText).fadeIn(500);
@@ -1448,7 +1361,7 @@ $(document).ready(function(){
 		$('.gavaiMin1').off('click').on('click onload', gavaiClick);
 		$('.baliMin1').off('click').on('click onload', baliClick);
 	};
-		$('.dubayMin1').on('click onload', dubayClick);
+	$('.dubayMin1').on('click onload', dubayClick);
 
 	function seysheliClick () {
 		$('.wrapItem3 *, .item6 *').css('box-shadow','');
@@ -1456,13 +1369,15 @@ $(document).ready(function(){
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 
 		$('#contentImg1').fadeOut('fast', function() {
-			$('#contentImg1').attr('src', '/img/images/seysheli1.jpg').fadeIn(500);
+			$('#contentImg1').attr('src', '/img/images/seysheli2.jpg').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
-		$('#contentImg2').fadeOut('fast',function() {
-			$('#contentImg2').attr('src', '/img/images/seysheli2.jpg').fadeIn(500);
-		});
-	}
+			$('#contentImg2').fadeOut('fast', function() {
+				$('#contentImg2').attr('src', '/img/images/seysheli1.jpg').fadeIn(500);
+			});
+		} else {
+			$('#contentImg2').attr('src', '/img/images/seysheli1.jpg');	
+		}
 		$('#contentText, .item1 p').fadeOut('fast', function(){
 			$('#contentText').html(txt4.bodyText).fadeIn(500);
 			$('.item1 p').text(txt4.headerText).fadeIn(500);
@@ -1474,7 +1389,7 @@ $(document).ready(function(){
 		$('.gavaiMin1').off('click').off('click').on('click onload', gavaiClick);
 		$('.baliMin1').off('click').off('click').on('click onload', baliClick);
 	};
-		$('.seysheliMin1').on('click onload', seysheliClick);
+	$('.seysheliMin1').on('click onload', seysheliClick);
 
 	function gavaiClick () {
 		$('.wrapItem3 *, .item6 *').css('box-shadow','');
@@ -1485,10 +1400,12 @@ $(document).ready(function(){
 			$('#contentImg1').attr('src', '/img/images/Gavai1.jpg').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
-		$('#contentImg2').fadeOut('fast', function() {
-			$('#contentImg2').attr('src', '/img/images/Gavai2.jpg').fadeIn(500);
-		});
-	}
+			$('#contentImg2').fadeOut('fast', function() {
+				$('#contentImg2').attr('src', '/img/images/Gavai2.jpg').fadeIn(500);
+			});
+		} else {
+			$('#contentImg2').attr('src', '/img/images/Gavai2.jpg');
+		}
 		$('#contentText, .item1 p').fadeOut('fast', function(){
 			$('#contentText').html(txt5.bodyText).fadeIn(500);
 			$('.item1 p').text(txt5.headerText).fadeIn(500);
@@ -1514,6 +1431,8 @@ $(document).ready(function(){
 			$('#contentImg2').fadeOut('fast', function() {
 				$('#contentImg2').attr('src', '/img/images/bali2.jpg').fadeIn(500);
 			});
+		} else {
+			$('#contentImg2').attr('src', '/img/images/bali2.jpg');
 		}
 		$('#contentText, .item1 p').fadeOut('fast', function(){
 			$('#contentText').html(txt6.bodyText).fadeIn(500);
@@ -1526,39 +1445,41 @@ $(document).ready(function(){
 		$('.seysheliMin1').off('click').on('click onload', seysheliClick);
 		$('.gavaiMin1').off('click').on('click onload', gavaiClick);
 	};
-		$('.baliMin1').on('click onload', baliClick);
+	$('.baliMin1').on('click onload', baliClick);
 });
 
 // test slide right
 function menuF() {
+	// show menu btn and img
 	if ($(window).outerWidth() <= '600') {
 		$('.menuBtn').fadeIn('slow');
 		$('.contentImg1').css('opacity', '1');
 		$('.item3, .item6').fadeOut(10);
-
+		// hide menu btn and show thumbs
 		$('.menuBtn').click(function() {
 			$('.menuBtn').fadeOut('slow');
 			$('.item3, .item6').fadeIn('slow');
 			$('.contentImg1').css('opacity', '.3');
-			});	
-		
+		});	
+		// toggle thumbs and btn menu
 		$('.item3, .item6').click(function() {
 			if  ($(window).outerWidth() <= '600') {
-			$('.item3, .item6').fadeOut('slow');
-			$('.menuBtn').fadeIn('slow');
-			$('.contentImg1').css('opacity', '1');
-		}
-		});
-		
+				$('.item3, .item6').fadeOut('slow');
+				$('.menuBtn').fadeIn('slow');
+				$('.contentImg1').css('opacity', '1');
+			}
+		});	
 		$('#item3').insertAfter($('.wrapMenuBtn'));
 		$('.wrapItem3 div:gt(8)').css('display', 'none');
 	} else {
+		// toggle left thumbs
 		$('#item6').css('display', 'none');
 		$('.item3').fadeIn(10);
 		$('#item3').insertAfter($('.item1'));
 		$('.wrapItem3 div:gt(8)').css('display', 'block');
   }
 };
+	// hide thumbs when mouseleave
   function hideItem3() {
 		$(document).ready(function() {
 			if ($(window).outerWidth() <= '600') {
@@ -1583,12 +1504,6 @@ function offonNiceScroll() {
    	  cursorcolor: 'aqua',
    	  cursorborder: '2px solid grey',
       horizrailenabled: false
-     // railoffset: true,
-     // railpadding: {
-     // right: "-55px"
-     // },
-     // boxzoom: true,
-     // background: 'blue'
   		});
 		}
 		if ($(window).outerWidth() <= '600') {
@@ -1606,23 +1521,13 @@ $(document).ready(function() {
 //hide angle
 $(document).ready(function() {
 	$(window).on('load resize', function() {
-		// $(window).trigger('resize'); // for mozilla 
 		hideAngle0();
 		hideAngle1();
 		hideAngle2();
 		hideAngle3();
-		// windowSize();
 	});
 });
-// hide beach item
-// function windowSize() {
-//  		if ($(window).outerWidth() <= '992'){
-//       $('#contentImg2').hide(10);
-//         return this; 
-//   } else {
-//  		  $('#contentImg2').show(10);
-//   }
-// }
+
 
 
 // creating the angle3 section
@@ -1762,15 +1667,15 @@ function hideAngle3() {
 
 /////////////////////////////////////
 //random balls
-function changePlaceBalls() {
-	var parentBalls = $('.balls');
-	var balls = parentBalls.children();
-	while (balls.length) {
-		 parentBalls.append(balls.splice(Math.floor(Math.random() * balls.length), 1)[0]);
-	}
-setTimeout(changePlaceBalls, 45000);
-};
-changePlaceBalls();
+// function changePlaceBalls() {
+// 	var parentBalls = $('.balls');
+// 	var balls = parentBalls.children();
+// 	while (balls.length) {
+// 		 parentBalls.append(balls.splice(Math.floor(Math.random() * balls.length), 1)[0]);
+// 	}
+// setTimeout(changePlaceBalls, 45000);
+// };
+// changePlaceBalls();
 ////////////////////////////////////////
 // function displayError() {
 // 	var items = $('.bottomFooter [class^=line]');
@@ -1832,25 +1737,24 @@ var flagConTime = false, flagContOff = null;
 		switch(true) { 
 			case(flagConTime == false): 
 				hideContacts();
-
 				setTimeout(function() {
-				$('.phone').triggerHandler("click");
-				$('.skype').triggerHandler("click");
-				$('.gmail').triggerHandler("click");
-				$('.fa-address-card').triggerHandler('click');
-				$('.fas.fa-handshake').triggerHandler('click');
+					$('.phone').triggerHandler("click");
+					$('.skype').triggerHandler("click");
+					$('.gmail').triggerHandler("click");
+					$('.fa-address-card').triggerHandler('click');
+					$('.fas.fa-handshake').triggerHandler('click');
 
-				$('.fa-address-card').off('click');
-				$('.fas.fa-handshake').off('click');
-				$('.phone').off("click");
-				$('.skype').off("click");
-				$('.gmail').off("click");
-				flagContOff = true;
-			},1000);
+					$('.fa-address-card').off('click');
+					$('.fas.fa-handshake').off('click');
+					$('.phone').off("click");
+					$('.skype').off("click");
+					$('.gmail').off("click");
+					flagContOff = true;
+				},1000);
 				flagConTime = true; 
-			setTimeout(function() {
-				flagConTime = false;
-			},2000);
+				setTimeout(function() {
+					flagConTime = false;
+				},2000);
 		}
 	});
 
@@ -1869,7 +1773,6 @@ function hideContacts() {
 					$('.contactSection').css('top', '-62px');
 					$('.contacts p').css({color: '#ADD8E6'});
 					$('.contactSection i').css('color', '#ADD8E6');
-
 					// on click
 					setTimeout(function() {
 						$('.phone').on("click", {class: "#phone", leftHide: "-110px", thisFlag: "flagPhone"}, movePhoneLeft);
@@ -1981,31 +1884,31 @@ var flagAuthor = false;
 function hideHeader() {	
 	switch (true) {
 		case (flagAuthor == false) :
-				// icon color
-				$('.fa-address-card').css('color', '#CBBEAE');
-				// header movie
-				$('.headerThis p').css({'left': '-15px'});
-				// change header overflow
-				$('.headerThis').css({'overflow': 'hidden'});
-				// slide content
-				$('.g6Cont').css({'left': '0px', 'opacity': '1'});
-				// move the text to top
-				$('.g6Cont p').css({'animation': 'textUp 20s linear infinite'});
-				setTimeout(function() {
-					flagAuthor = true;
-				},850);
+			// icon color
+			$('.fa-address-card').css('color', '#CBBEAE');
+			// header movie
+			$('.headerThis p').css({'left': '-15px'});
+			// change header overflow
+			$('.headerThis').css({'overflow': 'hidden'});
+			// slide content
+			$('.g6Cont').css({'left': '0px', 'opacity': '1'});
+			// move the text to top
+			$('.g6Cont p').css({'animation': 'textUp 20s linear infinite'});
+			setTimeout(function() {
+				flagAuthor = true;
+			},850);
 
-			break;
+		break;
 		case (flagAuthor == true) :
-			// function hide()
-				$('.fa-address-card').css('color', '#A9D9F2');
-				$('.headerThis p').css('left', '-155px');
-				$('.g6Cont').css({'left': '-160px', 'opacity': '0'});
-				setTimeout(function() {
-					$('.g6Cont p').css({'animation': ''});
-					flagAuthor = false;
-				},750);
-			break;
+		// function hide()
+			$('.fa-address-card').css('color', '#A9D9F2');
+			$('.headerThis p').css('left', '-155px');
+			$('.g6Cont').css({'left': '-160px', 'opacity': '0'});
+			setTimeout(function() {
+				$('.g6Cont p').css({'animation': ''});
+				flagAuthor = false;
+			},750);
+		break;
 	}
 }
 ///////////////////////////////////
@@ -2016,26 +1919,23 @@ var f = true;
 		function hideHeader2() {
 			switch(true) {
 				case (f == false) :
-				$('.wrapperP p').css('left', '-165px');
-				$('.fas.fa-handshake').css('color', '#A9D9F2');
-				$('.wrapG7 table').css('left', '-200px');
-				f = true;
-					break;
+					$('.wrapperP p').css('left', '-165px');
+					$('.fas.fa-handshake').css('color', '#A9D9F2');
+					$('.wrapG7 table').css('left', '-200px');
+					f = true;
+				break;
 				case (f == true) :
-				// change support overflow property
-				$('.wrapperP').css({'overflow': 'hidden'});
-				$('.wrapperP p').css('left', '13px');
-				$('.fas.fa-handshake').css('color', '#CBBEAE');
-				$('.wrapG7 table').css('left', '0px');
-				f = false;
-					break;
+					// change support overflow property
+					$('.wrapperP').css({'overflow': 'hidden'});
+					$('.wrapperP p').css('left', '13px');
+					$('.fas.fa-handshake').css('color', '#CBBEAE');
+					$('.wrapG7 table').css('left', '0px');
+					f = false;
+				break;
 			}
 		}
-
 ///////////////////////////////////////////
-// get data object from server
 
-// var textContentBook = JSON.parse($.ajax({'url': "js/page.json", 'async': false}).responseText); 
 var textContentBook = [
 	{"text":"", "img":"url(/img/images/nature2.png)"},
 	{"text":"", "img":"url(/img/images/nature/1.jpg)"},
@@ -2105,15 +2005,14 @@ function naming() {
 		$('.site02 div.fistDivSite:eq(3) span').text(contentPages[0]);
 		$('.site02 div.fistDivSite:eq(3) div p').text(textContentBook[0].text);
 		$('.site02 div.fistDivSite:eq(3) div.wrapPages').css('background-image',textContentBook[0].img);
-		// $('.site02 div:eq(2) span').text(contentPages[0]);
-		// $('.site02 div:eq(2) p').text(textContentBook[0].text);
+
 		$('#nummberSite').attr('max' , textContentBookLength);
 	});
 }
 naming();
 // flags for stopping flipping
 var prevFlag = true, nextFlag = false; 
-// start function and  disable click for the 1 sec
+// start function and disable click for the 1 sec
 if (is.not.firefox()) {
 	$(document).ready(function() {
 		$('.site02 div.fistDivSite:eq(1)').on('click', function() {
@@ -2131,61 +2030,60 @@ if (is.not.firefox()) {
 			}
 		});
 	// flipping next page
-			function forward() {
-				// 1/2 anim 90deg
-				$('.site02').css({'transition': 'transform .5s' ,
-					'opacity': '1', 'transform': 'rotateY(90deg) skewY(10deg)'});
-				setTimeout(function() {
-					$('.site02 div.fistDivSite:eq(1)').css({'opacity': '0', 'transform': 'rotateY(0deg)'});
-					$('.site02 div.fistDivSite:eq(2)').css({'opacity': '0', 'transform': 'rotateY(0deg)'});
-					$('.site02 div.fistDivSite:eq(0)').css({'opacity': '1', 'transform': 'rotateY(0deg)'});
-					$('.site02 div.fistDivSite:eq(3)').css({'opacity': '0', 'transform': 'rotateY(0deg)'});
-					$('.site02').css({'opacity': '1', 'transform': 'rotateY(0deg) skewY(0deg)'});
-				},600);
+		function forward() {
+			// 1/2 anim 90deg
+			$('.site02').css({'transition': 'transform .5s' ,
+				'opacity': '1', 'transform': 'rotateY(90deg) skewY(10deg)'});
+			setTimeout(function() {
+				$('.site02 div.fistDivSite:eq(1)').css({'opacity': '0', 'transform': 'rotateY(0deg)'});
+				$('.site02 div.fistDivSite:eq(2)').css({'opacity': '0', 'transform': 'rotateY(0deg)'});
+				$('.site02 div.fistDivSite:eq(0)').css({'opacity': '1', 'transform': 'rotateY(0deg)'});
+				$('.site02 div.fistDivSite:eq(3)').css({'opacity': '0', 'transform': 'rotateY(0deg)'});
+				$('.site02').css({'opacity': '1', 'transform': 'rotateY(0deg) skewY(0deg)'});
+			},600);
 				// 2/2 anim 180deg
-				setTimeout(function() {
-					$('.site02').css({'transition': 'transform .0s' ,
-					'opacity': '1', 'transform': 'rotateY(180deg) skewY(0deg)'});
-					$('.site02 div.fistDivSite:eq(0)').css({'opacity': '0', 'transform': 'rotateY(0deg)'});
-					$('.site02 div.fistDivSite:eq(2)').css({'opacity': '0', 'transform': 'rotateY(0deg)'});
-					$('.site02 div.fistDivSite:eq(1)').css({'opacity': '1', 'transform': 'rotateY(180deg)'});
-					$('.site02 div.fistDivSite:eq(3)').css({'opacity': '0', 'transform': 'rotateY(180deg)'});
-					// and anim bg
-					bgL += 2;
-					bgR += 2;
-					frR += 2;
-					frRD += 2;
-						$('.site01 div.fistDivSite:eq(1) span').text(contentPages[bgL]);
-						$('.site01 div.fistDivSite:eq(1) div p').text(textContentBook[bgL].text);
-						$('.site01 div.fistDivSite:eq(1) div.wrapPages').css('background-image',textContentBook[bgL].img);
+			setTimeout(function() {
+				$('.site02').css({'transition': 'transform .0s' ,
+				'opacity': '1', 'transform': 'rotateY(180deg) skewY(0deg)'});
+				$('.site02 div.fistDivSite:eq(0)').css({'opacity': '0', 'transform': 'rotateY(0deg)'});
+				$('.site02 div.fistDivSite:eq(2)').css({'opacity': '0', 'transform': 'rotateY(0deg)'});
+				$('.site02 div.fistDivSite:eq(1)').css({'opacity': '1', 'transform': 'rotateY(180deg)'});
+				$('.site02 div.fistDivSite:eq(3)').css({'opacity': '0', 'transform': 'rotateY(180deg)'});
+				// and anim bg
+				bgL += 2;
+				bgR += 2;
+				frR += 2;
+				frRD += 2;
+					$('.site01 div.fistDivSite:eq(1) span').text(contentPages[bgL]);
+					$('.site01 div.fistDivSite:eq(1) div p').text(textContentBook[bgL].text);
+					$('.site01 div.fistDivSite:eq(1) div.wrapPages').css('background-image',textContentBook[bgL].img);
 
-					if (bgR < contentPages.length) {
-						$('.site01 div.fistDivSite:eq(2) span').text(contentPages[bgR]);
-						$('.site01 div.fistDivSite:eq(2) div p').text(textContentBook[bgR].text);
-						$('.site01 div.fistDivSite:eq(2) div.wrapPages').css('background-image',textContentBook[bgR].img);
-					}
-
-						// anim change front
-						$('.site02 div.fistDivSite:eq(1) span').text(contentPages[frR]);
-						$('.site02 div.fistDivSite:eq(1) div p').text(textContentBook[frR].text);
-						$('.site02 div.fistDivSite:eq(1) div.wrapPages').css('background-image',textContentBook[frR].img);
-					if (bgR < contentPages.length) {
-						$('.site02 div.fistDivSite:eq(0) span').text(contentPages[frRD]);
-						$('.site02 div.fistDivSite:eq(0) div p').text(textContentBook[frRD].text);
-						$('.site02 div.fistDivSite:eq(0) div.wrapPages').css('background-image',textContentBook[frRD].img);
-			    }
-						$('.site02 div.fistDivSite:eq(3) span').text(contentPages[bgL]);
-						$('.site02 div.fistDivSite:eq(3) div p').text(textContentBook[bgL].text);
-						$('.site02 div.fistDivSite:eq(3) div.wrapPages').css('background-image',textContentBook[bgL].img);
-						$('.site02 div.fistDivSite:eq(2) span').text(contentPages[(bgL - 1)]);
-						$('.site02 div.fistDivSite:eq(2) div p').text(textContentBook[(bgL - 1)].text);	
-						$('.site02 div.fistDivSite:eq(2) div.wrapPages').css('background-image',textContentBook[(bgL - 1)].img);	
-					prevFlag = false;
-				},1000);
+				if (bgR < contentPages.length) {
+					$('.site01 div.fistDivSite:eq(2) span').text(contentPages[bgR]);
+					$('.site01 div.fistDivSite:eq(2) div p').text(textContentBook[bgR].text);
+					$('.site01 div.fistDivSite:eq(2) div.wrapPages').css('background-image',textContentBook[bgR].img);
+				}
+					// anim change front
+					$('.site02 div.fistDivSite:eq(1) span').text(contentPages[frR]);
+					$('.site02 div.fistDivSite:eq(1) div p').text(textContentBook[frR].text);
+					$('.site02 div.fistDivSite:eq(1) div.wrapPages').css('background-image',textContentBook[frR].img);
+				if (bgR < contentPages.length) {
+					$('.site02 div.fistDivSite:eq(0) span').text(contentPages[frRD]);
+					$('.site02 div.fistDivSite:eq(0) div p').text(textContentBook[frRD].text);
+					$('.site02 div.fistDivSite:eq(0) div.wrapPages').css('background-image',textContentBook[frRD].img);
+		    }
+					$('.site02 div.fistDivSite:eq(3) span').text(contentPages[bgL]);
+					$('.site02 div.fistDivSite:eq(3) div p').text(textContentBook[bgL].text);
+					$('.site02 div.fistDivSite:eq(3) div.wrapPages').css('background-image',textContentBook[bgL].img);
+					$('.site02 div.fistDivSite:eq(2) span').text(contentPages[(bgL - 1)]);
+					$('.site02 div.fistDivSite:eq(2) div p').text(textContentBook[(bgL - 1)].text);	
+					$('.site02 div.fistDivSite:eq(2) div.wrapPages').css('background-image',textContentBook[(bgL - 1)].img);	
+				prevFlag = false;
+			},1000);
 			// return input field
 			document.getElementById('numberSite').value = frR + 2;
 			numPages = +(document.getElementById('numberSite').value);
-			}
+		}
 
 		$('.site02 div.fistDivSite:eq(3)').on('click', function() {
 			if (bgL == 0) {
@@ -2203,36 +2101,36 @@ if (is.not.firefox()) {
 		});
 	// slide previous page
 		function previous() {
-				$('.site02').css({'transition': 'transform 0s',
-					'opacity': '1', 'transform': 'rotateY(0deg) skewY(0deg)'});
-				$('.site02').css({'transition': 'transform 0s',
-					'opacity': '1', 'transform': 'rotateY(0deg) skewY(0deg)'});
-				// reverse span
-				$('.site02 div.fistDivSite:eq(1) span').css({'left': '3px', 'right': 'initial'});
-				bgL -= 2;
-				bgR -= 2;
-				frR -= 2;
-				frRD -= 2;
-				$('.site02 div.fistDivSite:eq(0) span').text(contentPages[frRD]);
-				$('.site02 div.fistDivSite:eq(0) div p').text(textContentBook[frRD].text);
-				$('.site02 div.fistDivSite:eq(0) div.wrapPages').css('background-image',textContentBook[frRD].img);
-				$('.site01 div.fistDivSite:eq(1) span').text(contentPages[bgL]);
-				$('.site01 div.fistDivSite:eq(1) div p').text(textContentBook[bgL].text);
-				$('.site01 div.fistDivSite:eq(1) div.wrapPages').css('background-image',textContentBook[bgL].img);
-				$('.site01 div.fistDivSite:eq(2) span').text(contentPages[bgR]);
-				$('.site01 div.fistDivSite:eq(2) div p').text(textContentBook[bgR].text);
-				$('.site01 div.fistDivSite:eq(2) div.wrapPages').css('background-image',textContentBook[bgR].img);
-				$('.site02 div.fistDivSite:eq(1) span').text(contentPages[frRD]);
-				$('.site02 div.fistDivSite:eq(1) div p').text(textContentBook[frRD].text);
-				$('.site02 div.fistDivSite:eq(1) div.wrapPages').css('background-image',textContentBook[frRD].img);
-				$('.site02 div.fistDivSite:eq(3) span').text(contentPages[(frRD - 2)]);
-				$('.site02 div.fistDivSite:eq(3) div p').text(textContentBook[(frRD - 2)].text);
-				$('.site02 div.fistDivSite:eq(3) div.wrapPages').css('background-image',textContentBook[(frRD - 2)].img);
+			$('.site02').css({'transition': 'transform 0s',
+				'opacity': '1', 'transform': 'rotateY(0deg) skewY(0deg)'});
+			$('.site02').css({'transition': 'transform 0s',
+				'opacity': '1', 'transform': 'rotateY(0deg) skewY(0deg)'});
+			// reverse span
+			$('.site02 div.fistDivSite:eq(1) span').css({'left': '3px', 'right': 'initial'});
+			bgL -= 2;
+			bgR -= 2;
+			frR -= 2;
+			frRD -= 2;
+			$('.site02 div.fistDivSite:eq(0) span').text(contentPages[frRD]);
+			$('.site02 div.fistDivSite:eq(0) div p').text(textContentBook[frRD].text);
+			$('.site02 div.fistDivSite:eq(0) div.wrapPages').css('background-image',textContentBook[frRD].img);
+			$('.site01 div.fistDivSite:eq(1) span').text(contentPages[bgL]);
+			$('.site01 div.fistDivSite:eq(1) div p').text(textContentBook[bgL].text);
+			$('.site01 div.fistDivSite:eq(1) div.wrapPages').css('background-image',textContentBook[bgL].img);
+			$('.site01 div.fistDivSite:eq(2) span').text(contentPages[bgR]);
+			$('.site01 div.fistDivSite:eq(2) div p').text(textContentBook[bgR].text);
+			$('.site01 div.fistDivSite:eq(2) div.wrapPages').css('background-image',textContentBook[bgR].img);
+			$('.site02 div.fistDivSite:eq(1) span').text(contentPages[frRD]);
+			$('.site02 div.fistDivSite:eq(1) div p').text(textContentBook[frRD].text);
+			$('.site02 div.fistDivSite:eq(1) div.wrapPages').css('background-image',textContentBook[frRD].img);
+			$('.site02 div.fistDivSite:eq(3) span').text(contentPages[(frRD - 2)]);
+			$('.site02 div.fistDivSite:eq(3) div p').text(textContentBook[(frRD - 2)].text);
+			$('.site02 div.fistDivSite:eq(3) div.wrapPages').css('background-image',textContentBook[(frRD - 2)].img);
 			// reverse all
-				$('.site02 div.fistDivSite:eq(0)').css({'opacity': '0', 'transform': 'rotateY(180deg)'});
-				$('.site02 div.fistDivSite:eq(1)').css({'opacity': '1', 'transform': 'rotateY(0deg)'});
-				$('.site02 div.fistDivSite:eq(2)').css({'opacity': '0', 'transform': 'rotateY(180deg)'});
-				$('.site02 div.fistDivSite:eq(3)').css({'opacity': '0', 'transform': 'rotateY(0deg)'});
+			$('.site02 div.fistDivSite:eq(0)').css({'opacity': '0', 'transform': 'rotateY(180deg)'});
+			$('.site02 div.fistDivSite:eq(1)').css({'opacity': '1', 'transform': 'rotateY(0deg)'});
+			$('.site02 div.fistDivSite:eq(2)').css({'opacity': '0', 'transform': 'rotateY(180deg)'});
+			$('.site02 div.fistDivSite:eq(3)').css({'opacity': '0', 'transform': 'rotateY(0deg)'});
 			// 1/2 anim 90deg
 			setTimeout(function() {
 				// reverse span
@@ -2310,10 +2208,10 @@ function getNumberSite() {
   numPages = +(document.getElementById('numberSite').value);
 	prevFlag = false, nextFlag = false;
 	if (!(numPages % 2) == 1) {
-	numPages--;
+		numPages--;
 	};
 	if (numPages === undefined || numPages === null ||
-	 numPages === NaN || numPages <= 0 ) {
+		numPages === NaN || numPages <= 0 ) {
 		numPages = 1;
 		document.getElementById('numberSite').value = 1;
 	}
@@ -2330,29 +2228,29 @@ function getNumberSite() {
 	}
 	standVars();
 	// change all content
-		$('.site01 div.fistDivSite:eq(1)')
-			.fadeOut('fast')
-			.queue(function() {
-				$('.site01 div.fistDivSite:eq(1) span').text(contentPages[bgL]);
-				$('.site01 div.fistDivSite:eq(1) p').text(textContentBook[bgL].text);
-				$('.site01 div.fistDivSite:eq(1) div.wrapPages').css('background-image',textContentBook[bgL].img);
-				$(this).dequeue();
-			});
-		$('.site01 div.fistDivSite:eq(1)').fadeIn('fast');
-  ////////////////////////////////////////
-		$('.site01 div.fistDivSite:eq(2)').css('opacity', '0');
-				$('.site01 div.fistDivSite:eq(2) span').text(contentPages[frR]);
-				$('.site01 div.fistDivSite:eq(2) p').text(textContentBook[frR].text);
-				$('.site01 div.fistDivSite:eq(2) div.wrapPages').css('background-image',textContentBook[frR].img);
-		$('.site02 div.fistDivSite:eq(1)')
-			.fadeOut('fast')
-			.queue(function() {
-				$('.site02 div.fistDivSite:eq(1) span').text(contentPages[frR]);
-				$('.site02 div.fistDivSite:eq(1) p').text(textContentBook[frR].text);
-				$('.site02 div.fistDivSite:eq(1) div.wrapPages').css('background-image',textContentBook[frR].img);
-				$(this).dequeue();
-			});
-		$('.site02 div.fistDivSite:eq(1)').fadeIn('fast');
+	$('.site01 div.fistDivSite:eq(1)')
+		.fadeOut('fast')
+		.queue(function() {
+			$('.site01 div.fistDivSite:eq(1) span').text(contentPages[bgL]);
+			$('.site01 div.fistDivSite:eq(1) p').text(textContentBook[bgL].text);
+			$('.site01 div.fistDivSite:eq(1) div.wrapPages').css('background-image',textContentBook[bgL].img);
+			$(this).dequeue();
+		});
+	$('.site01 div.fistDivSite:eq(1)').fadeIn('fast');
+    //////////////////////////////////////
+	$('.site01 div.fistDivSite:eq(2)').css('opacity', '0');
+	$('.site01 div.fistDivSite:eq(2) span').text(contentPages[frR]);
+	$('.site01 div.fistDivSite:eq(2) p').text(textContentBook[frR].text);
+	$('.site01 div.fistDivSite:eq(2) div.wrapPages').css('background-image',textContentBook[frR].img);
+	$('.site02 div.fistDivSite:eq(1)')
+		.fadeOut('fast')
+		.queue(function() {
+			$('.site02 div.fistDivSite:eq(1) span').text(contentPages[frR]);
+			$('.site02 div.fistDivSite:eq(1) p').text(textContentBook[frR].text);
+			$('.site02 div.fistDivSite:eq(1) div.wrapPages').css('background-image',textContentBook[frR].img);
+			$(this).dequeue();
+		});
+	$('.site02 div.fistDivSite:eq(1)').fadeIn('fast');
 	if (bgR < contentPages.length) {
 		$('.site02 div.fistDivSite:eq(0) span').fadeOut('fast').text(contentPages[frRD]).fadeIn('fast');
 		$('.site02 div.fistDivSite:eq(0) p').fadeOut('fast').text(textContentBook[frRD].text).fadeIn('fast');
@@ -2371,10 +2269,9 @@ function getNumberSite() {
 		$('.site01 div.fistDivSite:eq(2) p').fadeOut('fast').text(textContentBook[bgR].text).fadeIn('fast');
 		$('.site01 div.fistDivSite:eq(2) div.wrapPages').fadeOut('fast').css('background-image',textContentBook[bgR].img).fadeIn('fast');
 	}
-
-		setTimeout(function() {
-			$('.site01 div.fistDivSite:eq(2)').css('opacity', '1');
-		},400)
+	setTimeout(function() {
+		$('.site01 div.fistDivSite:eq(2)').css('opacity', '1');
+	},400)
 }
 
 var secTime = false;
@@ -2430,11 +2327,11 @@ function closeOpenBook() {
 $(document).ready(function() {
 	$('#numberSite, #bu, #leftSlide, #rightSlide, #count, #count2, #close').fadeOut(500); // hide slide buttons panel
 	$('.bookCover').addClass('appearance');
+	// start function
 	$('.bookCover, #count').on('click', closeOpenBook);
 	$('#appearance').on('click', appearance);
 	$('#leftSlide').on('click', leftButton);
 	$('#rightSlide').on('click', rightButton);
-
 });
 // appearance book
 function appearance() {
@@ -2442,11 +2339,11 @@ function appearance() {
 		case ($('.bookCover').hasClass('appearance')) :
 			$('.bookCover').toggleClass('appearance');
 			$('.someButifulText').css({'opacity': '1'});
-			break;
+		break;
 		case (!$('.bookCover').hasClass('appearance')) :
 		  $('.bookCover').toggleClass('appearance');
 			$('.someButifulText').css({'opacity': '0'});
-			break;
+		break;
 	}
 }
 // toggle text
@@ -2455,22 +2352,15 @@ $(window).on('resize load', function() {
 		case ($(window).outerWidth() < '920') :
 			$('.someButifulText').css({'opacity': '1'});
 			// $('.bookCover').css({'opacity': '0'});
-			break;
+		break;
 		case ($(window).outerWidth() >= '920') :
 			if (!$('.bookCover').hasClass('appearance')) {
 				$('.someButifulText').css({'opacity': '0'});
 			}
+		break;
 	}
 });
-// hide someButiful Text
-$(document).ready(function() {
-	$(window).on('resize load', function() {
-		if ($(window).outerWidth() < 768) {
-			$('.someButifulText').css({'opacity': '0'});
-		} 
-		
-	});
-});
+
 // action for left and right button page
 function leftButton() {
 	if (document.getElementById('numberSite').value > 1) {
@@ -2494,13 +2384,13 @@ $(document).ready(function() {
 	$('#numberSite').on('blur', resetMaxLengthPages);
 });
 
-// change reviews section and hide
+// change section 'reviews' and hide it
 
-	$('.far.fa-caret-square-right').on('click',rightSectionArrData, changeReviews);
+	$('.far.fa-caret-square-right').on('click', rightSectionArrTxt, changeReviews);
 	$('.footerRight').on('click', hideReviews);
 
 // content reviews
-var rightSectionArrData = [
+var rightSectionArrTxt = [
 	{
 		'header': 'Владимир',
 		'body': 'Я получил настоящее эстетическое наслаждение после прочтения статей этого сайта. Долго любовался пейзажами, так как обожаю природу.'
@@ -2520,18 +2410,18 @@ function changeReviews() {
 	$('.f1Content p.bt')
 		.css({'transform': 'rotateX(90deg) scale(0, 0)'})
 	setTimeout(function() {
-		$('.f1Content p.bt').text(rightSectionArrData[counter].body);
+		$('.f1Content p.bt').text(rightSectionArrTxt[counter].body);
 		$('.f1Content p.bt').css({'transform': 'rotateX(0deg) scale(1, 1)'});
 	},150)
 	//change header
 	$('.f1Header p.ht')
 		.css({'transform': 'rotateX(90deg) scale(0, 0)'})
 	setTimeout(function() {
-		$('.f1Header p.ht').text(rightSectionArrData[counter].header);
+		$('.f1Header p.ht').text(rightSectionArrTxt[counter].header);
 		$('.f1Header p.ht').css({'transform': 'rotateX(0deg) scale(1, 1)'});
 	},150);
 	counter++;
-	if (counter == rightSectionArrData.length) {
+	if (counter == rightSectionArrTxt.length) {
 		counter = 0;
 	}
 }
@@ -2592,7 +2482,7 @@ window.addEventListener('scroll', function() {
   
   timer = setTimeout(function(){
     body.classList.remove('disable-hover')
-  },500);
+  },300);
 }, false);
  //////////////////////////////////////////////////////
 $(document).ready(function() {
