@@ -1820,7 +1820,7 @@ function hideContacts() {
 				// icon support changeSideImgw
 				$('.fas.fa-handshake').css({'left': '-30px'});
 				// hide author text
-				$('.headerThis p').css({'left': '-165px'});
+				$('.headerThis p').css({'left': '-185px'});
 				// change header overflow
 				$('.headerThis').css({'overflow': 'visible'});
 				$('.fa-address-card').css('color', '#A9D9F2');
