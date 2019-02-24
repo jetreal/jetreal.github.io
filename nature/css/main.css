@@ -3672,6 +3672,7 @@ a.test-popup-link {
   display: none; }
 
 .item6 {
+  border-radius: 4px;
   display: none; }
 
 .angle3 {
@@ -3683,7 +3684,6 @@ a.test-popup-link {
   margin: 0 5%;
   height: 180px;
   padding-top: 15px;
-  border-radius: 4px;
   position: relative;
   border: 1px solid gray; }
 
