@@ -138,7 +138,7 @@ function mDown() {
 				'box-shadow': '3px 3px 6px #19B9F5, -3px -3px 6px #19B9F5,\
 				-3px 3px 6px #19B9F5, 3px -3px 6px #19B9F5'});
 			// css
-			$('.circleImg').attr('src', '/img/images/button2.png');
+			$('.circleImg').attr('src', 'img/images/button2.png');
 			$('.into03, .into04, .into05, .into06')
 			.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 			$('.bDiv').css('border', '1px solid #19B9F5');
@@ -149,7 +149,7 @@ function mDown() {
 			$('.circleImg').off('click');
 			$('.circleImg').on('click', offTimerHeader);
 			// css
-			$('.circleImg').attr('src', '/img/images/button3.png');
+			$('.circleImg').attr('src', 'img/images/button3.png');
 			$('.circleImg').css({width:'150px',height:'150px',
 			 'box-shadow': '3px 3px 6px gray, -3px -3px 6px gray,\
 			 -3px 3px 6px gray, 3px -3px 6px gray'});
@@ -217,53 +217,53 @@ $(window).on('load resize', replaceTopLine);
 //afterHeader section change image
 var sectionObj = [
 	{
-		leftSrc: '/img/images/flowers/romashka1.jpg',
-		rightSRC: '/img/images/flowers/romashka2.jpg',
+		leftSrc: 'img/images/flowers/romashka1.jpg',
+		rightSRC: 'img/images/flowers/romashka2.jpg',
 		centerTxt: 'Ромашка'
 	},
 	{
-		leftSrc: '/img/images/flowers/nartsisi1.jpg',
-		rightSRC: '/img/images/flowers/nartsisi2.jpg',
+		leftSrc: 'img/images/flowers/nartsisi1.jpg',
+		rightSRC: 'img/images/flowers/nartsisi2.jpg',
 		centerTxt: 'Нарцисс'
 	},
 	{
-		leftSrc: '/img/images/flowers/rose1.jpg',
-		rightSRC: '/img/images/flowers/rose2.jpg',
+		leftSrc: 'img/images/flowers/rose1.jpg',
+		rightSRC: 'img/images/flowers/rose2.jpg',
 		centerTxt: 'Роза'
 	},
 	{
-		leftSrc: '/img/images/flowers/tulpan1.jpg',
-		rightSRC: '/img/images/flowers/tulpan2.jpg',
+		leftSrc: 'img/images/flowers/tulpan1.jpg',
+		rightSRC: 'img/images/flowers/tulpan2.jpg',
 		centerTxt: 'Тюльпан'
 	},
 	{
-		leftSrc: '/img/images/flowers/fucsia1.jpg',
-		rightSRC: '/img/images/flowers/fucsia2.jpg',
+		leftSrc: 'img/images/flowers/fucsia1.jpg',
+		rightSRC: 'img/images/flowers/fucsia2.jpg',
 		centerTxt: 'Фуксия'
 	},
 	{
-		leftSrc: '/img/images/flowers/lilii1.jpg',
-		rightSRC: '/img/images/flowers/lilii2.jpg',
+		leftSrc: 'img/images/flowers/lilii1.jpg',
+		rightSRC: 'img/images/flowers/lilii2.jpg',
 		centerTxt: 'Лилия'
 	},
 	{
-		leftSrc: '/img/images/flowers/hrizantem1.jpg',
-		rightSRC: '/img/images/flowers/hrizantem2.jpg',
+		leftSrc: 'img/images/flowers/hrizantem1.jpg',
+		rightSRC: 'img/images/flowers/hrizantem2.jpg',
 		centerTxt: 'Хризантема'
 	},
 	{
-		leftSrc: '/img/images/flowers/kolokolchik1.jpg',
-		rightSRC: '/img/images/flowers/kolokolchik2.jpg',
+		leftSrc: 'img/images/flowers/kolokolchik1.jpg',
+		rightSRC: 'img/images/flowers/kolokolchik2.jpg',
 		centerTxt: 'Колокольчик'
 	},
 	{
-		leftSrc: '/img/images/flowers/fialki1.jpg',
-		rightSRC: '/img/images/flowers/fialki2.jpg',
+		leftSrc: 'img/images/flowers/fialki1.jpg',
+		rightSRC: 'img/images/flowers/fialki2.jpg',
 		centerTxt: 'Фиалка'
 	},
 	{
-		leftSrc: '/img/images/flowers/gvozdika1.jpg',
-		rightSRC: '/img/images/flowers/gvozdika2.jpg',
+		leftSrc: 'img/images/flowers/gvozdika1.jpg',
+		rightSRC: 'img/images/flowers/gvozdika2.jpg',
 		centerTxt: 'Гвоздика'
 	}
 ];
@@ -407,8 +407,8 @@ function changeCount2(event) {
 ///////////////////////////////////////////////////////////////////////
 var sectionObj3 = [
 	{
-		leftSrc: '/img/images/animals/ej1.jpg',
-		rightSRC: '/img/images/animals/ej2.jpg',
+		leftSrc: 'img/images/animals/ej1.jpg',
+		rightSRC: 'img/images/animals/ej2.jpg',
 		centerTxt: 'ёж',
 		popupTect: 'Образ колючего жителя лесов\
 		 и степей всем хорошо известен. Происхождение \
@@ -422,48 +422,48 @@ var sectionObj3 = [
 		  становится неприступной крепостью.'
 	},
 	{
-		leftSrc: '/img/images/animals/belka1.jpg',
-		rightSRC: '/img/images/animals/belka2.jpg',
+		leftSrc: 'img/images/animals/belka1.jpg',
+		rightSRC: 'img/images/animals/belka2.jpg',
 		centerTxt: 'Белка'
 	},
 	{
-		leftSrc: '/img/images/animals/kaban1.jpg',
-		rightSRC: '/img/images/animals/kaban2.jpg',
+		leftSrc: 'img/images/animals/kaban1.jpg',
+		rightSRC: 'img/images/animals/kaban2.jpg',
 		centerTxt: 'Кабан'
 	},
 	{
-		leftSrc: '/img/images/animals/enot1.jpg',
-		rightSRC: '/img/images/animals/enot2.jpg',
+		leftSrc: 'img/images/animals/enot1.jpg',
+		rightSRC: 'img/images/animals/enot2.jpg',
 		centerTxt: 'Енот'
 	},
 	{
-		leftSrc: '/img/images/animals/bobr1.jpg',
-		rightSRC: '/img/images/animals/bobr2.jpg',
+		leftSrc: 'img/images/animals/bobr1.jpg',
+		rightSRC: 'img/images/animals/bobr2.jpg',
 		centerTxt: 'Бобр'
 	},
 	{
-		leftSrc: '/img/images/animals/olen1.jpg',
-		rightSRC: '/img/images/animals/olen2.jpg',
+		leftSrc: 'img/images/animals/olen1.jpg',
+		rightSRC: 'img/images/animals/olen2.jpg',
 		centerTxt: 'Олень'
 	},
 	{
-		leftSrc: '/img/images/animals/zayats1.jpg',
-		rightSRC: '/img/images/animals/zayats2.jpg',
+		leftSrc: 'img/images/animals/zayats1.jpg',
+		rightSRC: 'img/images/animals/zayats2.jpg',
 		centerTxt: 'Заяц'
 	},
 	{
-		leftSrc: '/img/images/animals/los1.jpg',
-		rightSRC: '/img/images/animals/los2.jpg',
+		leftSrc: 'img/images/animals/los1.jpg',
+		rightSRC: 'img/images/animals/los2.jpg',
 		centerTxt: 'Лось'
 	},
 	{
-		leftSrc: '/img/images/animals/lisa1.jpg',
-		rightSRC: '/img/images/animals/lisa2.jpg',
+		leftSrc: 'img/images/animals/lisa1.jpg',
+		rightSRC: 'img/images/animals/lisa2.jpg',
 		centerTxt: 'Лиса'
 	},
 	{
-		leftSrc: '/img/images/animals/sova1.jpg',
-		rightSRC: '/img/images/animals/sova2.jpg',
+		leftSrc: 'img/images/animals/sova1.jpg',
+		rightSRC: 'img/images/animals/sova2.jpg',
 		centerTxt: 'Сова'
 	}
 ]
@@ -681,8 +681,8 @@ var locationObj = {
 $(document).ready(function() {
   function myCh() {
     function changeRiversContent() {
-			$('#imgContent').attr('src', '/img/images/rivers/1.png');
-			$('#imgContent2').attr('src', '/img/images/rivers/6.png');
+			$('#imgContent').attr('src', 'img/images/rivers/1.png');
+			$('#imgContent2').attr('src', 'img/images/rivers/6.png');
 			$('#headerLeftSection p').text(fTxt.rivers);
 			// src for popup
 			var atrLeft = $('#imgContent2').attr('src');
@@ -713,8 +713,8 @@ $(document).ready(function() {
   function myCh2() {
 // change display
   	function changeForestContent() {
-		$('#imgContent').attr('src', '/img/images/forest/1.png');
-		$('#imgContent2').attr('src', '/img/images/forest/6.png');
+		$('#imgContent').attr('src', 'img/images/forest/1.png');
+		$('#imgContent2').attr('src', 'img/images/forest/6.png');
 // change miniText
 		$('#headerLeftSection p').text(fTxt.forests);
 // change attr href for popup
@@ -751,8 +751,8 @@ $(document).ready(function() {
 
   function myCh3() {
   	function changeMountainContent() {
-			$('#imgContent').attr('src', '/img/images/mountain/1.png');
-			$('#imgContent2').attr('src', '/img/images/mountain/6.png');
+			$('#imgContent').attr('src', 'img/images/mountain/1.png');
+			$('#imgContent2').attr('src', 'img/images/mountain/6.png');
 			$('#headerLeftSection p').text(fTxt.mountains);
 			var atrLeft = $('#imgContent2').attr('src');
 			var atrRight = $('#imgContent').attr('src');
@@ -782,8 +782,8 @@ $(document).ready(function() {
   function myCh4() {
   	$('.bgImage3').addClass('bgImage3no');
       function changeFieldsContent() {
-				$('#imgContent').attr('src', '/img/images/fields/1.png');
-				$('#imgContent2').attr('src', '/img/images/fields/6.png');
+				$('#imgContent').attr('src', 'img/images/fields/1.png');
+				$('#imgContent2').attr('src', 'img/images/fields/6.png');
 				$('#headerLeftSection p').text(fTxt.fields);
 				var atrLeft = $('#imgContent2').attr('src');
 				var atrRight = $('#imgContent').attr('src');
@@ -811,8 +811,8 @@ $(document).ready(function() {
   };
   function myCh5() {
   	function changeSeasContent() {
-			$('#imgContent').attr('src', '/img/images/seas/1.png');
-			$('#imgContent2').attr('src', '/img/images/seas/6.png');
+			$('#imgContent').attr('src', 'img/images/seas/1.png');
+			$('#imgContent2').attr('src', 'img/images/seas/6.png');
 			$('#headerLeftSection p').text(fTxt.seas);
 			var atrLeft = $('#imgContent2').attr('src');
 			var atrRight = $('#imgContent').attr('src');
@@ -840,8 +840,8 @@ $(document).ready(function() {
   };
   function myCh6() {
   	function changeDesertsContent() {
-			$('#imgContent').attr('src', '/img/images/deserts/1.png');
-			$('#imgContent2').attr('src', '/img/images/deserts/6.png');
+			$('#imgContent').attr('src', 'img/images/deserts/1.png');
+			$('#imgContent2').attr('src', 'img/images/deserts/6.png');
 			$('#headerLeftSection p').text(fTxt.deserts);
 			var atrLeft = $('#imgContent2').attr('src');
 			var atrRight = $('#imgContent').attr('src');
@@ -869,8 +869,8 @@ $(document).ready(function() {
   };
   function myCh7() {
   	function changeJunlesContent() {
-			$('#imgContent').attr('src', '/img/images/jungles/1.png');
-			$('#imgContent2').attr('src', '/img/images/jungles/6.png');
+			$('#imgContent').attr('src', 'img/images/jungles/1.png');
+			$('#imgContent2').attr('src', 'img/images/jungles/6.png');
 			$('#headerLeftSection p').text(fTxt.jungles);
 			var atrLeft = $('#imgContent2').attr('src');
 			var atrRight = $('#imgContent').attr('src');
@@ -1282,14 +1282,14 @@ $(document).ready(function() {
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 		// change img
 		$('#contentImg1').css('box-shadow', 'none').fadeOut('fast', function() {
-			$('#contentImg1').attr('src', '/img/images/maldives1.jpg').fadeIn(500);
+			$('#contentImg1').attr('src', 'img/images/maldives1.jpg').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', '/img/images/maldives2.jpg').fadeIn(500);
+				$('#contentImg2').attr('src', 'img/images/maldives2.jpg').fadeIn(500);
 			});
 		} else {
-			$('#contentImg2').attr('src', '/img/images/maldives2.jpg')
+			$('#contentImg2').attr('src', 'img/images/maldives2.jpg')
 		}
 		// change text
 		$('#contentText, .item1 p').fadeOut('fast', function() {
@@ -1313,14 +1313,14 @@ $(document).ready(function() {
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 
 		$('#contentImg1').fadeOut('fast', function() {
-			$('#contentImg1').attr('src', '/img/images/kanari2.jpg').fadeIn(500);
+			$('#contentImg1').attr('src', 'img/images/kanari2.jpg').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', '/img/images/kanari1.jpg').fadeIn(500);
+				$('#contentImg2').attr('src', 'img/images/kanari1.jpg').fadeIn(500);
 			});
 		} else {
-			$('#contentImg2').attr('src', '/img/images/kanari1.jpg');
+			$('#contentImg2').attr('src', 'img/images/kanari1.jpg');
 		}
 		$('#contentText, .item1 p').fadeOut('fast', function(){
 			$('#contentText').html(txt3.bodyText).fadeIn(500);
@@ -1341,14 +1341,14 @@ $(document).ready(function() {
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 
 		$('#contentImg1').fadeOut('fast',function() {
-			$('#contentImg1').attr('src', '/img/images/dubay1.jpg').fadeIn(500);
+			$('#contentImg1').attr('src', 'img/images/dubay1.jpg').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', '/img/images/dubay2.jpg').fadeIn(500);
+				$('#contentImg2').attr('src', 'img/images/dubay2.jpg').fadeIn(500);
 			});
 		} else {
-			$('#contentImg2').attr('src', '/img/images/dubay2.jpg');
+			$('#contentImg2').attr('src', 'img/images/dubay2.jpg');
 		}
 		$('#contentText, .item1 p').fadeOut('fast', function(){
 			$('#contentText').html(txt2.bodyText).fadeIn(500);
@@ -1369,14 +1369,14 @@ $(document).ready(function() {
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 
 		$('#contentImg1').fadeOut('fast', function() {
-			$('#contentImg1').attr('src', '/img/images/seysheli2.jpg').fadeIn(500);
+			$('#contentImg1').attr('src', 'img/images/seysheli2.jpg').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', '/img/images/seysheli1.jpg').fadeIn(500);
+				$('#contentImg2').attr('src', 'img/images/seysheli1.jpg').fadeIn(500);
 			});
 		} else {
-			$('#contentImg2').attr('src', '/img/images/seysheli1.jpg');	
+			$('#contentImg2').attr('src', 'img/images/seysheli1.jpg');	
 		}
 		$('#contentText, .item1 p').fadeOut('fast', function(){
 			$('#contentText').html(txt4.bodyText).fadeIn(500);
@@ -1397,14 +1397,14 @@ $(document).ready(function() {
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 		
 		$('#contentImg1').fadeOut('fast', function() {
-			$('#contentImg1').attr('src', '/img/images/Gavai1.jpg').fadeIn(500);
+			$('#contentImg1').attr('src', 'img/images/Gavai1.jpg').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', '/img/images/Gavai2.jpg').fadeIn(500);
+				$('#contentImg2').attr('src', 'img/images/Gavai2.jpg').fadeIn(500);
 			});
 		} else {
-			$('#contentImg2').attr('src', '/img/images/Gavai2.jpg');
+			$('#contentImg2').attr('src', 'img/images/Gavai2.jpg');
 		}
 		$('#contentText, .item1 p').fadeOut('fast', function(){
 			$('#contentText').html(txt5.bodyText).fadeIn(500);
@@ -1425,14 +1425,14 @@ $(document).ready(function() {
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 		
 		$('#contentImg1').fadeOut('fast', function() {
-			$('#contentImg1').attr('src', '/img/images/bali1.jpg').fadeIn(500);
+			$('#contentImg1').attr('src', 'img/images/bali1.jpg').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', '/img/images/bali2.jpg').fadeIn(500);
+				$('#contentImg2').attr('src', 'img/images/bali2.jpg').fadeIn(500);
 			});
 		} else {
-			$('#contentImg2').attr('src', '/img/images/bali2.jpg');
+			$('#contentImg2').attr('src', 'img/images/bali2.jpg');
 		}
 		$('#contentText, .item1 p').fadeOut('fast', function(){
 			$('#contentText').html(txt6.bodyText).fadeIn(500);
