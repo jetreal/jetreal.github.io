@@ -73,10 +73,10 @@ $('.popup-modal2').magnificPopup({
 ////////////////////////////////////////////////////////////
 // header bottom text scale function
 var lDivDataObj = {
-	wind:{img:'url(/img/images/sky2.jpg)', text:'Ветер', rightImg:''},
-	fire:{img:'url(/img/images/fireHeaderDisp.jpg', text: 'Огонь', rightImg: ''},
-	water:{img:'url(/img/images/waterHeaderDisp.jpg', text: 'Вода', rightImg: ''},
-	earth:{img:'url(/img/images/earth.jpg', text: 'Земля', rightImg: ''}
+	wind:{img:'url(img/images/sky2.jpg)', text:'Ветер', rightImg:''},
+	fire:{img:'url(img/images/fireHeaderDisp.jpg', text: 'Огонь', rightImg: ''},
+	water:{img:'url(img/images/waterHeaderDisp.jpg', text: 'Вода', rightImg: ''},
+	earth:{img:'url(img/images/earth.jpg', text: 'Земля', rightImg: ''}
 }
 var flagi = false;
 
@@ -997,28 +997,28 @@ $(document).ready(function() {
 
 	var counterImg = 1, arrObj = [
 		  {
-		  	url:'url(/img/images/ownFriends/bear.jpg',
+		  	url:'url(img/images/ownFriends/bear.jpg',
 				headerText: 'Медведь',
 				bodyText: 'Лесной тяжеловес, любитель мёда.',
 				bgp: '0 0',
-				miniDisLeft: 'url(/img/images/ownFriends/bear/1.jpg)',
-				miniDisRight: 'url(/img/images/ownFriends/bear2/1.jpg)'
+				miniDisLeft: 'url(img/images/ownFriends/bear/1.jpg)',
+				miniDisRight: 'url(img/images/ownFriends/bear2/1.jpg)'
 			},
 	    {
-	    	url:'url(/img/images/ownFriends/eagle.jpg',
+	    	url:'url(img/images/ownFriends/eagle.jpg',
 				headerText: 'Орёл',
 				bodyText: 'Крылатый истребитель, гроза неба.',
 				bgp: '-30px 0',
-				miniDisLeft: 'url(/img/images/ownFriends/bird/1.jpg)',
-				miniDisRight: 'url(/img/images/ownFriends/bird2/1.jpg)'
+				miniDisLeft: 'url(img/images/ownFriends/bird/1.jpg)',
+				miniDisRight: 'url(img/images/ownFriends/bird2/1.jpg)'
 			},
 	    {
-	    	url:'url(/img/images/ownFriends/wolf.jpg',
+	    	url:'url(img/images/ownFriends/wolf.jpg',
 				headerText: 'Волк',
 				bodyText: 'Серый волк, зубами щёлк.',
 				bgp: '-20px 0',
-				miniDisLeft: 'url(/img/images/ownFriends/wolf/1.jpg)',
-				miniDisRight: 'url(/img/images/ownFriends/wolf2/1.jpg)'
+				miniDisLeft: 'url(img/images/ownFriends/wolf/1.jpg)',
+				miniDisRight: 'url(img/images/ownFriends/wolf2/1.jpg)'
 			}
 	];
 	
@@ -1050,54 +1050,54 @@ $(document).ready(function() {
 		CountEagleL = 1, CountBearL = 1, CountWolfL = 1;
 		CountEagleR = 1, CountBearR = 1, CountWolfR = 1;
 		} else {
-			$('.inImgLeft').css('background-image', 'url(/img/images/ownFriends/bear/1.jpg)');
-			$('.inImgRight').css('background-image', 'url(/img/images/ownFriends/bear2/1.jpg)');
+			$('.inImgLeft').css('background-image', 'url(img/images/ownFriends/bear/1.jpg)');
+			$('.inImgRight').css('background-image', 'url(img/images/ownFriends/bear2/1.jpg)');
 			$('.lb img').attr('src', locationObj.numbers[0]);
 			$('.rb img').attr('src', locationObj.numbers[0]);
 		}
 	}
 	var leftMiniDispArr = {
 		eagleLeft: [
-			'url(/img/images/ownFriends/bird/1.jpg)',
-			'url(/img/images/ownFriends/bird/2.jpg)',
-			'url(/img/images/ownFriends/bird/3.jpg)',
-			'url(/img/images/ownFriends/bird/4.jpg)',
-			'url(/img/images/ownFriends/bird/5.jpg)'
+			'url(img/images/ownFriends/bird/1.jpg)',
+			'url(img/images/ownFriends/bird/2.jpg)',
+			'url(img/images/ownFriends/bird/3.jpg)',
+			'url(img/images/ownFriends/bird/4.jpg)',
+			'url(img/images/ownFriends/bird/5.jpg)'
 		],
 		bearLeft: [
-			'url(/img/images/ownFriends/bear/1.jpg)',
-			'url(/img/images/ownFriends/bear/2.jpg)',
-			'url(/img/images/ownFriends/bear/3.jpg)',
-			'url(/img/images/ownFriends/bear/4.jpg)',
-			'url(/img/images/ownFriends/bear/5.jpg)'
+			'url(img/images/ownFriends/bear/1.jpg)',
+			'url(img/images/ownFriends/bear/2.jpg)',
+			'url(img/images/ownFriends/bear/3.jpg)',
+			'url(img/images/ownFriends/bear/4.jpg)',
+			'url(img/images/ownFriends/bear/5.jpg)'
 		],
 		wolfLeft: [
-			'url(/img/images/ownFriends/wolf/1.jpg)',
-			'url(/img/images/ownFriends/wolf/2.jpg)',
-			'url(/img/images/ownFriends/wolf/3.jpg)',
-			'url(/img/images/ownFriends/wolf/4.jpg)',
-			'url(/img/images/ownFriends/wolf/5.jpg)'
+			'url(img/images/ownFriends/wolf/1.jpg)',
+			'url(img/images/ownFriends/wolf/2.jpg)',
+			'url(img/images/ownFriends/wolf/3.jpg)',
+			'url(img/images/ownFriends/wolf/4.jpg)',
+			'url(img/images/ownFriends/wolf/5.jpg)'
 		],
 		eagleRight: [
-			'url(/img/images/ownFriends/bird2/1.jpg)',
-			'url(/img/images/ownFriends/bird2/2.jpg)',
-			'url(/img/images/ownFriends/bird2/3.jpg)',
-			'url(/img/images/ownFriends/bird2/4.jpg)',
-			'url(/img/images/ownFriends/bird2/5.jpg)'
+			'url(img/images/ownFriends/bird2/1.jpg)',
+			'url(img/images/ownFriends/bird2/2.jpg)',
+			'url(img/images/ownFriends/bird2/3.jpg)',
+			'url(img/images/ownFriends/bird2/4.jpg)',
+			'url(img/images/ownFriends/bird2/5.jpg)'
 		],
 		bearRight: [
-			'url(/img/images/ownFriends/bear2/1.jpg)',
-			'url(/img/images/ownFriends/bear2/2.jpg)',
-			'url(/img/images/ownFriends/bear2/3.jpg)',
-			'url(/img/images/ownFriends/bear2/4.jpg)',
-			'url(/img/images/ownFriends/bear2/5.jpg)'
+			'url(img/images/ownFriends/bear2/1.jpg)',
+			'url(img/images/ownFriends/bear2/2.jpg)',
+			'url(img/images/ownFriends/bear2/3.jpg)',
+			'url(img/images/ownFriends/bear2/4.jpg)',
+			'url(img/images/ownFriends/bear2/5.jpg)'
 		],
 		wolfRight: [
-			'url(/img/images/ownFriends/wolf2/1.jpg)',
-			'url(/img/images/ownFriends/wolf2/2.jpg)',
-			'url(/img/images/ownFriends/wolf2/3.jpg)',
-			'url(/img/images/ownFriends/wolf2/4.jpg)',
-			'url(/img/images/ownFriends/wolf2/5.jpg)'
+			'url(img/images/ownFriends/wolf2/1.jpg)',
+			'url(img/images/ownFriends/wolf2/2.jpg)',
+			'url(img/images/ownFriends/wolf2/3.jpg)',
+			'url(img/images/ownFriends/wolf2/4.jpg)',
+			'url(img/images/ownFriends/wolf2/5.jpg)'
 		]
 	};
 
@@ -1106,7 +1106,7 @@ $(document).ready(function() {
 // change img mini display on medium display
 	function leftBtn() {
 	$('.lb').on('mousedown', function() {
-		$(this).css('background-image', 'url(/img/favicon/click.png)');
+		$(this).css('background-image', 'url(img/favicon/click.png)');
 		if (counterImg == 1) {
 			$('.inImgLeft').css('background-image', leftMiniDispArr.bearLeft[CountBearL]);
 				CountBearL++;
@@ -1136,11 +1136,11 @@ $(document).ready(function() {
 	leftBtn();
 	function rightBtn() {
 	$('.lb').on('mouseup', function() {
-		$(this).css('background-image', 'url(/img/favicon/btnUp.png)');
+		$(this).css('background-image', 'url(img/favicon/btnUp.png)');
 	});
 
 	$('.rb').on('mousedown', function() {
-		$(this).css('background-image', 'url(/img/favicon/click.png)');
+		$(this).css('background-image', 'url(img/favicon/click.png)');
 		if (counterImg == 1) {
 			$('.inImgRight').css('background-image', leftMiniDispArr.bearRight[CountBearR]);
 				CountBearR++;
@@ -1170,7 +1170,7 @@ $(document).ready(function() {
 	rightBtn();
 // for color button
 	$('.rb').on('mouseup', function() {
-		$(this).css('background-image', 'url(/img/favicon/btnUp.png)');
+		$(this).css('background-image', 'url(img/favicon/btnUp.png)');
 	});
 
 // change btn color
@@ -1534,36 +1534,36 @@ $(document).ready(function() {
 // function angle3() {
 // var angle3Item = $('.bgImg');
 // var arrImgUrl = [
-// 	'url(/img/images/nature/1.jpg)',
-// 	'url(/img/images/nature/2.jpg)',
-// 	'url(/img/images/nature/3.jpg)',
-// 	'url(/img/images/nature/4.jpg)',
-// 	'url(/img/images/nature/5.jpg)',
-// 	'url(/img/images/nature/6.jpg)',
-// 	'url(/img/images/nature/7.jpg)',
-// 	'url(/img/images/nature/8.jpg)',
-// 	'url(/img/images/nature/9.jpg)',
-// 	'url(/img/images/nature/10.jpg)',
-// 	'url(/img/images/nature/11.jpg)',
-// 	'url(/img/images/nature/12.jpg)',
-// 	'url(/img/images/nature/13.jpg)',
-// 	'url(/img/images/nature/14.jpg)',
-// 	'url(/img/images/nature/15.jpg)',
-// 	'url(/img/images/nature/16.jpg)',
-// 	'url(/img/images/nature/17.jpg)',
-// 	'url(/img/images/nature/18.jpg)',
-// 	'url(/img/images/nature/19.jpg)',
-// 	'url(/img/images/nature/20.jpg)',
-// 	'url(/img/images/nature/21.jpg)',
-// 	'url(/img/images/nature/22.jpg)',
-// 	'url(/img/images/nature/23.jpg)',
-// 	'url(/img/images/nature/24.jpg)',
-// 	'url(/img/images/nature/25.jpg)',
-// 	'url(/img/images/nature/26.jpg)',
-// 	'url(/img/images/nature/27.jpg)',
-// 	'url(/img/images/nature/28.jpg)',
-// 	'url(/img/images/nature/29.jpg)',
-// 	'url(/img/images/nature/30.jpg)'
+// 	'url(img/images/nature/1.jpg)',
+// 	'url(img/images/nature/2.jpg)',
+// 	'url(img/images/nature/3.jpg)',
+// 	'url(img/images/nature/4.jpg)',
+// 	'url(img/images/nature/5.jpg)',
+// 	'url(img/images/nature/6.jpg)',
+// 	'url(img/images/nature/7.jpg)',
+// 	'url(img/images/nature/8.jpg)',
+// 	'url(img/images/nature/9.jpg)',
+// 	'url(img/images/nature/10.jpg)',
+// 	'url(img/images/nature/11.jpg)',
+// 	'url(img/images/nature/12.jpg)',
+// 	'url(img/images/nature/13.jpg)',
+// 	'url(img/images/nature/14.jpg)',
+// 	'url(img/images/nature/15.jpg)',
+// 	'url(img/images/nature/16.jpg)',
+// 	'url(img/images/nature/17.jpg)',
+// 	'url(img/images/nature/18.jpg)',
+// 	'url(img/images/nature/19.jpg)',
+// 	'url(img/images/nature/20.jpg)',
+// 	'url(img/images/nature/21.jpg)',
+// 	'url(img/images/nature/22.jpg)',
+// 	'url(img/images/nature/23.jpg)',
+// 	'url(img/images/nature/24.jpg)',
+// 	'url(img/images/nature/25.jpg)',
+// 	'url(img/images/nature/26.jpg)',
+// 	'url(img/images/nature/27.jpg)',
+// 	'url(img/images/nature/28.jpg)',
+// 	'url(img/images/nature/29.jpg)',
+// 	'url(img/images/nature/30.jpg)'
 	
 // ];
 //  	var randImageNumber = Math.floor(Math.random() * arrImgUrl.length);
@@ -1937,38 +1937,38 @@ var f = true;
 ///////////////////////////////////////////
 
 var textContentBook = [
-	{"text":"", "img":"url(/img/images/nature2.png)"},
-	{"text":"", "img":"url(/img/images/nature/1.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/2.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/3.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/4.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/5.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/6.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/7.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/8.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/9.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/10.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/11.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/12.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/13.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/14.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/15.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/16.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/17.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/18.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/19.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/20.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/21.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/22.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/23.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/24.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/25.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/26.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/27.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/28.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/29.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/30.jpg)"},
-	{"text":"", "img":"url(/img/images/nature2.png)"}
+	{"text":"", "img":"url(img/images/nature2.png)"},
+	{"text":"", "img":"url(img/images/nature/1.jpg)"},
+	{"text":"", "img":"url(img/images/nature/2.jpg)"},
+	{"text":"", "img":"url(img/images/nature/3.jpg)"},
+	{"text":"", "img":"url(img/images/nature/4.jpg)"},
+	{"text":"", "img":"url(img/images/nature/5.jpg)"},
+	{"text":"", "img":"url(img/images/nature/6.jpg)"},
+	{"text":"", "img":"url(img/images/nature/7.jpg)"},
+	{"text":"", "img":"url(img/images/nature/8.jpg)"},
+	{"text":"", "img":"url(img/images/nature/9.jpg)"},
+	{"text":"", "img":"url(img/images/nature/10.jpg)"},
+	{"text":"", "img":"url(img/images/nature/11.jpg)"},
+	{"text":"", "img":"url(img/images/nature/12.jpg)"},
+	{"text":"", "img":"url(img/images/nature/13.jpg)"},
+	{"text":"", "img":"url(img/images/nature/14.jpg)"},
+	{"text":"", "img":"url(img/images/nature/15.jpg)"},
+	{"text":"", "img":"url(img/images/nature/16.jpg)"},
+	{"text":"", "img":"url(img/images/nature/17.jpg)"},
+	{"text":"", "img":"url(img/images/nature/18.jpg)"},
+	{"text":"", "img":"url(img/images/nature/19.jpg)"},
+	{"text":"", "img":"url(img/images/nature/20.jpg)"},
+	{"text":"", "img":"url(img/images/nature/21.jpg)"},
+	{"text":"", "img":"url(img/images/nature/22.jpg)"},
+	{"text":"", "img":"url(img/images/nature/23.jpg)"},
+	{"text":"", "img":"url(img/images/nature/24.jpg)"},
+	{"text":"", "img":"url(img/images/nature/25.jpg)"},
+	{"text":"", "img":"url(img/images/nature/26.jpg)"},
+	{"text":"", "img":"url(img/images/nature/27.jpg)"},
+	{"text":"", "img":"url(img/images/nature/28.jpg)"},
+	{"text":"", "img":"url(img/images/nature/29.jpg)"},
+	{"text":"", "img":"url(img/images/nature/30.jpg)"},
+	{"text":"", "img":"url(img/images/nature2.png)"}
 ]
 // define array length
 var textContentBookLength = 0;
