@@ -47,7 +47,7 @@
   margin: 0 5%;
   width: 90%;
   height: 580px;
-  background-image: url("img/images/headerbg2.jpg");
+  background-image: url("/img/images/headerbg2.jpg");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
           background-size: cover;
@@ -350,7 +350,7 @@
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s; }
   .wr17 .into03 {
-    background-image: url("./img/images/brokenDisp2.png");
+    background-image: url("/img/images/brokenDisp2.png");
     -webkit-background-size: content content;
             background-size: content;
     background-color: #191917; }
@@ -441,7 +441,7 @@
 
 .wrapperImg {
   display: none;
-  background-image: url("./img/images/sky2.jpg");
+  background-image: url("/img/images/sky2.jpg");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -920,7 +920,7 @@ html, body {
   font-size: 16px; }
 
 body {
-  background-image: url("img/images/fon4.jpg");
+  background-image: url("/img/images/fon4.jpg");
   background-color: #0c0c0c;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1050,7 +1050,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   padding-bottom: initial;
   padding-left: initial;
   padding-right: initial;
-  background-image: url("img/images/brokenDisp2.png");
+  background-image: url("/img/images/brokenDisp2.png");
   background-position: 0 250px;
   width: 90%;
   margin: 0 5%;
@@ -1152,14 +1152,14 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     .duckText p:before {
       display: block;
       position: absolute;
-      content: url("./img/images/lines.png");
+      content: url("/img/images/lines.png");
       top: 0px;
       left: -webkit-calc(50% - 51px);
       left: calc(50% - 51px); }
     .duckText p:after {
       display: block;
       position: absolute;
-      content: url("./img/images/lines.png");
+      content: url("/img/images/lines.png");
       bottom: -7px;
       left: -webkit-calc(50% - 51px);
       left: calc(50% - 51px);
@@ -1211,7 +1211,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   border: 1px solid #7F7F7F;
   padding: 10px;
   position: relative;
-  background-image: url("./img/images/forest.jpg");
+  background-image: url("/img/images/forest.jpg");
   -webkit-background-size: cover;
           background-size: cover;
   background-position: center;
@@ -1395,7 +1395,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   -webkit-transform: rotate(120deg);
       -ms-transform: rotate(120deg);
           transform: rotate(120deg);
-  background-image: url("./img/images/rivers/6mini.png");
+  background-image: url("/img/images/rivers/6mini.png");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -1448,7 +1448,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   -webkit-transform: rotate(120deg);
       -ms-transform: rotate(120deg);
           transform: rotate(120deg);
-  background-image: url("./img/images/mountain/6mini.png");
+  background-image: url("/img/images/mountain/6mini.png");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -1501,7 +1501,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   -webkit-transform: rotate(120deg);
       -ms-transform: rotate(120deg);
           transform: rotate(120deg);
-  background-image: url("./img/images/fields/6mini.png");
+  background-image: url("/img/images/fields/6mini.png");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -1554,7 +1554,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   -webkit-transform: rotate(120deg);
       -ms-transform: rotate(120deg);
           transform: rotate(120deg);
-  background-image: url("./img/images/seas/6mini.png");
+  background-image: url("/img/images/seas/6mini.png");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -1607,7 +1607,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   -webkit-transform: rotate(120deg);
       -ms-transform: rotate(120deg);
           transform: rotate(120deg);
-  background-image: url("./img/images/deserts/6mini.png");
+  background-image: url("/img/images/deserts/6mini.png");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -1660,7 +1660,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   -webkit-transform: rotate(120deg);
       -ms-transform: rotate(120deg);
           transform: rotate(120deg);
-  background-image: url("./img/images/jungles/6mini.png");
+  background-image: url("/img/images/jungles/6mini.png");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -1713,7 +1713,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   -webkit-transform: rotate(120deg);
       -ms-transform: rotate(120deg);
           transform: rotate(120deg);
-  background-image: url("./img/images/forest/6mini.png");
+  background-image: url("/img/images/forest/6mini.png");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -1783,7 +1783,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   -webkit-transform: rotate(120deg);
       -ms-transform: rotate(120deg);
           transform: rotate(120deg);
-  background-image: url("./img/images/ej.jpg");
+  background-image: url("/img/images/ej.jpg");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -1926,7 +1926,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: url("./img/favicon/left.png");
+  background-image: url("/img/favicon/left.png");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -1963,7 +1963,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  background-image: url("./img/favicon/right.png");
+  background-image: url("/img/favicon/right.png");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -1997,7 +1997,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   width: 100%; }
 
 .afterForest {
-  background-image: url("./img/images/brokenDisp2.png");
+  background-image: url("/img/images/brokenDisp2.png");
   width: 90%;
   margin: 0 5%;
   padding: 10px 0;
@@ -2087,14 +2087,14 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   .textEj p:before {
     display: block;
     position: absolute;
-    content: url("./img/images/lines.png");
+    content: url("/img/images/lines.png");
     top: -28px;
     left: -webkit-calc(50% - 51px);
     left: calc(50% - 51px); }
   .textEj p:after {
     display: block;
     position: absolute;
-    content: url("./img/images/lines.png");
+    content: url("/img/images/lines.png");
     bottom: -31px;
     left: -webkit-calc(50% - 51px);
     left: calc(50% - 51px);
@@ -2133,7 +2133,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .palmBg {
   border: 1px solid #7F7F7F;
   position: relative;
-  background-image: url("./img/images/palmBg2.jpg");
+  background-image: url("/img/images/palmBg2.jpg");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -2246,23 +2246,23 @@ a.test-popup-link {
   text-decoration: none; }
 
 .tiger {
-  background-image: url("./img/images/animalMini/tigerMini.jpg");
+  background-image: url("/img/images/animalMini/tigerMini.jpg");
   color: #b9eaa8; }
 
 .panthera {
-  background-image: url("./img/images/animalMini/panteraMini.jpg"); }
+  background-image: url("/img/images/animalMini/panteraMini.jpg"); }
 
 .puma {
-  background-image: url("./img/images/animalMini/pumaMini.jpg"); }
+  background-image: url("/img/images/animalMini/pumaMini.jpg"); }
 
 .snowBars {
-  background-image: url("./img/images/animalMini/snowBarsMini.jpg"); }
+  background-image: url("/img/images/animalMini/snowBarsMini.jpg"); }
 
 .lion {
-  background-image: url("./img/images/animalMini/levMini.jpg"); }
+  background-image: url("/img/images/animalMini/levMini.jpg"); }
 
 .jaguar {
-  background-image: url("./img/images/animalMini/jaguarMini.jpg"); }
+  background-image: url("/img/images/animalMini/jaguarMini.jpg"); }
 
 .textAnimal {
   display: grid;
@@ -2287,7 +2287,7 @@ a.test-popup-link {
           box-shadow: 3px 3px 5px gray inset, -3px -3px 5px gray inset; }
 
 .afterBeach {
-  background-image: url("./img/images/brokenDisp2.png");
+  background-image: url("/img/images/brokenDisp2.png");
   background-position: 0 200px;
   width: 90%;
   margin: 0 5%;
@@ -2406,14 +2406,14 @@ a.test-popup-link {
     .catText p:before {
       display: block;
       position: absolute;
-      content: url("./img/images/lines.png");
+      content: url("/img/images/lines.png");
       top: -27px;
       left: -webkit-calc(50% - 51px);
       left: calc(50% - 51px); }
     .catText p:after {
       display: block;
       position: absolute;
-      content: url("./img/images/lines.png");
+      content: url("/img/images/lines.png");
       bottom: -36px;
       left: -webkit-calc(50% - 51px);
       left: calc(50% - 51px);
@@ -2456,7 +2456,7 @@ a.test-popup-link {
 
 .glacier {
   border: 1px solid #7F7F7F;
-  background-image: url("./img/images/Glaser.jpg");
+  background-image: url("/img/images/Glaser.jpg");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -2471,7 +2471,7 @@ a.test-popup-link {
     pointer-events: none; }
 
 .glacierBack {
-  background-image: url("./img/images/GlaserBack.png");
+  background-image: url("/img/images/GlaserBack.png");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -2483,7 +2483,7 @@ a.test-popup-link {
   z-index: 2; }
 
 .glacierBack2 {
-  background-image: url("./img/images/GlaserBack2.png");
+  background-image: url("/img/images/GlaserBack2.png");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -2514,7 +2514,7 @@ a.test-popup-link {
   height: 120px;
   -webkit-transform: rotateY(25deg);
           transform: rotateY(25deg);
-  background-image: url("./img/images/glacierLeft.jpg");
+  background-image: url("/img/images/glacierLeft.jpg");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -2531,7 +2531,7 @@ a.test-popup-link {
   height: 120px;
   -webkit-transform: rotateY(-25deg);
           transform: rotateY(-25deg);
-  background-image: url("./img/images/glacierRight.jpg");
+  background-image: url("/img/images/glacierRight.jpg");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -2563,7 +2563,7 @@ a.test-popup-link {
   height: 170px;
   -webkit-transform: rotateX(40deg);
           transform: rotateX(40deg);
-  background-image: url("./img/images/glacierItem3.jpg");
+  background-image: url("/img/images/glacierItem3.jpg");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -2574,7 +2574,7 @@ a.test-popup-link {
 .rombLeft {
   width: 200px;
   height: 100px;
-  background-image: url("./img/images/lednik_4.jpg");
+  background-image: url("/img/images/lednik_4.jpg");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -2592,7 +2592,7 @@ a.test-popup-link {
 .rombRight {
   width: 200px;
   height: 100px;
-  background-image: url("./img/images/lednik_5.jpg");
+  background-image: url("/img/images/lednik_5.jpg");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -2664,7 +2664,7 @@ a.test-popup-link {
   position: relative;
   top: 10px;
   border: 1px solid #011A1C;
-  background-image: url("./img/favicon/btnUp.png");
+  background-image: url("/img/favicon/btnUp.png");
   -webkit-border-radius: 8px;
           border-radius: 8px;
   background-position: center;
@@ -2683,7 +2683,7 @@ a.test-popup-link {
   position: relative;
   top: 10px;
   border: 1px solid #011A1C;
-  background-image: url("./img/favicon/btnUp.png");
+  background-image: url("/img/favicon/btnUp.png");
   -webkit-border-radius: 8px;
           border-radius: 8px;
   background-position: center;
@@ -2698,7 +2698,7 @@ a.test-popup-link {
   -webkit-transform: rotate(30deg);
       -ms-transform: rotate(30deg);
           transform: rotate(30deg);
-  background-image: url("./img/images/ownFriends/eagle.jpg");
+  background-image: url("/img/images/ownFriends/eagle.jpg");
   background-position: -30px 0;
   -webkit-background-size: cover;
           background-size: cover;
@@ -2719,7 +2719,7 @@ a.test-popup-link {
   -webkit-transform: rotate(30deg);
       -ms-transform: rotate(30deg);
           transform: rotate(30deg);
-  background-image: url("./img/images/ownFriends/bear.jpg");
+  background-image: url("/img/images/ownFriends/bear.jpg");
   background-position: 0 0;
   -webkit-background-size: cover;
           background-size: cover;
@@ -2740,7 +2740,7 @@ a.test-popup-link {
   -webkit-transform: rotate(30deg);
       -ms-transform: rotate(30deg);
           transform: rotate(30deg);
-  background-image: url("./img/images/ownFriends/wolf.jpg");
+  background-image: url("/img/images/ownFriends/wolf.jpg");
   background-position: -20px 0px;
   -webkit-background-size: cover;
           background-size: cover;
@@ -2785,7 +2785,7 @@ a.test-popup-link {
   left: -5px; }
 
 .inImgLeft {
-  background-image: url("./img/images/ownFriends/bear/1.jpg");
+  background-image: url("/img/images/ownFriends/bear/1.jpg");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -2803,7 +2803,7 @@ a.test-popup-link {
           box-shadow: 3px 3px 6px #6B95C7 inset, -3px -3px 6px #6B95C7 inset; }
 
 .inImgRight {
-  background-image: url("./img/images/ownFriends/bear2/1.jpg");
+  background-image: url("/img/images/ownFriends/bear2/1.jpg");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -2847,7 +2847,7 @@ a.test-popup-link {
   overflow: hidden; }
 
 .into11 {
-  background-image: url("./img/images/ej.jpg");
+  background-image: url("/img/images/ej.jpg");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -3079,7 +3079,7 @@ a.test-popup-link {
   -webkit-transform: rotate(30deg);
       -ms-transform: rotate(30deg);
           transform: rotate(30deg);
-  background-image: url("./img/images/ej.jpg");
+  background-image: url("/img/images/ej.jpg");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -3130,7 +3130,7 @@ a.test-popup-link {
 
 .beach {
   border: 1px solid #7F7F7F;
-  background-image: url("./img/images/beach.jpg");
+  background-image: url("/img/images/beach.jpg");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
           background-size: cover;
@@ -3280,7 +3280,7 @@ a.test-popup-link {
   overflow: hidden;
   width: 100px;
   height: 100px;
-  background-image: url("./img/images/beachMin/maldives1mini.jpg");
+  background-image: url("/img/images/beachMin/maldives1mini.jpg");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -3330,7 +3330,7 @@ a.test-popup-link {
   overflow: hidden;
   width: 100px;
   height: 100px;
-  background-image: url("./img/images/beachMin/dubay1mini.jpg");
+  background-image: url("/img/images/beachMin/dubay1mini.jpg");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -3377,7 +3377,7 @@ a.test-popup-link {
   overflow: hidden;
   width: 100px;
   height: 100px;
-  background-image: url("./img/images/beachMin/kanari1mini.jpg");
+  background-image: url("/img/images/beachMin/kanari1mini.jpg");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -3424,7 +3424,7 @@ a.test-popup-link {
   overflow: hidden;
   width: 100px;
   height: 100px;
-  background-image: url("./img/images/beachMin/seysheli1mini.jpg");
+  background-image: url("/img/images/beachMin/seysheli1mini.jpg");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -3471,7 +3471,7 @@ a.test-popup-link {
   overflow: hidden;
   width: 100px;
   height: 100px;
-  background-image: url("./img/images/beachMin/Gavai1mini.jpg");
+  background-image: url("/img/images/beachMin/Gavai1mini.jpg");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -3518,7 +3518,7 @@ a.test-popup-link {
   overflow: hidden;
   width: 100px;
   height: 100px;
-  background-image: url("./img/images/beachMin/bali1mini.jpg");
+  background-image: url("/img/images/beachMin/bali1mini.jpg");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -3825,7 +3825,7 @@ a.test-popup-link {
   -webkit-transform: rotate(240deg);
       -ms-transform: rotate(240deg);
           transform: rotate(240deg);
-  background-image: url("./img/images/jaguar.jpg");
+  background-image: url("/img/images/jaguar.jpg");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -3891,7 +3891,7 @@ a.test-popup-link {
   -webkit-transform: rotate(120deg);
       -ms-transform: rotate(120deg);
           transform: rotate(120deg);
-  background-image: url("./img/images/jaguar.jpg");
+  background-image: url("/img/images/jaguar.jpg");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -3929,41 +3929,41 @@ a.test-popup-link {
           box-shadow: 2px 2px 2px grey inset, -2px -2px 2px grey inset; }
 
 .bgBack1 {
-  background-image: url("./img/images/nature/1.jpg"); }
+  background-image: url("/img/images/nature/1.jpg"); }
 
 .bgBack2 {
-  background-image: url("./img/images/nature/2.jpg"); }
+  background-image: url("/img/images/nature/2.jpg"); }
 
 .bgBack3 {
-  background-image: url("./img/images/nature/3.jpg"); }
+  background-image: url("/img/images/nature/3.jpg"); }
 
 .bgBack4 {
-  background-image: url("./img/images/nature/4.jpg"); }
+  background-image: url("/img/images/nature/4.jpg"); }
 
 .bgBack5 {
-  background-image: url("./img/images/nature/5.jpg"); }
+  background-image: url("/img/images/nature/5.jpg"); }
 
 .bgBack6 {
-  background-image: url("./img/images/nature/6.jpg"); }
+  background-image: url("/img/images/nature/6.jpg"); }
 
 .bgBack7 {
-  background-image: url("./img/images/nature/7.jpg"); }
+  background-image: url("/img/images/nature/7.jpg"); }
 
 .bgBack8 {
-  background-image: url("./img/images/nature/8.jpg"); }
+  background-image: url("/img/images/nature/8.jpg"); }
 
 .bgBack9 {
-  background-image: url("./img/images/nature/9.jpg"); }
+  background-image: url("/img/images/nature/9.jpg"); }
 
 .bgBack10 {
-  background-image: url("./img/images/nature/10.jpg"); }
+  background-image: url("/img/images/nature/10.jpg"); }
 
 .bgBack11 {
-  background-image: url("./img/images/nature/11.jpg"); }
+  background-image: url("/img/images/nature/11.jpg"); }
 
 .footer {
   border: 1px solid #7F7F7F;
-  background-image: url("./img/images/footer.jpg");
+  background-image: url("/img/images/footer.jpg");
   -webkit-border-radius: 0 0 30px 72px;
           border-radius: 0 0 30px 72px;
   background-repeat: no-repeat;
@@ -4016,13 +4016,13 @@ a.test-popup-link {
   .f1Header:before {
     display: block;
     position: absolute;
-    content: url("./img/images/lines.png");
+    content: url("/img/images/lines.png");
     top: 5px;
     left: 55px; }
   .f1Header:after {
     display: block;
     position: absolute;
-    content: url("./img/images/lines.png");
+    content: url("/img/images/lines.png");
     bottom: -283px;
     left: 55px;
     -webkit-transform: rotate(180deg);
@@ -4185,9 +4185,9 @@ a.test-popup-link {
 
 .centerLine {
   border: 1px solid transparent;
-  -webkit-border-image: url("./img/images/border3.png") 20 round;
-       -o-border-image: url("./img/images/border3.png") 20 round;
-          border-image: url("./img/images/border3.png") 20 round;
+  -webkit-border-image: url("/img/images/border3.png") 20 round;
+       -o-border-image: url("/img/images/border3.png") 20 round;
+          border-image: url("/img/images/border3.png") 20 round;
   width: 1px;
   height: 240px;
   z-index: 3;
@@ -4226,9 +4226,9 @@ a.test-popup-link {
   padding-right: initial;
   color: #CBBEAE;
   border: 7px solid transparent;
-  -webkit-border-image: url("./img/images/border3.png") 28 round;
-       -o-border-image: url("./img/images/border3.png") 28 round;
-          border-image: url("./img/images/border3.png") 28 round;
+  -webkit-border-image: url("/img/images/border3.png") 28 round;
+       -o-border-image: url("/img/images/border3.png") 28 round;
+          border-image: url("/img/images/border3.png") 28 round;
   border-image-outset: 0px 7px 0px 7px;
   border-image-width: 10px;
   -webkit-box-sizing: initial;
@@ -4243,7 +4243,7 @@ a.test-popup-link {
   -o-transition: all 0.6s cubic-bezier(0, 1.08, 0.81, 1.01);
   transition: all 0.6s cubic-bezier(0, 1.08, 0.81, 1.01);
   top: 20px;
-  background-image: url("./img/images/fon.jpg");
+  background-image: url("/img/images/fon.jpg");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;
@@ -4269,9 +4269,9 @@ a.test-popup-link {
       -ms-flex-pack: center;
           justify-content: center;
   border: 7px solid transparent;
-  -webkit-border-image: url("./img/images/border3.png") 28 round;
-       -o-border-image: url("./img/images/border3.png") 28 round;
-          border-image: url("./img/images/border3.png") 28 round;
+  -webkit-border-image: url("/img/images/border3.png") 28 round;
+       -o-border-image: url("/img/images/border3.png") 28 round;
+          border-image: url("/img/images/border3.png") 28 round;
   border-image-width: 10px;
   -webkit-box-sizing: initial;
           box-sizing: initial;
@@ -5209,7 +5209,7 @@ input::-webkit-inner-spin-button {
   right: 0; }
 
 .into03 {
-  background-image: url("./img/images/balls/ball8.png");
+  background-image: url("/img/images/balls/ball8.png");
   -webkit-background-size: cover;
           background-size: cover;
   background-repeat: no-repeat;
@@ -5399,7 +5399,7 @@ input::-webkit-inner-spin-button {
   overflow: hidden;
   top: 7px;
   left: -5px;
-  background-image: url("./img/images/jewel.jpg");
+  background-image: url("/img/images/jewel.jpg");
   background-position: -32px 2px;
   -webkit-background-size: cover;
           background-size: cover;
