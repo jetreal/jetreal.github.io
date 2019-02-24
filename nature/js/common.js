@@ -1854,7 +1854,7 @@ function hideContacts() {
 		 		setTimeout(function() {
 			 		$('.fa-address-card').css('color', '#CBBEAE');
 					// header movie
-					$('.headerThis p').css({'left': '-15px'});
+					$('.headerThis p').css({'left': '-10px'});
 					// change header overflow
 					$('.headerThis').css({'overflow': 'hidden'});
 					// slide content
@@ -1887,7 +1887,7 @@ function hideHeader() {
 			// icon color
 			$('.fa-address-card').css('color', '#CBBEAE');
 			// header movie
-			$('.headerThis p').css({'left': '-15px'});
+			$('.headerThis p').css({'left': '-10px'});
 			// change header overflow
 			$('.headerThis').css({'overflow': 'hidden'});
 			// slide content
