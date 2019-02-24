@@ -920,7 +920,7 @@ html, body {
   font-size: 16px; }
 
 body {
-  background-image: url("/img/images/fon4.jpg");
+  background-image: url("img/images/fon4.jpg");
   background-color: #0c0c0c;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1050,7 +1050,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   padding-bottom: initial;
   padding-left: initial;
   padding-right: initial;
-  background-image: url("/img/images/brokenDisp2.png");
+  background-image: url("img/images/brokenDisp2.png");
   background-position: 0 250px;
   width: 90%;
   margin: 0 5%;
