@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>mySite</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/cssLibs/magnific-popup.css"> -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2|Rubik|Seymour+One|Comfortaa|Amatic+SC|Open+Sans|Roboto">
+    <!-- jQuery library-->
+    <style>
+      .wrapperLoader {
+      	position: fixed;
+      	background-color: rgb(0,0,0);
+      	top: 0;
+      	bottom: 0;
+      	left: 0;
+      	right: 0;
+      	z-index: 9999;
+      	display: grid;
+      	align-content: center;
+      	justify-content: center;
+      }
+      .loader img {
+      	width: 80px;
+      	height: 80px;
+      	transform: rotate(0deg);
+      	animation: rotate 4s linear infinite;
+      }
+      @keyframes rotate {
+      	from {transform: rotate(0deg);}
+      	to {transform: rotate(360deg);}
+      }
+      	
+    </style>
+  </head>
+  <body>
+    <div class="wrapperLoader">
+      <div class="loader"><img src="/img/images/balls/ball10.png" alt=""></div>
+    </div>
+    <div id="arrowToTop"><a href="#wrapper" rel="m_PageScroll2id"><img src="img/favicon/toTop.png" alt="arrow"></a></div>
+    <!-- wrapper-->
+    <div class="display">
+      <p id="showScroll"></p>
+      <p id="width"></p>
+      <p id="height"></p>
+    </div>
+    <div class="wrapper" id="wrapper">
+      <div class="wrapSun"><img class="sun" src="img/images/sun.png" alt="fire-logo" width="130px" height="90px"></div>
+      <!-- header first page-->
+      <section class="firstSection">
+        <header class="top_header">
+          <div class="wr16">
+            <div class="into00">
+              <div class="into01">
+                <div class="into02">
+                  <div class="into03">
+                    <div class="into04">
+                      <div class="into05">
+                        <div class="into06"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="headText">
+            <p>Один из лучших сайтов о природе<br>и<br>её обитателях.</p>
+          </div>
+        </header>
+        <div class="wrapCenterHeaderDiv">
+          <div class="lDiv">
+            <p>Этот сайт</p>
+            <p>создан</p>
+            <p>для</p>
+            <P>поднятия настроения</P>
+            <p>всем тем,</p>
+            <p>кто соскучился</p>
+            <p>по красоте и природы.</p>
+            <p>Удивительные</p>
+            <p>уголки мира,</p>
+            <p>замечательные</p>
+            <p>животные и расстения</p>
+            <P>с нетерпением</P>
+            <p>ждут </p>
+            <p>минутки</p>
+            <p>вашего внимания.</p>
+            <p>Добро пожаловать.</p>
+          </div>
+          <div class="centerDiv">
+            <div class="rDiv">
+              <ul>
+                <li><a href="#forest">
+                    <button>природные локации</button></a></li>
+                <li><a href="#palmBg">
+                    <button>дикие кошки</button></a></li>
+                <li><a href="#ownFriends">
+                    <button>3 лесных жителя</button></a></li>
+                <li><a href="#bluesky">
+                    <button>мировые курорты</button></a></li>
+              </ul>
+            </div>
+            <div class="bDiv">
+              <div class="bDivText">
+                <p id="bDivTextP">Облака</p>
+                <div class="wrapperImg"></div>
+              </div>
+              <div class="wr17">
+                <div class="into00">
+                  <div class="into01">
+                    <div class="into02">
+                      <div class="into03">
+                        <div class="into04">
+                          <div class="into05">
+                            <div class="into06"></div>
+                          </div>
+                        </div>
+                        <div class="wrapCircleImg"><img class="circleImg" src="/img/images/button3.png" alt="button"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end header first page-->
+      <section class="afterFirst">
+        <div class="wrapDuckSec2 container-fluid">
+          <div class="row justify-content-center rowDuck">
+            <div class="wrapDuck col col-md-4"><img class="duck" src="img/images/flowers/romashka1.jpg" alt="duck"></div>
+            <div class="col col-sm- duckText"><span id="angleLabelText">так выглядит:</span>
+              <p>Ромашка</p>
+            </div>
+            <div class="wrapDuck col col-md-4"><img class="duck2" src="img/images/flowers/romashka2.jpg" alt="duck"></div>
+          </div>
+        </div>
+      </section>
+      <!-- forest section-->
+      <section class="forest" id="forest">
+        <div class="theLostRiverText2">
+          <p id="forestTextContainer">Поля охватывают значительную часть наземного пространства, не имея высокой растительности. За эту особенность их иногда даже называют бескрайними. На полях растут: либо культурные сорта растений и трав, либо дикорастущие. Не имея особых преград, ветер в поле гуляет особенно сильно.</p>
+        </div>
+        <div class="theLostRiverText3"></div>
+        <div class="wrapperAll">
+          <div class="leftItem">
+            <div id="headerLeftSection">
+              <p>поля</p>
+            </div>
+            <div class="galleryDeg1Left">
+              <div class="galleryDeg2Left">
+                <div class="galleryLeft">
+                  <div class="galleryImgContentLeft"><a class="popup-modal2 mfp-bg" id="popupLeft" href="#imgContent2" data-effect="mfp-zoom-in"><img id="imgContent2" src="/img/images/fields/6.png" alt="foto Nature"></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="wrapVItem">
+            <div class="v1">
+              <div class="into30">
+                <div class="into31">
+                  <div class="bgImage1" id="theone">
+                    <div class="into33">
+                      <div class="into34"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="v2">
+              <div class="into30">
+                <div class="into31">
+                  <div class="bgImage2">
+                    <div class="into33">
+                      <div class="into34"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="v3">
+              <div class="into30">
+                <div class="into31">
+                  <div class="bgImage3">
+                    <div class="into33">
+                      <div class="into34"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="v4">
+              <div class="into30">
+                <div class="into31">
+                  <div class="bgImage4">
+                    <div class="into33">
+                      <div class="into34"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="v5">
+              <div class="into30">
+                <div class="into31">
+                  <div class="bgImage5">
+                    <div class="into33">
+                      <div class="into34"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="v6">
+              <div class="into30">
+                <div class="into31">
+                  <div class="bgImage6">
+                    <div class="into33">
+                      <div class="into34"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="v7">
+              <div class="into30">
+                <div class="into31">
+                  <div class="bgImage7" id="the7">
+                    <div class="into33">
+                      <div class="into34"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="wrapGallery"><span class="arrowLeft"></span><span class="arrowRight"></span><span class="showNumber"><img id="num" src="img/images/numbers/1.png"></span>
+            <div class="galleryDeg1">
+              <div class="galleryDeg2">
+                <div class="gallery">
+                  <div class="galleryImgContent"><a class="popup-modal2" id="popupRight" href="#imgContent1" data-effect="mfp-zoom-in"><img id="imgContent" src="img/images/fields/1.png" alt="foto Nature"></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="theLostRiverText grid center">Природные локации</div>
+      </section>
+      <!-- end forest section-->
+      <section class="afterForest">
+        <div class="conEj container-fluid">
+          <div class="rowEj row justify-content-center">
+            <div class="col col-md-4 ejDiv"><img class="ej" src="img/images/berries/malina1.jpg" alt="ej"></div>
+            <div class="col col-sm- textEj">
+              <p>Малина</p><span id="angleLabelText2">так выглядит:</span>
+            </div>
+            <div class="col col-md-4 ejDiv"><img class="ej2" src="img/images/berries/malina2.jpg" alt="ej"></div>
+          </div>
+        </div>
+      </section>
+      <!-- animal section-->
+      <section class="palmBg" id="palmBg">
+        <div class="txtBestAnimal center"> 
+          <p>Топ 6 из семейства кошачих</p>
+        </div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-sm- m-2 grid">
+              <!-- <span class="wrapAni center grid"></span>--><a class="test-popup-link" href="img/images/tiger.jpg">
+                <div class="cardShadow animal tiger">
+                  <p>Тигр&#x9;</p>
+                </div></a>
+              <div class="textAnimal grid center">Тигр обитает в азии - в Индии, Непале и на Алтае... Тигры - это большие, сильные, крупные и красивые кошки. Тигр самый крупный и тяжёлый представитель семейства кошачих.</div>
+            </div>
+            <div class="col-sm- m-2"><a class="test-popup-link" href="img/images/pantera.jpg">
+                <div class="cardShadow animal panthera">
+                  <p>Пантера&#x9;</p>
+                </div></a>
+              <div class="textAnimal">Чёрной пантерой обычно является леопард или ягуар, имеющий чёрную шкуру. На охоту пантеры всегда выходят ночью, так как в тёмное время суток они практически невидимы. Пантеры предпочитают жить поодиночке, или парами самец + самка.</div>
+            </div>
+            <div class="col-sm- m-2 grid"><a class="test-popup-link" href="img/images/puma.jpg">
+                <div class="cardShadow animal puma">
+                  <p>
+                     Пума&#x9;</p>
+                </div></a>
+              <div class="textAnimal">
+                Пума обитает в северной и южной Америке, предпочитая селиться в горных районах. Также пумы могут встретиться в 
+                	хвойных и тропических лесах. Пума легко передвигается по горным склонам и скалам, отлично лазают
+                по деревьям и хорошо плавают.
+              </div>
+            </div>
+            <div class="col-sm- m-2"><a class="test-popup-link" href="img/images/snowBars.jpg">
+                <div class="cardShadow animal snowBars">
+                  <p>
+                     Снежный леопард</p>
+                </div></a>
+              <div class="textAnimal">Снежный барс - представитель семейства кошачих, обитающий в суровом климате горных массивов цетральной азии. Среди всех крупных кошек снежный брас - единственный постоянный житель высокогорий.</div>
+            </div>
+            <div class="col-sm- m-2"><a class="test-popup-link" href="img/images/lev.jpg">
+                <div class="cardShadow animal lion">
+                  <p>
+                     Лев</p>
+                </div></a>
+              <div class="textAnimal">
+                Длинна когтей льва достигает семи сантиметров, а клыков достигают восьми. Лев и львица внешне очень отличаются друг от друга.
+                Охотятся у львов в основном самки.
+              </div>
+            </div>
+            <div class="col-sm- m-2"><a class="test-popup-link" href="img/images/jaguar.jpg">
+                <div class="cardShadow animal jaguar">
+                  <p>
+                     Ягуар</p>
+                </div></a>
+              <div class="textAnimal">
+                Ягуар имеет внушительные размеры. Его окраска по праву считается одной из самых красивых кошачих окрасок. Среда обитания Ягуара
+                южная и центральная Америка. 
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end animal section-->
+      <section class="afterBeach">
+        <div class="wrapCats container-fluid">
+          <div class="row rowCat justify-content-center">
+            <div class="col col-md-4 divCat"><img class="catsImg" src="img/images/animals/ej1.jpg" alt="cats"></div>
+            <div class="col col-sm- catText"><span id="angleLabelText3">так выглядит:</span>
+              <p>ёж</p>
+            </div>
+            <div class="col col-md-4 divCat2"><img class="catsImg2" src="img/images/animals/ej2.jpg" alt="cats2"></div>
+          </div>
+        </div>
+      </section>
+      <!-- Glacier-->
+      <section class="glacier" id="glacier">
+        <div class="textGlacier">
+          <p>Один из крупнейших ледников</p>
+        </div>
+        <div class="glacierBack"></div>
+        <div class="glacierBack2"></div>
+        <div class="glacierLogo grid center"></div>
+        <div class="wrapPicture">
+          <div class="pictureLeft"></div>
+          <div class="pictureRight"></div>
+        </div>
+        <div class="wrapRombs">
+          <div class="rombLeft"></div>
+          <div class="rombCenter"></div>
+          <div class="rombRight"></div>
+        </div>
+      </section>
+      <!-- end Glaser-->
+      <section class="ownFriends" id="ownFriends">
+        <div class="wrapAfterGlacierHead">
+          <div class="lb"><img id="numLeft" src="img/images/numbers/1.png" alt="number"></div>
+          <div class="afterGlacierHead">
+            <h2>Жители леса</h2>
+          </div>
+          <div class="rb"><img id="numRight" src="img/images/numbers/1.png" alt="number"></div>
+        </div>
+        <div class="wrapCardBoot">
+          <div class="wrapCard">
+            <div class="wrMiniDisLeft">
+              <div class="into10">
+                <div class="inImgLeft">
+                  <div class="into12"></div>
+                </div>
+              </div>
+            </div>
+            <div class="TheCard1">
+              <p class="cardTextHead1">Орёл</p>
+              <p class="cardTextBody1">Крылатый истребитель, Гроза неба</p>
+              <div class="into20">
+                <div class="into21">
+                  <div class="angle12Left">
+                    <div class="into23">
+                      <div class="into24"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="wrapCard">
+            <div class="TheCard2">
+              <p class="cardTextHead2">Медведь</p>
+              <p class="cardTextBody2">Лесной тяжеловес, любитель мёда.</p>
+              <div class="into20">
+                <div class="into21">
+                  <div class="angle12Center">
+                    <div class="into23">
+                      <div class="into24"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="wrapCard">
+            <div class="wrMiniDisRight">
+              <div class="into10">
+                <div class="inImgRight">
+                  <div class="into12"></div>
+                </div>
+              </div>
+            </div>
+            <div class="TheCard3">
+              <p class="cardTextHead3">Волк</p>
+              <p class="cardTextBody3">Серый волк, зубами щёлк.</p>
+              <div class="into20">
+                <div class="into21">
+                  <div class="angle12Right">
+                    <div class="into23">
+                      <div class="into24"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- beach-->
+      <section class="beach" id="bluesky">
+        <div class="item1">
+          <p>Топ 6 лучших курортов мира</p>
+        </div>
+        <div class="item3" id="item3">
+          <div class="wrapItem3" id="wrapItem3">
+            <div class="maldivesMin0" title="maldivi">
+              <div class="maldivesMin1">
+                <div class="maldivesMin2"></div>
+              </div>
+            </div>
+            <div class="dubayMin0">
+              <div class="dubayMin1">
+                <div class="dubayMin2"></div>
+              </div>
+            </div>
+            <div class="kanariMin0">
+              <div class="kanariMin1">
+                <div class="kanariMin2"></div>
+              </div>
+            </div>
+            <div class="seysheliMin0">
+              <div class="seysheliMin1">
+                <div class="seysheliMin2"></div>
+              </div>
+            </div>
+            <div class="gavaiMin0">
+              <div class="gavaiMin1">
+                <div class="gavaiMin2"></div>
+              </div>
+            </div>
+            <div class="baliMin0">
+              <div class="baliMin1">
+                <div class="baliMin2"></div>
+              </div>
+            </div>
+          </div>
+          <div class="menuLabel">
+            <p>меню</p>
+          </div>
+        </div>
+        <div class="item4" id="item4">
+          <div class="item6">
+            <div class="seysheliMin0">
+              <div class="seysheliMin1">
+                <div class="seysheliMin2"></div>
+              </div>
+            </div>
+            <div class="gavaiMin0">
+              <div class="gavaiMin1">
+                <div class="gavaiMin2"></div>
+              </div>
+            </div>
+            <div class="baliMin0">
+              <div class="baliMin1">
+                <div class="baliMin2"></div>
+              </div>
+            </div>
+          </div>
+          <div class="wrapMenuBtn">
+            <button class="menuBtn">menu</button>
+          </div>
+          <div class="wrapContentImg">
+            <div class="contentImg1"><img src="/img/images/maldives1.jpg" id="contentImg1" alt="maldives1"></div>
+            <div class="contentImg2"><img src="/img/images/maldives2.jpg" id="contentImg2" alt="maldives2"></div>
+          </div>
+        </div>
+        <div class="item5">
+          <p id="contentText">
+            Если ваше представление о рае - это нетронутый тропический остров с раскачивающимися пальмами
+            	 и белоснежными пляжами, окруженными кристаллическими лагунами различных оттенков синего
+            	 - тогда Мальдивские острова наверняка будут отвечать всем требованиям. Неудивительно,
+            	 что большой процент туристов, которые приезжают на Мальдивы, являются постоянными посетителями - людьми,
+            	 которые приехали однажды и так полюбили это место, что им просто пришлось приехать снова. <br>	 Красота Мальдив действительно вызывает привыкание. После того, как вы попробуете пьянящую смесь уединенного спокойствия,
+            	 захватывающих занятий водными видами спорта, успокаивающих спа-салонов,
+            	 расслабляющих пляжей - все в роскошном комфорте современных удобств - вы обязательно захотите испытать снова.<br>	 Солнечные, уникальные и нетронутые, острова Мальдив предлагают вам солнце, независимо от того,
+            	 в какое время года вы решите посетить Мальдивы - острова, которые поистине являются раем на Земле.
+          </p>
+          <p class="maldivesText">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Меня послушавшись жизни себя запятой текстами собрал свою возвращайся залетают заманивший великий, пунктуация раз маленькая речью большой страна алфавит lorem сих если лучше. Заголовок толку от всех страна снова живет, семантика ipsum свой ему, океана грамматики, пустился единственное проектах выйти. Возвращайся.</p>
+          <p class="dubayText">Dubay Text</p>
+          <p class="kanariText">kanari text</p>
+          <p class="seysheliText">seysheliText</p>
+          <p class="gavaiText">gavaiText</p>
+          <p class="baliText">baliText</p>
+        </div>
+      </section>
+      <!-- end beach-->
+      <section class="angle3" id="angle3">
+        <div class="wu0">
+          <div class="into60">
+            <div class="into61">
+              <div class="into62 bgImg bgBack1">
+                <div class="into63">
+                  <div class="into64"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w0">
+          <div class="into70">
+            <div class="into71">
+              <div class="into72 bgImg bgBack2">
+                <div class="into73">
+                  <div class="into74"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-1">
+          <div class="into70">
+            <div class="into71">
+              <div class="into72 bgImg bgBack3">
+                <div class="into73">
+                  <div class="into74"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w1">
+          <div class="into70">
+            <div class="into71">
+              <div class="into72 bgImg bgBack4">
+                <div class="into73">
+                  <div class="into74"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w2" id="w2">
+          <div class="into70">
+            <div class="into71">
+              <div class="into72 bgImg bgBack5">
+                <div class="into73">
+                  <div class="into74"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-2">
+          <div class="into70">
+            <div class="into71">
+              <div class="into72 bgImg bgBack6">
+                <div class="into73">
+                  <div class="into74"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-3">
+          <div class="into70">
+            <div class="into71">
+              <div class="into72 bgImg bgBack7">
+                <div class="into73">
+                  <div class="into74"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wu1">
+          <div class="into60">
+            <div class="into61">
+              <div class="into62 bgImg bgBack8">
+                <div class="into63">
+                  <div class="into64"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wu2">
+          <div class="into60">
+            <div class="into61">
+              <div class="into62 bgImg bgBack9">
+                <div class="into63">
+                  <div class="into64"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wu-1">
+          <div class="into60">
+            <div class="into61">
+              <div class="into62 bgImg bgBack10">
+                <div class="into63">
+                  <div class="into64"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wu-2">
+          <div class="into60">
+            <div class="into61">
+              <div class="into62 bgImg bgBack11">
+                <div class="into63">
+                  <div class="into64"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- footer-->
+      <section class="footer" id="footer">
+        <div class="grid25">
+          <div class="grid1">
+            <div class="g1">
+              <div class="contacts">
+                <p>контакты</p>
+              </div>
+              <div class="wrapContactSection">
+                <div class="contactSection">
+                  <div class="phone"><i class="fas fa-mobile-alt" style="font-size:22px;color:lightblue;"></i></div>
+                  <div class="phone2">
+                    <p id="phone">8 905 104 10 26</p>
+                  </div>
+                  <div class="skype"><i class="fab fa-skype" style="font-size:20px;color:lightblue;"></i></div>
+                  <div class="skype2">
+                    <p id="skype">sergey jetreal7</p>
+                  </div>
+                  <div class="gmail"><i class="far fa-envelope" style="font-size:20px;color:lightblue;"></i></div>
+                  <div class="gmail2">
+                    <p id="gmail">someGmail@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="g6">
+              <div class="wrapHead"><i class="fa fa-address-card"></i>
+                <div class="headerThis">
+                  <p>об авторе</p>
+                </div>
+              </div>
+              <div class="g6Cont">
+                <p> Сайт разработан при поддержке творческого объединения, ведущих веб разработчиков сетевой паутины.</p>
+              </div>
+            </div>
+            <div class="g7">
+              <div class="wrapG7">
+                <header><i class="fas fa-handshake"></i>
+                  <div class="wrapperP">
+                    <p>Поддержка</p>
+                  </div>
+                </header>
+                <table>
+                  <tr>
+                    <td>visa</td>
+                    <td class="littleLeft">5469 0800 1320 8314</td>
+                  </tr>
+                  <tr>
+                    <td>yandex</td>
+                    <td class="littleLeft">410012458826759</td>
+                  </tr>
+                  <tr>
+                    <td>webmoney</td>
+                    <td class="littleLeft">z106623153059</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="ang"></div>
+            </div>
+          </div>
+          <div class="wrapBook">
+            <div class="someButifulText">
+              <p><em>Природное многообразие неисчерпаемо. Любая точка пространства на открытом воздухе, будь то равнина, остров, лес или море  имеет своё неповторимое очарование. </em></p>
+            </div>
+            <div class="bookCover">фотоАльбом</div>
+            <div class="wrapBook2">
+              <div class="grid3 closeBook">
+                <div class="centerLine"></div>
+                <div class="site01">
+                  <div class="fistDivSite">
+                    <div class="wrapPages">
+                      <p> </p>
+                    </div><span>
+                       1</span>
+                  </div>
+                  <div class="fistDivSite">
+                    <div class="wrapPages">
+                      <p> </p>
+                    </div><span>
+                       1</span>
+                  </div>
+                  <div class="fistDivSite">
+                    <div class="wrapPages">
+                      <p> </p>
+                    </div><span>
+                       1</span>
+                  </div>
+                  <div class="fistDivSite">
+                    <div class="wrapPages">
+                      <p> </p>
+                    </div><span>
+                       1</span>
+                  </div><i class="far fa-times-circle" id="count"></i>
+                </div>
+                <div class="site02">
+                  <div class="fistDivSite">
+                    <div class="wrapPages">
+                      <p></p>
+                    </div><span>
+                       1</span>
+                  </div>
+                  <div class="fistDivSite">
+                    <div class="wrapPages">
+                      <p></p>
+                    </div><span>
+                       1</span>
+                  </div>
+                  <div class="fistDivSite">
+                    <div class="wrapPages">
+                      <p></p>
+                    </div><span>
+                       1</span>
+                  </div>
+                  <div class="fistDivSite">
+                    <div class="wrapPages">
+                      <p></p>
+                    </div><span>
+                       1</span>
+                  </div>
+                </div>
+              </div>
+              <input type="number" id="numberSite" name="numSite" value="1" min="0" max="">
+              <button id="count2"></button>
+              <button id="leftSlide"></button>
+              <button id="rightSlide"></button>
+              <button id="close"></button>
+              <button id="appearance">фотоальбом</button>
+            </div>
+          </div>
+          <div class="grid2">
+            <div class="footerRight">
+              <p> отзывы
+                <div></div>
+              </p>
+            </div>
+            <div class="f1Header">
+              <p class="far fa-caret-square-right"></p>
+              <p class="ht"></p>
+            </div>
+            <div class="f1Content">
+              <p class="bt">Я получил настоящее эстетическое наслаждение после прочтения статей этого сайта. Долго любовался пейзажами, так как обожаю природу.</p>
+            </div>
+          </div>
+        </div>
+        <div class="intoWr">
+          <div class="into45">
+            <div class="into46">
+              <div class="into47">
+                <div class="into48">
+                  <div class="into49">
+                    <div class="into40">
+                      <div class="into41">
+                        <div class="into42">
+                          <div class="into42"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottomFooter">
+          <div class="wrapFoo"><img class="uicn" src="img/images/iucn.png" alt="iucn"></div>
+          <div class="wrapFoo"><img class="greenPeace" src="img/images/green.png" alt="greenPeace"></div>
+          <div class="wrapFoo"><img class="wap" src="img/images/wap.png" alt="wap"></div>
+          <div class="wrapFoo"><img class="panda" src="img/images/panda5.png" alt="panda"></div>
+          <div class="wrapFoo"><img class="wcs" src="img/images/wcs.png" alt="wcs"></div>
+          <div class="line-7"></div>
+          <div class="line-6"></div>
+          <div class="line-5"></div>
+          <div class="line-4"></div>
+          <div class="line-3"></div>
+          <div class="line-2"></div>
+          <div class="line-1"></div>
+          <div class="line0"></div>
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+          <div class="line4"></div>
+          <div class="line5"></div>
+          <div class="line6"></div>
+          <div class="line7"></div>
+        </div>
+      </section>
+      <div id="arrowToBottom"><a href="#footer"><img src="img/favicon/toBottom.png" alt="arrow"></a></div>
+      <div class="copyright"><i class="far fa-copyright"></i>
+        <p>national geographic 2019</p>
+      </div>
+      <!-- end footer-->
+    </div>
+    <!-- end wrapper -->
+    <!-- end wrapper-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- nice scroll-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.5.1/jquery.nicescroll.min.js"></script>
+    <!-- Latest compiled JavaScript-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <!-- Magnific Popup core JS file-->
+   <!--  <script src="libs/html5shiv/html5shiv.min.js"></script>
+    <script src="libs/is.min.js"></script>
+    <script src="libs/Magnific/jquery.magnific-popup.min.js"></script>
+    <script src="libs/scroll2Id/jquery.malihu.PageScroll2id.min.js"></script> -->
+    <script src="js/libs.min.js" defer></script>
+    <script src="js/common.js" defer></script>
+  </body>
+</html>
