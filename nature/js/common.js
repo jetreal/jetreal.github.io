@@ -1795,7 +1795,7 @@ function hideContacts() {
 				// icon support changeSideImgw
 				$('.fas.fa-handshake').css({'left': '-30px'});
 				// hide author
-				$('.headerThis p').css({'left': '-165px'}).removeClass('opacity');
+				$('.headerThis p').css({'left': '-185px'}).removeClass('opacity');
 				// change header overflow
 				$('.headerThis').css({'overflow': 'visible'});
 				$('.fa-address-card').css('color', '#A9D9F2');
