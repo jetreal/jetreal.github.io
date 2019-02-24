@@ -6554,6 +6554,7 @@ input::-webkit-inner-spin-button {
     grid-column: 1;
     grid-row: 3; }
   .item6 {
+    border-radius: 4px;
     position: absolute;
     grid-column: 1;
     grid-row: 1;
