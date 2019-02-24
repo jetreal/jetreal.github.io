@@ -3683,6 +3683,7 @@ a.test-popup-link {
   margin: 0 5%;
   height: 180px;
   padding-top: 15px;
+  border-radius: 4px;
   position: relative;
   border: 1px solid gray; }
 
@@ -4777,7 +4778,7 @@ input::-webkit-inner-spin-button {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    left: -165px;
+    left: -185px;
     -webkit-transition: all 1s;
     -o-transition: all 1s;
     transition: all 1s;
