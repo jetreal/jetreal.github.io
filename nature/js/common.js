@@ -100,7 +100,7 @@ function headerAnime(iDivDataObj) {
 		$('.circleImg').off('click');
 			$('.circleImg').on('click', offTimerHeader);
 			// css
-			$('.circleImg').attr('src', '/img/images/button3.png');
+			$('.circleImg').attr('src', 'img/images/button3.png');
 			$('.circleImg').css({width:'150px',height:'150px',
 			 'box-shadow': '3px 3px 6px gray, -3px -3px 6px gray,\
 			 -3px 3px 6px gray, 3px -3px 6px gray'});
