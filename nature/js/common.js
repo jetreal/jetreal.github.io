@@ -3,7 +3,7 @@
 $(document).ready(function() {
 	setTimeout(function() {
 		$(window).trigger('resize');
-	},250);
+	},350);
 });
 
 
@@ -202,17 +202,8 @@ function hidechangeSideImgwButton () {
 	} 
 }
 ///////////////////////////////////////////////////////////
-// replace red TopLine at forest section  
-function replaceTopLine() {
-	$(document).ready(function() {
-		if ($(window).outerWidth() <= 992) {
-			$('.theLostRiverText3').css({position:'relative',bottom:'116px',zIndex: '11'}).appendTo($('.wrapVItem'));
-		}	else {
-			$('.theLostRiverText3').css({position:'relative',bottom:'8px',zIndex: '11'}).insertAfter($('.theLostRiverText2'));
-		}
-	});
-}
-$(window).on('load resize', replaceTopLine);
+ 
+
 ///////////////////////////////////////////////////////////////////////
 //afterHeader section change image
 var sectionObj = [
