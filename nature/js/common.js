@@ -3,7 +3,7 @@
 $(document).ready(function() {
 	setTimeout(function() {
 		$(window).trigger('resize');
-	},350);
+	},250);
 });
 
 
@@ -101,11 +101,12 @@ function headerAnime(iDivDataObj) {
 			$('.circleImg').on('click', offTimerHeader);
 			// css
 			$('.circleImg').attr('src', 'img/images/button3.png');
-			$('.circleImg').css({width:'150px',height:'150px',
-			 'box-shadow': '3px 3px 6px gray, -3px -3px 6px gray,\
-			 -3px 3px 6px gray, 3px -3px 6px gray'});
+			$('.circleImg').css({width:'150px', height:'150px',
+			 'box-shadow': '2px 2px 6px gray, -2px -2px 6px gray,\
+			 -2px 2px 6px gray, 2px -2px 6px gray'});
 			$('.into03, .into04, .into05, .into06')
-			.css('box-shadow', '3px 3px 6px #7F7F7F inset, -3px -3px 6px #7F7F7F inset');
+			.css('box-shadow', '2px 2px 6px #7F7F7F inset, -2px -2px 6px #7F7F7F inset,\
+				-2px 2px 6px #7F7F7F inset, 2px -2px 6px #7F7F7F inset');
 			$('.bDiv').css('border', '1px solid #99747A');
 	},32000);
 }
@@ -202,8 +203,17 @@ function hidechangeSideImgwButton () {
 	} 
 }
 ///////////////////////////////////////////////////////////
- 
-
+// replace red TopLine at forest section  
+function replaceTopLine() {
+	$(document).ready(function() {
+		if ($(window).outerWidth() <= 992) {
+			$('.theLostRiverText3').css({position:'relative',bottom:'116px',zIndex: '11'}).appendTo($('.wrapVItem'));
+		}	else {
+			$('.theLostRiverText3').css({position:'relative',bottom:'8px',zIndex: '11'}).insertAfter($('.theLostRiverText2'));
+		}
+	});
+}
+$(window).on('load resize', replaceTopLine);
 ///////////////////////////////////////////////////////////////////////
 //afterHeader section change image
 var sectionObj = [
@@ -1685,12 +1695,12 @@ function movePhoneLeft(event) {
 		switch (true) {
 			case (( event.data.thisFlag == 'flagPhone') && (flagPhone == false)) :
 		 		$(event.data.class).css('left', '0px');
-		 		$('.phone i').css('color', '#CBBEAE');
+		 		$('.icon-mobile').css('color', '#CBBEAE');
 				flagPhone = true;
 					break;
 			case (( event.data.thisFlag == 'flagPhone') && (flagPhone == true)) :
 				$(event.data.class).css('left', event.data.leftHide);
-				$('.phone i').css('color', '#ADD8E6');
+				$('.icon-mobile').css('color', '#ADD8E6');
 				flagPhone = false;
 					break;
 			case (( event.data.thisFlag == 'flagSkype') && (flagSkype == false)) :
@@ -1705,12 +1715,12 @@ function movePhoneLeft(event) {
 					break;
 			case (( event.data.thisFlag == 'flagGmail') && (flagGmail == false)) :
 		 		$(event.data.class).css('left', '0px');
-			 	$('.gmail i').css('color', '#CBBEAE');
+			 	$('.icon-mail').css('color', '#CBBEAE');
 			 	flagGmail = true;
 					break;
 			case (( event.data.thisFlag == 'flagGmail') && (flagGmail == true)) :
 				$(event.data.class).css('left', event.data.leftHide);
-				$('.gmail i').css('color', '#ADD8E6');
+				$('.icon-mail').css('color', '#ADD8E6');
 				flagGmail = false;
 					break;
 		}
@@ -1733,10 +1743,10 @@ var flagConTime = false, flagContOff = null;
 					$('.skype').triggerHandler("click");
 					$('.gmail').triggerHandler("click");
 					$('.fa-address-card').triggerHandler('click');
-					$('.fas.fa-handshake').triggerHandler('click');
+					$('.icon-handshake-o').triggerHandler('click');
 
 					$('.fa-address-card').off('click');
-					$('.fas.fa-handshake').off('click');
+					$('.icon-handshake-o').off('click');
 					$('.phone').off("click");
 					$('.skype').off("click");
 					$('.gmail').off("click");
@@ -1778,15 +1788,15 @@ function hideContacts() {
 				flagContOff = true;
 				// hide support text
 				$('.wrapperP p').css('left', '-165px');
-				$('.fas.fa-handshake').css('color', '#A9D9F2');
+				$('.icon-handshake-o').css('color', '#A9D9F2');
 				$('.wrapG7 table').css('left', '-200px');
 				// f = true;
 				// change support overflow
 				$('.wrapperP').css({'overflow': 'visible'});
 				// icon support changeSideImgw
-				$('.fas.fa-handshake').css({'left': '-30px'});
+				$('.icon-handshake-o').css({'left': '-35px'});
 				// hide author
-				$('.headerThis p').css({'left': '-185px'}).removeClass('opacity');
+				$('.headerThis p').css({'left': '-165px'}).removeClass('opacity');
 				// change header overflow
 				$('.headerThis').css({'overflow': 'visible'});
 				$('.fa-address-card').css('color', '#A9D9F2');
@@ -1796,22 +1806,22 @@ function hideContacts() {
 					$('.g6Cont p').css({'animation': ''});
 					// flagAuthor = false;
 				},750);
-				$('.wrapHead i').css({'left': '-15px', 'position': 'relative'});
+				$('.icon-comment-empty').css({'left': '-15px', 'position': 'relative'});
 				// off click author and support
 
 				break;
 			case (contactFlag == false) :
 				// hide support text
 				$('.wrapperP p').css('left', '-165px');
-				$('.fas.fa-handshake').css('color', '#A9D9F2');
+				$('.icon-handshake-o').css('color', '#A9D9F2');
 				$('.wrapG7 table').css('left', '-200px');
 				f = true;
 				// change support overflow
 				$('.wrapperP').css({'overflow': 'visible'});
 				// icon support changeSideImgw
-				$('.fas.fa-handshake').css({'left': '-30px'});
+				$('.icon-handshake-o').css({'left': '-35px'});
 				// hide author text
-				$('.headerThis p').css({'left': '-185px'});
+				$('.headerThis p').css({'left': '-165px'});
 				// change header overflow
 				$('.headerThis').css({'overflow': 'visible'});
 				$('.fa-address-card').css('color', '#A9D9F2');
@@ -1820,7 +1830,7 @@ function hideContacts() {
 					$('.g6Cont p').css({'animation': ''});
 					flagAuthor = false;
 				},750);
-				$('.wrapHead i').css({'left': '-15px', 'position': 'relative'});// icon author changeSideImgw
+				$('.icon-comment-empty').css({'left': '-15px', 'position': 'relative'});// icon author changeSideImgw
         //////////////////////////////////////////////////////
         // top contacts
 				$('#phone, #skype').css('left', '-110px');
@@ -1833,10 +1843,10 @@ function hideContacts() {
 		  	break;
 			case (contactFlag == true) :
 				// icon support changeSideImgw
-				$('.fas.fa-handshake').css({'left': '-2px'});
+				$('.icon-handshake-o').css({'left': '-6px', 'color': '#CBBEAE'});
 				// icon author changeSideImgw
 				$('.g6Cont').css({'left': '-160px', 'opacity': '0'});
-				$('.wrapHead i').css({'left': '10px', 'position': 'relative'});
+				$('.icon-comment-empty').css({'left': '10px', 'position': 'relative'});
 				// changeSideImgw contacts
 				$('.contactSection').css('top', '-14px');
 				$('.contacts p').css({color: '#CBBEAE'});
@@ -1845,7 +1855,7 @@ function hideContacts() {
 		 		setTimeout(function() {
 			 		$('.fa-address-card').css('color', '#CBBEAE');
 					// header movie
-					$('.headerThis p').css({'left': '-10px'});
+					$('.headerThis p').css({'left': '-15px'});
 					// change header overflow
 					$('.headerThis').css({'overflow': 'hidden'});
 					// slide content
@@ -1855,7 +1865,7 @@ function hideContacts() {
 		 		// of support
 					$('.wrapperP').css({'overflow': 'hidden'});
 					$('.wrapperP p').css('left', '13px');
-					$('.fas.fa-handshake').css('color', '#CBBEAE');
+					$('.icon-handshake-o').css('color', '#CBBEAE');
 					$('.wrapG7 table').css('left', '0px');
 					// f = false;
 
@@ -1867,9 +1877,7 @@ function hideContacts() {
 
 
 // about author
-$(document).ready(function() {
-	$('.fa-address-card, .headerThis').on('click', hideHeader);
-});
+
 
 var flagAuthor = false;
 function hideHeader() {	
@@ -1878,7 +1886,7 @@ function hideHeader() {
 			// icon color
 			$('.fa-address-card').css('color', '#CBBEAE');
 			// header movie
-			$('.headerThis p').css({'left': '-10px'});
+			$('.headerThis p').css({'left': '-15px'});
 			// change header overflow
 			$('.headerThis').css({'overflow': 'hidden'});
 			// slide content
@@ -1906,12 +1914,12 @@ function hideHeader() {
 
 
 var f = true;
-	$('.fas.fa-handshake').on('click', hideHeader2);
+	$('.icon-handshake-o').on('click', hideHeader2);
 		function hideHeader2() {
 			switch(true) {
 				case (f == false) :
 					$('.wrapperP p').css('left', '-165px');
-					$('.fas.fa-handshake').css('color', '#A9D9F2');
+					$('.icon-handshake-o').css('color', '#A9D9F2');
 					$('.wrapG7 table').css('left', '-200px');
 					f = true;
 				break;
@@ -1919,7 +1927,7 @@ var f = true;
 					// change support overflow property
 					$('.wrapperP').css({'overflow': 'hidden'});
 					$('.wrapperP p').css('left', '13px');
-					$('.fas.fa-handshake').css('color', '#CBBEAE');
+					$('.icon-handshake-o').css('color', '#CBBEAE');
 					$('.wrapG7 table').css('left', '0px');
 					f = false;
 				break;
@@ -2376,8 +2384,8 @@ $(document).ready(function() {
 });
 
 // change section 'reviews' and hide it
-
-	$('.far.fa-caret-square-right').on('click', rightSectionArrTxt, changeReviews);
+// start functions
+	$('.icon-to-end').on('click', rightSectionArrTxt, changeReviews);
 	$('.footerRight').on('click', hideReviews);
 
 // content reviews
@@ -2403,7 +2411,7 @@ function changeReviews() {
 	setTimeout(function() {
 		$('.f1Content p.bt').text(rightSectionArrTxt[counter].body);
 		$('.f1Content p.bt').css({'transform': 'rotateX(0deg) scale(1, 1)'});
-	},150)
+	},150);
 	//change header
 	$('.f1Header p.ht')
 		.css({'transform': 'rotateX(90deg) scale(0, 0)'})
@@ -2421,16 +2429,16 @@ var	flagT = true;
 function hideReviews() {
 	switch(true) {
 		case (flagT == false):
-		$('.f1Header, .f1Content').css({'opacity': '0'});
-		$('.footerRight p, .far.fa-caret-square-right').css({'color': 'rgb(169, 217, 242)'});
-		flagT = true;
-		  break;
+			$('.f1Header, .f1Content').css({'opacity': '0'});
+			$('.footerRight p, .icon-to-end').css({'color': 'rgb(169, 217, 242)'});
+			flagT = true;
+		break;
 		case (flagT == true):
-		$('.f1Header, .f1Content').css({'opacity': '1'});
-		$('.footerRight p, .far.fa-caret-square-right').css({'color': '#CBBEAE'});
-		flagT = false;
-	    break;
-	}  
+			$('.f1Header, .f1Content').css({'opacity': '1'});
+			$('.footerRight p, .icon-to-end').css({'color': '#CBBEAE'});
+			flagT = false;
+	  break;
+	}
 }
 // hide footerRight sideBar initially
 $(document).ready(function() {
@@ -2438,18 +2446,17 @@ $(document).ready(function() {
 });
 
 ////////////////////////////////////////
-     // preloader
+// preloader
 $(window).one('load', function() {
 	setTimeout(function() {
 		$('.wrapperLoader').fadeOut('slow');
-		
-	},250)
+	},250);
 });
 ///////////////////////////////////////////
 //smoothScroll to id
 $(document).ready(function() {
 	if ($(window).outerWidth() > 768) {
-		(function(){
+		(function() {
 		  $(window).on("load",function(){
 		    $("a[href*='#']").mPageScroll2id({
 		    	scrollSpeed: 500,
@@ -2470,7 +2477,6 @@ window.addEventListener('scroll', function() {
   if(!body.classList.contains('disable-hover')) {
     body.classList.add('disable-hover')
   }
-  
   timer = setTimeout(function(){
     body.classList.remove('disable-hover')
   },300);
