@@ -1,8 +1,8 @@
 @font-face {
   font-family: "RobotoRegular";
   font-display: swap;
-  src: url("/fonts/RobotoRegular/RobotoRegular.eot");
-  src: url("/fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("/fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("/fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
+  src: url("../fonts/RobotoRegular/RobotoRegular.eot");
+  src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("/fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("/fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal; }
 
@@ -5339,7 +5339,7 @@ a.test-popup-link {
   height: 120px;
   -webkit-transform: rotateY(25deg);
           transform: rotateY(25deg);
-  background-image: url("..../img/images/glacierLeft.jpg");
+  background-image: url("../img/images/glacierLeft.jpg");
   background-position: center;
   -webkit-background-size: cover;
           background-size: cover;

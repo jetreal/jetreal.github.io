@@ -73,10 +73,10 @@ $('.popup-modal2').magnificPopup({
 ////////////////////////////////////////////////////////////
 // header bottom text scale function
 var lDivDataObj = {
-	wind:{img:'url(/img/images/sky2.jpg)', text:'Ветер', rightImg:''},
-	fire:{img:'url(/img/images/fireHeaderDisp.jpg', text: 'Огонь', rightImg: ''},
-	water:{img:'url(/img/images/waterHeaderDisp.jpg', text: 'Вода', rightImg: ''},
-	earth:{img:'url(/img/images/earth.jpg', text: 'Земля', rightImg: ''}
+	wind:{img:'url(img/images/sky2.jpg)', text:'Ветер', rightImg:''},
+	fire:{img:'url(img/images/fireHeaderDisp.jpg)', text: 'Огонь', rightImg: ''},
+	water:{img:'url(img/images/waterHeaderDisp.jpg)', text: 'Вода', rightImg: ''},
+	earth:{img:'url(img/images/earth.jpg)', text: 'Земля', rightImg: ''}
 }
 var flagi = false;
 
@@ -100,7 +100,7 @@ function headerAnime(iDivDataObj) {
 		$('.circleImg').off('click');
 			$('.circleImg').on('click', offTimerHeader);
 			// css
-			$('.circleImg').attr('src', '/img/images/button3.png');
+			$('.circleImg').attr('src', 'img/images/button3.png');
 			$('.circleImg').css({width:'150px', height:'150px',
 			 'box-shadow': '2px 2px 6px gray, -2px -2px 6px gray,\
 			 -2px 2px 6px gray, 2px -2px 6px gray'});
@@ -139,7 +139,7 @@ function mDown() {
 				'box-shadow': '3px 3px 6px #19B9F5, -3px -3px 6px #19B9F5,\
 				-3px 3px 6px #19B9F5, 3px -3px 6px #19B9F5'});
 			// css
-			$('.circleImg').attr('src', '/img/images/button2.png');
+			$('.circleImg').attr('src', 'img/images/button2.png');
 			$('.into03, .into04, .into05, .into06')
 			.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 			$('.bDiv').css('border', '1px solid #19B9F5');
@@ -150,7 +150,7 @@ function mDown() {
 			$('.circleImg').off('click');
 			$('.circleImg').on('click', offTimerHeader);
 			// css
-			$('.circleImg').attr('src', '/img/images/button3.png');
+			$('.circleImg').attr('src', 'img/images/button3.png');
 			$('.circleImg').css({width:'150px',height:'150px',
 			 'box-shadow': '3px 3px 6px gray, -3px -3px 6px gray,\
 			 -3px 3px 6px gray, 3px -3px 6px gray'});
@@ -218,53 +218,53 @@ $(window).on('load resize', replaceTopLine);
 //afterHeader section change image
 var sectionObj = [
 	{
-		leftSrc: '/img/images/flowers/romashka1.jpg',
-		rightSRC: '/img/images/flowers/romashka2.jpg',
+		leftSrc: 'img/images/flowers/romashka1.jpg',
+		rightSRC: 'img/images/flowers/romashka2.jpg',
 		centerTxt: 'Ромашка'
 	},
 	{
-		leftSrc: '/img/images/flowers/nartsisi1.jpg',
-		rightSRC: '/img/images/flowers/nartsisi2.jpg',
+		leftSrc: 'img/images/flowers/nartsisi1.jpg',
+		rightSRC: 'img/images/flowers/nartsisi2.jpg',
 		centerTxt: 'Нарцисс'
 	},
 	{
-		leftSrc: '/img/images/flowers/rose1.jpg',
-		rightSRC: '/img/images/flowers/rose2.jpg',
+		leftSrc: 'img/images/flowers/rose1.jpg',
+		rightSRC: 'img/images/flowers/rose2.jpg',
 		centerTxt: 'Роза'
 	},
 	{
-		leftSrc: '/img/images/flowers/tulpan1.jpg',
-		rightSRC: '/img/images/flowers/tulpan2.jpg',
+		leftSrc: 'img/images/flowers/tulpan1.jpg',
+		rightSRC: 'img/images/flowers/tulpan2.jpg',
 		centerTxt: 'Тюльпан'
 	},
 	{
-		leftSrc: '/img/images/flowers/fucsia1.jpg',
-		rightSRC: '/img/images/flowers/fucsia2.jpg',
+		leftSrc: 'img/images/flowers/fucsia1.jpg',
+		rightSRC: 'img/images/flowers/fucsia2.jpg',
 		centerTxt: 'Фуксия'
 	},
 	{
-		leftSrc: '/img/images/flowers/lilii1.jpg',
-		rightSRC: '/img/images/flowers/lilii2.jpg',
+		leftSrc: 'img/images/flowers/lilii1.jpg',
+		rightSRC: 'img/images/flowers/lilii2.jpg',
 		centerTxt: 'Лилия'
 	},
 	{
-		leftSrc: '/img/images/flowers/hrizantem1.jpg',
-		rightSRC: '/img/images/flowers/hrizantem2.jpg',
+		leftSrc: 'img/images/flowers/hrizantem1.jpg',
+		rightSRC: 'img/images/flowers/hrizantem2.jpg',
 		centerTxt: 'Хризантема'
 	},
 	{
-		leftSrc: '/img/images/flowers/kolokolchik1.jpg',
-		rightSRC: '/img/images/flowers/kolokolchik2.jpg',
+		leftSrc: 'img/images/flowers/kolokolchik1.jpg',
+		rightSRC: 'img/images/flowers/kolokolchik2.jpg',
 		centerTxt: 'Колокольчик'
 	},
 	{
-		leftSrc: '/img/images/flowers/fialki1.jpg',
-		rightSRC: '/img/images/flowers/fialki2.jpg',
+		leftSrc: 'img/images/flowers/fialki1.jpg',
+		rightSRC: 'img/images/flowers/fialki2.jpg',
 		centerTxt: 'Фиалка'
 	},
 	{
-		leftSrc: '/img/images/flowers/gvozdika1.jpg',
-		rightSRC: '/img/images/flowers/gvozdika2.jpg',
+		leftSrc: 'img/images/flowers/gvozdika1.jpg',
+		rightSRC: 'img/images/flowers/gvozdika2.jpg',
 		centerTxt: 'Гвоздика'
 	}
 ];
@@ -308,63 +308,63 @@ function changeCount(event) {
 ///////////////////////////////////////////////////////////////////////
 var sectionObj2 = [
 	{
-		leftSrc: '/img/images/berries/malina1.jpg',
-		rightSRC: '/img/images/berries/malina2.jpg',
+		leftSrc: 'img/images/berries/malina1.jpg',
+		rightSRC: 'img/images/berries/malina2.jpg',
 		centerTxt: 'Малина'
 	},
 	{
-		leftSrc: '/img/images/berries/ejevika1.jpg',
-		rightSRC: '/img/images/berries/ejevika2.jpg',
+		leftSrc: 'img/images/berries/ejevika1.jpg',
+		rightSRC: 'img/images/berries/ejevika2.jpg',
 		centerTxt: 'Ежевика'
 	},
 	{
-		leftSrc: '/img/images/berries/zemlyanika1.jpg',
-		rightSRC: '/img/images/berries/zemlyanika2.jpg',
+		leftSrc: 'img/images/berries/zemlyanika1.jpg',
+		rightSRC: 'img/images/berries/zemlyanika2.jpg',
 		centerTxt: 'Земляника'
 	},
 	{
-		leftSrc: '/img/images/berries/krijovnik1.jpg',
-		rightSRC: '/img/images/berries/krijovnik2.jpg',
+		leftSrc: 'img/images/berries/krijovnik1.jpg',
+		rightSRC: 'img/images/berries/krijovnik2.jpg',
 		centerTxt: 'Крыжовник'
 	},
 	{
-		leftSrc: '/img/images/berries/klubnika1.jpg',
-		rightSRC: '/img/images/berries/klubnika2.jpg',
+		leftSrc: 'img/images/berries/klubnika1.jpg',
+		rightSRC: 'img/images/berries/klubnika2.jpg',
 		centerTxt: 'Клубника'
 	},
 	{
-		leftSrc: '/img/images/berries/smorodina1.jpg',
-		rightSRC: '/img/images/berries/smorodina2.jpg',
+		leftSrc: 'img/images/berries/smorodina1.jpg',
+		rightSRC: 'img/images/berries/smorodina2.jpg',
 		centerTxt: 'Смородина'
 	},
 	{
-		leftSrc: '/img/images/berries/chernika1.jpg',
-		rightSRC: '/img/images/berries/chernika2.jpg',
+		leftSrc: 'img/images/berries/chernika1.jpg',
+		rightSRC: 'img/images/berries/chernika2.jpg',
 		centerTxt: 'Черника'
 	},
 	{
-		leftSrc: '/img/images/berries/vishnya1.jpg',
-		rightSRC: '/img/images/berries/vishnya2.jpg',
+		leftSrc: 'img/images/berries/vishnya1.jpg',
+		rightSRC: 'img/images/berries/vishnya2.jpg',
 		centerTxt: 'Вишня'
 	},
 	{
-		leftSrc: '/img/images/berries/golubika1.jpg',
-		rightSRC: '/img/images/berries/golubika2.jpg',
+		leftSrc: 'img/images/berries/golubika1.jpg',
+		rightSRC: 'img/images/berries/golubika2.jpg',
 		centerTxt: 'Голубика'
 	},
 	{
-		leftSrc: '/img/images/berries/chereshnya1.jpg',
-		rightSRC: '/img/images/berries/chereshnya2.jpg',
+		leftSrc: 'img/images/berries/chereshnya1.jpg',
+		rightSRC: 'img/images/berries/chereshnya2.jpg',
 		centerTxt: 'Черешня'
 	},
 	{
-		leftSrc: '/img/images/berries/brusnika1.jpg',
-		rightSRC: '/img/images/berries/brusnika2.jpg',
+		leftSrc: 'img/images/berries/brusnika1.jpg',
+		rightSRC: 'img/images/berries/brusnika2.jpg',
 		centerTxt: 'Брусника'
 	},
 	{
-		leftSrc: '/img/images/berries/vinograd1.jpg',
-		rightSRC: '/img/images/berries/vinograd2.jpg',
+		leftSrc: 'img/images/berries/vinograd1.jpg',
+		rightSRC: 'img/images/berries/vinograd2.jpg',
 		centerTxt: 'Виноград'
 	}
 ];
@@ -408,8 +408,8 @@ function changeCount2(event) {
 ///////////////////////////////////////////////////////////////////////
 var sectionObj3 = [
 	{
-		leftSrc: '/img/images/animals/ej1.jpg',
-		rightSRC: '/img/images/animals/ej2.jpg',
+		leftSrc: 'img/images/animals/ej1.jpg',
+		rightSRC: 'img/images/animals/ej2.jpg',
 		centerTxt: 'ёж',
 		popupTect: 'Образ колючего жителя лесов\
 		 и степей всем хорошо известен. Происхождение \
@@ -423,48 +423,48 @@ var sectionObj3 = [
 		  становится неприступной крепостью.'
 	},
 	{
-		leftSrc: '/img/images/animals/belka1.jpg',
-		rightSRC: '/img/images/animals/belka2.jpg',
+		leftSrc: 'img/images/animals/belka1.jpg',
+		rightSRC: 'img/images/animals/belka2.jpg',
 		centerTxt: 'Белка'
 	},
 	{
-		leftSrc: '/img/images/animals/kaban1.jpg',
-		rightSRC: '/img/images/animals/kaban2.jpg',
+		leftSrc: 'img/images/animals/kaban1.jpg',
+		rightSRC: 'img/images/animals/kaban2.jpg',
 		centerTxt: 'Кабан'
 	},
 	{
-		leftSrc: '/img/images/animals/enot1.jpg',
-		rightSRC: '/img/images/animals/enot2.jpg',
+		leftSrc: 'img/images/animals/enot1.jpg',
+		rightSRC: 'img/images/animals/enot2.jpg',
 		centerTxt: 'Енот'
 	},
 	{
-		leftSrc: '/img/images/animals/bobr1.jpg',
-		rightSRC: '/img/images/animals/bobr2.jpg',
+		leftSrc: 'img/images/animals/bobr1.jpg',
+		rightSRC: 'img/images/animals/bobr2.jpg',
 		centerTxt: 'Бобр'
 	},
 	{
-		leftSrc: '/img/images/animals/olen1.jpg',
-		rightSRC: '/img/images/animals/olen2.jpg',
+		leftSrc: 'img/images/animals/olen1.jpg',
+		rightSRC: 'img/images/animals/olen2.jpg',
 		centerTxt: 'Олень'
 	},
 	{
-		leftSrc: '/img/images/animals/zayats1.jpg',
-		rightSRC: '/img/images/animals/zayats2.jpg',
+		leftSrc: 'img/images/animals/zayats1.jpg',
+		rightSRC: 'img/images/animals/zayats2.jpg',
 		centerTxt: 'Заяц'
 	},
 	{
-		leftSrc: '/img/images/animals/los1.jpg',
-		rightSRC: '/img/images/animals/los2.jpg',
+		leftSrc: 'img/images/animals/los1.jpg',
+		rightSRC: 'img/images/animals/los2.jpg',
 		centerTxt: 'Лось'
 	},
 	{
-		leftSrc: '/img/images/animals/lisa1.jpg',
-		rightSRC: '/img/images/animals/lisa2.jpg',
+		leftSrc: 'img/images/animals/lisa1.jpg',
+		rightSRC: 'img/images/animals/lisa2.jpg',
 		centerTxt: 'Лиса'
 	},
 	{
-		leftSrc: '/img/images/animals/sova1.jpg',
-		rightSRC: '/img/images/animals/sova2.jpg',
+		leftSrc: 'img/images/animals/sova1.jpg',
+		rightSRC: 'img/images/animals/sova2.jpg',
 		centerTxt: 'Сова'
 	}
 ]
@@ -621,60 +621,60 @@ var anyArr = [];
 	// img Obj path for imgs
 var locationObj = {
 	numbers: [
-		'/img/images/numbers/1.png',
-		'/img/images/numbers/2.png',
-		'/img/images/numbers/3.png',
-		'/img/images/numbers/4.png',
-		'/img/images/numbers/5.png'
+		'img/images/numbers/1.png',
+		'img/images/numbers/2.png',
+		'img/images/numbers/3.png',
+		'img/images/numbers/4.png',
+		'img/images/numbers/5.png'
 	],
 	rivers: [
-		'/img/images/rivers/1.png',
-		'/img/images/rivers/2.png',
-		'/img/images/rivers/3.png',
-		'/img/images/rivers/4.png',
-		'/img/images/rivers/5.png'
+		'img/images/rivers/1.png',
+		'img/images/rivers/2.png',
+		'img/images/rivers/3.png',
+		'img/images/rivers/4.png',
+		'img/images/rivers/5.png'
 	],
 	forest: [
-		'/img/images/forest/1.png',
-		'/img/images/forest/2.png',
-		'/img/images/forest/3.png',
-		'/img/images/forest/4.png',
-		'/img/images/forest/5.png'
+		'img/images/forest/1.png',
+		'img/images/forest/2.png',
+		'img/images/forest/3.png',
+		'img/images/forest/4.png',
+		'img/images/forest/5.png'
 	],
 	mountain: [
-		'/img/images/mountain/1.png',
-		'/img/images/mountain/2.png',
-		'/img/images/mountain/3.png',
-		'/img/images/mountain/4.png',
-		'/img/images/mountain/5.png'
+		'img/images/mountain/1.png',
+		'img/images/mountain/2.png',
+		'img/images/mountain/3.png',
+		'img/images/mountain/4.png',
+		'img/images/mountain/5.png'
 	],
 	fields: [
-		'/img/images/fields/1.png',
-		'/img/images/fields/2.png',
-		'/img/images/fields/3.png',
-		'/img/images/fields/4.png',
-		'/img/images/fields/5.png'
+		'img/images/fields/1.png',
+		'img/images/fields/2.png',
+		'img/images/fields/3.png',
+		'img/images/fields/4.png',
+		'img/images/fields/5.png'
 	],
 	seas: [
-		'/img/images/seas/1.png',
-		'/img/images/seas/2.png',
-		'/img/images/seas/3.png',
-		'/img/images/seas/4.png',
-		'/img/images/seas/5.png'
+		'img/images/seas/1.png',
+		'img/images/seas/2.png',
+		'img/images/seas/3.png',
+		'img/images/seas/4.png',
+		'img/images/seas/5.png'
 	],
 	deserts: [
-		'/img/images/deserts/1.png',
-		'/img/images/deserts/2.png',
-		'/img/images/deserts/3.png',
-		'/img/images/deserts/4.png',
-		'/img/images/deserts/5.png'
+		'img/images/deserts/1.png',
+		'img/images/deserts/2.png',
+		'img/images/deserts/3.png',
+		'img/images/deserts/4.png',
+		'img/images/deserts/5.png'
 	],
 	jungles: [
-		'/img/images/jungles/1.png',
-		'/img/images/jungles/2.png',
-		'/img/images/jungles/3.png',
-		'/img/images/jungles/4.png',
-		'/img/images/jungles/5.png'
+		'img/images/jungles/1.png',
+		'img/images/jungles/2.png',
+		'img/images/jungles/3.png',
+		'img/images/jungles/4.png',
+		'img/images/jungles/5.png'
 	]
 	}
 	var index = 0;
@@ -682,8 +682,8 @@ var locationObj = {
 $(document).ready(function() {
   function myCh() {
     function changeRiversContent() {
-			$('#imgContent').attr('src', '/img/images/rivers/1.png');
-			$('#imgContent2').attr('src', '/img/images/rivers/6.png');
+			$('#imgContent').attr('src', 'img/images/rivers/1.png');
+			$('#imgContent2').attr('src', 'img/images/rivers/6.png');
 			$('#headerLeftSection p').text(fTxt.rivers);
 			// src for popup
 			var atrLeft = $('#imgContent2').attr('src');
@@ -714,8 +714,8 @@ $(document).ready(function() {
   function myCh2() {
 // change display
   	function changeForestContent() {
-		$('#imgContent').attr('src', '/img/images/forest/1.png');
-		$('#imgContent2').attr('src', '/img/images/forest/6.png');
+		$('#imgContent').attr('src', 'img/images/forest/1.png');
+		$('#imgContent2').attr('src', 'img/images/forest/6.png');
 // change miniText
 		$('#headerLeftSection p').text(fTxt.forests);
 // change attr href for popup
@@ -752,8 +752,8 @@ $(document).ready(function() {
 
   function myCh3() {
   	function changeMountainContent() {
-			$('#imgContent').attr('src', '/img/images/mountain/1.png');
-			$('#imgContent2').attr('src', '/img/images/mountain/6.png');
+			$('#imgContent').attr('src', 'img/images/mountain/1.png');
+			$('#imgContent2').attr('src', 'img/images/mountain/6.png');
 			$('#headerLeftSection p').text(fTxt.mountains);
 			var atrLeft = $('#imgContent2').attr('src');
 			var atrRight = $('#imgContent').attr('src');
@@ -783,8 +783,8 @@ $(document).ready(function() {
   function myCh4() {
   	$('.bgImage3').addClass('bgImage3no');
       function changeFieldsContent() {
-				$('#imgContent').attr('src', '/img/images/fields/1.png');
-				$('#imgContent2').attr('src', '/img/images/fields/6.png');
+				$('#imgContent').attr('src', 'img/images/fields/1.png');
+				$('#imgContent2').attr('src', 'img/images/fields/6.png');
 				$('#headerLeftSection p').text(fTxt.fields);
 				var atrLeft = $('#imgContent2').attr('src');
 				var atrRight = $('#imgContent').attr('src');
@@ -812,8 +812,8 @@ $(document).ready(function() {
   };
   function myCh5() {
   	function changeSeasContent() {
-			$('#imgContent').attr('src', '/img/images/seas/1.png');
-			$('#imgContent2').attr('src', '/img/images/seas/6.png');
+			$('#imgContent').attr('src', 'img/images/seas/1.png');
+			$('#imgContent2').attr('src', 'img/images/seas/6.png');
 			$('#headerLeftSection p').text(fTxt.seas);
 			var atrLeft = $('#imgContent2').attr('src');
 			var atrRight = $('#imgContent').attr('src');
@@ -841,8 +841,8 @@ $(document).ready(function() {
   };
   function myCh6() {
   	function changeDesertsContent() {
-			$('#imgContent').attr('src', '/img/images/deserts/1.png');
-			$('#imgContent2').attr('src', '/img/images/deserts/6.png');
+			$('#imgContent').attr('src', 'img/images/deserts/1.png');
+			$('#imgContent2').attr('src', 'img/images/deserts/6.png');
 			$('#headerLeftSection p').text(fTxt.deserts);
 			var atrLeft = $('#imgContent2').attr('src');
 			var atrRight = $('#imgContent').attr('src');
@@ -870,8 +870,8 @@ $(document).ready(function() {
   };
   function myCh7() {
   	function changeJunlesContent() {
-			$('#imgContent').attr('src', '/img/images/jungles/1.png');
-			$('#imgContent2').attr('src', '/img/images/jungles/6.png');
+			$('#imgContent').attr('src', 'img/images/jungles/1.png');
+			$('#imgContent2').attr('src', 'img/images/jungles/6.png');
 			$('#headerLeftSection p').text(fTxt.jungles);
 			var atrLeft = $('#imgContent2').attr('src');
 			var atrRight = $('#imgContent').attr('src');
@@ -998,28 +998,28 @@ $(document).ready(function() {
 
 	var counterImg = 1, arrObj = [
 		  {
-		  	url:'url(/img/images/ownFriends/bear2.jpg',
+		  	url:'url(img/images/ownFriends/bear2.jpg',
 				headerText: 'Медведь',
 				bodyText: 'Лесной тяжеловес, любитель мёда.',
 				bgp: '0 0',
-				miniDisLeft: 'url(/img/images/ownFriends/bear/1.jpg)',
-				miniDisRight: 'url(/img/images/ownFriends/bear2/1.jpg)'
+				miniDisLeft: 'url(img/images/ownFriends/bear/1.jpg)',
+				miniDisRight: 'url(img/images/ownFriends/bear2/1.jpg)'
 			},
 	    {
-	    	url:'url(/img/images/ownFriends/eagle2.jpg',
+	    	url:'url(img/images/ownFriends/eagle2.jpg',
 				headerText: 'Орёл',
 				bodyText: 'Крылатый истребитель, гроза неба.',
 				bgp: '-30px 0',
-				miniDisLeft: 'url(/img/images/ownFriends/bird/1.jpg)',
-				miniDisRight: 'url(/img/images/ownFriends/bird2/1.jpg)'
+				miniDisLeft: 'url(img/images/ownFriends/bird/1.jpg)',
+				miniDisRight: 'url(img/images/ownFriends/bird2/1.jpg)'
 			},
 	    {
-	    	url:'url(/img/images/ownFriends/wolf2.jpg',
+	    	url:'url(img/images/ownFriends/wolf2.jpg',
 				headerText: 'Волк',
 				bodyText: 'Серый волк, зубами щёлк.',
 				bgp: '-20px 0',
-				miniDisLeft: 'url(/img/images/ownFriends/wolf/1.jpg)',
-				miniDisRight: 'url(/img/images/ownFriends/wolf2/1.jpg)'
+				miniDisLeft: 'url(img/images/ownFriends/wolf/1.jpg)',
+				miniDisRight: 'url(img/images/ownFriends/wolf2/1.jpg)'
 			}
 	];
 	
@@ -1051,54 +1051,54 @@ $(document).ready(function() {
 		CountEagleL = 1, CountBearL = 1, CountWolfL = 1;
 		CountEagleR = 1, CountBearR = 1, CountWolfR = 1;
 		} else {
-			$('.inImgLeft').css('background-image', 'url(/img/images/ownFriends/bear/1.jpg)');
-			$('.inImgRight').css('background-image', 'url(/img/images/ownFriends/bear2/1.jpg)');
+			$('.inImgLeft').css('background-image', 'url(img/images/ownFriends/bear/1.jpg)');
+			$('.inImgRight').css('background-image', 'url(img/images/ownFriends/bear2/1.jpg)');
 			$('.lb img').attr('src', locationObj.numbers[0]);
 			$('.rb img').attr('src', locationObj.numbers[0]);
 		}
 	}
 	var leftMiniDispArr = {
 		eagleLeft: [
-			'url(/img/images/ownFriends/bird/1.jpg)',
-			'url(/img/images/ownFriends/bird/2.jpg)',
-			'url(/img/images/ownFriends/bird/3.jpg)',
-			'url(/img/images/ownFriends/bird/4.jpg)',
-			'url(/img/images/ownFriends/bird/5.jpg)'
+			'url(img/images/ownFriends/bird/1.jpg)',
+			'url(img/images/ownFriends/bird/2.jpg)',
+			'url(img/images/ownFriends/bird/3.jpg)',
+			'url(img/images/ownFriends/bird/4.jpg)',
+			'url(img/images/ownFriends/bird/5.jpg)'
 		],
 		bearLeft: [
-			'url(/img/images/ownFriends/bear/1.jpg)',
-			'url(/img/images/ownFriends/bear/2.jpg)',
-			'url(/img/images/ownFriends/bear/3.jpg)',
-			'url(/img/images/ownFriends/bear/4.jpg)',
-			'url(/img/images/ownFriends/bear/5.jpg)'
+			'url(img/images/ownFriends/bear/1.jpg)',
+			'url(img/images/ownFriends/bear/2.jpg)',
+			'url(img/images/ownFriends/bear/3.jpg)',
+			'url(img/images/ownFriends/bear/4.jpg)',
+			'url(img/images/ownFriends/bear/5.jpg)'
 		],
 		wolfLeft: [
-			'url(/img/images/ownFriends/wolf/1.jpg)',
-			'url(/img/images/ownFriends/wolf/2.jpg)',
-			'url(/img/images/ownFriends/wolf/3.jpg)',
-			'url(/img/images/ownFriends/wolf/4.jpg)',
-			'url(/img/images/ownFriends/wolf/5.jpg)'
+			'url(img/images/ownFriends/wolf/1.jpg)',
+			'url(img/images/ownFriends/wolf/2.jpg)',
+			'url(img/images/ownFriends/wolf/3.jpg)',
+			'url(img/images/ownFriends/wolf/4.jpg)',
+			'url(img/images/ownFriends/wolf/5.jpg)'
 		],
 		eagleRight: [
-			'url(/img/images/ownFriends/bird2/1.jpg)',
-			'url(/img/images/ownFriends/bird2/2.jpg)',
-			'url(/img/images/ownFriends/bird2/3.jpg)',
-			'url(/img/images/ownFriends/bird2/4.jpg)',
-			'url(/img/images/ownFriends/bird2/5.jpg)'
+			'url(img/images/ownFriends/bird2/1.jpg)',
+			'url(img/images/ownFriends/bird2/2.jpg)',
+			'url(img/images/ownFriends/bird2/3.jpg)',
+			'url(img/images/ownFriends/bird2/4.jpg)',
+			'url(img/images/ownFriends/bird2/5.jpg)'
 		],
 		bearRight: [
-			'url(/img/images/ownFriends/bear2/1.jpg)',
-			'url(/img/images/ownFriends/bear2/2.jpg)',
-			'url(/img/images/ownFriends/bear2/3.jpg)',
-			'url(/img/images/ownFriends/bear2/4.jpg)',
-			'url(/img/images/ownFriends/bear2/5.jpg)'
+			'url(img/images/ownFriends/bear2/1.jpg)',
+			'url(img/images/ownFriends/bear2/2.jpg)',
+			'url(img/images/ownFriends/bear2/3.jpg)',
+			'url(img/images/ownFriends/bear2/4.jpg)',
+			'url(img/images/ownFriends/bear2/5.jpg)'
 		],
 		wolfRight: [
-			'url(/img/images/ownFriends/wolf2/1.jpg)',
-			'url(/img/images/ownFriends/wolf2/2.jpg)',
-			'url(/img/images/ownFriends/wolf2/3.jpg)',
-			'url(/img/images/ownFriends/wolf2/4.jpg)',
-			'url(/img/images/ownFriends/wolf2/5.jpg)'
+			'url(img/images/ownFriends/wolf2/1.jpg)',
+			'url(img/images/ownFriends/wolf2/2.jpg)',
+			'url(img/images/ownFriends/wolf2/3.jpg)',
+			'url(img/images/ownFriends/wolf2/4.jpg)',
+			'url(img/images/ownFriends/wolf2/5.jpg)'
 		]
 	};
 
@@ -1107,7 +1107,7 @@ $(document).ready(function() {
 // change img mini display on medium display
 	function leftBtn() {
 	$('.lb').on('mousedown', function() {
-		$(this).css('background-image', 'url(/img/favicon/click.png)');
+		$(this).css('background-image', 'url(img/favicon/click.png)');
 		if (counterImg == 1) {
 			$('.inImgLeft').css('background-image', leftMiniDispArr.bearLeft[CountBearL]);
 				CountBearL++;
@@ -1137,11 +1137,11 @@ $(document).ready(function() {
 	leftBtn();
 	function rightBtn() {
 	$('.lb').on('mouseup', function() {
-		$(this).css('background-image', 'url(/img/favicon/btnUp.png)');
+		$(this).css('background-image', 'url(img/favicon/btnUp.png)');
 	});
 
 	$('.rb').on('mousedown', function() {
-		$(this).css('background-image', 'url(/img/favicon/click.png)');
+		$(this).css('background-image', 'url(img/favicon/click.png)');
 		if (counterImg == 1) {
 			$('.inImgRight').css('background-image', leftMiniDispArr.bearRight[CountBearR]);
 				CountBearR++;
@@ -1171,7 +1171,7 @@ $(document).ready(function() {
 	rightBtn();
 // for color button
 	$('.rb').on('mouseup', function() {
-		$(this).css('background-image', 'url(/img/favicon/btnUp.png)');
+		$(this).css('background-image', 'url(img/favicon/btnUp.png)');
 	});
 
 // change btn color
@@ -1283,14 +1283,14 @@ $(document).ready(function() {
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 		// change img
 		$('#contentImg1').css('box-shadow', 'none').fadeOut('fast', function() {
-			$('#contentImg1').attr('src', '/img/images/maldives1.jpg').fadeIn(500);
+			$('#contentImg1').attr('src', 'img/images/maldives1.jpg').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', '/img/images/maldives2.jpg').fadeIn(500);
+				$('#contentImg2').attr('src', 'img/images/maldives2.jpg').fadeIn(500);
 			});
 		} else {
-			$('#contentImg2').attr('src', '/img/images/maldives2.jpg')
+			$('#contentImg2').attr('src', 'img/images/maldives2.jpg')
 		}
 		// change text
 		$('#contentText, .item1 p').fadeOut('fast', function() {
@@ -1314,14 +1314,14 @@ $(document).ready(function() {
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 
 		$('#contentImg1').fadeOut('fast', function() {
-			$('#contentImg1').attr('src', '/img/images/kanari2.jpg').fadeIn(500);
+			$('#contentImg1').attr('src', 'img/images/kanari2.jpg').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', '/img/images/kanari1.jpg').fadeIn(500);
+				$('#contentImg2').attr('src', 'img/images/kanari1.jpg').fadeIn(500);
 			});
 		} else {
-			$('#contentImg2').attr('src', '/img/images/kanari1.jpg');
+			$('#contentImg2').attr('src', 'img/images/kanari1.jpg');
 		}
 		$('#contentText, .item1 p').fadeOut('fast', function(){
 			$('#contentText').html(txt3.bodyText).fadeIn(500);
@@ -1342,14 +1342,14 @@ $(document).ready(function() {
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 
 		$('#contentImg1').fadeOut('fast',function() {
-			$('#contentImg1').attr('src', '/img/images/dubay1.jpg').fadeIn(500);
+			$('#contentImg1').attr('src', 'img/images/dubay1.jpg').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', '/img/images/dubay2.jpg').fadeIn(500);
+				$('#contentImg2').attr('src', 'img/images/dubay2.jpg').fadeIn(500);
 			});
 		} else {
-			$('#contentImg2').attr('src', '/img/images/dubay2.jpg');
+			$('#contentImg2').attr('src', 'img/images/dubay2.jpg');
 		}
 		$('#contentText, .item1 p').fadeOut('fast', function(){
 			$('#contentText').html(txt2.bodyText).fadeIn(500);
@@ -1370,14 +1370,14 @@ $(document).ready(function() {
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 
 		$('#contentImg1').fadeOut('fast', function() {
-			$('#contentImg1').attr('src', '/img/images/seysheli2.jpg').fadeIn(500);
+			$('#contentImg1').attr('src', 'img/images/seysheli2.jpg').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', '/img/images/seysheli1.jpg').fadeIn(500);
+				$('#contentImg2').attr('src', 'img/images/seysheli1.jpg').fadeIn(500);
 			});
 		} else {
-			$('#contentImg2').attr('src', '/img/images/seysheli1.jpg');	
+			$('#contentImg2').attr('src', 'img/images/seysheli1.jpg');	
 		}
 		$('#contentText, .item1 p').fadeOut('fast', function(){
 			$('#contentText').html(txt4.bodyText).fadeIn(500);
@@ -1398,14 +1398,14 @@ $(document).ready(function() {
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 		
 		$('#contentImg1').fadeOut('fast', function() {
-			$('#contentImg1').attr('src', '/img/images/Gavai1.jpg').fadeIn(500);
+			$('#contentImg1').attr('src', 'img/images/Gavai1.jpg').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', '/img/images/Gavai2.jpg').fadeIn(500);
+				$('#contentImg2').attr('src', 'img/images/Gavai2.jpg').fadeIn(500);
 			});
 		} else {
-			$('#contentImg2').attr('src', '/img/images/Gavai2.jpg');
+			$('#contentImg2').attr('src', 'img/images/Gavai2.jpg');
 		}
 		$('#contentText, .item1 p').fadeOut('fast', function(){
 			$('#contentText').html(txt5.bodyText).fadeIn(500);
@@ -1426,14 +1426,14 @@ $(document).ready(function() {
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 		
 		$('#contentImg1').fadeOut('fast', function() {
-			$('#contentImg1').attr('src', '/img/images/bali1.jpg').fadeIn(500);
+			$('#contentImg1').attr('src', 'img/images/bali1.jpg').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', '/img/images/bali2.jpg').fadeIn(500);
+				$('#contentImg2').attr('src', 'img/images/bali2.jpg').fadeIn(500);
 			});
 		} else {
-			$('#contentImg2').attr('src', '/img/images/bali2.jpg');
+			$('#contentImg2').attr('src', 'img/images/bali2.jpg');
 		}
 		$('#contentText, .item1 p').fadeOut('fast', function(){
 			$('#contentText').html(txt6.bodyText).fadeIn(500);
@@ -1535,36 +1535,36 @@ $(document).ready(function() {
 // function angle3() {
 // var angle3Item = $('.bgImg');
 // var arrImgUrl = [
-// 	'url(/img/images/nature/1.jpg)',
-// 	'url(/img/images/nature/2.jpg)',
-// 	'url(/img/images/nature/3.jpg)',
-// 	'url(/img/images/nature/4.jpg)',
-// 	'url(/img/images/nature/5.jpg)',
-// 	'url(/img/images/nature/6.jpg)',
-// 	'url(/img/images/nature/7.jpg)',
-// 	'url(/img/images/nature/8.jpg)',
-// 	'url(/img/images/nature/9.jpg)',
-// 	'url(/img/images/nature/10.jpg)',
-// 	'url(/img/images/nature/11.jpg)',
-// 	'url(/img/images/nature/12.jpg)',
-// 	'url(/img/images/nature/13.jpg)',
-// 	'url(/img/images/nature/14.jpg)',
-// 	'url(/img/images/nature/15.jpg)',
-// 	'url(/img/images/nature/16.jpg)',
-// 	'url(/img/images/nature/17.jpg)',
-// 	'url(/img/images/nature/18.jpg)',
-// 	'url(/img/images/nature/19.jpg)',
-// 	'url(/img/images/nature/20.jpg)',
-// 	'url(/img/images/nature/21.jpg)',
-// 	'url(/img/images/nature/22.jpg)',
-// 	'url(/img/images/nature/23.jpg)',
-// 	'url(/img/images/nature/24.jpg)',
-// 	'url(/img/images/nature/25.jpg)',
-// 	'url(/img/images/nature/26.jpg)',
-// 	'url(/img/images/nature/27.jpg)',
-// 	'url(/img/images/nature/28.jpg)',
-// 	'url(/img/images/nature/29.jpg)',
-// 	'url(/img/images/nature/30.jpg)'
+// 	'url(img/images/nature/1.jpg)',
+// 	'url(img/images/nature/2.jpg)',
+// 	'url(img/images/nature/3.jpg)',
+// 	'url(img/images/nature/4.jpg)',
+// 	'url(img/images/nature/5.jpg)',
+// 	'url(img/images/nature/6.jpg)',
+// 	'url(img/images/nature/7.jpg)',
+// 	'url(img/images/nature/8.jpg)',
+// 	'url(img/images/nature/9.jpg)',
+// 	'url(img/images/nature/10.jpg)',
+// 	'url(img/images/nature/11.jpg)',
+// 	'url(img/images/nature/12.jpg)',
+// 	'url(img/images/nature/13.jpg)',
+// 	'url(img/images/nature/14.jpg)',
+// 	'url(img/images/nature/15.jpg)',
+// 	'url(img/images/nature/16.jpg)',
+// 	'url(img/images/nature/17.jpg)',
+// 	'url(img/images/nature/18.jpg)',
+// 	'url(img/images/nature/19.jpg)',
+// 	'url(img/images/nature/20.jpg)',
+// 	'url(img/images/nature/21.jpg)',
+// 	'url(img/images/nature/22.jpg)',
+// 	'url(img/images/nature/23.jpg)',
+// 	'url(img/images/nature/24.jpg)',
+// 	'url(img/images/nature/25.jpg)',
+// 	'url(img/images/nature/26.jpg)',
+// 	'url(img/images/nature/27.jpg)',
+// 	'url(img/images/nature/28.jpg)',
+// 	'url(img/images/nature/29.jpg)',
+// 	'url(img/images/nature/30.jpg)'
 	
 // ];
 //  	var randImageNumber = Math.floor(Math.random() * arrImgUrl.length);
@@ -1936,38 +1936,38 @@ var f = true;
 ///////////////////////////////////////////
 
 var textContentBook = [
-	{"text":"", "img":"url(/img/images/nature2.png)"},
-	{"text":"", "img":"url(/img/images/nature/1.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/2.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/3.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/4.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/5.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/6.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/7.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/8.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/9.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/10.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/11.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/12.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/13.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/14.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/15.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/16.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/17.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/18.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/19.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/20.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/21.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/22.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/23.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/24.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/25.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/26.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/27.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/28.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/29.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/30.jpg)"},
-	{"text":"", "img":"url(/img/images/nature2.png)"}
+	{"text":"", "img":"url(img/images/nature2.png)"},
+	{"text":"", "img":"url(img/images/nature/1.jpg)"},
+	{"text":"", "img":"url(img/images/nature/2.jpg)"},
+	{"text":"", "img":"url(img/images/nature/3.jpg)"},
+	{"text":"", "img":"url(img/images/nature/4.jpg)"},
+	{"text":"", "img":"url(img/images/nature/5.jpg)"},
+	{"text":"", "img":"url(img/images/nature/6.jpg)"},
+	{"text":"", "img":"url(img/images/nature/7.jpg)"},
+	{"text":"", "img":"url(img/images/nature/8.jpg)"},
+	{"text":"", "img":"url(img/images/nature/9.jpg)"},
+	{"text":"", "img":"url(img/images/nature/10.jpg)"},
+	{"text":"", "img":"url(img/images/nature/11.jpg)"},
+	{"text":"", "img":"url(img/images/nature/12.jpg)"},
+	{"text":"", "img":"url(img/images/nature/13.jpg)"},
+	{"text":"", "img":"url(img/images/nature/14.jpg)"},
+	{"text":"", "img":"url(img/images/nature/15.jpg)"},
+	{"text":"", "img":"url(img/images/nature/16.jpg)"},
+	{"text":"", "img":"url(img/images/nature/17.jpg)"},
+	{"text":"", "img":"url(img/images/nature/18.jpg)"},
+	{"text":"", "img":"url(img/images/nature/19.jpg)"},
+	{"text":"", "img":"url(img/images/nature/20.jpg)"},
+	{"text":"", "img":"url(img/images/nature/21.jpg)"},
+	{"text":"", "img":"url(img/images/nature/22.jpg)"},
+	{"text":"", "img":"url(img/images/nature/23.jpg)"},
+	{"text":"", "img":"url(img/images/nature/24.jpg)"},
+	{"text":"", "img":"url(img/images/nature/25.jpg)"},
+	{"text":"", "img":"url(img/images/nature/26.jpg)"},
+	{"text":"", "img":"url(img/images/nature/27.jpg)"},
+	{"text":"", "img":"url(img/images/nature/28.jpg)"},
+	{"text":"", "img":"url(img/images/nature/29.jpg)"},
+	{"text":"", "img":"url(img/images/nature/30.jpg)"},
+	{"text":"", "img":"url(img/images/nature2.png)"}
 ]
 // define array length
 var textContentBookLength = 0;
