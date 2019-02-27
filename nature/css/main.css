@@ -1,10 +1,11 @@
-@font-face {
+
+/*@font-face {
   font-family: "RobotoRegular";
   font-display: swap;
   src: url("../fonts/RobotoRegular/RobotoRegular.eot");
-  src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("/fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("/fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
+  src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
   font-style: normal;
-  font-weight: normal; }
+  font-weight: normal; }*/
 
 @font-face {
   font-family: "fontello";
@@ -5100,7 +5101,7 @@ a.test-popup-link {
   line-height: 1.2em;
   text-indent: 10px;
   text-align: center;
-  font-family: 'RobotoRegular';
+  font-family: 'Exo 2';
   -webkit-border-radius: 4px;
           border-radius: 4px;
   -webkit-box-shadow: 3px 3px 5px gray inset, -3px -3px 5px gray inset;
