@@ -547,7 +547,17 @@ p {
     -webkit-transition: all 1s;
     -o-transition: all 1s;
     transition: all 1s; }
-
+.wrapperImg {
+  display: none;
+  background-image: url('/img/images/sky2.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: .8;
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  }
 .wr17 {
   margin: initial;
   padding: initial;
