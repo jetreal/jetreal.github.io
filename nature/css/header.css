@@ -549,7 +549,7 @@ p {
     transition: all 1s; }
 .wrapperImg {
   display: none;
-  background-image: url('/img/images/sky2.jpg');
+  /*background-image: url('/img/images/sky2.jpg');*/
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
