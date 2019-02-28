@@ -16,7 +16,7 @@ html, body {
   font-size: 16px; }
 
 body {
-  background-image: url("/img/images/fon4.jpg");
+  background-image: url("../img/images/fon4.jpg");
   background-color: #0c0c0c;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -100,14 +100,14 @@ body {
     .duckText p:before {
       display: block;
       position: absolute;
-      content: url("/img/images/lines.png");
+      content: url("../img/images/lines.png");
       top: 0px;
       left: -webkit-calc(50% - 51px);
       left: calc(50% - 51px); }
     .duckText p:after {
       display: block;
       position: absolute;
-      content: url("/img/images/lines.png");
+      content: url("../img/images/lines.png");
       bottom: -7px;
       left: -webkit-calc(50% - 51px);
       left: calc(50% - 51px);
@@ -136,7 +136,7 @@ body {
       -webkit-box-shadow: 2px 2px 3px 2px gray, -2px -2px 3px 2px gray, 2px -2px 3px 2px gray, -2px 2px 3px 2px gray;
               box-shadow: 2px 2px 3px 2px gray, -2px -2px 3px 2px gray, 2px -2px 3px 2px gray, -2px 2px 3px 2px gray; }
   #arrowToTop div {
-    background-image: url("/img/favicon/toTop.png");
+    background-image: url("../img/favicon/toTop.png");
     width: 29px;
     height: 85px; }
 
@@ -162,7 +162,7 @@ body {
       -webkit-box-shadow: 2px 2px 3px 2px gray, -2px -2px 3px 2px gray, 2px -2px 3px 2px gray, -2px 2px 3px 2px gray;
               box-shadow: 2px 2px 3px 2px gray, -2px -2px 3px 2px gray, 2px -2px 3px 2px gray, -2px 2px 3px 2px gray; }
   #arrowToBottom div {
-    background-image: url("/img/favicon/toBottom.png");
+    background-image: url("../img/favicon/toBottom.png");
     width: 29px;
     height: 85px; }
 
@@ -202,7 +202,7 @@ p {
   margin: 0 5%;
   width: 90%;
   height: 580px;
-  background-image: url("/img/images/headerbg2.jpg");
+  background-image: url("../img/images/headerbg2.jpg");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
           background-size: cover;
@@ -255,7 +255,7 @@ p {
   right: 0; }
 
 .into03 {
-  background-image: url("/img/images/balls/ball8.png");
+  background-image: url("../img/images/balls/ball8.png");
   -webkit-background-size: cover;
           background-size: cover;
   background-repeat: no-repeat;
@@ -564,7 +564,7 @@ p {
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s; }
   .wr17 .into03 {
-    background-image: url("/img/images/brokenDisp2.png");
+    background-image: url("../img/images/brokenDisp2.png");
     -webkit-background-size: content content;
             background-size: content;
     background-color: #191917; }
@@ -656,7 +656,7 @@ p {
 .afterFirst {
   margin: initial;
   padding: initial;
-  background-image: url("/img/images/brokenDisp2.png");
+  background-image: url("../img/images/brokenDisp2.png");
   background-position: 0 250px;
   width: 90%;
   margin: 0 5%;
@@ -744,7 +744,7 @@ p {
   border: 1px solid #7F7F7F;
   padding: 10px;
   position: relative;
-  background-image: url("/img/images/forest.jpg");
+  background-image: url("../img/images/forest.jpg");
   -webkit-background-size: cover;
           background-size: cover;
   background-position: center;
