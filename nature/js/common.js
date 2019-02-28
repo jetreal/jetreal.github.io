@@ -73,9 +73,9 @@ $('.popup-modal2').magnificPopup({
 // header bottom text scale function
 var lDivDataObj = {
 	wind:{img:'url(img/images/sky2.jpg)', text:'Ветер', rightImg:''},
-	fire:{img:'url(img/images/fireHeaderDisp.jpg', text: 'Огонь', rightImg: ''},
-	water:{img:'url(img/images/waterHeaderDisp.jpg', text: 'Вода', rightImg: ''},
-	earth:{img:'url(img/images/earth.jpg', text: 'Земля', rightImg: ''}
+	fire:{img:'url(img/images/fireHeaderDisp.jpg)', text: 'Огонь', rightImg: ''},
+	water:{img:'url(img/images/waterHeaderDisp.jpg)', text: 'Вода', rightImg: ''},
+	earth:{img:'url(img/images/earth.jpg)', text: 'Земля', rightImg: ''}
 }
 var flagi = false;
 
