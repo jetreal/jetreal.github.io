@@ -3,17 +3,20 @@
   <head>
     <title>mySite</title>
     <meta charset="UTF-8">
+    <noscript>
+      <link rel="stylesheet" href="main.css">
+    </noscript>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="_grid.min.css">
+    <link rel="stylesheet" href="css/header.css">
     <!-- fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2|Comfortaa|Open+Sans">
     <link rel="stylesheet" href="fonts/fontello/css/animation.css">
     <link rel="stylesheet" href="fonts/fontello/css/myicon-codes.css">
     <link rel="stylesheet" href="fonts/fontello/css/myicon.css">
     <link rel="stylesheet" href="fonts/fontello/css/myicon-embedded.css">
     <style>
       .wrapperLoader {
+      	transition: opacity .5s;
       	position: fixed;
       	background-color: rgb(0,0,0);
       	top: 0;
@@ -35,20 +38,17 @@
       	from {transform: rotate(0deg);}
       	to {transform: rotate(360deg);}
       }
-      	
     </style>
   </head>
   <body>
-    <div class="wrapperLoader">
+    <div class="wrapperLoader" id="prel">
       <div class="loader"><img src="img/images/balls/ball10.png" alt=""></div>
     </div>
-    <div id="arrowToTop"><a href="#wrapper" rel="m_PageScroll2id"><img src="img/favicon/toTop.png" alt="arrow"></a></div>
+    <div id="arrowToTop"><a href="#wrapper" rel="m_PageScroll2id">
+        <div></div></a></div>
+    <div id="arrowToBottom"><a href="#footer">
+        <div></div></a></div>
     <!-- wrapper-->
-    <div class="display">
-      <p id="showScroll"></p>
-      <p id="width"></p>
-      <p id="height"></p>
-    </div>
     <div class="wrapper" id="wrapper">
       <div class="wrapSun"><img class="sun" src="img/images/sun.png" alt="fire-logo" width="130px" height="90px"></div>
       <!-- header first page-->
@@ -822,23 +822,29 @@
           <div class="line7"></div>
         </div>
       </section>
-      <div id="arrowToBottom"><a href="#footer"><img src="img/favicon/toBottom.png" alt="arrow"></a></div>
       <div class="copyright"><i class="icon-copyright"></i>
         <p>national geographic 2019</p>
       </div>
       <!-- end footer-->
     </div>
     <!-- end wrapper-->
-    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2|Comfortaa|Open+Sans">
+    <!-- jQuery library-->
+    <!-- Load CSS compiled without Bootstrap & Header styles (after release)-->
+    <script>
+      var ms=document.createElement("link");ms.rel="stylesheet";
+      ms.href="css/main.css";document.getElementsByTagName("head")[0].appendChild(ms);
+      
+      
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- nice scroll-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.5.1/jquery.nicescroll.min.js"></script>
     <!-- Magnific Popup core JS file-->
- <!--    <script src="libs/html5shiv/html5shiv.min.js"></script>
+    <script src="libs/html5shiv/html5shiv.min.js"></script>
     <script src="libs/is.min.js"></script>
     <script src="libs/Magnific/jquery.magnific-popup.min.js"></script>
-    <script src="libs/scroll2Id/jquery.malihu.PageScroll2id.min.js"></script> -->
-    <script src="js/libs.min.js" defer></script>
-    <script src="js/common.min.js" defer></script>
+    <script src="libs/scroll2Id/jquery.malihu.PageScroll2id.min.js"></script>
+    <script src="js/common.js" defer></script>
   </body>
 </html>
