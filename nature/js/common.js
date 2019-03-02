@@ -3,8 +3,36 @@
 $(document).ready(function() {
 	setTimeout(function() {
 		$(window).trigger('resize');
-	},250);
+	},1000);
 });
+// start field function without flicker when reload page
+$(window).on('load', function() {
+	setTimeout(function() {
+		$('.bgImage3').addClass('bgImage3no');
+		$('#headerLeftSection p').text(fTxt.fields).fadeIn(60);
+		var atrLeft = $('#imgContent2').attr('src');
+		var atrRight = $('#imgContent').attr('src');
+		$('#popupLeft').attr('href', atrLeft);
+		$('#popupRight').attr('href', atrRight);
+			index = 0;
+		$('#num').attr('src', locationObj.numbers[index]);
+		anyArr = locationObj.fields;
+		$('.wrapVItem *').css('box-shadow','');
+		$('.bgImage3, .bgImage3 div, .bgImage3 div div')
+		.css('box-shadow', '3px 3px 6px #FFB352 inset, -3px -3px 6px #FFB352 inset');
+		$('.into31 div:first-child')
+		.removeClass('bgImage2no bgImage1no bgImage4no bgImage5no bgImage6no bgImage7no');
+		$(this).addClass('bgImage3no');
+  		$('.bgImage3').off('click');
+  		$('.bgImage7').one('click', myCh2);
+  		$('.bgImage1').one('click', myCh);
+  		$('.bgImage2').one('click', myCh3);
+  		$('.bgImage4').one('click', myCh5);
+  		$('.bgImage5').one('click', myCh6);
+  		$('.bgImage6').one('click', myCh7);
+	},1200);
+});
+/////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -72,10 +100,10 @@ $('.popup-modal2').magnificPopup({
 ////////////////////////////////////////////////////////////
 // header bottom text scale function
 var lDivDataObj = {
-	wind:{img:'url(img/images/sky2.jpg)', text:'Ветер', rightImg:''},
-	fire:{img:'url(img/images/fireHeaderDisp.jpg)', text: 'Огонь', rightImg: ''},
-	water:{img:'url(img/images/waterHeaderDisp.jpg)', text: 'Вода', rightImg: ''},
-	earth:{img:'url(img/images/earth.jpg)', text: 'Земля', rightImg: ''}
+	wind:{img:'url(img/images/sky2.webp)', text:'Ветер', rightImg:''},
+	fire:{img:'url(img/images/fireHeaderDisp.webp)', text: 'Огонь', rightImg: ''},
+	water:{img:'url(img/images/waterHeaderDisp.webp)', text: 'Вода', rightImg: ''},
+	earth:{img:'url(img/images/earth.webp)', text: 'Земля', rightImg: ''}
 }
 var flagi = false;
 
@@ -99,7 +127,7 @@ function headerAnime(iDivDataObj) {
 		$('.circleImg').off('click');
 			$('.circleImg').on('click', offTimerHeader);
 			// css
-			$('.circleImg').attr('src', 'img/images/button3.png');
+			$('.circleImg').attr('src', 'img/images/button3.webp');
 			$('.circleImg').css({width:'150px', height:'150px',
 			 'box-shadow': '2px 2px 6px gray, -2px -2px 6px gray,\
 			 -2px 2px 6px gray, 2px -2px 6px gray'});
@@ -138,7 +166,7 @@ function mDown() {
 				'box-shadow': '3px 3px 6px #19B9F5, -3px -3px 6px #19B9F5,\
 				-3px 3px 6px #19B9F5, 3px -3px 6px #19B9F5'});
 			// css
-			$('.circleImg').attr('src', 'img/images/button2.png');
+			$('.circleImg').attr('src', 'img/images/button2.webp');
 			$('.into03, .into04, .into05, .into06')
 			.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 			$('.bDiv').css('border', '1px solid #19B9F5');
@@ -149,7 +177,7 @@ function mDown() {
 			$('.circleImg').off('click');
 			$('.circleImg').on('click', offTimerHeader);
 			// css
-			$('.circleImg').attr('src', 'img/images/button3.png');
+			$('.circleImg').attr('src', 'img/images/button3.webp');
 			$('.circleImg').css({width:'150px',height:'150px',
 			 'box-shadow': '3px 3px 6px gray, -3px -3px 6px gray,\
 			 -3px 3px 6px gray, 3px -3px 6px gray'});
@@ -217,53 +245,53 @@ $(window).on('load resize', replaceTopLine);
 //afterHeader section change image
 var sectionObj = [
 	{
-		leftSrc: 'img/images/flowers/romashka1.jpg',
-		rightSRC: 'img/images/flowers/romashka2.jpg',
+		leftSrc: '1000px 0',
+		rightSRC: '1200px 0',
 		centerTxt: 'Ромашка'
 	},
 	{
-		leftSrc: 'img/images/flowers/nartsisi1.jpg',
-		rightSRC: 'img/images/flowers/nartsisi2.jpg',
+		leftSrc: '1600px 0',
+		rightSRC: '1400px 0',
 		centerTxt: 'Нарцисс'
 	},
 	{
-		leftSrc: 'img/images/flowers/rose1.jpg',
-		rightSRC: 'img/images/flowers/rose2.jpg',
+		leftSrc: '600px 0',
+		rightSRC: '800px 0',
 		centerTxt: 'Роза'
 	},
 	{
-		leftSrc: 'img/images/flowers/tulpan1.jpg',
-		rightSRC: 'img/images/flowers/tulpan2.jpg',
+		leftSrc: '0px 0',
+		rightSRC: '200px 0',
 		centerTxt: 'Тюльпан'
 	},
 	{
-		leftSrc: 'img/images/flowers/fucsia1.jpg',
-		rightSRC: 'img/images/flowers/fucsia2.jpg',
+		leftSrc: '3600px 0',
+		rightSRC: '3400px 0',
 		centerTxt: 'Фуксия'
 	},
 	{
-		leftSrc: 'img/images/flowers/lilii1.jpg',
-		rightSRC: 'img/images/flowers/lilii2.jpg',
+		leftSrc: '2000px 0',
+		rightSRC: '1800px 0',
 		centerTxt: 'Лилия'
 	},
 	{
-		leftSrc: 'img/images/flowers/hrizantem1.jpg',
-		rightSRC: 'img/images/flowers/hrizantem2.jpg',
+		leftSrc: '2800px 0',
+		rightSRC: '2600px 0',
 		centerTxt: 'Хризантема'
 	},
 	{
-		leftSrc: 'img/images/flowers/kolokolchik1.jpg',
-		rightSRC: 'img/images/flowers/kolokolchik2.jpg',
+		leftSrc: '2200px 0',
+		rightSRC: '2400px 0',
 		centerTxt: 'Колокольчик'
 	},
 	{
-		leftSrc: 'img/images/flowers/fialki1.jpg',
-		rightSRC: 'img/images/flowers/fialki2.jpg',
+		leftSrc: '3800px 0',
+		rightSRC: '4000px 0',
 		centerTxt: 'Фиалка'
 	},
 	{
-		leftSrc: 'img/images/flowers/gvozdika1.jpg',
-		rightSRC: 'img/images/flowers/gvozdika2.jpg',
+		leftSrc: '3000px 0',
+		rightSRC: '3200px 0',
 		centerTxt: 'Гвоздика'
 	}
 ];
@@ -273,8 +301,8 @@ function changeCount(event) {
 	switch(true) {
 		case (event.target.className == 'duck') :
 			function changeSideImg(){
-				$('.duck').attr('src', sectionObj[indexO].leftSrc);
-				$('.duck2').attr('src', sectionObj[indexO].rightSRC);
+				$('.duck').css('background-position', sectionObj[indexO].leftSrc);
+				$('.duck2').css('background-position', sectionObj[indexO].rightSRC);
 				$('.duckText p').text(sectionObj[indexO].centerTxt);
 				$('#textDuckModal p:eq(0)').text(sectionObj[indexO].centerTxt);
 			}
@@ -307,63 +335,63 @@ function changeCount(event) {
 ///////////////////////////////////////////////////////////////////////
 var sectionObj2 = [
 	{
-		leftSrc: 'img/images/berries/malina1.jpg',
-		rightSRC: 'img/images/berries/malina2.jpg',
+		leftSrc: '1800px 0',
+		rightSRC: '2000px 0',
 		centerTxt: 'Малина'
 	},
 	{
-		leftSrc: 'img/images/berries/ejevika1.jpg',
-		rightSRC: 'img/images/berries/ejevika2.jpg',
+		leftSrc: '3600px 0',
+		rightSRC: '3400px 0',
 		centerTxt: 'Ежевика'
 	},
 	{
-		leftSrc: 'img/images/berries/zemlyanika1.jpg',
-		rightSRC: 'img/images/berries/zemlyanika2.jpg',
+		leftSrc: '200px 0',
+		rightSRC: '400px 0',
 		centerTxt: 'Земляника'
 	},
 	{
-		leftSrc: 'img/images/berries/krijovnik1.jpg',
-		rightSRC: 'img/images/berries/krijovnik2.jpg',
+		leftSrc: '2200px 0',
+		rightSRC: '2400px 0',
 		centerTxt: 'Крыжовник'
 	},
 	{
-		leftSrc: 'img/images/berries/klubnika1.jpg',
-		rightSRC: 'img/images/berries/klubnika2.jpg',
+		leftSrc: '2600px 0',
+		rightSRC: '2800px 0',
 		centerTxt: 'Клубника'
 	},
 	{
-		leftSrc: 'img/images/berries/smorodina1.jpg',
-		rightSRC: 'img/images/berries/smorodina2.jpg',
+		leftSrc: '1000px 0',
+		rightSRC: '1200px 0',
 		centerTxt: 'Смородина'
 	},
 	{
-		leftSrc: 'img/images/berries/chernika1.jpg',
-		rightSRC: 'img/images/berries/chernika2.jpg',
+		leftSrc: '3800px 0',
+		rightSRC: '3800px 0',
 		centerTxt: 'Черника'
 	},
 	{
-		leftSrc: 'img/images/berries/vishnya1.jpg',
-		rightSRC: 'img/images/berries/vishnya2.jpg',
+		leftSrc: '600px 0',
+		rightSRC: '800px 0',
 		centerTxt: 'Вишня'
 	},
 	{
-		leftSrc: 'img/images/berries/golubika1.jpg',
-		rightSRC: 'img/images/berries/golubika2.jpg',
+		leftSrc: '3200px 0',
+		rightSRC: '3000px 0',
 		centerTxt: 'Голубика'
 	},
 	{
-		leftSrc: 'img/images/berries/chereshnya1.jpg',
-		rightSRC: 'img/images/berries/chereshnya2.jpg',
+		leftSrc: '0px 0',
+		rightSRC: '4600px 0',
 		centerTxt: 'Черешня'
 	},
 	{
-		leftSrc: 'img/images/berries/brusnika1.jpg',
-		rightSRC: 'img/images/berries/brusnika2.jpg',
+		leftSrc: '4400px 0',
+		rightSRC: '4200px 0',
 		centerTxt: 'Брусника'
 	},
 	{
-		leftSrc: 'img/images/berries/vinograd1.jpg',
-		rightSRC: 'img/images/berries/vinograd2.jpg',
+		leftSrc: '1600px 0',
+		rightSRC: '1400px 0',
 		centerTxt: 'Виноград'
 	}
 ];
@@ -373,8 +401,8 @@ function changeCount2(event) {
 	switch(true) {
 		case (event.target.className == 'ej') :
 			function changeSideImg(){
-				$('.ej').attr('src', sectionObj2[indexO2].leftSrc);
-				$('.ej2').attr('src', sectionObj2[indexO2].rightSRC);
+				$('.ej').css('background-position', sectionObj2[indexO2].leftSrc);
+				$('.ej2').css('background-position', sectionObj2[indexO2].rightSRC);
 				$('.textEj p').text(sectionObj2[indexO2].centerTxt);
 				$('#textEjModal p:eq(0)').text(sectionObj2[indexO2].centerTxt);
 			}
@@ -407,8 +435,8 @@ function changeCount2(event) {
 ///////////////////////////////////////////////////////////////////////
 var sectionObj3 = [
 	{
-		leftSrc: 'img/images/animals/ej1.jpg',
-		rightSRC: 'img/images/animals/ej2.jpg',
+		leftSrc: '3000px 0',
+		rightSRC: '3200px 0',
 		centerTxt: 'ёж',
 		popupTect: 'Образ колючего жителя лесов\
 		 и степей всем хорошо известен. Происхождение \
@@ -422,48 +450,48 @@ var sectionObj3 = [
 		  становится неприступной крепостью.'
 	},
 	{
-		leftSrc: 'img/images/animals/belka1.jpg',
-		rightSRC: 'img/images/animals/belka2.jpg',
+		leftSrc: '4000px 0',
+		rightSRC: '3800px 0',
 		centerTxt: 'Белка'
 	},
 	{
-		leftSrc: 'img/images/animals/kaban1.jpg',
-		rightSRC: 'img/images/animals/kaban2.jpg',
+		leftSrc: '2400px 0',
+		rightSRC: '2200px 0',
 		centerTxt: 'Кабан'
 	},
 	{
-		leftSrc: 'img/images/animals/enot1.jpg',
-		rightSRC: 'img/images/animals/enot2.jpg',
+		leftSrc: '2600px 0',
+		rightSRC: '2800px 0',
 		centerTxt: 'Енот'
 	},
 	{
-		leftSrc: 'img/images/animals/bobr1.jpg',
-		rightSRC: 'img/images/animals/bobr2.jpg',
+		leftSrc: '3600px 0',
+		rightSRC: '3400px 0',
 		centerTxt: 'Бобр'
 	},
 	{
-		leftSrc: 'img/images/animals/olen1.jpg',
-		rightSRC: 'img/images/animals/olen2.jpg',
+		leftSrc: '1000px 0',
+		rightSRC: '1200px 0',
 		centerTxt: 'Олень'
 	},
 	{
-		leftSrc: 'img/images/animals/zayats1.jpg',
-		rightSRC: 'img/images/animals/zayats2.jpg',
+		leftSrc: '200px 0',
+		rightSRC: '400px 0',
 		centerTxt: 'Заяц'
 	},
 	{
-		leftSrc: 'img/images/animals/los1.jpg',
-		rightSRC: 'img/images/animals/los2.jpg',
+		leftSrc: '1600px 0',
+		rightSRC: '1400px 0',
 		centerTxt: 'Лось'
 	},
 	{
-		leftSrc: 'img/images/animals/lisa1.jpg',
-		rightSRC: 'img/images/animals/lisa2.jpg',
+		leftSrc: '1800px 0',
+		rightSRC: '2000px 0',
 		centerTxt: 'Лиса'
 	},
 	{
-		leftSrc: 'img/images/animals/sova1.jpg',
-		rightSRC: 'img/images/animals/sova2.jpg',
+		leftSrc: '800px 0',
+		rightSRC: '600px 0',
 		centerTxt: 'Сова'
 	}
 ]
@@ -472,8 +500,8 @@ function changeCount3(event) {
 	switch(true) {
 		case (event.target.className == 'catsImg') :
 			function changeSideImg(){
-				$('.catsImg').attr('src', sectionObj3[indexO3].leftSrc);
-				$('.catsImg2').attr('src', sectionObj3[indexO3].rightSRC);
+				$('.catsImg').css('background-position', sectionObj3[indexO3].leftSrc);
+				$('.catsImg2').css('background-position', sectionObj3[indexO3].rightSRC);
 				$('.catText p').text(sectionObj3[indexO3].centerTxt);
 				$('#textCatModal p:eq(0)').text(sectionObj3[indexO3].centerTxt);
 			}
@@ -620,69 +648,69 @@ var anyArr = [];
 	// img Obj path for imgs
 var locationObj = {
 	numbers: [
-		'img/images/numbers/1.png',
-		'img/images/numbers/2.png',
-		'img/images/numbers/3.png',
-		'img/images/numbers/4.png',
-		'img/images/numbers/5.png'
+		'img/images/numbers/1.webp',
+		'img/images/numbers/2.webp',
+		'img/images/numbers/3.webp',
+		'img/images/numbers/4.webp',
+		'img/images/numbers/5.webp'
 	],
 	rivers: [
-		'img/images/rivers/1.png',
-		'img/images/rivers/2.png',
-		'img/images/rivers/3.png',
-		'img/images/rivers/4.png',
-		'img/images/rivers/5.png'
+		'img/images/rivers/1.webp',
+		'img/images/rivers/2.webp',
+		'img/images/rivers/3.webp',
+		'img/images/rivers/4.webp',
+		'img/images/rivers/5.webp'
 	],
 	forest: [
-		'img/images/forest/1.png',
-		'img/images/forest/2.png',
-		'img/images/forest/3.png',
-		'img/images/forest/4.png',
-		'img/images/forest/5.png'
+		'img/images/forest/1.webp',
+		'img/images/forest/2.webp',
+		'img/images/forest/3.webp',
+		'img/images/forest/4.webp',
+		'img/images/forest/5.webp'
 	],
 	mountain: [
-		'img/images/mountain/1.png',
-		'img/images/mountain/2.png',
-		'img/images/mountain/3.png',
-		'img/images/mountain/4.png',
-		'img/images/mountain/5.png'
+		'img/images/mountain/1.webp',
+		'img/images/mountain/2.webp',
+		'img/images/mountain/3.webp',
+		'img/images/mountain/4.webp',
+		'img/images/mountain/5.webp'
 	],
 	fields: [
-		'img/images/fields/1.png',
-		'img/images/fields/2.png',
-		'img/images/fields/3.png',
-		'img/images/fields/4.png',
-		'img/images/fields/5.png'
+		'img/images/fields/1.webp',
+		'img/images/fields/2.webp',
+		'img/images/fields/3.webp',
+		'img/images/fields/4.webp',
+		'img/images/fields/5.webp'
 	],
 	seas: [
-		'img/images/seas/1.png',
-		'img/images/seas/2.png',
-		'img/images/seas/3.png',
-		'img/images/seas/4.png',
-		'img/images/seas/5.png'
+		'img/images/seas/1.webp',
+		'img/images/seas/2.webp',
+		'img/images/seas/3.webp',
+		'img/images/seas/4.webp',
+		'img/images/seas/5.webp'
 	],
 	deserts: [
-		'img/images/deserts/1.png',
-		'img/images/deserts/2.png',
-		'img/images/deserts/3.png',
-		'img/images/deserts/4.png',
-		'img/images/deserts/5.png'
+		'img/images/deserts/1.webp',
+		'img/images/deserts/2.webp',
+		'img/images/deserts/3.webp',
+		'img/images/deserts/4.webp',
+		'img/images/deserts/5.webp'
 	],
 	jungles: [
-		'img/images/jungles/1.png',
-		'img/images/jungles/2.png',
-		'img/images/jungles/3.png',
-		'img/images/jungles/4.png',
-		'img/images/jungles/5.png'
+		'img/images/jungles/1.webp',
+		'img/images/jungles/2.webp',
+		'img/images/jungles/3.webp',
+		'img/images/jungles/4.webp',
+		'img/images/jungles/5.webp'
 	]
 	}
 	var index = 0;
 
-$(document).ready(function() {
+
   function myCh() {
     function changeRiversContent() {
-			$('#imgContent').attr('src', 'img/images/rivers/1.png');
-			$('#imgContent2').attr('src', 'img/images/rivers/6.png');
+			$('#imgContent').attr('src', 'img/images/rivers/1.webp');
+			$('#imgContent2').attr('src', 'img/images/rivers/6.webp');
 			$('#headerLeftSection p').text(fTxt.rivers);
 			// src for popup
 			var atrLeft = $('#imgContent2').attr('src');
@@ -713,8 +741,8 @@ $(document).ready(function() {
   function myCh2() {
 // change display
   	function changeForestContent() {
-		$('#imgContent').attr('src', 'img/images/forest/1.png');
-		$('#imgContent2').attr('src', 'img/images/forest/6.png');
+		$('#imgContent').attr('src', 'img/images/forest/1.webp');
+		$('#imgContent2').attr('src', 'img/images/forest/6.webp');
 // change miniText
 		$('#headerLeftSection p').text(fTxt.forests);
 // change attr href for popup
@@ -748,11 +776,10 @@ $(document).ready(function() {
   	$('.bgImage5').off('click').one('click', myCh6);
   	$('.bgImage6').off('click').one('click', myCh7);
   };
-
   function myCh3() {
   	function changeMountainContent() {
-			$('#imgContent').attr('src', 'img/images/mountain/1.png');
-			$('#imgContent2').attr('src', 'img/images/mountain/6.png');
+			$('#imgContent').attr('src', 'img/images/mountain/1.webp');
+			$('#imgContent2').attr('src', 'img/images/mountain/6.webp');
 			$('#headerLeftSection p').text(fTxt.mountains);
 			var atrLeft = $('#imgContent2').attr('src');
 			var atrRight = $('#imgContent').attr('src');
@@ -778,12 +805,11 @@ $(document).ready(function() {
   	$('.bgImage5').off('click').one('click', myCh6);
   	$('.bgImage6').off('click').one('click', myCh7);
   };
-
   function myCh4() {
   	$('.bgImage3').addClass('bgImage3no');
       function changeFieldsContent() {
-				$('#imgContent').attr('src', 'img/images/fields/1.png');
-				$('#imgContent2').attr('src', 'img/images/fields/6.png');
+				$('#imgContent').attr('src', 'img/images/fields/1.webp');
+				$('#imgContent2').attr('src', 'img/images/fields/6.webp');
 				$('#headerLeftSection p').text(fTxt.fields);
 				var atrLeft = $('#imgContent2').attr('src');
 				var atrRight = $('#imgContent').attr('src');
@@ -811,8 +837,8 @@ $(document).ready(function() {
   };
   function myCh5() {
   	function changeSeasContent() {
-			$('#imgContent').attr('src', 'img/images/seas/1.png');
-			$('#imgContent2').attr('src', 'img/images/seas/6.png');
+			$('#imgContent').attr('src', 'img/images/seas/1.webp');
+			$('#imgContent2').attr('src', 'img/images/seas/6.webp');
 			$('#headerLeftSection p').text(fTxt.seas);
 			var atrLeft = $('#imgContent2').attr('src');
 			var atrRight = $('#imgContent').attr('src');
@@ -840,8 +866,8 @@ $(document).ready(function() {
   };
   function myCh6() {
   	function changeDesertsContent() {
-			$('#imgContent').attr('src', 'img/images/deserts/1.png');
-			$('#imgContent2').attr('src', 'img/images/deserts/6.png');
+			$('#imgContent').attr('src', 'img/images/deserts/1.webp');
+			$('#imgContent2').attr('src', 'img/images/deserts/6.webp');
 			$('#headerLeftSection p').text(fTxt.deserts);
 			var atrLeft = $('#imgContent2').attr('src');
 			var atrRight = $('#imgContent').attr('src');
@@ -869,8 +895,8 @@ $(document).ready(function() {
   };
   function myCh7() {
   	function changeJunlesContent() {
-			$('#imgContent').attr('src', 'img/images/jungles/1.png');
-			$('#imgContent2').attr('src', 'img/images/jungles/6.png');
+			$('#imgContent').attr('src', 'img/images/jungles/1.webp');
+			$('#imgContent2').attr('src', 'img/images/jungles/6.webp');
 			$('#headerLeftSection p').text(fTxt.jungles);
 			var atrLeft = $('#imgContent2').attr('src');
 			var atrRight = $('#imgContent').attr('src');
@@ -902,38 +928,11 @@ $(document).ready(function() {
 	$('.bgImage2').one('click', myCh3);
 	$('.bgImage3').one('click', myCh4);
 		////////////////////////////////////////////////////////
-		// start field function without flicker when reload page
-		$(window).on('load', function() {
-			$('.bgImage3').addClass('bgImage3no');
 
-			$('#headerLeftSection p').text(fTxt.fields).fadeIn(60);
-			var atrLeft = $('#imgContent2').attr('src');
-			var atrRight = $('#imgContent').attr('src');
-			$('#popupLeft').attr('href', atrLeft);
-			$('#popupRight').attr('href', atrRight);
-  	
-  		index = 0;
-			$('#num').attr('src', locationObj.numbers[index]);
-			anyArr = locationObj.fields;
-			$('.wrapVItem *').css('box-shadow','');
-			$('.bgImage3, .bgImage3 div, .bgImage3 div div')
-			.css('box-shadow', '3px 3px 6px #FFB352 inset, -3px -3px 6px #FFB352 inset');
-			$('.into31 div:first-child')
-			.removeClass('bgImage2no bgImage1no bgImage4no bgImage5no bgImage6no bgImage7no');
-			$(this).addClass('bgImage3no');
-  		$('.bgImage3').off('click');
-  		$('.bgImage7').one('click', myCh2);
-  		$('.bgImage1').one('click', myCh);
-  		$('.bgImage2').one('click', myCh3);
-  		$('.bgImage4').one('click', myCh5);
-  		$('.bgImage5').one('click', myCh6);
-  		$('.bgImage6').one('click', myCh7);
-		});
-		/////////////////////////////////////////////////////////
 	$('.bgImage4').one('click', myCh5);
 	$('.bgImage5').one('click', myCh6);
 	$('.bgImage6').one('click', myCh7);
-});
+
 // forest slide and changeSideImgw counter
 $(document).ready(function() {	
 	$('.arrowRight').click(function() {
@@ -976,7 +975,6 @@ function replaceForestTextLeft(){
 
 $(window).on('load resize', replaceFText);
 
-
 //animal section
 // hide animal text
 $(document).ready(function() {
@@ -997,28 +995,28 @@ $(document).ready(function() {
 
 	var counterImg = 1, arrObj = [
 		  {
-		  	url:'url(img/images/ownFriends/bear2.jpg',
+		  	url:'url(img/images/ownFriends/3Animals.webp',
 				headerText: 'Медведь',
 				bodyText: 'Лесной тяжеловес, любитель мёда.',
 				bgp: '0 0',
-				miniDisLeft: 'url(img/images/ownFriends/bear/1.jpg)',
-				miniDisRight: 'url(img/images/ownFriends/bear2/1.jpg)'
+				miniDisLeft: 'url(img/images/ownFriends/bear/allBears.webp)',
+				miniDisRight: 'url(img/images/ownFriends/bear/allBears.webp)'
 			},
 	    {
-	    	url:'url(img/images/ownFriends/eagle2.jpg',
+	    	url:'url(img/images/ownFriends/3Animals.webp',
 				headerText: 'Орёл',
 				bodyText: 'Крылатый истребитель, гроза неба.',
-				bgp: '-30px 0',
-				miniDisLeft: 'url(img/images/ownFriends/bird/1.jpg)',
-				miniDisRight: 'url(img/images/ownFriends/bird2/1.jpg)'
+				bgp: '-150px 0',
+				miniDisLeft: 'url(img/images/ownFriends/bird/allBirds.webp)',
+				miniDisRight: 'url(img/images/ownFriends/bird/allBirds.webp)'
 			},
 	    {
-	    	url:'url(img/images/ownFriends/wolf2.jpg',
+	    	url:'url(img/images/ownFriends/3Animals.webp',
 				headerText: 'Волк',
 				bodyText: 'Серый волк, зубами щёлк.',
-				bgp: '-20px 0',
-				miniDisLeft: 'url(img/images/ownFriends/wolf/1.jpg)',
-				miniDisRight: 'url(img/images/ownFriends/wolf2/1.jpg)'
+				bgp: '-300px 0',
+				miniDisLeft: 'url(img/images/ownFriends/wolf/allWolfs.webp)',
+				miniDisRight: 'url(img/images/ownFriends/wolf/allWolfs.webp)'
 			}
 	];
 	
@@ -1026,8 +1024,8 @@ $(document).ready(function() {
 		if ($(window).outerWidth() < '1150') {
 			$('.angle12Center').css('background-image', arrObj[counterImg].url);
 			$('.angle12Center').css('background-position', arrObj[counterImg].bgp);
-			$('.inImgLeft').css('background-image', arrObj[counterImg].miniDisLeft);
-			$('.inImgRight').css('background-image', arrObj[counterImg].miniDisRight);
+			$('.inImgLeft').css({'background-image': arrObj[counterImg].miniDisLeft, 'background-position': '0 0'});
+			$('.inImgRight').css({'background-image': arrObj[counterImg].miniDisRight, 'background-position': '-750px 0'});
 			$('.cardTextHead2').text(arrObj[counterImg].headerText);
 			$('.cardTextBody2').text(arrObj[counterImg].bodyText);
 			counterImg++;
@@ -1042,62 +1040,65 @@ $(document).ready(function() {
 	}
 	// restore Img on large display
 	function restoreImg() {
-		if ($(window).outerWidth() > '1150' || $(window).outerWidth() < '768') {
+		if ($(window).outerWidth() > '1150' || $(window).outerWidth() < '748') {
 		$('.angle12Center').css('background-image', arrObj[0].url);
+		$('.angle12Center').css('background-position', arrObj[0].bgp);
 		$('.cardTextHead2').text(arrObj[0].headerText);
 		$('.cardTextBody2').text(arrObj[0].bodyText);
 		counterImg = 1;
 		CountEagleL = 1, CountBearL = 1, CountWolfL = 1;
 		CountEagleR = 1, CountBearR = 1, CountWolfR = 1;
+		setTimeout(function() {
+			$('.inImgLeft').css({'background-image': 'url(img/images/ownFriends/bear/allBears.webp)', 'background-position': '0 0'});
+			$('.inImgRight').css({'background-image': 'url(img/images/ownFriends/bear/allBears.webp)', 'background-position': '-750px 0'});	
+		}, 1200);
 		} else {
-			$('.inImgLeft').css('background-image', 'url(img/images/ownFriends/bear/1.jpg)');
-			$('.inImgRight').css('background-image', 'url(img/images/ownFriends/bear2/1.jpg)');
 			$('.lb img').attr('src', locationObj.numbers[0]);
 			$('.rb img').attr('src', locationObj.numbers[0]);
 		}
 	}
 	var leftMiniDispArr = {
 		eagleLeft: [
-			'url(img/images/ownFriends/bird/1.jpg)',
-			'url(img/images/ownFriends/bird/2.jpg)',
-			'url(img/images/ownFriends/bird/3.jpg)',
-			'url(img/images/ownFriends/bird/4.jpg)',
-			'url(img/images/ownFriends/bird/5.jpg)'
+			'0 0',
+			'-150px 0',
+			'-300px 0',
+			'-450px 0',
+			'-600px 0'
 		],
 		bearLeft: [
-			'url(img/images/ownFriends/bear/1.jpg)',
-			'url(img/images/ownFriends/bear/2.jpg)',
-			'url(img/images/ownFriends/bear/3.jpg)',
-			'url(img/images/ownFriends/bear/4.jpg)',
-			'url(img/images/ownFriends/bear/5.jpg)'
+			'0 0',
+			'-150px 0',
+			'-300px 0',
+			'-450px 0',
+			'-600px 0'
 		],
 		wolfLeft: [
-			'url(img/images/ownFriends/wolf/1.jpg)',
-			'url(img/images/ownFriends/wolf/2.jpg)',
-			'url(img/images/ownFriends/wolf/3.jpg)',
-			'url(img/images/ownFriends/wolf/4.jpg)',
-			'url(img/images/ownFriends/wolf/5.jpg)'
+			'0 0',
+			'-150px 0',
+			'-300px 0',
+			'-450px 0',
+			'-600px 0'
 		],
 		eagleRight: [
-			'url(img/images/ownFriends/bird2/1.jpg)',
-			'url(img/images/ownFriends/bird2/2.jpg)',
-			'url(img/images/ownFriends/bird2/3.jpg)',
-			'url(img/images/ownFriends/bird2/4.jpg)',
-			'url(img/images/ownFriends/bird2/5.jpg)'
+			'-750px 0',
+			'-900px 0',
+			'-1050px 0',
+			'-1200px 0',
+			'-1350px 0'
 		],
 		bearRight: [
-			'url(img/images/ownFriends/bear2/1.jpg)',
-			'url(img/images/ownFriends/bear2/2.jpg)',
-			'url(img/images/ownFriends/bear2/3.jpg)',
-			'url(img/images/ownFriends/bear2/4.jpg)',
-			'url(img/images/ownFriends/bear2/5.jpg)'
+			'-750px 0',
+			'-900px 0',
+			'-1050px 0',
+			'-1200px 0',
+			'-1350px 0'
 		],
 		wolfRight: [
-			'url(img/images/ownFriends/wolf2/1.jpg)',
-			'url(img/images/ownFriends/wolf2/2.jpg)',
-			'url(img/images/ownFriends/wolf2/3.jpg)',
-			'url(img/images/ownFriends/wolf2/4.jpg)',
-			'url(img/images/ownFriends/wolf2/5.jpg)'
+			'-750px 0',
+			'-900px 0',
+			'-1050px 0',
+			'-1200px 0',
+			'-1350px 0'
 		]
 	};
 
@@ -1106,9 +1107,9 @@ $(document).ready(function() {
 // change img mini display on medium display
 	function leftBtn() {
 	$('.lb').on('mousedown', function() {
-		$(this).css('background-image', 'url(img/favicon/click.png)');
+		$(this).css('background-image', 'url(img/favicon/click.webp)');
 		if (counterImg == 1) {
-			$('.inImgLeft').css('background-image', leftMiniDispArr.bearLeft[CountBearL]);
+			$('.inImgLeft').css('background-position', leftMiniDispArr.bearLeft[CountBearL]);
 				CountBearL++;
 			$('.lb img').attr('src', locationObj.numbers[CountBearL - 1]);
 			if (CountBearL == leftMiniDispArr.bearLeft.length) {
@@ -1116,7 +1117,7 @@ $(document).ready(function() {
 			}
 		}
 		if (counterImg == 2) {
-			$('.inImgLeft').css('background-image', leftMiniDispArr.eagleLeft[CountEagleL]);
+			$('.inImgLeft').css('background-position', leftMiniDispArr.eagleLeft[CountEagleL]);
 				CountEagleL++;
 			$('.lb img').attr('src', locationObj.numbers[CountEagleL - 1]);
 			if (CountEagleL == leftMiniDispArr.eagleLeft.length) {
@@ -1124,7 +1125,7 @@ $(document).ready(function() {
 			}
 		}
 		if (counterImg == 0) {
-			$('.inImgLeft').css('background-image', leftMiniDispArr.wolfLeft[CountWolfL]);
+			$('.inImgLeft').css('background-position', leftMiniDispArr.wolfLeft[CountWolfL]);
 				CountWolfL++;
 				$('.lb img').attr('src', locationObj.numbers[CountWolfL - 1]);
 			if (CountWolfL == leftMiniDispArr.wolfLeft.length) {
@@ -1136,13 +1137,13 @@ $(document).ready(function() {
 	leftBtn();
 	function rightBtn() {
 	$('.lb').on('mouseup', function() {
-		$(this).css('background-image', 'url(img/favicon/btnUp.png)');
+		$(this).css('background-image', 'url(img/favicon/btnUp.webp)');
 	});
 
 	$('.rb').on('mousedown', function() {
-		$(this).css('background-image', 'url(img/favicon/click.png)');
+		$(this).css('background-image', 'url(img/favicon/click.webp)');
 		if (counterImg == 1) {
-			$('.inImgRight').css('background-image', leftMiniDispArr.bearRight[CountBearR]);
+			$('.inImgRight').css('background-position', leftMiniDispArr.bearRight[CountBearR]);
 				CountBearR++;
 				$('.rb img').attr('src', locationObj.numbers[CountBearR - 1]);
 			if (CountBearR == leftMiniDispArr.bearRight.length) {
@@ -1150,7 +1151,7 @@ $(document).ready(function() {
 			}
 		}
 		if (counterImg == 2) {
-			$('.inImgRight').css('background-image', leftMiniDispArr.eagleRight[CountEagleR]);
+			$('.inImgRight').css('background-position', leftMiniDispArr.eagleRight[CountEagleR]);
 				CountEagleR++;
 				$('.rb img').attr('src', locationObj.numbers[CountEagleR - 1]);
 			if (CountEagleR == leftMiniDispArr.eagleRight.length) {
@@ -1158,7 +1159,7 @@ $(document).ready(function() {
 			}
 		}
 		if (counterImg == 0) {
-			$('.inImgRight').css('background-image', leftMiniDispArr.wolfRight[CountWolfR]);
+			$('.inImgRight').css('background-position', leftMiniDispArr.wolfRight[CountWolfR]);
 				CountWolfR++;
 				$('.rb img').attr('src', locationObj.numbers[CountWolfR - 1]);
 			if (CountWolfR == leftMiniDispArr.wolfRight.length) {
@@ -1170,7 +1171,7 @@ $(document).ready(function() {
 	rightBtn();
 // for color button
 	$('.rb').on('mouseup', function() {
-		$(this).css('background-image', 'url(img/favicon/btnUp.png)');
+		$(this).css('background-image', 'url(img/favicon/btnUp.webp)');
 	});
 
 // change btn color
@@ -1282,14 +1283,14 @@ $(document).ready(function() {
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 		// change img
 		$('#contentImg1').css('box-shadow', 'none').fadeOut('fast', function() {
-			$('#contentImg1').attr('src', 'img/images/maldives1.jpg').fadeIn(500);
+			$('#contentImg1').attr('src', 'img/images/maldives1.webp').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', 'img/images/maldives2.jpg').fadeIn(500);
+				$('#contentImg2').attr('src', 'img/images/maldives2.webp').fadeIn(500);
 			});
 		} else {
-			$('#contentImg2').attr('src', 'img/images/maldives2.jpg')
+			$('#contentImg2').attr('src', 'img/images/maldives2.webp')
 		}
 		// change text
 		$('#contentText, .item1 p').fadeOut('fast', function() {
@@ -1313,14 +1314,14 @@ $(document).ready(function() {
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 
 		$('#contentImg1').fadeOut('fast', function() {
-			$('#contentImg1').attr('src', 'img/images/kanari2.jpg').fadeIn(500);
+			$('#contentImg1').attr('src', 'img/images/kanari2.webp').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', 'img/images/kanari1.jpg').fadeIn(500);
+				$('#contentImg2').attr('src', 'img/images/kanari1.webp').fadeIn(500);
 			});
 		} else {
-			$('#contentImg2').attr('src', 'img/images/kanari1.jpg');
+			$('#contentImg2').attr('src', 'img/images/kanari1.webp');
 		}
 		$('#contentText, .item1 p').fadeOut('fast', function(){
 			$('#contentText').html(txt3.bodyText).fadeIn(500);
@@ -1341,14 +1342,14 @@ $(document).ready(function() {
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 
 		$('#contentImg1').fadeOut('fast',function() {
-			$('#contentImg1').attr('src', 'img/images/dubay1.jpg').fadeIn(500);
+			$('#contentImg1').attr('src', 'img/images/dubay1.webp').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', 'img/images/dubay2.jpg').fadeIn(500);
+				$('#contentImg2').attr('src', 'img/images/dubay2.webp').fadeIn(500);
 			});
 		} else {
-			$('#contentImg2').attr('src', 'img/images/dubay2.jpg');
+			$('#contentImg2').attr('src', 'img/images/dubay2.webp');
 		}
 		$('#contentText, .item1 p').fadeOut('fast', function(){
 			$('#contentText').html(txt2.bodyText).fadeIn(500);
@@ -1369,14 +1370,14 @@ $(document).ready(function() {
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 
 		$('#contentImg1').fadeOut('fast', function() {
-			$('#contentImg1').attr('src', 'img/images/seysheli2.jpg').fadeIn(500);
+			$('#contentImg1').attr('src', 'img/images/seysheli2.webp').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', 'img/images/seysheli1.jpg').fadeIn(500);
+				$('#contentImg2').attr('src', 'img/images/seysheli1.webp').fadeIn(500);
 			});
 		} else {
-			$('#contentImg2').attr('src', 'img/images/seysheli1.jpg');	
+			$('#contentImg2').attr('src', 'img/images/seysheli1.webp');	
 		}
 		$('#contentText, .item1 p').fadeOut('fast', function(){
 			$('#contentText').html(txt4.bodyText).fadeIn(500);
@@ -1397,14 +1398,14 @@ $(document).ready(function() {
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 		
 		$('#contentImg1').fadeOut('fast', function() {
-			$('#contentImg1').attr('src', 'img/images/Gavai1.jpg').fadeIn(500);
+			$('#contentImg1').attr('src', 'img/images/Gavai1.webp').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', 'img/images/Gavai2.jpg').fadeIn(500);
+				$('#contentImg2').attr('src', 'img/images/Gavai2.webp').fadeIn(500);
 			});
 		} else {
-			$('#contentImg2').attr('src', 'img/images/Gavai2.jpg');
+			$('#contentImg2').attr('src', 'img/images/Gavai2.webp');
 		}
 		$('#contentText, .item1 p').fadeOut('fast', function(){
 			$('#contentText').html(txt5.bodyText).fadeIn(500);
@@ -1425,14 +1426,14 @@ $(document).ready(function() {
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 		
 		$('#contentImg1').fadeOut('fast', function() {
-			$('#contentImg1').attr('src', 'img/images/bali1.jpg').fadeIn(500);
+			$('#contentImg1').attr('src', 'img/images/bali1.webp').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', 'img/images/bali2.jpg').fadeIn(500);
+				$('#contentImg2').attr('src', 'img/images/bali2.webp').fadeIn(500);
 			});
 		} else {
-			$('#contentImg2').attr('src', 'img/images/bali2.jpg');
+			$('#contentImg2').attr('src', 'img/images/bali2.webp');
 		}
 		$('#contentText, .item1 p').fadeOut('fast', function(){
 			$('#contentText').html(txt6.bodyText).fadeIn(500);
@@ -1528,42 +1529,40 @@ $(document).ready(function() {
 	});
 });
 
-
-
 // creating the angle3 section
 // function angle3() {
 // var angle3Item = $('.bgImg');
 // var arrImgUrl = [
-// 	'url(img/images/nature/1.jpg)',
-// 	'url(img/images/nature/2.jpg)',
-// 	'url(img/images/nature/3.jpg)',
-// 	'url(img/images/nature/4.jpg)',
-// 	'url(img/images/nature/5.jpg)',
-// 	'url(img/images/nature/6.jpg)',
-// 	'url(img/images/nature/7.jpg)',
-// 	'url(img/images/nature/8.jpg)',
-// 	'url(img/images/nature/9.jpg)',
-// 	'url(img/images/nature/10.jpg)',
-// 	'url(img/images/nature/11.jpg)',
-// 	'url(img/images/nature/12.jpg)',
-// 	'url(img/images/nature/13.jpg)',
-// 	'url(img/images/nature/14.jpg)',
-// 	'url(img/images/nature/15.jpg)',
-// 	'url(img/images/nature/16.jpg)',
-// 	'url(img/images/nature/17.jpg)',
-// 	'url(img/images/nature/18.jpg)',
-// 	'url(img/images/nature/19.jpg)',
-// 	'url(img/images/nature/20.jpg)',
-// 	'url(img/images/nature/21.jpg)',
-// 	'url(img/images/nature/22.jpg)',
-// 	'url(img/images/nature/23.jpg)',
-// 	'url(img/images/nature/24.jpg)',
-// 	'url(img/images/nature/25.jpg)',
-// 	'url(img/images/nature/26.jpg)',
-// 	'url(img/images/nature/27.jpg)',
-// 	'url(img/images/nature/28.jpg)',
-// 	'url(img/images/nature/29.jpg)',
-// 	'url(img/images/nature/30.jpg)'
+// 	'url(img/images/nature/1.webp)',
+// 	'url(img/images/nature/2.webp)',
+// 	'url(img/images/nature/3.webp)',
+// 	'url(img/images/nature/4.webp)',
+// 	'url(img/images/nature/5.webp)',
+// 	'url(img/images/nature/6.webp)',
+// 	'url(img/images/nature/7.webp)',
+// 	'url(img/images/nature/8.webp)',
+// 	'url(img/images/nature/9.webp)',
+// 	'url(img/images/nature/10.webp)',
+// 	'url(img/images/nature/11.webp)',
+// 	'url(img/images/nature/12.webp)',
+// 	'url(img/images/nature/13.webp)',
+// 	'url(img/images/nature/14.webp)',
+// 	'url(img/images/nature/15.webp)',
+// 	'url(img/images/nature/16.webp)',
+// 	'url(img/images/nature/17.webp)',
+// 	'url(img/images/nature/18.webp)',
+// 	'url(img/images/nature/19.webp)',
+// 	'url(img/images/nature/20.webp)',
+// 	'url(img/images/nature/21.webp)',
+// 	'url(img/images/nature/22.webp)',
+// 	'url(img/images/nature/23.webp)',
+// 	'url(img/images/nature/24.webp)',
+// 	'url(img/images/nature/25.webp)',
+// 	'url(img/images/nature/26.webp)',
+// 	'url(img/images/nature/27.webp)',
+// 	'url(img/images/nature/28.webp)',
+// 	'url(img/images/nature/29.webp)',
+// 	'url(img/images/nature/30.webp)'
 	
 // ];
 //  	var randImageNumber = Math.floor(Math.random() * arrImgUrl.length);
@@ -1625,7 +1624,6 @@ $(document).ready(function() {
 // 	},2000);
 // };
 // angle3();
-
 //hide 3angle
 var w = $('.w2, .w-3');
 var p = $('#w2').parent();
@@ -1664,7 +1662,6 @@ function hideAngle3() {
  		  $('.wu1, .wu-1').fadeIn('slow');
 	}
 }
-
 /////////////////////////////////////
 //random balls
 // function changePlaceBalls() {
@@ -1757,8 +1754,6 @@ var flagConTime = false, flagContOff = null;
 				},2000);
 		}
 	});
-
-
 function hideContacts() {
 	switch (true) {
 			case (contactFlag == false && flagPhone || flagSkype || flagGmail == true) :
@@ -1795,7 +1790,7 @@ function hideContacts() {
 				// icon support changeSideImgw
 				$('.icon-handshake-o').css({'left': '-35px'});
 				// hide author
-				$('.headerThis p').css({'left': '-185px'}).removeClass('opacity');
+				$('.headerThis p').css({'left': '-190px'}).removeClass('opacity');
 				// change header overflow
 				$('.headerThis').css({'overflow': 'visible'});
 				$('.fa-address-card').css('color', '#A9D9F2');
@@ -1807,7 +1802,6 @@ function hideContacts() {
 				},750);
 				$('.icon-comment-empty').css({'left': '-15px', 'position': 'relative'});
 				// off click author and support
-
 				break;
 			case (contactFlag == false) :
 				// hide support text
@@ -1820,7 +1814,7 @@ function hideContacts() {
 				// icon support changeSideImgw
 				$('.icon-handshake-o').css({'left': '-35px'});
 				// hide author text
-				$('.headerThis p').css({'left': '-185px'});
+				$('.headerThis p').css({'left': '-190px'});
 				// change header overflow
 				$('.headerThis').css({'overflow': 'visible'});
 				$('.fa-address-card').css('color', '#A9D9F2');
@@ -1900,7 +1894,7 @@ function hideHeader() {
 		case (flagAuthor == true) :
 		// function hide()
 			$('.fa-address-card').css('color', '#A9D9F2');
-			$('.headerThis p').css('left', '-155px');
+			$('.headerThis p').css('left', '-190px');
 			$('.g6Cont').css({'left': '-160px', 'opacity': '0'});
 			setTimeout(function() {
 				$('.g6Cont p').css({'animation': ''});
@@ -1910,7 +1904,6 @@ function hideHeader() {
 	}
 }
 ///////////////////////////////////
-
 
 var f = true;
 	$('.icon-handshake-o').on('click', hideHeader2);
@@ -1935,38 +1928,38 @@ var f = true;
 ///////////////////////////////////////////
 
 var textContentBook = [
-	{"text":"", "img":"url(img/images/nature2.png)"},
-	{"text":"", "img":"url(img/images/nature/1.jpg)"},
-	{"text":"", "img":"url(img/images/nature/2.jpg)"},
-	{"text":"", "img":"url(img/images/nature/3.jpg)"},
-	{"text":"", "img":"url(img/images/nature/4.jpg)"},
-	{"text":"", "img":"url(img/images/nature/5.jpg)"},
-	{"text":"", "img":"url(img/images/nature/6.jpg)"},
-	{"text":"", "img":"url(img/images/nature/7.jpg)"},
-	{"text":"", "img":"url(img/images/nature/8.jpg)"},
-	{"text":"", "img":"url(img/images/nature/9.jpg)"},
-	{"text":"", "img":"url(img/images/nature/10.jpg)"},
-	{"text":"", "img":"url(img/images/nature/11.jpg)"},
-	{"text":"", "img":"url(img/images/nature/12.jpg)"},
-	{"text":"", "img":"url(img/images/nature/13.jpg)"},
-	{"text":"", "img":"url(img/images/nature/14.jpg)"},
-	{"text":"", "img":"url(img/images/nature/15.jpg)"},
-	{"text":"", "img":"url(img/images/nature/16.jpg)"},
-	{"text":"", "img":"url(img/images/nature/17.jpg)"},
-	{"text":"", "img":"url(img/images/nature/18.jpg)"},
-	{"text":"", "img":"url(img/images/nature/19.jpg)"},
-	{"text":"", "img":"url(img/images/nature/20.jpg)"},
-	{"text":"", "img":"url(img/images/nature/21.jpg)"},
-	{"text":"", "img":"url(img/images/nature/22.jpg)"},
-	{"text":"", "img":"url(img/images/nature/23.jpg)"},
-	{"text":"", "img":"url(img/images/nature/24.jpg)"},
-	{"text":"", "img":"url(img/images/nature/25.jpg)"},
-	{"text":"", "img":"url(img/images/nature/26.jpg)"},
-	{"text":"", "img":"url(img/images/nature/27.jpg)"},
-	{"text":"", "img":"url(img/images/nature/28.jpg)"},
-	{"text":"", "img":"url(img/images/nature/29.jpg)"},
-	{"text":"", "img":"url(img/images/nature/30.jpg)"},
-	{"text":"", "img":"url(img/images/nature2.png)"}
+	{"text":"", "img":"url(img/images/nature2.webp)"},
+	{"text":"", "img":"url(img/images/nature/1.webp)"},
+	{"text":"", "img":"url(img/images/nature/2.webp)"},
+	{"text":"", "img":"url(img/images/nature/3.webp)"},
+	{"text":"", "img":"url(img/images/nature/4.webp)"},
+	{"text":"", "img":"url(img/images/nature/5.webp)"},
+	{"text":"", "img":"url(img/images/nature/6.webp)"},
+	{"text":"", "img":"url(img/images/nature/7.webp)"},
+	{"text":"", "img":"url(img/images/nature/8.webp)"},
+	{"text":"", "img":"url(img/images/nature/9.webp)"},
+	{"text":"", "img":"url(img/images/nature/10.webp)"},
+	{"text":"", "img":"url(img/images/nature/11.webp)"},
+	{"text":"", "img":"url(img/images/nature/12.webp)"},
+	{"text":"", "img":"url(img/images/nature/13.webp)"},
+	{"text":"", "img":"url(img/images/nature/14.webp)"},
+	{"text":"", "img":"url(img/images/nature/15.webp)"},
+	{"text":"", "img":"url(img/images/nature/16.webp)"},
+	{"text":"", "img":"url(img/images/nature/17.webp)"},
+	{"text":"", "img":"url(img/images/nature/18.webp)"},
+	{"text":"", "img":"url(img/images/nature/19.webp)"},
+	{"text":"", "img":"url(img/images/nature/20.webp)"},
+	{"text":"", "img":"url(img/images/nature/21.webp)"},
+	{"text":"", "img":"url(img/images/nature/22.webp)"},
+	{"text":"", "img":"url(img/images/nature/23.webp)"},
+	{"text":"", "img":"url(img/images/nature/24.webp)"},
+	{"text":"", "img":"url(img/images/nature/25.webp)"},
+	{"text":"", "img":"url(img/images/nature/26.webp)"},
+	{"text":"", "img":"url(img/images/nature/27.webp)"},
+	{"text":"", "img":"url(img/images/nature/28.webp)"},
+	{"text":"", "img":"url(img/images/nature/29.webp)"},
+	{"text":"", "img":"url(img/images/nature/30.webp)"},
+	{"text":"", "img":"url(img/images/nature2.webp)"}
 ]
 // define array length
 var textContentBookLength = 0;
@@ -2456,7 +2449,6 @@ $(document).ready(function() {
 // } else {
 // 	$('.wrapperLoader').css({'display': 'none'});
 // }
-	
 ///////////////////////////////////////////
 //smoothScroll to id
 $(document).ready(function() {
@@ -2486,12 +2478,12 @@ window.addEventListener('scroll', function() {
   },300);
 }, false);
  //////////////////////////////////////////////////////
-$(document).ready(function() {
-	$(window).on('load resize', function() {
-	if ($(window).outerWidth() < 480) {
-		$('body').addClass('animated');
-	} else {
-		$('body').removeClass('animated');
-	}
-	});
-});
+// $(document).ready(function() {
+// 	$(window).on('load resize', function() {
+// 	if ($(window).outerWidth() < 768) {
+// 		$('body').addClass('.userSelect');
+// 	} else {
+// 		$('body').removeClass('.userSelect');
+// 	}
+// 	});
+// });
