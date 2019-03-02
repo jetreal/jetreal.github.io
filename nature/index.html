@@ -4,16 +4,16 @@
     <title>mySite</title>
     <meta charset="UTF-8">
     <noscript>
-      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="main.css">
     </noscript>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/grid.min.css">
-    <link rel="stylesheet" href="css/header.min.css">
+    <link rel="stylesheet" href="_grid.min.css">
+    <link rel="stylesheet" href="css/main.css">
     <!-- fonts -->
-    <link rel="stylesheet" href="fonts/fontello/css/animation.css">
-    <link rel="stylesheet" href="fonts/fontello/css/myicon-codes.css">
+<!--     <link rel="stylesheet" href="fonts/fontello/css/animation.css">
+    <link rel="stylesheet" href="fonts/fontello/css/myicon-codes.css"> -->
     <link rel="stylesheet" href="fonts/fontello/css/myicon.css">
-    <link rel="stylesheet" href="fonts/fontello/css/myicon-embedded.css">
+    <!-- <link rel="stylesheet" href="fonts/fontello/css/myicon-embedded.css"> -->
     <style>
       .wrapperLoader {
       	transition: opacity .5s;
@@ -42,7 +42,12 @@
   </head>
   <body>
     <div class="wrapperLoader" id="prel">
-      <div class="loader"><img src="img/images/balls/ball10.png" alt=""></div>
+      <div class="loader">
+        <picture>
+          <source srcset="img/images/balls/ball10.webp" type="image/webp" alt="">
+          <source srcset="img/images/balls/ball10.webp" type="image/png" alt=""><img src="img/images/balls/ball10.webp" alt="">
+        </picture>
+      </div>
     </div>
     <div id="arrowToTop"><a href="#wrapper" rel="m_PageScroll2id">
         <div></div></a></div>
@@ -50,7 +55,7 @@
         <div></div></a></div>
     <!-- wrapper-->
     <div class="wrapper" id="wrapper">
-      <div class="wrapSun"><img class="sun" src="img/images/sun.png" alt="fire-logo" width="130px" height="90px"></div>
+      <div class="wrapSun"><img class="sun" src="img/images/sun.webp" alt="fire-logo" width="130px" height="90px"></div>
       <!-- header first page-->
       <section class="firstSection">
         <header class="top_header">
@@ -120,7 +125,7 @@
                             <div class="into06"></div>
                           </div>
                         </div>
-                        <div class="wrapCircleImg"><img class="circleImg" src="img/images/button3.png" alt="button"></div>
+                        <div class="wrapCircleImg"><img class="circleImg" src="img/images/button3.webp" alt="button"></div>
                       </div>
                     </div>
                   </div>
@@ -134,11 +139,15 @@
       <section class="afterFirst">
         <div class="wrapDuckSec2 container-fluid">
           <div class="row justify-content-center rowDuck">
-            <div class="wrapDuck col col-md-4"><img class="duck" src="img/images/flowers/romashka1.jpg" alt="duck"></div>
+            <div class="wrapDuck col col-md-4">
+              <div class="duck"></div>
+            </div>
             <div class="col col-sm- duckText"><span id="angleLabelText">так выглядит:</span>
               <p>Ромашка</p>
             </div>
-            <div class="wrapDuck col col-md-4"><img class="duck2" src="img/images/flowers/romashka2.jpg" alt="duck"></div>
+            <div class="wrapDuck col col-md-4">
+              <div class="duck2"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -155,7 +164,7 @@
             <div class="galleryDeg1Left">
               <div class="galleryDeg2Left">
                 <div class="galleryLeft">
-                  <div class="galleryImgContentLeft"><a class="popup-modal2 mfp-bg" id="popupLeft" href="#imgContent2" data-effect="mfp-zoom-in"><img id="imgContent2" src="img/images/fields/6.png" alt="foto Nature"></a></div>
+                  <div class="galleryImgContentLeft"><a class="popup-modal2 mfp-bg" id="popupLeft" href="#imgContent2" data-effect="mfp-zoom-in"><img id="imgContent2" src="img/images/fields/6.webp" alt="foto Nature"></a></div>
                 </div>
               </div>
             </div>
@@ -239,27 +248,31 @@
               </div>
             </div>
           </div>
-          <div class="wrapGallery"><span class="arrowLeft"></span><span class="arrowRight"></span><span class="showNumber"><img id="num" src="img/images/numbers/1.png"></span>
+          <div class="wrapGallery"><span class="arrowLeft"></span><span class="arrowRight"></span><span class="showNumber"><img id="num" src="img/images/numbers/1.webp"></span>
             <div class="galleryDeg1">
               <div class="galleryDeg2">
                 <div class="gallery">
-                  <div class="galleryImgContent"><a class="popup-modal2" id="popupRight" href="#imgContent1" data-effect="mfp-zoom-in"><img id="imgContent" src="img/images/fields/1.png" alt="foto Nature"></a></div>
+                  <div class="galleryImgContent"><a class="popup-modal2" id="popupRight" href="#imgContent1" data-effect="mfp-zoom-in"><img id="imgContent" src="img/images/fields/1.webp" alt="foto Nature"></a></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="theLostRiverText grid center">Природные локации</div>
+        <div class="theLostRiverText">Природные локации</div>
       </section>
       <!-- end forest section-->
       <section class="afterForest">
         <div class="conEj container-fluid">
           <div class="rowEj row justify-content-center">
-            <div class="col col-md-4 ejDiv"><img class="ej" src="img/images/berries/malina1.jpg" alt="ej"></div>
+            <div class="col col-md-4 ejDiv">
+              <div class="ej"></div>
+            </div>
             <div class="col col-sm- textEj">
               <p>Малина</p><span id="angleLabelText2">так выглядит:</span>
             </div>
-            <div class="col col-md-4 ejDiv"><img class="ej2" src="img/images/berries/malina2.jpg" alt="ej"></div>
+            <div class="col col-md-4 ejDiv">
+              <div class="ej2"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -271,19 +284,19 @@
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-sm- m-2 grid">
-              <!-- <span class="wrapAni center grid"></span>--><a class="test-popup-link" href="img/images/tiger.jpg">
+              <!-- <span class="wrapAni center grid"></span>--><a class="test-popup-link" href="img/images/tiger.webp">
                 <div class="cardShadow animal tiger">
                   <p>Тигр&#x9;</p>
                 </div></a>
               <div class="textAnimal grid center">Тигр обитает в азии - в Индии, Непале и на Алтае... Тигры - это большие, сильные, крупные и красивые кошки. Тигр самый крупный и тяжёлый представитель семейства кошачих.</div>
             </div>
-            <div class="col-sm- m-2"><a class="test-popup-link" href="img/images/pantera.jpg">
+            <div class="col-sm- m-2"><a class="test-popup-link" href="img/images/pantera.webp">
                 <div class="cardShadow animal panthera">
                   <p>Пантера&#x9;</p>
                 </div></a>
               <div class="textAnimal">Чёрной пантерой обычно является леопард или ягуар, имеющий чёрную шкуру. На охоту пантеры всегда выходят ночью, так как в тёмное время суток они практически невидимы. Пантеры предпочитают жить поодиночке, или парами самец + самка.</div>
             </div>
-            <div class="col-sm- m-2 grid"><a class="test-popup-link" href="img/images/puma.jpg">
+            <div class="col-sm- m-2 grid"><a class="test-popup-link" href="img/images/puma.webp">
                 <div class="cardShadow animal puma">
                   <p>
                      Пума&#x9;</p>
@@ -294,14 +307,14 @@
                 по деревьям и хорошо плавают.
               </div>
             </div>
-            <div class="col-sm- m-2"><a class="test-popup-link" href="img/images/snowBars.jpg">
+            <div class="col-sm- m-2"><a class="test-popup-link" href="img/images/snowBars.webp">
                 <div class="cardShadow animal snowBars">
                   <p>
                      Снежный леопард</p>
                 </div></a>
               <div class="textAnimal">Снежный барс - представитель семейства кошачих, обитающий в суровом климате горных массивов цетральной азии. Среди всех крупных кошек снежный брас - единственный постоянный житель высокогорий.</div>
             </div>
-            <div class="col-sm- m-2"><a class="test-popup-link" href="img/images/lev.jpg">
+            <div class="col-sm- m-2"><a class="test-popup-link" href="img/images/lev.webp">
                 <div class="cardShadow animal lion">
                   <p>
                      Лев</p>
@@ -311,7 +324,7 @@
                 Охотятся у львов в основном самки.
               </div>
             </div>
-            <div class="col-sm- m-2"><a class="test-popup-link" href="img/images/jaguar.jpg">
+            <div class="col-sm- m-2"><a class="test-popup-link" href="img/images/jaguar.webp">
                 <div class="cardShadow animal jaguar">
                   <p>
                      Ягуар</p>
@@ -328,11 +341,15 @@
       <section class="afterBeach">
         <div class="wrapCats container-fluid">
           <div class="row rowCat justify-content-center">
-            <div class="col col-md-4 divCat"><img class="catsImg" src="img/images/animals/ej1.jpg" alt="cats"></div>
+            <div class="col col-md-4 divCat">
+              <div class="catsImg"></div>
+            </div>
             <div class="col col-sm- catText">
               <p>ёж</p><span id="angleLabelText3">так выглядит:</span>
             </div>
-            <div class="col col-md-4 divCat2"><img class="catsImg2" src="img/images/animals/ej2.jpg" alt="cats2"></div>
+            <div class="col col-md-4 divCat2">
+              <div class="catsImg2"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -357,11 +374,11 @@
       <!-- end Glaser-->
       <section class="ownFriends" id="ownFriends">
         <div class="wrapAfterGlacierHead">
-          <div class="lb"><img id="numLeft" src="img/images/numbers/1.png" alt="number"></div>
+          <div class="lb"><img id="numLeft" src="img/images/numbers/1.webp" alt="number"></div>
           <div class="afterGlacierHead">
             <h2>Жители леса</h2>
           </div>
-          <div class="rb"><img id="numRight" src="img/images/numbers/1.png" alt="number"></div>
+          <div class="rb"><img id="numRight" src="img/images/numbers/1.webp" alt="number"></div>
         </div>
         <div class="wrapCardBoot">
           <div class="wrapCard">
@@ -489,8 +506,8 @@
             <button class="menuBtn">menu</button>
           </div>
           <div class="wrapContentImg">
-            <div class="contentImg1"><img src="img/images/maldives1.jpg" id="contentImg1" alt="maldives1"></div>
-            <div class="contentImg2"><img src="img/images/maldives2.jpg" id="contentImg2" alt="maldives2"></div>
+            <div class="contentImg1"><img src="img/images/maldives1.webp" id="contentImg1" alt="maldives1"></div>
+            <div class="contentImg2"><img src="img/images/maldives2.webp" id="contentImg2" alt="maldives2"></div>
           </div>
         </div>
         <div class="item5">
@@ -800,11 +817,11 @@
           </div>
         </div>
         <div class="bottomFooter">
-          <div class="wrapFoo"><img class="uicn" src="img/images/iucn.png" alt="iucn"></div>
-          <div class="wrapFoo"><img class="greenPeace" src="img/images/green.png" alt="greenPeace"></div>
-          <div class="wrapFoo"><img class="wap" src="img/images/wap.png" alt="wap"></div>
-          <div class="wrapFoo"><img class="panda" src="img/images/panda5.png" alt="panda"></div>
-          <div class="wrapFoo"><img class="wcs" src="img/images/wcs.png" alt="wcs"></div>
+          <div class="wrapFoo"><img class="uicn" src="img/images/iucn.webp" alt="iucn"></div>
+          <div class="wrapFoo"><img class="greenPeace" src="img/images/green.webp" alt="greenPeace"></div>
+          <div class="wrapFoo"><img class="wap" src="img/images/wap.webp" alt="wap"></div>
+          <div class="wrapFoo"><img class="panda" src="img/images/panda5.webp" alt="panda"></div>
+          <div class="wrapFoo"><img class="wcs" src="img/images/wcs.webp" alt="wcs"></div>
           <div class="line-7"></div>
           <div class="line-6"></div>
           <div class="line-5"></div>
@@ -830,12 +847,6 @@
     <!-- end wrapper-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2|Comfortaa|Open+Sans">
     <!-- jQuery library-->
-    <!-- Load CSS compiled without Bootstrap & Header styles (after release)-->
-    <script>
-      var ms=document.createElement("link");ms.rel="stylesheet";
-      ms.href="css/main.css";document.getElementsByTagName("head")[0].appendChild(ms);
-      
-    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- nice scroll-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.5.1/jquery.nicescroll.min.js"></script>
@@ -845,6 +856,6 @@
     <script src="libs/Magnific/jquery.magnific-popup.min.js"></script>
     <script src="libs/scroll2Id/jquery.malihu.PageScroll2id.min.js"></script> -->
     <script src="js/libs.min.js" defer></script>
-    <script src="js/common.min.js" defer></script>
+    <script src="js/common.js" defer></script>
   </body>
 </html>
