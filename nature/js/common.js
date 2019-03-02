@@ -37,7 +37,7 @@ $(window).on('load', function() {
 ////////////////////////////////////////////////////////////////////////
 
 // magnific Popup
-if ($(window).outerWidth > 768) {
+
 	jQuery(document).ready(function(){
 		jQuery('.test-popup-link').magnificPopup({
 			type: 'image',
@@ -68,7 +68,7 @@ if ($(window).outerWidth > 768) {
 				// duration: 300 // don't foget to change the duration also in CSS
 			}
 		});
-}
+
 /////////////////////////////////////////////////////////////
 // forest section
 
