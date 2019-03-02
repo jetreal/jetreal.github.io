@@ -100,10 +100,10 @@ $('.popup-modal2').magnificPopup({
 ////////////////////////////////////////////////////////////
 // header bottom text scale function
 var lDivDataObj = {
-	wind:{img:'url(..img/images/sky2.webp)', text:'Ветер', rightImg:''},
-	fire:{img:'url(..img/images/fireHeaderDisp.webp)', text: 'Огонь', rightImg: ''},
-	water:{img:'url(..img/images/waterHeaderDisp.webp)', text: 'Вода', rightImg: ''},
-	earth:{img:'url(..img/images/earth.webp)', text: 'Земля', rightImg: ''}
+	wind:{img:'url(../img/images/sky2.webp)', text:'Ветер', rightImg:''},
+	fire:{img:'url(../img/images/fireHeaderDisp.webp)', text: 'Огонь', rightImg: ''},
+	water:{img:'url(../img/images/waterHeaderDisp.webp)', text: 'Вода', rightImg: ''},
+	earth:{img:'url(../img/images/earth.webp)', text: 'Земля', rightImg: ''}
 }
 var flagi = false;
 
@@ -127,7 +127,7 @@ function headerAnime(iDivDataObj) {
 		$('.circleImg').off('click');
 			$('.circleImg').on('click', offTimerHeader);
 			// css
-			$('.circleImg').attr('src', '..img/images/button3.webp');
+			$('.circleImg').attr('src', '../img/images/button3.webp');
 			$('.circleImg').css({width:'150px', height:'150px',
 			 'box-shadow': '2px 2px 6px gray, -2px -2px 6px gray,\
 			 -2px 2px 6px gray, 2px -2px 6px gray'});
@@ -166,7 +166,7 @@ function mDown() {
 				'box-shadow': '3px 3px 6px #19B9F5, -3px -3px 6px #19B9F5,\
 				-3px 3px 6px #19B9F5, 3px -3px 6px #19B9F5'});
 			// css
-			$('.circleImg').attr('src', '..img/images/button2.webp');
+			$('.circleImg').attr('src', '../img/images/button2.webp');
 			$('.into03, .into04, .into05, .into06')
 			.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 			$('.bDiv').css('border', '1px solid #19B9F5');
@@ -177,7 +177,7 @@ function mDown() {
 			$('.circleImg').off('click');
 			$('.circleImg').on('click', offTimerHeader);
 			// css
-			$('.circleImg').attr('src', '..img/images/button3.webp');
+			$('.circleImg').attr('src', '../img/images/button3.webp');
 			$('.circleImg').css({width:'150px',height:'150px',
 			 'box-shadow': '3px 3px 6px gray, -3px -3px 6px gray,\
 			 -3px 3px 6px gray, 3px -3px 6px gray'});
@@ -648,60 +648,60 @@ var anyArr = [];
 	// img Obj path for imgs
 var locationObj = {
 	numbers: [
-		'..img/images/numbers/1.webp',
-		'..img/images/numbers/2.webp',
-		'..img/images/numbers/3.webp',
-		'..img/images/numbers/4.webp',
-		'..img/images/numbers/5.webp'
+		'../img/images/numbers/1.webp',
+		'../img/images/numbers/2.webp',
+		'../img/images/numbers/3.webp',
+		'../img/images/numbers/4.webp',
+		'../img/images/numbers/5.webp'
 	],
 	rivers: [
-		'..img/images/rivers/1.webp',
-		'..img/images/rivers/2.webp',
-		'..img/images/rivers/3.webp',
-		'..img/images/rivers/4.webp',
-		'..img/images/rivers/5.webp'
+		'../img/images/rivers/1.webp',
+		'../img/images/rivers/2.webp',
+		'../img/images/rivers/3.webp',
+		'../img/images/rivers/4.webp',
+		'../img/images/rivers/5.webp'
 	],
 	forest: [
-		'..img/images/forest/1.webp',
-		'..img/images/forest/2.webp',
-		'..img/images/forest/3.webp',
-		'..img/images/forest/4.webp',
-		'..img/images/forest/5.webp'
+		'../img/images/forest/1.webp',
+		'../img/images/forest/2.webp',
+		'../img/images/forest/3.webp',
+		'../img/images/forest/4.webp',
+		'../img/images/forest/5.webp'
 	],
 	mountain: [
-		'..img/images/mountain/1.webp',
-		'..img/images/mountain/2.webp',
-		'..img/images/mountain/3.webp',
-		'..img/images/mountain/4.webp',
-		'..img/images/mountain/5.webp'
+		'../img/images/mountain/1.webp',
+		'../img/images/mountain/2.webp',
+		'../img/images/mountain/3.webp',
+		'../img/images/mountain/4.webp',
+		'../img/images/mountain/5.webp'
 	],
 	fields: [
-		'..img/images/fields/1.webp',
-		'..img/images/fields/2.webp',
-		'..img/images/fields/3.webp',
-		'..img/images/fields/4.webp',
-		'..img/images/fields/5.webp'
+		'../img/images/fields/1.webp',
+		'../img/images/fields/2.webp',
+		'../img/images/fields/3.webp',
+		'../img/images/fields/4.webp',
+		'../img/images/fields/5.webp'
 	],
 	seas: [
-		'..img/images/seas/1.webp',
-		'..img/images/seas/2.webp',
-		'..img/images/seas/3.webp',
-		'..img/images/seas/4.webp',
-		'..img/images/seas/5.webp'
+		'../img/images/seas/1.webp',
+		'../img/images/seas/2.webp',
+		'../img/images/seas/3.webp',
+		'../img/images/seas/4.webp',
+		'../img/images/seas/5.webp'
 	],
 	deserts: [
-		'..img/images/deserts/1.webp',
-		'..img/images/deserts/2.webp',
-		'..img/images/deserts/3.webp',
-		'..img/images/deserts/4.webp',
-		'..img/images/deserts/5.webp'
+		'../img/images/deserts/1.webp',
+		'../img/images/deserts/2.webp',
+		'../img/images/deserts/3.webp',
+		'../img/images/deserts/4.webp',
+		'../img/images/deserts/5.webp'
 	],
 	jungles: [
-		'..img/images/jungles/1.webp',
-		'..img/images/jungles/2.webp',
-		'..img/images/jungles/3.webp',
-		'..img/images/jungles/4.webp',
-		'..img/images/jungles/5.webp'
+		'../img/images/jungles/1.webp',
+		'../img/images/jungles/2.webp',
+		'../img/images/jungles/3.webp',
+		'../img/images/jungles/4.webp',
+		'../img/images/jungles/5.webp'
 	]
 	}
 	var index = 0;
@@ -709,8 +709,8 @@ var locationObj = {
 
   function myCh() {
     function changeRiversContent() {
-			$('#imgContent').attr('src', '..img/images/rivers/1.webp');
-			$('#imgContent2').attr('src', '..img/images/rivers/6.webp');
+			$('#imgContent').attr('src', '../img/images/rivers/1.webp');
+			$('#imgContent2').attr('src', '../img/images/rivers/6.webp');
 			$('#headerLeftSection p').text(fTxt.rivers);
 			// src for popup
 			var atrLeft = $('#imgContent2').attr('src');
@@ -741,8 +741,8 @@ var locationObj = {
   function myCh2() {
 // change display
   	function changeForestContent() {
-		$('#imgContent').attr('src', '..img/images/forest/1.webp');
-		$('#imgContent2').attr('src', '..img/images/forest/6.webp');
+		$('#imgContent').attr('src', '../img/images/forest/1.webp');
+		$('#imgContent2').attr('src', '../img/images/forest/6.webp');
 // change miniText
 		$('#headerLeftSection p').text(fTxt.forests);
 // change attr href for popup
@@ -778,8 +778,8 @@ var locationObj = {
   };
   function myCh3() {
   	function changeMountainContent() {
-			$('#imgContent').attr('src', '..img/images/mountain/1.webp');
-			$('#imgContent2').attr('src', '..img/images/mountain/6.webp');
+			$('#imgContent').attr('src', '../img/images/mountain/1.webp');
+			$('#imgContent2').attr('src', '../img/images/mountain/6.webp');
 			$('#headerLeftSection p').text(fTxt.mountains);
 			var atrLeft = $('#imgContent2').attr('src');
 			var atrRight = $('#imgContent').attr('src');
@@ -808,8 +808,8 @@ var locationObj = {
   function myCh4() {
   	$('.bgImage3').addClass('bgImage3no');
       function changeFieldsContent() {
-				$('#imgContent').attr('src', '..img/images/fields/1.webp');
-				$('#imgContent2').attr('src', '..img/images/fields/6.webp');
+				$('#imgContent').attr('src', '../img/images/fields/1.webp');
+				$('#imgContent2').attr('src', '../img/images/fields/6.webp');
 				$('#headerLeftSection p').text(fTxt.fields);
 				var atrLeft = $('#imgContent2').attr('src');
 				var atrRight = $('#imgContent').attr('src');
@@ -837,8 +837,8 @@ var locationObj = {
   };
   function myCh5() {
   	function changeSeasContent() {
-			$('#imgContent').attr('src', '..img/images/seas/1.webp');
-			$('#imgContent2').attr('src', '..img/images/seas/6.webp');
+			$('#imgContent').attr('src', '../img/images/seas/1.webp');
+			$('#imgContent2').attr('src', '../img/images/seas/6.webp');
 			$('#headerLeftSection p').text(fTxt.seas);
 			var atrLeft = $('#imgContent2').attr('src');
 			var atrRight = $('#imgContent').attr('src');
@@ -866,8 +866,8 @@ var locationObj = {
   };
   function myCh6() {
   	function changeDesertsContent() {
-			$('#imgContent').attr('src', '..img/images/deserts/1.webp');
-			$('#imgContent2').attr('src', '..img/images/deserts/6.webp');
+			$('#imgContent').attr('src', '../img/images/deserts/1.webp');
+			$('#imgContent2').attr('src', '../img/images/deserts/6.webp');
 			$('#headerLeftSection p').text(fTxt.deserts);
 			var atrLeft = $('#imgContent2').attr('src');
 			var atrRight = $('#imgContent').attr('src');
@@ -895,8 +895,8 @@ var locationObj = {
   };
   function myCh7() {
   	function changeJunlesContent() {
-			$('#imgContent').attr('src', '..img/images/jungles/1.webp');
-			$('#imgContent2').attr('src', '..img/images/jungles/6.webp');
+			$('#imgContent').attr('src', '../img/images/jungles/1.webp');
+			$('#imgContent2').attr('src', '../img/images/jungles/6.webp');
 			$('#headerLeftSection p').text(fTxt.jungles);
 			var atrLeft = $('#imgContent2').attr('src');
 			var atrRight = $('#imgContent').attr('src');
@@ -995,28 +995,28 @@ $(document).ready(function() {
 
 	var counterImg = 1, arrObj = [
 		  {
-		  	url:'url(..img/images/ownFriends/3Animals.webp',
+		  	url:'url(../img/images/ownFriends/3Animals.webp',
 				headerText: 'Медведь',
 				bodyText: 'Лесной тяжеловес, любитель мёда.',
 				bgp: '0 0',
-				miniDisLeft: 'url(..img/images/ownFriends/bear/allBears.webp)',
-				miniDisRight: 'url(..img/images/ownFriends/bear/allBears.webp)'
+				miniDisLeft: 'url(../img/images/ownFriends/bear/allBears.webp)',
+				miniDisRight: 'url(../img/images/ownFriends/bear/allBears.webp)'
 			},
 	    {
-	    	url:'url(..img/images/ownFriends/3Animals.webp',
+	    	url:'url(../img/images/ownFriends/3Animals.webp',
 				headerText: 'Орёл',
 				bodyText: 'Крылатый истребитель, гроза неба.',
 				bgp: '-150px 0',
-				miniDisLeft: 'url(..img/images/ownFriends/bird/allBirds.webp)',
-				miniDisRight: 'url(..img/images/ownFriends/bird/allBirds.webp)'
+				miniDisLeft: 'url(../img/images/ownFriends/bird/allBirds.webp)',
+				miniDisRight: 'url(../img/images/ownFriends/bird/allBirds.webp)'
 			},
 	    {
-	    	url:'url(..img/images/ownFriends/3Animals.webp',
+	    	url:'url(../img/images/ownFriends/3Animals.webp',
 				headerText: 'Волк',
 				bodyText: 'Серый волк, зубами щёлк.',
 				bgp: '-300px 0',
-				miniDisLeft: 'url(..img/images/ownFriends/wolf/allWolfs.webp)',
-				miniDisRight: 'url(..img/images/ownFriends/wolf/allWolfs.webp)'
+				miniDisLeft: 'url(../img/images/ownFriends/wolf/allWolfs.webp)',
+				miniDisRight: 'url(../img/images/ownFriends/wolf/allWolfs.webp)'
 			}
 	];
 	
@@ -1049,8 +1049,8 @@ $(document).ready(function() {
 		CountEagleL = 1, CountBearL = 1, CountWolfL = 1;
 		CountEagleR = 1, CountBearR = 1, CountWolfR = 1;
 		setTimeout(function() {
-			$('.inImgLeft').css({'background-image': 'url(..img/images/ownFriends/bear/allBears.webp)', 'background-position': '0 0'});
-			$('.inImgRight').css({'background-image': 'url(..img/images/ownFriends/bear/allBears.webp)', 'background-position': '-750px 0'});	
+			$('.inImgLeft').css({'background-image': 'url(../img/images/ownFriends/bear/allBears.webp)', 'background-position': '0 0'});
+			$('.inImgRight').css({'background-image': 'url(../img/images/ownFriends/bear/allBears.webp)', 'background-position': '-750px 0'});	
 		}, 1200);
 		} else {
 			$('.lb img').attr('src', locationObj.numbers[0]);
@@ -1107,7 +1107,7 @@ $(document).ready(function() {
 // change img mini display on medium display
 	function leftBtn() {
 	$('.lb').on('mousedown', function() {
-		$(this).css('background-image', 'url(..img/favicon/click.webp)');
+		$(this).css('background-image', 'url(../img/favicon/click.webp)');
 		if (counterImg == 1) {
 			$('.inImgLeft').css('background-position', leftMiniDispArr.bearLeft[CountBearL]);
 				CountBearL++;
@@ -1137,11 +1137,11 @@ $(document).ready(function() {
 	leftBtn();
 	function rightBtn() {
 	$('.lb').on('mouseup', function() {
-		$(this).css('background-image', 'url(..img/favicon/btnUp.webp)');
+		$(this).css('background-image', 'url(../img/favicon/btnUp.webp)');
 	});
 
 	$('.rb').on('mousedown', function() {
-		$(this).css('background-image', 'url(..img/favicon/click.webp)');
+		$(this).css('background-image', 'url(../img/favicon/click.webp)');
 		if (counterImg == 1) {
 			$('.inImgRight').css('background-position', leftMiniDispArr.bearRight[CountBearR]);
 				CountBearR++;
@@ -1171,7 +1171,7 @@ $(document).ready(function() {
 	rightBtn();
 // for color button
 	$('.rb').on('mouseup', function() {
-		$(this).css('background-image', 'url(..img/favicon/btnUp.webp)');
+		$(this).css('background-image', 'url(../img/favicon/btnUp.webp)');
 	});
 
 // change btn color
@@ -1283,14 +1283,14 @@ $(document).ready(function() {
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 		// change img
 		$('#contentImg1').css('box-shadow', 'none').fadeOut('fast', function() {
-			$('#contentImg1').attr('src', '..img/images/maldives1.webp').fadeIn(500);
+			$('#contentImg1').attr('src', '../img/images/maldives1.webp').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', '..img/images/maldives2.webp').fadeIn(500);
+				$('#contentImg2').attr('src', '../img/images/maldives2.webp').fadeIn(500);
 			});
 		} else {
-			$('#contentImg2').attr('src', '..img/images/maldives2.webp')
+			$('#contentImg2').attr('src', '../img/images/maldives2.webp')
 		}
 		// change text
 		$('#contentText, .item1 p').fadeOut('fast', function() {
@@ -1314,14 +1314,14 @@ $(document).ready(function() {
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 
 		$('#contentImg1').fadeOut('fast', function() {
-			$('#contentImg1').attr('src', '..img/images/kanari2.webp').fadeIn(500);
+			$('#contentImg1').attr('src', '../img/images/kanari2.webp').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', '..img/images/kanari1.webp').fadeIn(500);
+				$('#contentImg2').attr('src', '../img/images/kanari1.webp').fadeIn(500);
 			});
 		} else {
-			$('#contentImg2').attr('src', '..img/images/kanari1.webp');
+			$('#contentImg2').attr('src', '../img/images/kanari1.webp');
 		}
 		$('#contentText, .item1 p').fadeOut('fast', function(){
 			$('#contentText').html(txt3.bodyText).fadeIn(500);
@@ -1342,14 +1342,14 @@ $(document).ready(function() {
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 
 		$('#contentImg1').fadeOut('fast',function() {
-			$('#contentImg1').attr('src', '..img/images/dubay1.webp').fadeIn(500);
+			$('#contentImg1').attr('src', '../img/images/dubay1.webp').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', '..img/images/dubay2.webp').fadeIn(500);
+				$('#contentImg2').attr('src', '../img/images/dubay2.webp').fadeIn(500);
 			});
 		} else {
-			$('#contentImg2').attr('src', '..img/images/dubay2.webp');
+			$('#contentImg2').attr('src', '../img/images/dubay2.webp');
 		}
 		$('#contentText, .item1 p').fadeOut('fast', function(){
 			$('#contentText').html(txt2.bodyText).fadeIn(500);
@@ -1370,14 +1370,14 @@ $(document).ready(function() {
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 
 		$('#contentImg1').fadeOut('fast', function() {
-			$('#contentImg1').attr('src', '..img/images/seysheli2.webp').fadeIn(500);
+			$('#contentImg1').attr('src', '../img/images/seysheli2.webp').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', '..img/images/seysheli1.webp').fadeIn(500);
+				$('#contentImg2').attr('src', '../img/images/seysheli1.webp').fadeIn(500);
 			});
 		} else {
-			$('#contentImg2').attr('src', '..img/images/seysheli1.webp');	
+			$('#contentImg2').attr('src', '../img/images/seysheli1.webp');	
 		}
 		$('#contentText, .item1 p').fadeOut('fast', function(){
 			$('#contentText').html(txt4.bodyText).fadeIn(500);
@@ -1398,14 +1398,14 @@ $(document).ready(function() {
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 		
 		$('#contentImg1').fadeOut('fast', function() {
-			$('#contentImg1').attr('src', '..img/images/Gavai1.webp').fadeIn(500);
+			$('#contentImg1').attr('src', '../img/images/Gavai1.webp').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', '..img/images/Gavai2.webp').fadeIn(500);
+				$('#contentImg2').attr('src', '../img/images/Gavai2.webp').fadeIn(500);
 			});
 		} else {
-			$('#contentImg2').attr('src', '..img/images/Gavai2.webp');
+			$('#contentImg2').attr('src', '../img/images/Gavai2.webp');
 		}
 		$('#contentText, .item1 p').fadeOut('fast', function(){
 			$('#contentText').html(txt5.bodyText).fadeIn(500);
@@ -1426,14 +1426,14 @@ $(document).ready(function() {
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 		
 		$('#contentImg1').fadeOut('fast', function() {
-			$('#contentImg1').attr('src', '..img/images/bali1.webp').fadeIn(500);
+			$('#contentImg1').attr('src', '../img/images/bali1.webp').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', '..img/images/bali2.webp').fadeIn(500);
+				$('#contentImg2').attr('src', '../img/images/bali2.webp').fadeIn(500);
 			});
 		} else {
-			$('#contentImg2').attr('src', '..img/images/bali2.webp');
+			$('#contentImg2').attr('src', '../img/images/bali2.webp');
 		}
 		$('#contentText, .item1 p').fadeOut('fast', function(){
 			$('#contentText').html(txt6.bodyText).fadeIn(500);
@@ -1533,36 +1533,36 @@ $(document).ready(function() {
 // function angle3() {
 // var angle3Item = $('.bgImg');
 // var arrImgUrl = [
-// 	'url(..img/images/nature/1.webp)',
-// 	'url(..img/images/nature/2.webp)',
-// 	'url(..img/images/nature/3.webp)',
-// 	'url(..img/images/nature/4.webp)',
-// 	'url(..img/images/nature/5.webp)',
-// 	'url(..img/images/nature/6.webp)',
-// 	'url(..img/images/nature/7.webp)',
-// 	'url(..img/images/nature/8.webp)',
-// 	'url(..img/images/nature/9.webp)',
-// 	'url(..img/images/nature/10.webp)',
-// 	'url(..img/images/nature/11.webp)',
-// 	'url(..img/images/nature/12.webp)',
-// 	'url(..img/images/nature/13.webp)',
-// 	'url(..img/images/nature/14.webp)',
-// 	'url(..img/images/nature/15.webp)',
-// 	'url(..img/images/nature/16.webp)',
-// 	'url(..img/images/nature/17.webp)',
-// 	'url(..img/images/nature/18.webp)',
-// 	'url(..img/images/nature/19.webp)',
-// 	'url(..img/images/nature/20.webp)',
-// 	'url(..img/images/nature/21.webp)',
-// 	'url(..img/images/nature/22.webp)',
-// 	'url(..img/images/nature/23.webp)',
-// 	'url(..img/images/nature/24.webp)',
-// 	'url(..img/images/nature/25.webp)',
-// 	'url(..img/images/nature/26.webp)',
-// 	'url(..img/images/nature/27.webp)',
-// 	'url(..img/images/nature/28.webp)',
-// 	'url(..img/images/nature/29.webp)',
-// 	'url(..img/images/nature/30.webp)'
+// 	'url(../img/images/nature/1.webp)',
+// 	'url(../img/images/nature/2.webp)',
+// 	'url(../img/images/nature/3.webp)',
+// 	'url(../img/images/nature/4.webp)',
+// 	'url(../img/images/nature/5.webp)',
+// 	'url(../img/images/nature/6.webp)',
+// 	'url(../img/images/nature/7.webp)',
+// 	'url(../img/images/nature/8.webp)',
+// 	'url(../img/images/nature/9.webp)',
+// 	'url(../img/images/nature/10.webp)',
+// 	'url(../img/images/nature/11.webp)',
+// 	'url(../img/images/nature/12.webp)',
+// 	'url(../img/images/nature/13.webp)',
+// 	'url(../img/images/nature/14.webp)',
+// 	'url(../img/images/nature/15.webp)',
+// 	'url(../img/images/nature/16.webp)',
+// 	'url(../img/images/nature/17.webp)',
+// 	'url(../img/images/nature/18.webp)',
+// 	'url(../img/images/nature/19.webp)',
+// 	'url(../img/images/nature/20.webp)',
+// 	'url(../img/images/nature/21.webp)',
+// 	'url(../img/images/nature/22.webp)',
+// 	'url(../img/images/nature/23.webp)',
+// 	'url(../img/images/nature/24.webp)',
+// 	'url(../img/images/nature/25.webp)',
+// 	'url(../img/images/nature/26.webp)',
+// 	'url(../img/images/nature/27.webp)',
+// 	'url(../img/images/nature/28.webp)',
+// 	'url(../img/images/nature/29.webp)',
+// 	'url(../img/images/nature/30.webp)'
 	
 // ];
 //  	var randImageNumber = Math.floor(Math.random() * arrImgUrl.length);
@@ -1928,38 +1928,38 @@ var f = true;
 ///////////////////////////////////////////
 
 var textContentBook = [
-	{"text":"", "img":"url(..img/images/nature2.webp)"},
-	{"text":"", "img":"url(..img/images/nature/1.webp)"},
-	{"text":"", "img":"url(..img/images/nature/2.webp)"},
-	{"text":"", "img":"url(..img/images/nature/3.webp)"},
-	{"text":"", "img":"url(..img/images/nature/4.webp)"},
-	{"text":"", "img":"url(..img/images/nature/5.webp)"},
-	{"text":"", "img":"url(..img/images/nature/6.webp)"},
-	{"text":"", "img":"url(..img/images/nature/7.webp)"},
-	{"text":"", "img":"url(..img/images/nature/8.webp)"},
-	{"text":"", "img":"url(..img/images/nature/9.webp)"},
-	{"text":"", "img":"url(..img/images/nature/10.webp)"},
-	{"text":"", "img":"url(..img/images/nature/11.webp)"},
-	{"text":"", "img":"url(..img/images/nature/12.webp)"},
-	{"text":"", "img":"url(..img/images/nature/13.webp)"},
-	{"text":"", "img":"url(..img/images/nature/14.webp)"},
-	{"text":"", "img":"url(..img/images/nature/15.webp)"},
-	{"text":"", "img":"url(..img/images/nature/16.webp)"},
-	{"text":"", "img":"url(..img/images/nature/17.webp)"},
-	{"text":"", "img":"url(..img/images/nature/18.webp)"},
-	{"text":"", "img":"url(..img/images/nature/19.webp)"},
-	{"text":"", "img":"url(..img/images/nature/20.webp)"},
-	{"text":"", "img":"url(..img/images/nature/21.webp)"},
-	{"text":"", "img":"url(..img/images/nature/22.webp)"},
-	{"text":"", "img":"url(..img/images/nature/23.webp)"},
-	{"text":"", "img":"url(..img/images/nature/24.webp)"},
-	{"text":"", "img":"url(..img/images/nature/25.webp)"},
-	{"text":"", "img":"url(..img/images/nature/26.webp)"},
-	{"text":"", "img":"url(..img/images/nature/27.webp)"},
-	{"text":"", "img":"url(..img/images/nature/28.webp)"},
-	{"text":"", "img":"url(..img/images/nature/29.webp)"},
-	{"text":"", "img":"url(..img/images/nature/30.webp)"},
-	{"text":"", "img":"url(..img/images/nature2.webp)"}
+	{"text":"", "img":"url(../img/images/nature2.webp)"},
+	{"text":"", "img":"url(../img/images/nature/1.webp)"},
+	{"text":"", "img":"url(../img/images/nature/2.webp)"},
+	{"text":"", "img":"url(../img/images/nature/3.webp)"},
+	{"text":"", "img":"url(../img/images/nature/4.webp)"},
+	{"text":"", "img":"url(../img/images/nature/5.webp)"},
+	{"text":"", "img":"url(../img/images/nature/6.webp)"},
+	{"text":"", "img":"url(../img/images/nature/7.webp)"},
+	{"text":"", "img":"url(../img/images/nature/8.webp)"},
+	{"text":"", "img":"url(../img/images/nature/9.webp)"},
+	{"text":"", "img":"url(../img/images/nature/10.webp)"},
+	{"text":"", "img":"url(../img/images/nature/11.webp)"},
+	{"text":"", "img":"url(../img/images/nature/12.webp)"},
+	{"text":"", "img":"url(../img/images/nature/13.webp)"},
+	{"text":"", "img":"url(../img/images/nature/14.webp)"},
+	{"text":"", "img":"url(../img/images/nature/15.webp)"},
+	{"text":"", "img":"url(../img/images/nature/16.webp)"},
+	{"text":"", "img":"url(../img/images/nature/17.webp)"},
+	{"text":"", "img":"url(../img/images/nature/18.webp)"},
+	{"text":"", "img":"url(../img/images/nature/19.webp)"},
+	{"text":"", "img":"url(../img/images/nature/20.webp)"},
+	{"text":"", "img":"url(../img/images/nature/21.webp)"},
+	{"text":"", "img":"url(../img/images/nature/22.webp)"},
+	{"text":"", "img":"url(../img/images/nature/23.webp)"},
+	{"text":"", "img":"url(../img/images/nature/24.webp)"},
+	{"text":"", "img":"url(../img/images/nature/25.webp)"},
+	{"text":"", "img":"url(../img/images/nature/26.webp)"},
+	{"text":"", "img":"url(../img/images/nature/27.webp)"},
+	{"text":"", "img":"url(../img/images/nature/28.webp)"},
+	{"text":"", "img":"url(../img/images/nature/29.webp)"},
+	{"text":"", "img":"url(../img/images/nature/30.webp)"},
+	{"text":"", "img":"url(../img/images/nature2.webp)"}
 ]
 // define array length
 var textContentBookLength = 0;
