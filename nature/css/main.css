@@ -5477,8 +5477,8 @@ input::-webkit-inner-spin-button {
   overflow: visible;
   top: -230px;
   background-repeat: no-repeat;
-  -webkit-animation: myBall2 30s ease-in-out 3s infinite;
-          animation: myBall2 30s ease-in-out 3s infinite; }
+  -webkit-animation: myBall2 30s ease-in-out 14s infinite;
+          animation: myBall2 30s ease-in-out 14s infinite; }
 
 @-webkit-keyframes myBall2 {
   0% {
@@ -5503,8 +5503,8 @@ input::-webkit-inner-spin-button {
   overflow: visible;
   top: -230px;
   background-repeat: no-repeat;
-  -webkit-animation: myBall3 25s ease-in-out 6s infinite;
-          animation: myBall3 25s ease-in-out 6s infinite; }
+  -webkit-animation: myBall3 25s ease-in-out 12s infinite;
+          animation: myBall3 25s ease-in-out 12s infinite; }
 
 @-webkit-keyframes myBall3 {
   0% {
@@ -5529,8 +5529,8 @@ input::-webkit-inner-spin-button {
   overflow: visible;
   top: -230px;
   background-repeat: no-repeat;
-  -webkit-animation: myBall4 30s ease-in-out 30s infinite;
-          animation: myBall4 30s ease-in-out 30s infinite; }
+  -webkit-animation: myBall4 30s ease-in-out 6s infinite;
+          animation: myBall4 30s ease-in-out 6s infinite; }
 
 @-webkit-keyframes myBall4 {
   0% {
@@ -5555,8 +5555,8 @@ input::-webkit-inner-spin-button {
   overflow: visible;
   top: -230px;
   background-repeat: no-repeat;
-  -webkit-animation: myBall5 25s ease-in-out 34s infinite;
-          animation: myBall5 25s ease-in-out 34s infinite; }
+  -webkit-animation: myBall5 25s ease-in-out 4s infinite;
+          animation: myBall5 25s ease-in-out 4s infinite; }
 
 @-webkit-keyframes myBall5 {
   0% {
@@ -5581,8 +5581,8 @@ input::-webkit-inner-spin-button {
   overflow: visible;
   top: -230px;
   background-repeat: no-repeat;
-  -webkit-animation: myBall6 30s ease-in-out 32s infinite;
-          animation: myBall6 30s ease-in-out 32s infinite; }
+  -webkit-animation: myBall6 30s ease-in-out 8s infinite;
+          animation: myBall6 30s ease-in-out 8s infinite; }
 
 @-webkit-keyframes myBall6 {
   0% {
@@ -5608,8 +5608,8 @@ input::-webkit-inner-spin-button {
   top: -230px;
   background-position: 0 -30px;
   background-repeat: no-repeat;
-  -webkit-animation: myBall7 20s ease-in-out 38s infinite;
-          animation: myBall7 20s ease-in-out 38s infinite; }
+  -webkit-animation: myBall7 20s ease-in-out infinite;
+          animation: myBall7 20s ease-in-out infinite; }
 
 @-webkit-keyframes myBall7 {
   0% {
