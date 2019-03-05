@@ -1692,19 +1692,6 @@ function hideAngle3() {
 }
 /////////////////////////////////////
 //random balls
-function changePlaceBalls() {
-	var parentBalls = $('.balls');
-	var balls = parentBalls.children();
-	while (balls.length) {
-		 parentBalls.append(balls.splice(Math.floor(Math.random() * balls.length), 1)[0]);
-	}
-setTimeout(changePlaceBalls, 45000);
-};
-$(document).ready(function() {
-	if ($(window).outerWidth() > 768) {
-		changePlaceBalls();
-	}
-});
 		
 ////////////////////////////////////////
 // function displayError() {
