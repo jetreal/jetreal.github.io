@@ -7,13 +7,9 @@
       <link rel="stylesheet" href="main.css">
     </noscript>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/grid.min.css">
-    <link rel="stylesheet" href="./css/main.min.css">
-    <!-- fonts -->
-<!--     <link rel="stylesheet" href="fonts/fontello/css/animation.css">
-    <link rel="stylesheet" href="fonts/fontello/css/myicon-codes.css"> -->
-    <link rel="stylesheet" href="./fonts/fontello/css/myicon.css">
-    <!-- <link rel="stylesheet" href="fonts/fontello/css/myicon-embedded.css"> -->
+    <link rel="stylesheet" href="_grid.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
     <style>
       .wrapperLoader {
       	transition: opacity .5s;
@@ -55,6 +51,7 @@
         <div></div></a></div>
     <!-- wrapper-->
     <div class="wrapper" id="wrapper">
+      <section class="balls"><img class="ball1" src="/img/images/balls/ball1.webp" alt="balls"><img class="ball2" src="/img/images/balls/ball2.webp" alt="balls"><img class="ball3" src="/img/images/balls/ball3.webp" alt="balls"><img class="ball4" src="/img/images/balls/ball4.webp" alt="balls"><img class="ball5" src="/img/images/balls/ball5.webp" alt="balls"><img class="ball6" src="/img/images/balls/ball6.webp" alt="balls"><img class="ball7" src="/img/images/balls/ball7.webp" alt="balls"></section>
       <div class="wrapSun"><img class="sun" src="img/images/sun.webp" alt="fire-logo" width="130px" height="90px"></div>
       <!-- header first page-->
       <section class="firstSection">
@@ -283,20 +280,19 @@
         </div>
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-sm- m-2 grid">
-              <!-- <span class="wrapAni center grid"></span>--><a class="test-popup-link" href="img/images/tiger.webp">
+            <div class="col-sm- m-2 grid wrapATiger"><a class="test-popup-link" id="aTiger" href="img/images/tiger.webp">
                 <div class="cardShadow animal tiger">
                   <p>Тигр&#x9;</p>
                 </div></a>
               <div class="textAnimal grid center">Тигр обитает в азии - в Индии, Непале и на Алтае... Тигры - это большие, сильные, крупные и красивые кошки. Тигр самый крупный и тяжёлый представитель семейства кошачих.</div>
             </div>
-            <div class="col-sm- m-2"><a class="test-popup-link" href="img/images/pantera.webp">
+            <div class="col-sm- m-2 wrapAPanthera"><a class="test-popup-link" id="aPanthera" href="img/images/pantera.webp">
                 <div class="cardShadow animal panthera">
                   <p>Пантера&#x9;</p>
                 </div></a>
               <div class="textAnimal">Чёрной пантерой обычно является леопард или ягуар, имеющий чёрную шкуру. На охоту пантеры всегда выходят ночью, так как в тёмное время суток они практически невидимы. Пантеры предпочитают жить поодиночке, или парами самец + самка.</div>
             </div>
-            <div class="col-sm- m-2 grid"><a class="test-popup-link" href="img/images/puma.webp">
+            <div class="col-sm- m-2 grid wrapAPuma"><a class="test-popup-link" id="aPuma" href="img/images/puma.webp">
                 <div class="cardShadow animal puma">
                   <p>
                      Пума&#x9;</p>
@@ -307,14 +303,14 @@
                 по деревьям и хорошо плавают.
               </div>
             </div>
-            <div class="col-sm- m-2"><a class="test-popup-link" href="img/images/snowBars.webp">
+            <div class="col-sm- m-2 wrapASnowBars"><a class="test-popup-link" id="aSnowBars" href="img/images/snowBars.webp">
                 <div class="cardShadow animal snowBars">
                   <p>
                      Снежный леопард</p>
                 </div></a>
               <div class="textAnimal">Снежный барс - представитель семейства кошачих, обитающий в суровом климате горных массивов цетральной азии. Среди всех крупных кошек снежный брас - единственный постоянный житель высокогорий.</div>
             </div>
-            <div class="col-sm- m-2"><a class="test-popup-link" href="img/images/lev.webp">
+            <div class="col-sm- m-2 wrapALion"><a class="test-popup-link" id="aLion" href="img/images/lev.webp">
                 <div class="cardShadow animal lion">
                   <p>
                      Лев</p>
@@ -324,7 +320,7 @@
                 Охотятся у львов в основном самки.
               </div>
             </div>
-            <div class="col-sm- m-2"><a class="test-popup-link" href="img/images/jaguar.webp">
+            <div class="col-sm- m-2 wrapAJaguar"><a class="test-popup-link" id="aJaguar" href="img/images/jaguar.webp">
                 <div class="cardShadow animal jaguar">
                   <p>
                      Ягуар</p>
@@ -844,6 +840,7 @@
       </div>
       <!-- end footer-->
     </div>
+    <link rel="stylesheet" href="fonts/fontello/css/myicon.css">
     <!-- end wrapper-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2|Comfortaa|Open+Sans">
     <!-- jQuery library-->
@@ -855,7 +852,7 @@
     <script src="libs/is.min.js"></script>
     <script src="libs/Magnific/jquery.magnific-popup.min.js"></script>
     <script src="libs/scroll2Id/jquery.malihu.PageScroll2id.min.js"></script> -->
-    <script src="./js/libs.min.js" defer></script>
-    <script src="./js/common.min.js" defer></script>
+    <script src="js/libs.min.js" defer></script>
+    <script src="js/common.js" defer></script>
   </body>
 </html>
