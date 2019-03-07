@@ -932,7 +932,7 @@ $(document).ready(function() {
 				dataBtnFunc[i].countB++;
 				var elemImg = dataBtnFunc[i].btnClass + ' img';
 			$(elemImg).attr('src', locationObj.numbers[dataBtnFunc[i].countB - 1]);
-			if (dataBtnFunc[i].countB == leftMiniDispArr.bearLeft.length) {
+			if (dataBtnFunc[i].countB == dataBtnFunc[i].img.bear.length) {
 				dataBtnFunc[i].countB = 0;
 			}
 		}
@@ -941,7 +941,7 @@ $(document).ready(function() {
 				dataBtnFunc[i].countE++;
 				var elemImg = dataBtnFunc[i].btnClass + ' img';
 			$(elemImg).attr('src', locationObj.numbers[dataBtnFunc[i].countE - 1]);
-			if (dataBtnFunc[i].countE == leftMiniDispArr.eagleLeft.length) {
+			if (dataBtnFunc[i].countE == dataBtnFunc[i].img.eagle.length) {
 				dataBtnFunc[i].countE = 0;
 			}
 		}
@@ -950,7 +950,7 @@ $(document).ready(function() {
 				dataBtnFunc[i].countW++;
 				var elemImg = dataBtnFunc[i].btnClass + ' img';
 				$(elemImg).attr('src', locationObj.numbers[dataBtnFunc[i].countW - 1]);
-			if (dataBtnFunc[i].countW == leftMiniDispArr.wolfLeft.length) {
+			if (dataBtnFunc[i].countW == dataBtnFunc[i].img.wolf.length) {
 				dataBtnFunc[i].countW = 0;
 			}
 		}
