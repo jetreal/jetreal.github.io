@@ -1,16 +1,14 @@
 'use strict'
+// $(document).ready(function() {
+// 	setTimeout(function() {
+// 		$(window).trigger('resize');
+// 	},1000);
+// });
 
-$(document).ready(function() {
-	setTimeout(function() {
-		$(window).trigger('resize');
-	},1000);
-});
 // start field function without flicker when reload page
-
 $(window).on('load', function() {
 	setTimeout(function() {
 		$('.bgImage3').triggerHandler('click');
-		// $('.bgImage3').addClass('bgImage3no');
 		$('#headerLeftSection p').text(dataForest[2].headText).fadeIn(60);
 		var atrLeft = $('#imgContent2').attr('src');
 		var atrRight = $('#imgContent').attr('src');
@@ -25,44 +23,44 @@ $(window).on('load', function() {
 		$('.into31 div:first-child')
 		.removeClass(dataForest[2].classAddHilight);
 		$('.bgImage3').addClass(dataForest[2].classRemoveHilight);
-	},1200);
+	},100);
 });
 
 ////////////////////////////////////////////////////////////////////////
 
 // magnific Popup
 $(window).on('resize load', function() {
-			jQuery(document).ready(function(){
-				jQuery('.test-popup-link').magnificPopup({
-					type: 'image',
-					gallery : {
-					enabled : true,
-					closeBtnInside: true,
-					navigateByImgClick: true
-				},
-				image: {
-					titleSrc: 'title'
-				},
-				removalDelay: 300,
-				mainClass: 'mfp-fade mfp-with-zoom',
-				disableOn: 748
-				});
-			});
+	jQuery(document).ready(function(){
+		jQuery('.test-popup-link').magnificPopup({
+			type: 'image',
+			gallery : {
+			enabled : true,
+			closeBtnInside: true,
+			navigateByImgClick: true
+		},
+		image: {
+			titleSrc: 'title'
+		},
+			removalDelay: 300,
+			mainClass: 'mfp-fade mfp-with-zoom',
+			disableOn: 748
+		});
+	});
 
-				$('.popup-modal2').magnificPopup({
-					type: 'image',
-					closeOnContentClick: true,
-					closeBtnInside: true,
-					fixedContentPos: false,
-					mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
-					image: {
-						verticalFit: true
-					},
-					zoom: {
-						enabled: true,
-					},
-					disableOn: 748
-				});	
+	$('.popup-modal2').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		closeBtnInside: true,
+		fixedContentPos: false,
+		mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+		image: {
+			verticalFit: true
+		},
+		zoom: {
+			enabled: true,
+		},
+		disableOn: 748
+	});	
 
 });
 // disable .popup-modal2 on small devices
@@ -74,7 +72,6 @@ const element2 = $('#imgContent');
 			// remove tag <a> and replace content without <a> 
 			$('#imgContent').insertAfter('.galleryImgContent');
 			element.detach();
-
 		} else {
 			// return <a> link fon magnific
 			element.appendTo('.galleryImgContent');
@@ -85,12 +82,12 @@ const element2 = $('#imgContent');
 disableMagnific();
 //disable .test-popup-link
 function disableMagnific2() {
-const elementTiger  	= $('#aTiger');
-const elementPanter 	= $('#aPanthera');
-const elementPuma   	= $('#aPuma');
-const elementSnowLeo 	= $('#aSnowBars');
-const elementLion   	= $('#aLion');
-const elementJaguar 	= $('#aJaguar');
+	const elementTiger  	= $('#aTiger');
+	const elementPanter 	= $('#aPanthera');
+	const elementPuma   	= $('#aPuma');
+	const elementSnowLeo 	= $('#aSnowBars');
+	const elementLion   	= $('#aLion');
+	const elementJaguar 	= $('#aJaguar');
 	$(window).on('load resize', function() {
 		if ($(window).outerWidth() < 768) {
 			// remove tag <a> and replace content without <a> 
@@ -125,29 +122,29 @@ const elementJaguar 	= $('#aJaguar');
 }
 disableMagnific2();
 /////////////////////////////////////////////////////////////
-// forest section
 
-	$(document).ready(function() {
-	  $(".wrapItem3, .theLostRiverText2, .item5")
-	    .niceScroll({cursorwidth: '6px',
-	     autohidemode: true,
-	     zindex: 998,
-	     cursorcolor: 'aqua',
-	     cursorborder: '2px solid grey',
-	     horizrailenabled: false,
-	     scrollspeed: 150,
-	     mousescrollstep: 30
-	  });
-	});
+// nice scroll
+$(document).ready(function() {
+  $(".wrapItem3, .theLostRiverText2, .item5")
+    .niceScroll({cursorwidth: '6px',
+      autohidemode: true,
+      zindex: 998,
+      cursorcolor: 'aqua',
+      cursorborder: '2px solid grey',
+      horizrailenabled: false,
+      scrollspeed: 150,
+      mousescrollstep: 30
+  });
+});
 ////////////////////////////////////////////////////////////
-// header bottom text scale function
 
+// header bottom text scale function
 function film() {
 	var lDivDataObj = {
-		wind:{img:'url(img/images/sky2.webp)', text:'Ветер', rightImg:''},
-		fire:{img:'url(img/images/fireHeaderDisp.webp)', text: 'Огонь', rightImg: ''},
-		water:{img:'url(img/images/waterHeaderDisp.webp)', text: 'Вода', rightImg: ''},
-		earth:{img:'url(img/images/earth.webp)', text: 'Земля', rightImg: ''}
+		wind:{img:'url(img/images/sky2.webp)', text:'Ветер'},
+		fire:{img:'url(img/images/fireHeaderDisp.webp)', text: 'Огонь'},
+		water:{img:'url(img/images/waterHeaderDisp.webp)', text: 'Вода'},
+		earth:{img:'url(img/images/earth.webp)', text: 'Земля'}
 	}
 	var flagi = false;
 	var timerHeader1, timerHeader2, timerHeader3, timerHeader4, timerHeader5;
@@ -214,20 +211,20 @@ function film() {
 				$('.bDiv').css('border', '1px solid #19B9F5');
 				// change flag
 				flagi = true;
-				break;
+			break;
 			case (flagi == true) :
-					$('.circleImg').off('click');
-					$('.circleImg').one('click', offTimerHeader);
-					// css
-					$('.circleImg').attr('src', 'img/images/button3.webp');
-					$('.circleImg').css({width:'150px',height:'150px',
-					 'box-shadow': '3px 3px 6px gray, -3px -3px 6px gray,\
-					 -3px 3px 6px gray, 3px -3px 6px gray'});
-					$('.wr17 .into03, .wr17 .into04, .wr17 .into05, .wr17 .into06')
-					.css('box-shadow', '3px 3px #7F7F7F inset, -3px -3px #7F7F7F inset');
-					$('.bDiv').css('border', '1px solid #99747A');
-					// change flag
-					flagi = false;
+				$('.circleImg').off('click');
+				$('.circleImg').one('click', offTimerHeader);
+				// css
+				$('.circleImg').attr('src', 'img/images/button3.webp');
+				$('.circleImg').css({width:'150px',height:'150px',
+				 'box-shadow': '3px 3px 6px gray, -3px -3px 6px gray,\
+				 -3px 3px 6px gray, 3px -3px 6px gray'});
+				$('.wr17 .into03, .wr17 .into04, .wr17 .into05, .wr17 .into06')
+				.css('box-shadow', '3px 3px #7F7F7F inset, -3px -3px #7F7F7F inset');
+				$('.bDiv').css('border', '1px solid #99747A');
+				// change flag
+				flagi = false;
 			break;
 		}	
 	}
@@ -235,7 +232,6 @@ function film() {
 	$('.circleImg').on('mousedown', mDown);
 
 	// hide button on resize
-
 	var fl = 0;
 	$(document).ready(function() {
 		$(window).on('resize load', hidechangeSideImgwButton);
@@ -275,9 +271,9 @@ function film() {
 		} 
 	}
 }
-// if ($(window).outerWidth() > 768) {
-	film();
-// } 
+film();
+
+	
 	
 ///////////////////////////////////////////////////////////
  
@@ -289,7 +285,7 @@ function film() {
 var indexO = 0;
 // change number 
 var dataArr = [
-	// fist
+	// first
 	{
 	  index: 0,
 	  classLeft: '.duck',
@@ -417,7 +413,7 @@ var dataArr = [
 	}
 ]
 	},
-	// thid
+	// third
 	{
 		index: 0,
 	 	classLeft: '.catsImg',
@@ -425,8 +421,8 @@ var dataArr = [
 	 	classText: '.catText p',
 	 	Obj : [
 	{
-		leftSrc: '3000px 1120px',
-		rightSRC: '3200px 1120px',
+		leftSrc: '0px 1120px',
+		rightSRC: '200px 1120px',
 		centerTxt: 'ёж'
 	},
 	{
@@ -512,17 +508,25 @@ function changeButtonImage(event, i) {
 	}
 }
 $(document).ready(function() {
-		$('.duck', '.duck2').on('click', function() {
-			changeButtonImage(event, 0);
-		});
-		$('.ej', '.ej2').on('click', function() {
-			changeButtonImage(event, 1);
-		});
-		$('.catsImg', '.catsImg2').on('click', function() {
-			changeButtonImage(event, 2);
-		});
+	$('.duck').on('click', function() {
+		changeButtonImage(event, 0);
+	});
+	$('.duck2').on('click', function() {
+		changeButtonImage(event, 0);
+	});
+	$('.ej').on('click', function() {
+		changeButtonImage(event, 1);
+	});
+	$('.ej2').on('click', function() {
+		changeButtonImage(event, 1);
+	});
+	$('.catsImg').on('click', function() {
+		changeButtonImage(event, 2);
+	});
+	$('.catsImg2').on('click', function() {
+		changeButtonImage(event, 2);
+	});
 });
-
 //////////////////////////////////////////////////////////////////////////
 // display param
 
@@ -531,38 +535,60 @@ $(document).ready(function() {
 //   scrolled = window.pageYOffset || document.documentElement.scrollTop;
 //   document.getElementById('changeSideImgwScroll').innerHTML = scrolled + 'px';
 // }
-$(window).on('load resize', function(){
-	var width = $('html').outerWidth();
-	var height = $(window).height();
-	$('#width').html(width + 'px');
-	$('#height').html(height + 'px');
-});
-
+// $(window).on('load resize', function(){
+// 	var width = $('html').outerWidth();
+// 	var height = $(window).height();
+// 	$('#width').html(width + 'px');
+// 	$('#height').html(height + 'px');
+// });
 ////////////////////////////////////////////////////////////////////////
+var locationObj = {
+	numbers: [
+		'img/images/numbers/1.webp',
+		'img/images/numbers/2.webp',
+		'img/images/numbers/3.webp',
+		'img/images/numbers/4.webp',
+		'img/images/numbers/5.webp'
+	]
+};
 
 var dataForest = [
 	{ classAddHilight: 'bgImage1no',
 		classRemoveHilight: 'bgImage2no bgImage3no bgImage4no bgImage5no bgImage6no bgImage7no',
 		classesForBoxshadow: '.bgImage1, .bgImage1 div, .bgImage1 div div',
-		urlContentLeft: 'img/images/rivers/6.webp',
-		urlContentRight: 'img/images/rivers/1.webp',
+		urlContentLeft: 'img/images/rivers/1.webp',
+		urlContentRight: 'img/images/rivers/6.webp',
 		headText: 'реки',
 		bodyText: 'Равнинные реки украшают пейзаж любого континента,\
 		реки являются естественной средой обитания для огромного количества животных -\
 		рыб, водоплавающих птиц, бобров, различных насекомых.\
 		Равнинные реки текут медленно и неспешно. Горные же реки, в свою очередь, несутся с огромной скоростью,\
-		и завораживают шумом своих вод.'
+		и завораживают шумом своих вод.',
+		images: [
+		'img/images/rivers/1.webp',
+		'img/images/rivers/2.webp',
+		'img/images/rivers/3.webp',
+		'img/images/rivers/4.webp',
+		'img/images/rivers/5.webp'
+	]
 	},
 		{ classAddHilight: 'bgImage2no',
 		classRemoveHilight: 'bgImage1no bgImage3no bgImage4no bgImage5no bgImage6no bgImage7no',
 		classesForBoxshadow: '.bgImage2, .bgImage2 div, .bgImage2 div div',
 		urlContentLeft: 'img/images/mountain/1.webp',
-		urlContentRight: 'img/images/mountain/1.webp',
+		urlContentRight: 'img/images/mountain/6.webp',
 		headText: 'горы',
 		bodyText: 'Миллионы туристов из разных уголков мира стремятся посетить различные возвышенности,\
 		чтобы полюбоваться потрясающей красотой удивительных пейзажей.\
-		 В этой подборке вы увидите замечательные горные пейзажи во всём своём многообразии. Мы собрали коллекцию самых потрясающих фотографий, на \
-		 которых запечатлены горы со всего мира.'
+		В этой подборке вы увидите замечательные горные пейзажи во всём своём многообразии. Мы собрали коллекцию самых потрясающих фотографий, на \
+		которых запечатлены горы со всего мира.',
+		images: [
+		'img/images/mountain/1.webp',
+		'img/images/mountain/2.webp',
+		'img/images/mountain/3.webp',
+		'img/images/mountain/4.webp',
+		'img/images/mountain/5.webp'
+	]
 	},
 		{ classAddHilight: 'bgImage3no',
 		classRemoveHilight: 'bgImage2no bgImage1no bgImage4no bgImage5no bgImage6no bgImage7no',
@@ -572,7 +598,14 @@ var dataForest = [
 		headText: 'поля',
 		bodyText: 'Поля охватывают значительную часть наземного пространства, не имея высокой растительности. \
 		За эту особенность их иногда даже называют бескрайними. На полях растут: либо культурные сорта растений и трав, либо дикорастущие. Не имея \
-		особых преград, ветер в поле гуляет особенно сильно.'
+		особых преград, ветер в поле гуляет особенно сильно.',
+		images: [
+		'img/images/fields/1.webp',
+		'img/images/fields/2.webp',
+		'img/images/fields/3.webp',
+		'img/images/fields/4.webp',
+		'img/images/fields/5.webp'
+	]
 	},
 		{ classAddHilight: 'bgImage4no',
 		classRemoveHilight: 'bgImage2no bgImage3no bgImage1no bgImage5no bgImage6no bgImage7no',
@@ -581,7 +614,14 @@ var dataForest = [
 		urlContentRight: 'img/images/seas/6.webp',
 		headText: 'моря',
 		bodyText: 'Люди часто используют термин «море» для обозначения океана. Для географов море - это разделение океана, который закрыт или частично закрыт сушей.\
-		A для не географов, море - это отличное место, где можно отдохнуть и расслабиться.'
+		A для не географов, море - это отличное место, где можно отдохнуть и расслабиться.',
+		images: [
+		'img/images/seas/1.webp',
+		'img/images/seas/2.webp',
+		'img/images/seas/3.webp',
+		'img/images/seas/4.webp',
+		'img/images/seas/5.webp'
+	]
 	},
 		{ classAddHilight: 'bgImage5no',
 		classRemoveHilight: 'bgImage2no bgImage3no bgImage4no bgImage1no bgImage6no bgImage7no',
@@ -592,7 +632,14 @@ var dataForest = [
 		bodyText: 'Пустыни - это огромные территории не плодотворных участков почвы,  лишённые практически всякой растительности. \
 		Пустыни бывают песчаные, каменистые, глинистые, а также некоторые арктические пространства называют пустынями. \
 		Несмотря на суровый климат, пресмыкающиеся, грызуны, \
-	  	некоторые птицы и даже такие крупные животные как - верблюды представляют животный мир пустынь. '
+	  	некоторые птицы и даже такие крупные животные как - верблюды представляют животный мир пустынь. ',
+	  images: [
+		'img/images/deserts/1.webp',
+		'img/images/deserts/2.webp',
+		'img/images/deserts/3.webp',
+		'img/images/deserts/4.webp',
+		'img/images/deserts/5.webp'
+	]	
 	},
 		{ classAddHilight: 'bgImage6no',
 		classRemoveHilight: 'bgImage2no bgImage3no bgImage4no bgImage5no bgImage1no bgImage7no',
@@ -603,112 +650,73 @@ var dataForest = [
 		bodyText: 'Джунгли значительно отличаются от северных лесов.\
 		В северных лесах пространство между деревьями достаточно обширное, в джунглях же, \
 		всё растёт очень плотно. Порой в джунглях невозможно пройти без мачете, необходимого для того, чтоб прорубить\
-		очень густую растительность. Джунгли поражают буйством красок и обилием живности.'
-	},
-	{ classAddHilight: 'bgImage7no',
-		classRemoveHilight: 'bgImage2no bgImage3no bgImage4no bgImage5no bgImage6no bgImage1no',
-		classesForBoxshadow: '.bgImage7, .bgImage7 div, .bgImage7 div div',
-		urlContentLeft: 'img/images/forest/6.webp',
-		urlContent: 'img/images/forest/1.webp',
-		headText: 'леса',
-		bodyText: 'Находясь в лесу человек ощущает умиротворение и покой. Пение птиц и изумительная красота деревьев буквально очаровывают. \
-		Каждый лес, будь-то весёлый берёзовый лесок, сосновый бор, или серьёзный ельник прекрасен по своему.\
-		Особенно приятно находиться в лесу весной, потому что всё вокруг расцветает. 	'
-	}
-
-]
-var anyArr = [];
-	// img Obj path for imgs
-var locationObj = {
-	numbers: [
-		'img/images/numbers/1.webp',
-		'img/images/numbers/2.webp',
-		'img/images/numbers/3.webp',
-		'img/images/numbers/4.webp',
-		'img/images/numbers/5.webp'
-	],
-	rivers: [
-		'img/images/rivers/1.webp',
-		'img/images/rivers/2.webp',
-		'img/images/rivers/3.webp',
-		'img/images/rivers/4.webp',
-		'img/images/rivers/5.webp'
-	],
-	forest: [
-		'img/images/forest/1.webp',
-		'img/images/forest/2.webp',
-		'img/images/forest/3.webp',
-		'img/images/forest/4.webp',
-		'img/images/forest/5.webp'
-	],
-	mountain: [
-		'img/images/mountain/1.webp',
-		'img/images/mountain/2.webp',
-		'img/images/mountain/3.webp',
-		'img/images/mountain/4.webp',
-		'img/images/mountain/5.webp'
-	],
-	fields: [
-		'img/images/fields/1.webp',
-		'img/images/fields/2.webp',
-		'img/images/fields/3.webp',
-		'img/images/fields/4.webp',
-		'img/images/fields/5.webp'
-	],
-	seas: [
-		'img/images/seas/1.webp',
-		'img/images/seas/2.webp',
-		'img/images/seas/3.webp',
-		'img/images/seas/4.webp',
-		'img/images/seas/5.webp'
-	],
-	deserts: [
-		'img/images/deserts/1.webp',
-		'img/images/deserts/2.webp',
-		'img/images/deserts/3.webp',
-		'img/images/deserts/4.webp',
-		'img/images/deserts/5.webp'
-	],
-	jungles: [
+		очень густую растительность. Джунгли поражают буйством красок и обилием живности.',
+		images: [
 		'img/images/jungles/1.webp',
 		'img/images/jungles/2.webp',
 		'img/images/jungles/3.webp',
 		'img/images/jungles/4.webp',
 		'img/images/jungles/5.webp'
-	]
-	};
-
-	var collectionForestThumb = $('.into30 > div > div');
-	var index = 0;
+		]
+	},
+	{ classAddHilight: 'bgImage7no',
+		classRemoveHilight: 'bgImage2no bgImage3no bgImage4no bgImage5no bgImage6no bgImage1no',
+		classesForBoxshadow: '.bgImage7, .bgImage7 div, .bgImage7 div div',
+		urlContentLeft: 'img/images/forest/1.webp',
+		urlContentRight: 'img/images/forest/6.webp',
+		headText: 'леса',
+		bodyText: 'Находясь в лесу человек ощущает умиротворение и покой. Пение птиц и изумительная красота деревьев буквально очаровывают. \
+		Каждый лес, будь-то весёлый берёзовый лесок, сосновый бор, или серьёзный ельник прекрасен по своему.\
+		Особенно приятно находиться в лесу весной, потому что всё вокруг расцветает. 	',
+		images: [
+		'img/images/forest/1.webp',
+		'img/images/forest/2.webp',
+		'img/images/forest/3.webp',
+		'img/images/forest/4.webp',
+		'img/images/forest/5.webp'
+		]
+	}
+]
+var anyArr = [];
+	// img Obj path for imgs
+var collectionForestThumb = $('.into30 > div > div');
+var index = 0;
 
 	function commonForest(i, el) {
 // change display
 		$('#imgContent').attr('src', dataForest[i].urlContentLeft);
 		$('#imgContent2').attr('src', dataForest[i].urlContentRight);
+
 // change miniText
-		$('#headerLeftSection p').text(dataForest[i].headText);
+	  $('#headerLeftSection p').text(dataForest[i].headText);
+
 // change attr href for popup
 		var atrLeft = $('#imgContent2').attr('src');
 		var atrRight = $('#imgContent').attr('src');
 		$('#popupLeft').attr('href', atrLeft);
 		$('#popupRight').attr('href', atrRight);
+
 // changeSideImgw number
 		index = 0;
 		$('#num').attr('src', locationObj.numbers[index]);
+
 // change image array
-		anyArr = locationObj.forest;
+		anyArr = dataForest[i].images;
+
 // change hilight border
 		$('.wrapVItem *').css('box-shadow','');
 		$(dataForest[i].classesForBoxshadow)
 		.css('box-shadow', '3px 3px 6px #FFB352 inset, -3px -3px 6px #FFB352 inset');
+
 // off before
 		$('.into31 div:first-child')
 		.removeClass(dataForest[i].classRemoveHilight);
 // change text
 		$('#forestTextContainer').text(dataForest[i].bodyText);
 // start others and off self
+
 		$.each((collectionForestThumb), function(i, el) {
-			$(el).off('click').on('click', function(){
+			$(el).off('click').on('click', function() {
 				commonForest(i, el);
 					$(this).off('click');
 					$(this).addClass(dataForest[i].classAddHilight)
@@ -735,6 +743,7 @@ $(document).ready(function() {
 		$('#popupRight').attr('href', atrRight);
 		$('#num').attr('src', locationObj.numbers[index]);
 	});
+
 	$('.arrowLeft').click(function() {
 		index--;
 		if (index < 0) {
@@ -822,8 +831,8 @@ $(document).ready(function() {
 			$('.rb img').attr('src', locationObj.numbers[0]);
 			if (counterImg == arrObj.length) {
 		 		counterImg = 0;
-		 	  CountEagleL = 1, CountBearL = 1, CountWolfL = 1;
-			  CountEagleR = 1, CountBearR = 1, CountWolfR = 1;
+		 	  dataBtnFunc[0].countE, dataBtnFunc[0].countB, dataBtnFunc[0].countW;
+			  dataBtnFunc[1].countE, dataBtnFunc[1].countB, dataBtnFunc[1].countW;
 			}
 		}
 	}
@@ -835,8 +844,8 @@ $(document).ready(function() {
 		$('.cardTextHead2').text(arrObj[0].headerText);
 		$('.cardTextBody2').text(arrObj[0].bodyText);
 		counterImg = 1;
-		CountEagleL = 1, CountBearL = 1, CountWolfL = 1;
-		CountEagleR = 1, CountBearR = 1, CountWolfR = 1;
+		dataBtnFunc[0].countE, dataBtnFunc[0].countB, dataBtnFunc[0].countW;
+		dataBtnFunc[1].countE, dataBtnFunc[1].countB, dataBtnFunc[1].countW;
 		setTimeout(function() {
 			$('.inImgLeft').css({'background-image': 'url(img/images/ownFriends/bear/allBears.webp)', 'background-position': '0 0'});
 			$('.inImgRight').css({'background-image': 'url(img/images/ownFriends/bear/allBears.webp)', 'background-position': '-750px 0'});	
@@ -846,64 +855,72 @@ $(document).ready(function() {
 			$('.rb img').attr('src', locationObj.numbers[0]);
 		}
 	}
-	var leftMiniDispArr = {
-		eagleLeft: [
+
+// change img mini display on medium display
+  var dataBtnFunc = [
+  // one
+	  {
+	  	btnClass: '.lb',
+	  	displayClass: '.inImgLeft',
+	  	countE: 1,
+	  	countB: 1,
+	  	countW: 1,
+	  	img: {
+		eagle: [
 			'0 0',
 			'-150px 0',
 			'-300px 0',
 			'-450px 0',
 			'-600px 0'
 		],
-		bearLeft: [
+		bear: [
 			'0 0',
 			'-150px 0',
 			'-300px 0',
 			'-450px 0',
 			'-600px 0'
 		],
-		wolfLeft: [
+		wolf: [
 			'0 0',
 			'-150px 0',
 			'-300px 0',
 			'-450px 0',
 			'-600px 0'
-		],
-		eagleRight: [
+			] 
+		}
+	},
+  // two
+	  {
+	  	btnClass: '.rb',
+	  	displayClass: '.inImgRight',
+	  	countE: 1,
+	  	countB: 1,
+	  	countW: 1,
+	  	img: { 
+		eagle: [
 			'-750px 0',
 			'-900px 0',
 			'-1050px 0',
 			'-1200px 0',
 			'-1350px 0'
 		],
-		bearRight: [
+		bear: [
 			'-750px 0',
 			'-900px 0',
 			'-1050px 0',
 			'-1200px 0',
 			'-1350px 0'
 		],
-		wolfRight: [
+		wolf: [
 			'-750px 0',
 			'-900px 0',
 			'-1050px 0',
 			'-1200px 0',
 			'-1350px 0'
 		]
-	};
-	var CountEagleL = 1, CountBearL = 1, CountWolfL = 1;
-	var CountEagleR = 1, CountBearR = 1, CountWolfR = 1;
-// change img mini display on medium display
-  var dataBtnFunc = [
-	  {
-	  	btnClass: '.lb',
-	  	displayClass: '.inImgLeft'
-	  },
-	  {
-	  	btnClass: '.rb',
-	  	displayClass: '.inImgRight'
 	  }
-  ]
-  
+  }
+	]
   function leftAndRightBtn(i) {
   	$(dataBtnFunc[i].btnClass).on('mouseup', function() {
 		$(this).css('background-image', 'url(img/favicon/btnUp.webp)');
@@ -911,30 +928,30 @@ $(document).ready(function() {
 	$(dataBtnFunc[i].btnClass).on('mousedown', function() {
 		$(this).css('background-image', 'url(img/favicon/click.webp)');
 		if (counterImg == 1) {
-			$(dataBtnFunc[i].displayClass).css('background-position', leftMiniDispArr.bearLeft[CountBearL]);
-				CountBearL++;
+			$(dataBtnFunc[i].displayClass).css('background-position', dataBtnFunc[i].img.bear[dataBtnFunc[i].countB]);
+				dataBtnFunc[i].countB++;
 				var elemImg = dataBtnFunc[i].btnClass + ' img';
-			$(elemImg).attr('src', locationObj.numbers[CountBearL - 1]);
-			if (CountBearL == leftMiniDispArr.bearLeft.length) {
-				CountBearL = 0;
+			$(elemImg).attr('src', locationObj.numbers[dataBtnFunc[i].countB - 1]);
+			if (dataBtnFunc[i].countB == leftMiniDispArr.bearLeft.length) {
+				dataBtnFunc[i].countB = 0;
 			}
 		}
 		if (counterImg == 2) {
-			$(dataBtnFunc[i].displayClass).css('background-position', leftMiniDispArr.eagleLeft[CountEagleL]);
-				CountEagleL++;
+			$(dataBtnFunc[i].displayClass).css('background-position', dataBtnFunc[i].img.eagle[dataBtnFunc[i].countE]);
+				dataBtnFunc[i].countE++;
 				var elemImg = dataBtnFunc[i].btnClass + ' img';
-			$(elemImg).attr('src', locationObj.numbers[CountEagleL - 1]);
-			if (CountEagleL == leftMiniDispArr.eagleLeft.length) {
-				CountEagleL = 0;
+			$(elemImg).attr('src', locationObj.numbers[dataBtnFunc[i].countE - 1]);
+			if (dataBtnFunc[i].countE == leftMiniDispArr.eagleLeft.length) {
+				dataBtnFunc[i].countE = 0;
 			}
 		}
 		if (counterImg == 0) {
-			$(dataBtnFunc[i].displayClass).css('background-position', leftMiniDispArr.wolfLeft[CountWolfL]);
-				CountWolfL++;
+			$(dataBtnFunc[i].displayClass).css('background-position', dataBtnFunc[i].img.wolf[dataBtnFunc[i].countW]);
+				dataBtnFunc[i].countW++;
 				var elemImg = dataBtnFunc[i].btnClass + ' img';
-				$(elemImg).attr('src', locationObj.numbers[CountWolfL - 1]);
-			if (CountWolfL == leftMiniDispArr.wolfLeft.length) {
-				CountWolfL = 0;
+				$(elemImg).attr('src', locationObj.numbers[dataBtnFunc[i].countW - 1]);
+			if (dataBtnFunc[i].countW == leftMiniDispArr.wolfLeft.length) {
+				dataBtnFunc[i].countW = 0;
 			}
 		}
 	});
@@ -969,9 +986,11 @@ $(document).ready(function() {
 		}
 	};
 	// start btn function
-	$(window).on('load resize', toggleButton);
-	$(window).on('load resize', oNafterGlacierHeadClick);
-	$(window).on('load resize', offafterGlacierHeadClick);
+	$(window).on('load resize', function() {
+		toggleButton();
+		oNafterGlacierHeadClick();
+		offafterGlacierHeadClick();
+  });
 });
 //////////////////////////////////////////////////////////////////////
 	
@@ -1149,7 +1168,7 @@ function menuF() {
 			}
 		});
 	}
-
+// off Nice scroll when < 600 width on beach section
 function offonNiceScroll() {
 	$(document).ready(function() {
 		if ($(window).outerWidth() > '600') {
@@ -1168,20 +1187,15 @@ function offonNiceScroll() {
 }
 
 $(document).ready(function() {
-	$(window).on('load resize', menuF);
-	$(window).on('load resize', hideItem3);
-	$(window).on('load resize', offonNiceScroll);
+	$(window).on('load resize', function() {
+		menuF();
+		hideItem3();
+		offonNiceScroll();
+	});
 });
 
 //hide angle
-$(document).ready(function() {
-	$(window).on('load resize', function() {
-		hideAngle0();
-		hideAngle1();
-		hideAngle2();
-		hideAngle3();
-	});
-});
+
 // creating the angle3 section
 // function angle3() {
 // var angle3Item = $('.bgImg');
@@ -1277,44 +1291,44 @@ $(document).ready(function() {
 // 	},2000);
 // };
 // angle3();
+
 //hide 3angle
-var w = $('.w2, .w-3');
-var p = $('#w2').parent();
-function hideAngle0() {
-	if ($(window).outerWidth() <= '1242') {
-    $('.w2, .w-3').fadeOut('slow', function() {
-      w.detach(); 
-    });
-      return this; 
-} else {
-  	p.append(w);
- 		    $('.w2, .w-3').fadeIn('slow');
-}
-}
-function hideAngle1() {
-		if ($(window).outerWidth() <= '1040'){
-      $('.wu2, .wu-2').fadeOut('slow');
-        return this; 
-  } else {
- 		  $('.wu2, .wu-2').fadeIn('slow');
-	}
-}
-function hideAngle2() {
-	if ($(window).outerWidth() <= '840'){
-      $('.w1, .w-2').fadeOut('slow');
-        return this; 
+var arrAngle = [
+	{
+		classesName: '.w2, .w-3',
+		windowWidth: '1242',
+	},
+	{
+		classesName: '.wu2, .wu-2',
+		windowWidth: '1040',
+	},
+	{
+		classesName: '.w1, .w-2',
+		windowWidth: '840',
+	},
+	{
+		classesName: '.wu1, .wu-1',
+		windowWidth: '635',
+	},
+]
+function hideAngle(i) {
+	if ($(window).outerWidth() <= arrAngle[i].windowWidth) {
+	  $(arrAngle[i].classesName).fadeOut('slow');
+	  return this; 
 	} else {
- 		  $('.w1, .w-2').fadeIn('slow');
+ 	  $(arrAngle[i].classesName).fadeIn('slow');
 	}
 }
-function hideAngle3() {
-	if ($(window).outerWidth() <= '635'){
-      $('.wu1, .wu-1').fadeOut('slow');
-        return this;
-	} else {
- 		  $('.wu1, .wu-1').fadeIn('slow');
+// start functions
+function startHideAngle() {
+	for (var i = 0; i < arrAngle.length; i++) {
+    hideAngle(i);
 	}
 }
+$(document).ready(function() {
+	$(window).on('load resize', startHideAngle);
+});
+	
 /////////////////////////////////////
 //random balls
 // function changePlaceBalls() {
@@ -1343,50 +1357,36 @@ function hideAngle3() {
 // displayError();
 /////////////////////////////////////////
 // footer contacts
-var flagPhone = false, flagSkype = false, flagGmail = false, contactFlag = true;
-function movePhoneLeft(event) {
-	$(document).ready(function() {
-		switch (true) {
-			case (( event.data.thisFlag == 'flagPhone') && (flagPhone == false)) :
-		 		$(event.data.class).css('left', '0px');
-		 		$('.icon-mobile').css('color', '#CBBEAE');
-				flagPhone = true;
-					break;
-			case (( event.data.thisFlag == 'flagPhone') && (flagPhone == true)) :
-				$(event.data.class).css('left', event.data.leftHide);
-				$('.icon-mobile').css('color', '#ADD8E6');
-				flagPhone = false;
-					break;
-			case (( event.data.thisFlag == 'flagSkype') && (flagSkype == false)) :
-		 		$(event.data.class).css('left', '0px');
-			 	$('.skype i').css('color', '#CBBEAE');
-				flagSkype = true;
-					break;
-			case (( event.data.thisFlag == 'flagSkype') && (flagSkype == true)) :
-				$(event.data.class).css('left', event.data.leftHide);
-				$('.skype i').css('color', '#ADD8E6');
-				flagSkype = false;
-					break;
-			case (( event.data.thisFlag == 'flagGmail') && (flagGmail == false)) :
-		 		$(event.data.class).css('left', '0px');
-			 	$('.icon-mail').css('color', '#CBBEAE');
-			 	flagGmail = true;
-					break;
-			case (( event.data.thisFlag == 'flagGmail') && (flagGmail == true)) :
-				$(event.data.class).css('left', event.data.leftHide);
-				$('.icon-mail').css('color', '#ADD8E6');
-				flagGmail = false;
-					break;
-		}
+var contactFlag = true;
+
+var conArrData = [ {clasName:'.phone', classText: "#phone", leftHide: "-110px", icon:'.icon-mobile', flag: false},
+									 {clasName:'.skype', classText: "#skype", leftHide: "-110px", icon:'.skype i', flag: false},
+									 {clasName:'.gmail', classText: "#gmail", leftHide: "-170px", icon:'.icon-mail', flag: false}
+								];
+	function commonSlideContactFunc(i) {
+		switch(true) {
+			case ((conArrData[i].flag == false)) :
+		 		$(conArrData[i].classText).css('left', '0px');
+		 		$(conArrData[i].icon).css('color', '#CBBEAE');
+				conArrData[i].flag = true;
+			break;
+			case ((conArrData[i].flag == true)) :
+				$(conArrData[i].classText).css('left', conArrData[i].leftHide);
+				$(conArrData[i].icon).css('color', '#ADD8E6');
+				conArrData[i].flag = false;
+			break;
+		}		
+	}
+var arrPSGstart = ['.phone', '.skype', '.gmail'];
+function psgStart() {
+	$.each((arrPSGstart), function(i, el) {
+		$(el).on('click', function() {
+			commonSlideContactFunc(i);
+		})
 	});
 }
-var conArrData = [ {class: "#phone", leftHide: "-110px", thisFlag: "flagPhone"},
-									 {class: "#skype", leftHide: "-110px", thisFlag: "flagSkype"},
-									 {class: "#gmail", leftHide: "-170px", thisFlag: "flagGmail"}
-								];
-$('.phone').on("click", conArrData[0], movePhoneLeft);
-$('.skype').on("click", conArrData[1], movePhoneLeft);
-$('.gmail').on("click", conArrData[2], movePhoneLeft);
+psgStart();
+
 var flagConTime = false, flagContOff = null;
 	$('.contacts').on("click", function() {
 		switch(true) { 
@@ -1414,122 +1414,116 @@ var flagConTime = false, flagContOff = null;
 	});
 function hideContacts() {
 	switch (true) {
-			case (contactFlag == false && flagPhone || flagSkype || flagGmail == true) :
-			// move icon left
+		case (contactFlag == false && conArrData[0].flag || conArrData[1].flag || conArrData[2].flag == true) :
+		// move icon left
 
-				$('#phone, #skype').css('left', '-110px');
-				$('#gmail').css('left', '-170px');
-				// off icon click
-				$('.phone, .skype, .gmail').off('click');
-				setTimeout(function() {
-					// change icon colors
-					$('.contactSection').css('top', '-62px');
-					$('.contacts p').css({color: '#ADD8E6'});
-					$('.contactSection i').css('color', '#ADD8E6');
-					// on click
-					setTimeout(function() {
-						$('.phone').on("click", {class: "#phone", leftHide: "-110px", thisFlag: "flagPhone"}, movePhoneLeft);
-						$('.skype').on("click", {class: "#skype", leftHide: "-110px", thisFlag: "flagSkype"}, movePhoneLeft);
-						$('.gmail').on("click", {class: "#gmail", leftHide: "-170px", thisFlag: "flagGmail"}, movePhoneLeft);
-
-					},800);
-				},500);
-				// restore flags
-				contactFlag = true;
-				flagPhone = flagSkype = flagGmail = false;
-				flagContOff = true;
-				// hide support text
-				$('.wrapperP p').css('left', '-165px');
-				$('.icon-handshake-o').css('color', '#A9D9F2');
-				$('.wrapG7 table').css('left', '-200px');
-				// f = true;
-				// change support overflow
-				$('.wrapperP').css({'overflow': 'visible'});
-				// icon support changeSideImgw
-				$('.icon-handshake-o').css({'left': '-35px'});
-				// hide author
-				$('.headerThis p').css({'left': '-190px'}).removeClass('opacity');
-				// change header overflow
-				$('.headerThis').css({'overflow': 'visible'});
-				$('.fa-address-card').css('color', '#A9D9F2');
-				$('.g6Cont').css({'left': '-160px', 'opacity': '0'});
-
-				setTimeout(function() {
-					$('.g6Cont p').css({'animation': ''});
-					// flagAuthor = false;
-				},750);
-				$('.icon-comment-empty').css({'left': '-15px', 'position': 'relative'});
-				// off click author and support
-				break;
-			case (contactFlag == false) :
-				// hide support text
-				$('.wrapperP p').css('left', '-165px');
-				$('.icon-handshake-o').css('color', '#A9D9F2');
-				$('.wrapG7 table').css('left', '-200px');
-				f = true;
-				// change support overflow
-				$('.wrapperP').css({'overflow': 'visible'});
-				// icon support changeSideImgw
-				$('.icon-handshake-o').css({'left': '-35px'});
-				// hide author text
-				$('.headerThis p').css({'left': '-190px'});
-				// change header overflow
-				$('.headerThis').css({'overflow': 'visible'});
-				$('.fa-address-card').css('color', '#A9D9F2');
-				$('.g6Cont').css({'left': '-160px', 'opacity': '0'});
-				setTimeout(function() {
-					$('.g6Cont p').css({'animation': ''});
-					flagAuthor = false;
-				},750);
-				$('.icon-comment-empty').css({'left': '-15px', 'position': 'relative'});// icon author changeSideImgw
-        //////////////////////////////////////////////////////
-        // top contacts
-				$('#phone, #skype').css('left', '-110px');
-				$('#gmail').css('left', '-170px');
+			$('#phone, #skype').css('left', '-110px');
+			$('#gmail').css('left', '-170px');
+			// off icon click
+			$('.phone, .skype, .gmail').off('click');
+			setTimeout(function() {
+				// change icon colors
 				$('.contactSection').css('top', '-62px');
 				$('.contacts p').css({color: '#ADD8E6'});
 				$('.contactSection i').css('color', '#ADD8E6');
-			 	contactFlag = true;
+				// on click
+				setTimeout(function() {
+					psgStart();
+				},800);
+			},500);
+			// restore flags
+			contactFlag = true;
+			conArrData[0].flag = conArrData[1].flag = conArrData[2].flag = false;
+			flagContOff = true;
+			// hide support text
+			$('.wrapperP p').css('left', '-165px');
+			$('.icon-handshake-o').css('color', '#A9D9F2');
+			$('.wrapG7 table').css('left', '-200px');
+			// f = true;
+			// change support overflow
+			$('.wrapperP').css({'overflow': 'visible'});
+			// icon support changeSideImgw
+			$('.icon-handshake-o').css({'left': '-35px'});
+			// hide author
+			$('.headerThis p').css({'left': '-190px'}).removeClass('opacity');
+			// change header overflow
+			$('.headerThis').css({'overflow': 'visible'});
+			$('.fa-address-card').css('color', '#A9D9F2');
+			$('.g6Cont').css({'left': '-160px', 'opacity': '0'});
 
-		  	break;
-			case (contactFlag == true) :
-				// icon support changeSideImgw
-				$('.icon-handshake-o').css({'left': '-6px', 'color': '#CBBEAE'});
-				// icon author changeSideImgw
-				$('.g6Cont').css({'left': '-160px', 'opacity': '0'});
-				$('.icon-comment-empty').css({'left': '10px', 'position': 'relative'});
-				// changeSideImgw contacts
-				$('.contactSection').css('top', '-14px');
-				$('.contacts p').css({color: '#CBBEAE'});
-		 		contactFlag = false;
-		 		// for author section
-		 		setTimeout(function() {
-			 		$('.fa-address-card').css('color', '#CBBEAE');
-					// header movie
-					$('.headerThis p').css({'left': '-20px'});
-					// change header overflow
-					$('.headerThis').css({'overflow': 'hidden'});
-					// slide content
-					$('.g6Cont').css({'left': '0px', 'opacity': '1'});
-					// move the text to top
-					$('.g6Cont p').css({'animation': 'textUp 20s linear infinite'});
-		 		// of support
-					$('.wrapperP').css({'overflow': 'hidden'});
-					$('.wrapperP p').css('left', '13px');
-					$('.icon-handshake-o').css('color', '#CBBEAE');
-					$('.wrapG7 table').css('left', '0px');
-					// f = false;
+			setTimeout(function() {
+				$('.g6Cont p').css({'animation': ''});
+				// flagAuthor = false;
+			},750);
+			$('.icon-comment-empty').css({'left': '-15px', 'position': 'relative'});
+			// off click author and support
+		break;
+		case (contactFlag == false) :
+			// hide support text
+			$('.wrapperP p').css('left', '-165px');
+			$('.icon-handshake-o').css('color', '#A9D9F2');
+			$('.wrapG7 table').css('left', '-200px');
+			f = true;
+			// change support overflow
+			$('.wrapperP').css({'overflow': 'visible'});
+			// icon support changeSideImgw
+			$('.icon-handshake-o').css({'left': '-35px'});
+			// hide author text
+			$('.headerThis p').css({'left': '-190px'});
+			// change header overflow
+			$('.headerThis').css({'overflow': 'visible'});
+			$('.fa-address-card').css('color', '#A9D9F2');
+			$('.g6Cont').css({'left': '-160px', 'opacity': '0'});
+			setTimeout(function() {
+				$('.g6Cont p').css({'animation': ''});
+				flagAuthor = false;
+			},750);
+			$('.icon-comment-empty').css({'left': '-15px', 'position': 'relative'});// icon author changeSideImgw
+      //////////////////////////////////////////////////////
+      // top contacts
+			$('#phone, #skype').css('left', '-110px');
+			$('#gmail').css('left', '-170px');
+			$('.contactSection').css('top', '-62px');
+			$('.contacts p').css({color: '#ADD8E6'});
+			$('.contactSection i').css('color', '#ADD8E6');
+		 	contactFlag = true;
+	  break;
+		case (contactFlag == true) :
+			// icon support changeSideImgw
+			$('.icon-handshake-o').css({'left': '-6px', 'color': '#CBBEAE'});
+			// icon author changeSideImgw
+			$('.g6Cont').css({'left': '-160px', 'opacity': '0'});
+			$('.icon-comment-empty').css({'left': '10px', 'position': 'relative'});
+			// changeSideImgw contacts
+			$('.contactSection').css('top', '-14px');
+			$('.contacts p').css({color: '#CBBEAE'});
+	 		contactFlag = false;
+	 		// for author section
+	 		setTimeout(function() {
+		 		$('.fa-address-card').css('color', '#CBBEAE');
+				// header movie
+				$('.headerThis p').css({'left': '-20px'});
+				// change header overflow
+				$('.headerThis').css({'overflow': 'hidden'});
+				// slide content
+				$('.g6Cont').css({'left': '0px', 'opacity': '1'});
+				// move the text to top
+				$('.g6Cont p').css({'animation': 'textUp 20s linear infinite'});
+	 		// of support
+				$('.wrapperP').css({'overflow': 'hidden'});
+				$('.wrapperP p').css('left', '13px');
+				$('.icon-handshake-o').css('color', '#CBBEAE');
+				$('.wrapG7 table').css('left', '0px');
+				// f = false;
 
-		 		},1000)
-		  	break;
+	 		},1000)
+	  	break;
 	}
 }
 //////////////////////////////////////////////////////
 
 
 // about author
-
-
 var flagAuthor = false;
 function hideHeader() {	
 	switch (true) {
@@ -1547,7 +1541,6 @@ function hideHeader() {
 			setTimeout(function() {
 				flagAuthor = true;
 			},850);
-
 		break;
 		case (flagAuthor == true) :
 		// function hide()
@@ -1584,39 +1577,39 @@ var f = true;
 			}
 		}
 ///////////////////////////////////////////
-
+// book 
 var textContentBook = [
 	{"text":"", "img":"url(img/images/nature2.webp)"},
-	{"text":"", "img":"url(img/images/nature/1.webp)"},
-	{"text":"", "img":"url(img/images/nature/2.webp)"},
-	{"text":"", "img":"url(img/images/nature/3.webp)"},
-	{"text":"", "img":"url(img/images/nature/4.webp)"},
-	{"text":"", "img":"url(img/images/nature/5.webp)"},
-	{"text":"", "img":"url(img/images/nature/6.webp)"},
-	{"text":"", "img":"url(img/images/nature/7.webp)"},
-	{"text":"", "img":"url(img/images/nature/8.webp)"},
-	{"text":"", "img":"url(img/images/nature/9.webp)"},
-	{"text":"", "img":"url(img/images/nature/10.webp)"},
-	{"text":"", "img":"url(img/images/nature/11.webp)"},
-	{"text":"", "img":"url(img/images/nature/12.webp)"},
-	{"text":"", "img":"url(img/images/nature/13.webp)"},
-	{"text":"", "img":"url(img/images/nature/14.webp)"},
-	{"text":"", "img":"url(img/images/nature/15.webp)"},
-	{"text":"", "img":"url(img/images/nature/16.webp)"},
-	{"text":"", "img":"url(img/images/nature/17.webp)"},
-	{"text":"", "img":"url(img/images/nature/18.webp)"},
-	{"text":"", "img":"url(img/images/nature/19.webp)"},
-	{"text":"", "img":"url(img/images/nature/20.webp)"},
-	{"text":"", "img":"url(img/images/nature/21.webp)"},
-	{"text":"", "img":"url(img/images/nature/22.webp)"},
-	{"text":"", "img":"url(img/images/nature/23.webp)"},
-	{"text":"", "img":"url(img/images/nature/24.webp)"},
-	{"text":"", "img":"url(img/images/nature/25.webp)"},
-	{"text":"", "img":"url(img/images/nature/26.webp)"},
-	{"text":"", "img":"url(img/images/nature/27.webp)"},
-	{"text":"", "img":"url(img/images/nature/28.webp)"},
-	{"text":"", "img":"url(img/images/nature/29.webp)"},
-	{"text":"", "img":"url(img/images/nature/30.webp)"},
+	{"text":"", "img":"url(img/images/nature/1.jpg)"},
+	{"text":"", "img":"url(img/images/nature/2.jpg)"},
+	{"text":"", "img":"url(img/images/nature/3.jpg)"},
+	{"text":"", "img":"url(img/images/nature/4.jpg)"},
+	{"text":"", "img":"url(img/images/nature/5.jpg)"},
+	{"text":"", "img":"url(img/images/nature/6.jpg)"},
+	{"text":"", "img":"url(img/images/nature/7.jpg)"},
+	{"text":"", "img":"url(img/images/nature/8.jpg)"},
+	{"text":"", "img":"url(img/images/nature/9.jpg)"},
+	{"text":"", "img":"url(img/images/nature/10.jpg)"},
+	{"text":"", "img":"url(img/images/nature/11.jpg)"},
+	{"text":"", "img":"url(img/images/nature/12.jpg)"},
+	{"text":"", "img":"url(img/images/nature/13.jpg)"},
+	{"text":"", "img":"url(img/images/nature/14.jpg)"},
+	{"text":"", "img":"url(img/images/nature/15.jpg)"},
+	{"text":"", "img":"url(img/images/nature/16.jpg)"},
+	{"text":"", "img":"url(img/images/nature/17.jpg)"},
+	{"text":"", "img":"url(img/images/nature/18.jpg)"},
+	{"text":"", "img":"url(img/images/nature/19.jpg)"},
+	{"text":"", "img":"url(img/images/nature/20.jpg)"},
+	{"text":"", "img":"url(img/images/nature/21.jpg)"},
+	{"text":"", "img":"url(img/images/nature/22.jpg)"},
+	{"text":"", "img":"url(img/images/nature/23.jpg)"},
+	{"text":"", "img":"url(img/images/nature/24.jpg)"},
+	{"text":"", "img":"url(img/images/nature/25.jpg)"},
+	{"text":"", "img":"url(img/images/nature/26.jpg)"},
+	{"text":"", "img":"url(img/images/nature/27.jpg)"},
+	{"text":"", "img":"url(img/images/nature/28.jpg)"},
+	{"text":"", "img":"url(img/images/nature/29.jpg)"},
+	{"text":"", "img":"url(img/images/nature/30.jpg)"},
 	{"text":"", "img":"url(img/images/nature2.webp)"}
 ]
 // define array length
@@ -1638,9 +1631,13 @@ var frR = 1, frRD = 2;
 function naming() {
 	$(document).ready(function() {
 		// bg site
+		// number pages
 		$('.site01 div.fistDivSite:eq(1) span').text(contentPages[0]);
+		// text pages (this apsent)
 		$('.site01 div.fistDivSite:eq(1) div p').text(textContentBook[0].text);
+		// image pages
 		$('.site01 div.fistDivSite:eq(1) div.wrapPages').css('background-image',textContentBook[0].img);
+
 		$('.site01 div.fistDivSite:eq(2) span').text(contentPages[3]);
 		$('.site01 div.fistDivSite:eq(2) div p').text(textContentBook[3].text);
 		$('.site01 div.fistDivSite:eq(2) div.wrapPages').css('background-image',textContentBook[3].img);
@@ -1820,36 +1817,36 @@ if (is.not.firefox()) {
 	});
 } else {
 	// alt displaing for mozila
-		$('.site02 div.fistDivSite:eq(1)').on('click', function() {
-			if (bgR >= contentPages.length) {
-				nextFlag = true;
-			}
-			if (nextFlag == false) {
-				document.getElementById('numberSite').value = frR + 2;
-				$('#count2').triggerHandler('click');
-				nextFlag = true;
-				prevFlag = true;
-				setTimeout(function() {
-					nextFlag = false;
-					prevFlag = false;
-				},1000);
-			}
-		});
-		$('.site02 div.fistDivSite:eq(3)').on('click', function() {
-			if (bgL == 0) {
-				prevFlag = true;
-			}
-			if (prevFlag == false) {
-				document.getElementById('numberSite').value = frR - 2;
-				$('#count2').triggerHandler('click');
-				prevFlag = true;
-				nextFlag = true;
-				setTimeout(function() {
-					prevFlag = false;
-					nextFlag = false;
-				},1000);
-			}
-		});
+	$('.site02 div.fistDivSite:eq(1)').on('click', function() {
+		if (bgR >= contentPages.length) {
+			nextFlag = true;
+		}
+		if (nextFlag == false) {
+			document.getElementById('numberSite').value = frR + 2;
+			$('#count2').triggerHandler('click');
+			nextFlag = true;
+			prevFlag = true;
+			setTimeout(function() {
+				nextFlag = false;
+				prevFlag = false;
+			},1000);
+		}
+	});
+	$('.site02 div.fistDivSite:eq(3)').on('click', function() {
+		if (bgL == 0) {
+			prevFlag = true;
+		}
+		if (prevFlag == false) {
+			document.getElementById('numberSite').value = frR - 2;
+			$('#count2').triggerHandler('click');
+			prevFlag = true;
+			nextFlag = true;
+			setTimeout(function() {
+				prevFlag = false;
+				nextFlag = false;
+			},1000);
+		}
+	});
 }
 var numPages = document.getElementById('numberSite').value;
 function getNumberSite() {
@@ -1926,13 +1923,14 @@ function getNumberSite() {
 var secTime = false;
 $('#count2').on('click load', function() {
 	// if not current state pages
-	if (!(numPages == document.getElementById('numberSite').value || numPages == (document.getElementById('numberSite').value) - 1)) { 
+	if (!(numPages == document.getElementById('numberSite').value ||
+	  numPages == (document.getElementById('numberSite').value) - 1)) { 
 	// 
- 	if (secTime === false) {
- 		getNumberSite();
- 	} else {
- 		return false;
- 	}
+	 	if (secTime === false) {
+	 		getNumberSite();
+	 	} else {
+	 		return false;
+	 	}
  		secTime = true;
  		setTimeout(function() {
  			secTime = false;
@@ -1960,7 +1958,7 @@ function closeOpenBook() {
 			},600);
 			// hide buttons
 			$('#appearance').fadeOut(500).off('click');
-	    break;
+	  break;
 	  case ($('.bookCover').hasClass('closeBook')) :
 	  removeIncline();
       $('.grid3').toggleClass('closeBook'),
@@ -1970,7 +1968,7 @@ function closeOpenBook() {
 			// changeSideImgw buttons
 			$('#numberSite, #bu, #leftSlide, #rightSlide, #count, #count2, #close').fadeOut(500);
 			$('#appearance').fadeIn(500).on('click', appearance);
-   	  break;
+   	break;
   }
 }
 $(document).ready(function() {
@@ -1995,12 +1993,11 @@ function appearance() {
 		break;
 	}
 }
-// toggle text
+// toggle text hide show
 $(window).on('resize load', function() {
 	switch(true) {
 		case ($(window).outerWidth() < '920') :
 			$('.someButifulText').css({'opacity': '1'});
-			// $('.bookCover').css({'opacity': '0'});
 		break;
 		case ($(window).outerWidth() >= '920') :
 			if (!$('.bookCover').hasClass('appearance')) {
@@ -2009,7 +2006,7 @@ $(window).on('resize load', function() {
 		break;
 	}
 });
-// action for left and right button page
+// action for left and right button for change pages
 function leftButton() {
 	if (document.getElementById('numberSite').value > 1) {
 		document.getElementById('numberSite').value--;
@@ -2109,7 +2106,7 @@ $(document).ready(function() {
 		(function() {
 		  $(window).on("load",function(){
 		    $("a[href*='#']").mPageScroll2id({
-		    	scrollSpeed: 700,
+		    	scrollSpeed: 500,
 		    	// onStart:function(){},
 		    	// onComplete:function(){}
 		    });
@@ -2130,5 +2127,3 @@ window.addEventListener('scroll', function() {
     body.classList.remove('disable-hover')
   },100);
 }, false);
- //////////////////////////////////////////////////////
-

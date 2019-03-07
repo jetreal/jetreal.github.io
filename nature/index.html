@@ -8,8 +8,6 @@
     </noscript>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/grid.min.css">
-    <link rel="stylesheet" href="css/main.css">
-
     <style>
       .wrapperLoader {
       	transition: opacity .5s;
@@ -51,7 +49,6 @@
         <div></div></a></div>
     <!-- wrapper-->
     <div class="wrapper" id="wrapper">
-    
       <div class="wrapSun"><img class="sun" src="img/images/sun.webp" alt="fire-logo" width="130px" height="90px"></div>
       <!-- header first page-->
       <section class="firstSection">
@@ -83,7 +80,7 @@
             <P>поднятия настроения</P>
             <p>всем тем,</p>
             <p>кто соскучился</p>
-            <p>по красоте и природы.</p>
+            <p>по красоте природы.</p>
             <p>Удивительные</p>
             <p>уголки мира,</p>
             <p>замечательные</p>
@@ -840,19 +837,22 @@
       </div>
       <!-- end footer-->
     </div>
-    <link rel="stylesheet" href="fonts/fontello/css/myicon.css">
     <!-- end wrapper-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2|Comfortaa|Open+Sans">
-    <!-- jQuery library-->
+    <link rel="stylesheet" href="fonts/fontello/css/myicon.css">
+    <script>
+      var ms=document.createElement("link");ms.rel="stylesheet";
+      ms.href="css/main.css";document.getElementsByTagName("head")[0].appendChild(ms);
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- nice scroll-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.5.1/jquery.nicescroll.min.js"></script>
     <!-- Magnific Popup core JS file-->
-<!--     <script src="libs/html5shiv/html5shiv.min.js"></script>
+   <!--  <script src="libs/html5shiv/html5shiv.min.js"></script>
     <script src="libs/is.min.js"></script>
     <script src="libs/Magnific/jquery.magnific-popup.min.js"></script>
     <script src="libs/scroll2Id/jquery.malihu.PageScroll2id.min.js"></script> -->
     <script src="js/libs.min.js" defer></script>
-    <script src="js/common.min.js" defer></script>
+    <script src="js/common.js" defer></script>
   </body>
 </html>
