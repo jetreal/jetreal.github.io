@@ -5,27 +5,10 @@
 // 	},1000);
 // });
 
-// start field function without flicker when reload page
+// start forest function without flicker when reload page
 $(window).on('load', function() {
-	setTimeout(function() {
-		$('.bgImage3').triggerHandler('click');
-		$('#headerLeftSection p').text(dataForest[2].headText).fadeIn(60);
-		var atrLeft = $('#imgContent2').attr('src');
-		var atrRight = $('#imgContent').attr('src');
-		$('#popupLeft').attr('href', atrLeft);
-		$('#popupRight').attr('href', atrRight);
-			index = 0;
-		$('#num').attr('src', locationObj.numbers[index]);
-		anyArr = locationObj.fields;
-		$('.wrapVItem *').css('box-shadow','');
-		$(dataForest[2].classesForBoxshadow)
-		.css('box-shadow', '3px 3px 6px #FFB352 inset, -3px -3px 6px #FFB352 inset');
-		$('.into31 div:first-child')
-		.removeClass(dataForest[2].classAddHilight);
-		$('.bgImage3').addClass(dataForest[2].classRemoveHilight);
-	},100);
+	$('.bgImage3').addClass(dataForest[2].classRemoveHilight);
 });
-
 ////////////////////////////////////////////////////////////////////////
 
 // magnific Popup
@@ -140,32 +123,26 @@ $(document).ready(function() {
 
 // header bottom text scale function
 function film() {
-	var lDivDataObj = {
-		wind:{img:'url(img/images/sky2.webp)', text:'Ветер'},
-		fire:{img:'url(img/images/fireHeaderDisp.webp)', text: 'Огонь'},
-		water:{img:'url(img/images/waterHeaderDisp.webp)', text: 'Вода'},
-		earth:{img:'url(img/images/earth.webp)', text: 'Земля'}
-	}
+	var lDivDataObj = [
+		{timer: 0, img: 'url(/img/images/sky2.webp)', txt: 'Ветер', time: 0},
+		{timer: 0, img: 'url(/img/images/fireHeaderDisp.webp)', txt: 'Огонь', time: 8000},
+		{timer: 0, img: 'url(/img/images/waterHeaderDisp.webp)', txt: 'Вода', time: 16000},
+		{timer: 0, img: 'url(/img/images/earth.webp)', txt: 'Земля', time: 24000}
+	]
 	var flagi = false;
 	var timerHeader1, timerHeader2, timerHeader3, timerHeader4, timerHeader5;
 	function headerAnime(iDivDataObj) {
 		// change the state
-		timerHeader1 = setTimeout(function() {
-			wind(lDivDataObj.wind.text, lDivDataObj.wind.img);
-		},0);
-		timerHeader2 = setTimeout(function() {
-			wind(lDivDataObj.fire.text, lDivDataObj.fire.img);
-		},8000);
-		timerHeader3 = setTimeout(function() {
-			wind(lDivDataObj.water.text, lDivDataObj.water.img);
-		},16000);
-		timerHeader4 = setTimeout(function() {
-			wind(lDivDataObj.earth.text, lDivDataObj.earth.img);
-		},24000);
+		for (var i = 0; i < lDivDataObj.length; i++) {
+			lDivDataObj[i].timer = setTimeout(function(txt, img) {
+				wind(txt, img);
+			}, lDivDataObj[i].time, lDivDataObj[i].txt, lDivDataObj[i].img);
+		}
+
 		timerHeader5 = setTimeout(function() {
 			// off button
 				// css
-				$('.circleImg').attr('src', 'img/images/button3.webp');
+				$('.circleImg').attr('src', '/img/images/button3.webp');
 				$('.circleImg').css({width:'150px', height:'150px',
 				 'box-shadow': '2px 2px 6px gray, -2px -2px 6px gray,\
 				 -2px 2px 6px gray, 2px -2px 6px gray'});
@@ -177,10 +154,9 @@ function film() {
 		},32000);
 	}
 	function offTimerHeader() {
-		clearTimeout(timerHeader1);
-		clearTimeout(timerHeader2);
-		clearTimeout(timerHeader3);
-		clearTimeout(timerHeader4);
+		for ( i = 0; i < lDivDataObj.length; i++) {
+      clearTimeout(lDivDataObj[i].timer)
+		}
 		clearTimeout(timerHeader5);
 	}
 	function wind(txt,img) {
@@ -200,12 +176,12 @@ function film() {
 	function mDown() {
 		switch (true) {
 			case (flagi == false ) :
-				$('.circleImg').off('click').one('click', lDivDataObj, headerAnime);
+				$('.circleImg').off('click').one('click', headerAnime);
 				$('.circleImg').css({width:'140px',height:'140px',
 					'box-shadow': '3px 3px 6px #19B9F5, -3px -3px 6px #19B9F5,\
 					-3px 3px 6px #19B9F5, 3px -3px 6px #19B9F5'});
 				// css
-				$('.circleImg').attr('src', 'img/images/button2.webp');
+				$('.circleImg').attr('src', '/img/images/button2.webp');
 				$('.wr17 .into03, .wr17 .into04, .wr17 .into05, .wr17 .into06')
 				.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 				$('.bDiv').css('border', '1px solid #19B9F5');
@@ -216,7 +192,7 @@ function film() {
 				$('.circleImg').off('click');
 				$('.circleImg').one('click', offTimerHeader);
 				// css
-				$('.circleImg').attr('src', 'img/images/button3.webp');
+				$('.circleImg').attr('src', '/img/images/button3.webp');
 				$('.circleImg').css({width:'150px',height:'150px',
 				 'box-shadow': '3px 3px 6px gray, -3px -3px 6px gray,\
 				 -3px 3px 6px gray, 3px -3px 6px gray'});
@@ -254,7 +230,7 @@ function film() {
 
 	  } else if ($('html').outerWidth() < 700 && flagi == true) {
 	  	// offTimerHeader();
-	  	 // $('.wrapperImg').css({'background-image': 'url(img/images/waterHeaderDisp.webp)', 'display': 'block'})
+	  	 // $('.wrapperImg').css({'background-image': 'url(/img/images/waterHeaderDisp.webp)', 'display': 'block'})
 			$('.wrapCircleImg').one('click', function() {
 				$(window).trigger('resize');
 			});
@@ -544,11 +520,11 @@ $(document).ready(function() {
 ////////////////////////////////////////////////////////////////////////
 var locationObj = {
 	numbers: [
-		'img/images/numbers/1.webp',
-		'img/images/numbers/2.webp',
-		'img/images/numbers/3.webp',
-		'img/images/numbers/4.webp',
-		'img/images/numbers/5.webp'
+		'/img/images/numbers/1.webp',
+		'/img/images/numbers/2.webp',
+		'/img/images/numbers/3.webp',
+		'/img/images/numbers/4.webp',
+		'/img/images/numbers/5.webp'
 	]
 };
 
@@ -556,8 +532,8 @@ var dataForest = [
 	{ classAddHilight: 'bgImage1no',
 		classRemoveHilight: 'bgImage2no bgImage3no bgImage4no bgImage5no bgImage6no bgImage7no',
 		classesForBoxshadow: '.bgImage1, .bgImage1 div, .bgImage1 div div',
-		urlContentLeft: 'img/images/rivers/1.webp',
-		urlContentRight: 'img/images/rivers/6.webp',
+		urlContentLeft: '/img/images/rivers/1.webp',
+		urlContentRight: '/img/images/rivers/6.webp',
 		headText: 'реки',
 		bodyText: 'Равнинные реки украшают пейзаж любого континента,\
 		реки являются естественной средой обитания для огромного количества животных -\
@@ -565,122 +541,122 @@ var dataForest = [
 		Равнинные реки текут медленно и неспешно. Горные же реки, в свою очередь, несутся с огромной скоростью,\
 		и завораживают шумом своих вод.',
 		images: [
-		'img/images/rivers/1.webp',
-		'img/images/rivers/2.webp',
-		'img/images/rivers/3.webp',
-		'img/images/rivers/4.webp',
-		'img/images/rivers/5.webp'
+		'/img/images/rivers/1.webp',
+		'/img/images/rivers/2.webp',
+		'/img/images/rivers/3.webp',
+		'/img/images/rivers/4.webp',
+		'/img/images/rivers/5.webp'
 	]
 	},
 		{ classAddHilight: 'bgImage2no',
 		classRemoveHilight: 'bgImage1no bgImage3no bgImage4no bgImage5no bgImage6no bgImage7no',
 		classesForBoxshadow: '.bgImage2, .bgImage2 div, .bgImage2 div div',
-		urlContentLeft: 'img/images/mountain/1.webp',
-		urlContentRight: 'img/images/mountain/6.webp',
+		urlContentLeft: '/img/images/mountain/1.webp',
+		urlContentRight: '/img/images/mountain/6.webp',
 		headText: 'горы',
 		bodyText: 'Миллионы туристов из разных уголков мира стремятся посетить различные возвышенности,\
 		чтобы полюбоваться потрясающей красотой удивительных пейзажей.\
 		В этой подборке вы увидите замечательные горные пейзажи во всём своём многообразии. Мы собрали коллекцию самых потрясающих фотографий, на \
 		которых запечатлены горы со всего мира.',
 		images: [
-		'img/images/mountain/1.webp',
-		'img/images/mountain/2.webp',
-		'img/images/mountain/3.webp',
-		'img/images/mountain/4.webp',
-		'img/images/mountain/5.webp'
+		'/img/images/mountain/1.webp',
+		'/img/images/mountain/2.webp',
+		'/img/images/mountain/3.webp',
+		'/img/images/mountain/4.webp',
+		'/img/images/mountain/5.webp'
 	]
 	},
 		{ classAddHilight: 'bgImage3no',
 		classRemoveHilight: 'bgImage2no bgImage1no bgImage4no bgImage5no bgImage6no bgImage7no',
 		classesForBoxshadow: '.bgImage3, .bgImage3 div, .bgImage3 div div',
-		urlContentLeft: 'img/images/fields/1.webp',
-		urlContentRight: 'img/images/fields/6.webp',
+		urlContentLeft: '/img/images/fields/1.webp',
+		urlContentRight: '/img/images/fields/6.webp',
 		headText: 'поля',
 		bodyText: 'Поля охватывают значительную часть наземного пространства, не имея высокой растительности. \
 		За эту особенность их иногда даже называют бескрайними. На полях растут: либо культурные сорта растений и трав, либо дикорастущие. Не имея \
 		особых преград, ветер в поле гуляет особенно сильно.',
 		images: [
-		'img/images/fields/1.webp',
-		'img/images/fields/2.webp',
-		'img/images/fields/3.webp',
-		'img/images/fields/4.webp',
-		'img/images/fields/5.webp'
+		'/img/images/fields/1.webp',
+		'/img/images/fields/2.webp',
+		'/img/images/fields/3.webp',
+		'/img/images/fields/4.webp',
+		'/img/images/fields/5.webp'
 	]
 	},
 		{ classAddHilight: 'bgImage4no',
 		classRemoveHilight: 'bgImage2no bgImage3no bgImage1no bgImage5no bgImage6no bgImage7no',
 		classesForBoxshadow: '.bgImage4, .bgImage4 div, .bgImage4 div div',
-		urlContentLeft: 'img/images/seas/1.webp',
-		urlContentRight: 'img/images/seas/6.webp',
+		urlContentLeft: '/img/images/seas/1.webp',
+		urlContentRight: '/img/images/seas/6.webp',
 		headText: 'моря',
 		bodyText: 'Люди часто используют термин «море» для обозначения океана. Для географов море - это разделение океана, который закрыт или частично закрыт сушей.\
 		A для не географов, море - это отличное место, где можно отдохнуть и расслабиться.',
 		images: [
-		'img/images/seas/1.webp',
-		'img/images/seas/2.webp',
-		'img/images/seas/3.webp',
-		'img/images/seas/4.webp',
-		'img/images/seas/5.webp'
+		'/img/images/seas/1.webp',
+		'/img/images/seas/2.webp',
+		'/img/images/seas/3.webp',
+		'/img/images/seas/4.webp',
+		'/img/images/seas/5.webp'
 	]
 	},
 		{ classAddHilight: 'bgImage5no',
 		classRemoveHilight: 'bgImage2no bgImage3no bgImage4no bgImage1no bgImage6no bgImage7no',
 		classesForBoxshadow: '.bgImage5, .bgImage5 div, .bgImage5 div div',
-		urlContentLeft: 'img/images/deserts/1.webp',
-		urlContentRight: 'img/images/deserts/6.webp',
+		urlContentLeft: '/img/images/deserts/1.webp',
+		urlContentRight: '/img/images/deserts/6.webp',
 		headText: 'пустыни',
 		bodyText: 'Пустыни - это огромные территории не плодотворных участков почвы,  лишённые практически всякой растительности. \
 		Пустыни бывают песчаные, каменистые, глинистые, а также некоторые арктические пространства называют пустынями. \
 		Несмотря на суровый климат, пресмыкающиеся, грызуны, \
 	  	некоторые птицы и даже такие крупные животные как - верблюды представляют животный мир пустынь. ',
 	  images: [
-		'img/images/deserts/1.webp',
-		'img/images/deserts/2.webp',
-		'img/images/deserts/3.webp',
-		'img/images/deserts/4.webp',
-		'img/images/deserts/5.webp'
+		'/img/images/deserts/1.webp',
+		'/img/images/deserts/2.webp',
+		'/img/images/deserts/3.webp',
+		'/img/images/deserts/4.webp',
+		'/img/images/deserts/5.webp'
 	]	
 	},
 		{ classAddHilight: 'bgImage6no',
 		classRemoveHilight: 'bgImage2no bgImage3no bgImage4no bgImage5no bgImage1no bgImage7no',
 		classesForBoxshadow: '.bgImage6, .bgImage6 div, .bgImage6 div div',
-		urlContentLeft: 'img/images/jungles/1.webp',
-		urlContentRight: 'img/images/jungles/6.webp',
+		urlContentLeft: '/img/images/jungles/1.webp',
+		urlContentRight: '/img/images/jungles/6.webp',
 		headText: 'джунгли',
 		bodyText: 'Джунгли значительно отличаются от северных лесов.\
 		В северных лесах пространство между деревьями достаточно обширное, в джунглях же, \
 		всё растёт очень плотно. Порой в джунглях невозможно пройти без мачете, необходимого для того, чтоб прорубить\
 		очень густую растительность. Джунгли поражают буйством красок и обилием живности.',
 		images: [
-		'img/images/jungles/1.webp',
-		'img/images/jungles/2.webp',
-		'img/images/jungles/3.webp',
-		'img/images/jungles/4.webp',
-		'img/images/jungles/5.webp'
+		'/img/images/jungles/1.webp',
+		'/img/images/jungles/2.webp',
+		'/img/images/jungles/3.webp',
+		'/img/images/jungles/4.webp',
+		'/img/images/jungles/5.webp'
 		]
 	},
 	{ classAddHilight: 'bgImage7no',
 		classRemoveHilight: 'bgImage2no bgImage3no bgImage4no bgImage5no bgImage6no bgImage1no',
 		classesForBoxshadow: '.bgImage7, .bgImage7 div, .bgImage7 div div',
-		urlContentLeft: 'img/images/forest/1.webp',
-		urlContentRight: 'img/images/forest/6.webp',
+		urlContentLeft: '/img/images/forest/1.webp',
+		urlContentRight: '/img/images/forest/6.webp',
 		headText: 'леса',
 		bodyText: 'Находясь в лесу человек ощущает умиротворение и покой. Пение птиц и изумительная красота деревьев буквально очаровывают. \
 		Каждый лес, будь-то весёлый берёзовый лесок, сосновый бор, или серьёзный ельник прекрасен по своему.\
 		Особенно приятно находиться в лесу весной, потому что всё вокруг расцветает. 	',
 		images: [
-		'img/images/forest/1.webp',
-		'img/images/forest/2.webp',
-		'img/images/forest/3.webp',
-		'img/images/forest/4.webp',
-		'img/images/forest/5.webp'
+		'/img/images/forest/1.webp',
+		'/img/images/forest/2.webp',
+		'/img/images/forest/3.webp',
+		'/img/images/forest/4.webp',
+		'/img/images/forest/5.webp'
 		]
 	}
 ]
-var anyArr = [];
 	// img Obj path for imgs
 var collectionForestThumb = $('.into30 > div > div');
 var index = 0;
+var anyArr = [];
 
 	function commonForest(i, el) {
 // change display
@@ -793,28 +769,28 @@ $(document).ready(function() {
 
 	var counterImg = 1, arrObj = [
 		  {
-		  	url:'url(img/images/ownFriends/3Animals.webp',
+		  	url:'url(/img/images/ownFriends/3Animals.webp',
 				headerText: 'Медведь',
 				bodyText: 'Лесной тяжеловес, любитель мёда.',
 				bgp: '0 0',
-				miniDisLeft: 'url(img/images/ownFriends/bear/allBears.webp)',
-				miniDisRight: 'url(img/images/ownFriends/bear/allBears.webp)'
+				miniDisLeft: 'url(/img/images/ownFriends/bear/allBears.webp)',
+				miniDisRight: 'url(/img/images/ownFriends/bear/allBears.webp)'
 			},
 	    {
-	    	url:'url(img/images/ownFriends/3Animals.webp',
+	    	url:'url(/img/images/ownFriends/3Animals.webp',
 				headerText: 'Орёл',
 				bodyText: 'Крылатый истребитель, гроза неба.',
 				bgp: '-150px 0',
-				miniDisLeft: 'url(img/images/ownFriends/bird/allBirds.webp)',
-				miniDisRight: 'url(img/images/ownFriends/bird/allBirds.webp)'
+				miniDisLeft: 'url(/img/images/ownFriends/bird/allBirds.webp)',
+				miniDisRight: 'url(/img/images/ownFriends/bird/allBirds.webp)'
 			},
 	    {
-	    	url:'url(img/images/ownFriends/3Animals.webp',
+	    	url:'url(/img/images/ownFriends/3Animals.webp',
 				headerText: 'Волк',
 				bodyText: 'Серый волк, зубами щёлк.',
 				bgp: '-300px 0',
-				miniDisLeft: 'url(img/images/ownFriends/wolf/allWolfs.webp)',
-				miniDisRight: 'url(img/images/ownFriends/wolf/allWolfs.webp)'
+				miniDisLeft: 'url(/img/images/ownFriends/wolf/allWolfs.webp)',
+				miniDisRight: 'url(/img/images/ownFriends/wolf/allWolfs.webp)'
 			}
 	];
 	
@@ -847,8 +823,8 @@ $(document).ready(function() {
 		dataBtnFunc[0].countE, dataBtnFunc[0].countB, dataBtnFunc[0].countW;
 		dataBtnFunc[1].countE, dataBtnFunc[1].countB, dataBtnFunc[1].countW;
 		setTimeout(function() {
-			$('.inImgLeft').css({'background-image': 'url(img/images/ownFriends/bear/allBears.webp)', 'background-position': '0 0'});
-			$('.inImgRight').css({'background-image': 'url(img/images/ownFriends/bear/allBears.webp)', 'background-position': '-750px 0'});	
+			$('.inImgLeft').css({'background-image': 'url(/img/images/ownFriends/bear/allBears.webp)', 'background-position': '0 0'});
+			$('.inImgRight').css({'background-image': 'url(/img/images/ownFriends/bear/allBears.webp)', 'background-position': '-750px 0'});	
 		}, 1200);
 		} else {
 			$('.lb img').attr('src', locationObj.numbers[0]);
@@ -923,10 +899,10 @@ $(document).ready(function() {
 	]
   function leftAndRightBtn(i) {
   	$(dataBtnFunc[i].btnClass).on('mouseup', function() {
-		$(this).css('background-image', 'url(img/favicon/btnUp.webp)');
+		$(this).css('background-image', 'url(/img/favicon/btnUp.webp)');
 	});
 	$(dataBtnFunc[i].btnClass).on('mousedown', function() {
-		$(this).css('background-image', 'url(img/favicon/click.webp)');
+		$(this).css('background-image', 'url(/img/favicon/click.webp)');
 		if (counterImg == 1) {
 			$(dataBtnFunc[i].displayClass).css('background-position', dataBtnFunc[i].img.bear[dataBtnFunc[i].countB]);
 				dataBtnFunc[i].countB++;
@@ -958,7 +934,6 @@ $(document).ready(function() {
   }
   leftAndRightBtn(0);
   leftAndRightBtn(1);
-
 // change btn color
 	function oNafterGlacierHeadClick() {
 		if ($(window).outerWidth() < '1150') {
@@ -999,8 +974,8 @@ $(document).ready(function() {
 $(document).ready(function() {
 	var	dataBeach = [
 		{	
-			url1: 'img/images/maldives1.webp',
-			url2: 'img/images/maldives2.webp',
+			url1: '/img/images/maldives1.webp',
+			url2: '/img/images/maldives2.webp',
 			eventClassName: '.maldivesMin1',
 			headerText: 'Мальдивские острова',
 			bodyText: "Если ваше представление о рае - это нетронутый тропический остров с раскачивающимися пальмами\
@@ -1015,8 +990,8 @@ $(document).ready(function() {
 							 в какое время года вы решите посетить Мальдивы - острова, которые поистине являются раем на Земле."
 							},
 							{
-			url1: 'img/images/dubay1.webp',
-			url2: 'img/images/dubay2.webp',
+			url1: '/img/images/dubay1.webp',
+			url2: '/img/images/dubay2.webp',
 			eventClassName: '.dubayMin1',
 			headerText: 'Остров Дубай',
 			bodyText: "Дубай ежегодно принимает миллионы туристов и бизнесменов со всего мира.\
@@ -1027,8 +1002,8 @@ $(document).ready(function() {
 							 Дубай быстро стал одним из самых популярных туристических направлений в мире." 
 							},
     					 {
-    	url1: 'img/images/kanari2.webp',
-			url2: 'img/images/kanari1.webp',
+    	url1: '/img/images/kanari2.webp',
+			url2: '/img/images/kanari1.webp',
     	eventClassName: '.kanariMin1',
      	headerText: 'Канарские острова',
 			bodyText: "Не только круглогодичное солнце делает Канарские острова столь популярными,\
@@ -1044,8 +1019,8 @@ $(document).ready(function() {
 							Ла Гомера и Ла Пальма - сонные острова, для которых характерны нетронутые пляжи, сосновые леса и рыбацкие деревни. "
    					  },
      					{
-     	url1: 'img/images/seysheli2.webp',
-			url2: 'img/images/seysheli1.webp',
+     	url1: '/img/images/seysheli2.webp',
+			url2: '/img/images/seysheli1.webp',
      	eventClassName: '.seysheliMin1',
      	headerText: 'Сейшельские острова',
 			bodyText: "Когда-то Сейшельские острова были укрытием пиратов, в частности Анс Форбанс (Пиратская бухта) на Маэ и Кот-д'Ор на Праслине.<br>\
@@ -1058,8 +1033,8 @@ $(document).ready(function() {
 				 			 Хлебные фрукты очень популярны на Сейшельских островах и могут быть съедены различными способами от жареного до вареного. Легенда гласит, что кто-нибудь, кто ест его на островах, однажды вернется."
      					},
      					{
-     	url1: 'img/images/Gavai1.webp',
-			url2: 'img/images/Gavai2.webp',					
+     	url1: '/img/images/Gavai1.webp',
+			url2: '/img/images/Gavai2.webp',					
      	eventClassName: '.gavaiMin1',
      	headerText: 'Гавайские острова',
 			bodyText: 'Гавайи не похожи ни на одно другое место на земле. Это единственный штат в Соединенных Штатах, состоящий исключительно из островов,\
@@ -1070,8 +1045,8 @@ $(document).ready(function() {
 							 Туристическая индустрия является крупнейшим источником внешних доходов на Гавайях.' 
    					 	},
    					 	{
-   		url1: 'img/images/bali1.webp',
-			url2: 'img/images/bali2.webp',
+   		url1: '/img/images/bali1.webp',
+			url2: '/img/images/bali2.webp',
    		eventClassName: '.baliMin1',
      	headerText: 'Остров Бали',
 		  bodyText: 'Бали является самым популярным островным местом отдыха на индонезийском архипелаге.\
@@ -1084,6 +1059,7 @@ $(document).ready(function() {
 	];
 
 		var collectionBeach = $('.wrapItem3 > div > div');
+		var collectionBeachMin600 = $('.item6 > div > div');
 		function commonBeach(i, el) {
 			// remove and add box-shadow
 			var el2 = '.' + el.className.replace('1', '2');
@@ -1115,13 +1091,21 @@ $(document).ready(function() {
 					});
 				});
 			}
+			// start function for large
 			$.each((collectionBeach), function(i, el) {
 				$(el).on('click', function() {
 					commonBeach(i, el);
 				});
 			});
+			// start function < 600 px 
+			$.each((collectionBeachMin600), function(i, el) {
+				i += 3;
+				$(el).on('click', function() {
+					commonBeach(i, el);
+				});
+			});
 		});
-
+		$('.bgImage3').triggerHandler('click');
 // test slide right
 function menuF() {
 	// show menu btn and img
@@ -1200,36 +1184,36 @@ $(document).ready(function() {
 // function angle3() {
 // var angle3Item = $('.bgImg');
 // var arrImgUrl = [
-// 	'url(img/images/nature/1.webp)',
-// 	'url(img/images/nature/2.webp)',
-// 	'url(img/images/nature/3.webp)',
-// 	'url(img/images/nature/4.webp)',
-// 	'url(img/images/nature/5.webp)',
-// 	'url(img/images/nature/6.webp)',
-// 	'url(img/images/nature/7.webp)',
-// 	'url(img/images/nature/8.webp)',
-// 	'url(img/images/nature/9.webp)',
-// 	'url(img/images/nature/10.webp)',
-// 	'url(img/images/nature/11.webp)',
-// 	'url(img/images/nature/12.webp)',
-// 	'url(img/images/nature/13.webp)',
-// 	'url(img/images/nature/14.webp)',
-// 	'url(img/images/nature/15.webp)',
-// 	'url(img/images/nature/16.webp)',
-// 	'url(img/images/nature/17.webp)',
-// 	'url(img/images/nature/18.webp)',
-// 	'url(img/images/nature/19.webp)',
-// 	'url(img/images/nature/20.webp)',
-// 	'url(img/images/nature/21.webp)',
-// 	'url(img/images/nature/22.webp)',
-// 	'url(img/images/nature/23.webp)',
-// 	'url(img/images/nature/24.webp)',
-// 	'url(img/images/nature/25.webp)',
-// 	'url(img/images/nature/26.webp)',
-// 	'url(img/images/nature/27.webp)',
-// 	'url(img/images/nature/28.webp)',
-// 	'url(img/images/nature/29.webp)',
-// 	'url(img/images/nature/30.webp)'
+// 	'url(/img/images/nature/1.webp)',
+// 	'url(/img/images/nature/2.webp)',
+// 	'url(/img/images/nature/3.webp)',
+// 	'url(/img/images/nature/4.webp)',
+// 	'url(/img/images/nature/5.webp)',
+// 	'url(/img/images/nature/6.webp)',
+// 	'url(/img/images/nature/7.webp)',
+// 	'url(/img/images/nature/8.webp)',
+// 	'url(/img/images/nature/9.webp)',
+// 	'url(/img/images/nature/10.webp)',
+// 	'url(/img/images/nature/11.webp)',
+// 	'url(/img/images/nature/12.webp)',
+// 	'url(/img/images/nature/13.webp)',
+// 	'url(/img/images/nature/14.webp)',
+// 	'url(/img/images/nature/15.webp)',
+// 	'url(/img/images/nature/16.webp)',
+// 	'url(/img/images/nature/17.webp)',
+// 	'url(/img/images/nature/18.webp)',
+// 	'url(/img/images/nature/19.webp)',
+// 	'url(/img/images/nature/20.webp)',
+// 	'url(/img/images/nature/21.webp)',
+// 	'url(/img/images/nature/22.webp)',
+// 	'url(/img/images/nature/23.webp)',
+// 	'url(/img/images/nature/24.webp)',
+// 	'url(/img/images/nature/25.webp)',
+// 	'url(/img/images/nature/26.webp)',
+// 	'url(/img/images/nature/27.webp)',
+// 	'url(/img/images/nature/28.webp)',
+// 	'url(/img/images/nature/29.webp)',
+// 	'url(/img/images/nature/30.webp)'
 	
 // ];
 //  	var randImageNumber = Math.floor(Math.random() * arrImgUrl.length);
@@ -1579,38 +1563,38 @@ var f = true;
 ///////////////////////////////////////////
 // book 
 var textContentBook = [
-	{"text":"", "img":"url(img/images/nature2.webp)"},
-	{"text":"", "img":"url(img/images/nature/1.jpg)"},
-	{"text":"", "img":"url(img/images/nature/2.jpg)"},
-	{"text":"", "img":"url(img/images/nature/3.jpg)"},
-	{"text":"", "img":"url(img/images/nature/4.jpg)"},
-	{"text":"", "img":"url(img/images/nature/5.jpg)"},
-	{"text":"", "img":"url(img/images/nature/6.jpg)"},
-	{"text":"", "img":"url(img/images/nature/7.jpg)"},
-	{"text":"", "img":"url(img/images/nature/8.jpg)"},
-	{"text":"", "img":"url(img/images/nature/9.jpg)"},
-	{"text":"", "img":"url(img/images/nature/10.jpg)"},
-	{"text":"", "img":"url(img/images/nature/11.jpg)"},
-	{"text":"", "img":"url(img/images/nature/12.jpg)"},
-	{"text":"", "img":"url(img/images/nature/13.jpg)"},
-	{"text":"", "img":"url(img/images/nature/14.jpg)"},
-	{"text":"", "img":"url(img/images/nature/15.jpg)"},
-	{"text":"", "img":"url(img/images/nature/16.jpg)"},
-	{"text":"", "img":"url(img/images/nature/17.jpg)"},
-	{"text":"", "img":"url(img/images/nature/18.jpg)"},
-	{"text":"", "img":"url(img/images/nature/19.jpg)"},
-	{"text":"", "img":"url(img/images/nature/20.jpg)"},
-	{"text":"", "img":"url(img/images/nature/21.jpg)"},
-	{"text":"", "img":"url(img/images/nature/22.jpg)"},
-	{"text":"", "img":"url(img/images/nature/23.jpg)"},
-	{"text":"", "img":"url(img/images/nature/24.jpg)"},
-	{"text":"", "img":"url(img/images/nature/25.jpg)"},
-	{"text":"", "img":"url(img/images/nature/26.jpg)"},
-	{"text":"", "img":"url(img/images/nature/27.jpg)"},
-	{"text":"", "img":"url(img/images/nature/28.jpg)"},
-	{"text":"", "img":"url(img/images/nature/29.jpg)"},
-	{"text":"", "img":"url(img/images/nature/30.jpg)"},
-	{"text":"", "img":"url(img/images/nature2.webp)"}
+	{"text":"", "img":"url(/img/images/nature2.webp)"},
+	{"text":"", "img":"url(/img/images/nature/1.jpg)"},
+	{"text":"", "img":"url(/img/images/nature/2.jpg)"},
+	{"text":"", "img":"url(/img/images/nature/3.jpg)"},
+	{"text":"", "img":"url(/img/images/nature/4.jpg)"},
+	{"text":"", "img":"url(/img/images/nature/5.jpg)"},
+	{"text":"", "img":"url(/img/images/nature/6.jpg)"},
+	{"text":"", "img":"url(/img/images/nature/7.jpg)"},
+	{"text":"", "img":"url(/img/images/nature/8.jpg)"},
+	{"text":"", "img":"url(/img/images/nature/9.jpg)"},
+	{"text":"", "img":"url(/img/images/nature/10.jpg)"},
+	{"text":"", "img":"url(/img/images/nature/11.jpg)"},
+	{"text":"", "img":"url(/img/images/nature/12.jpg)"},
+	{"text":"", "img":"url(/img/images/nature/13.jpg)"},
+	{"text":"", "img":"url(/img/images/nature/14.jpg)"},
+	{"text":"", "img":"url(/img/images/nature/15.jpg)"},
+	{"text":"", "img":"url(/img/images/nature/16.jpg)"},
+	{"text":"", "img":"url(/img/images/nature/17.jpg)"},
+	{"text":"", "img":"url(/img/images/nature/18.jpg)"},
+	{"text":"", "img":"url(/img/images/nature/19.jpg)"},
+	{"text":"", "img":"url(/img/images/nature/20.jpg)"},
+	{"text":"", "img":"url(/img/images/nature/21.jpg)"},
+	{"text":"", "img":"url(/img/images/nature/22.jpg)"},
+	{"text":"", "img":"url(/img/images/nature/23.jpg)"},
+	{"text":"", "img":"url(/img/images/nature/24.jpg)"},
+	{"text":"", "img":"url(/img/images/nature/25.jpg)"},
+	{"text":"", "img":"url(/img/images/nature/26.jpg)"},
+	{"text":"", "img":"url(/img/images/nature/27.jpg)"},
+	{"text":"", "img":"url(/img/images/nature/28.jpg)"},
+	{"text":"", "img":"url(/img/images/nature/29.jpg)"},
+	{"text":"", "img":"url(/img/images/nature/30.jpg)"},
+	{"text":"", "img":"url(/img/images/nature2.webp)"}
 ]
 // define array length
 var textContentBookLength = 0;

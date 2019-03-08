@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>mySite</title>
+    <title>Site about nature</title>
     <meta charset="UTF-8">
     <noscript>
       <link rel="stylesheet" href="main.css">
     </noscript>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/grid.min.css">
+    <link rel="shortcut icon" href="sun.png" type="image/x-icon">
     <style>
       .wrapperLoader {
       	transition: opacity .5s;
@@ -47,7 +48,6 @@
         <div></div></a></div>
     <div id="arrowToBottom"><a href="#footer">
         <div></div></a></div>
-    <!-- wrapper-->
     <div class="wrapper" id="wrapper">
       <div class="wrapSun"><img class="sun" src="img/images/sun.webp" alt="fire-logo" width="130px" height="90px"></div>
       <!-- header first page-->
@@ -106,7 +106,7 @@
             </div>
             <div class="bDiv">
               <div class="bDivText">
-                <p id="bDivTextP">Облака</p>
+                <p id="bDivTextP"></p>
                 <div class="wrapperImg"></div>
               </div>
               <div class="wr17">
@@ -131,6 +131,7 @@
       </section>
       <!-- end header first page-->
       <section class="afterFirst">
+        <div class="borderUp"></div>
         <div class="wrapDuckSec2 container-fluid">
           <div class="row justify-content-center rowDuck">
             <div class="wrapDuck col col-md-4">
@@ -252,7 +253,9 @@
             </div>
           </div>
         </div>
-        <div class="theLostRiverText">Природные локации</div>
+        <div class="theLostRiverText">
+          <p>Природные локации</p>
+        </div>
       </section>
       <!-- end forest section-->
       <section class="afterForest">
@@ -281,7 +284,7 @@
                 <div class="cardShadow animal tiger">
                   <p>Тигр&#x9;</p>
                 </div></a>
-              <div class="textAnimal grid center">Тигр обитает в азии - в Индии, Непале и на Алтае... Тигры - это большие, сильные, крупные и красивые кошки. Тигр самый крупный и тяжёлый представитель семейства кошачих.</div>
+              <div class="textAnimal">Тигр обитает в азии - в Индии, Непале и на Алтае... Тигры - это большие, сильные, крупные и красивые кошки. Тигр самый крупный и тяжёлый представитель семейства кошачих.</div>
             </div>
             <div class="col-sm- m-2 wrapAPanthera"><a class="test-popup-link" id="aPanthera" href="img/images/pantera.webp">
                 <div class="cardShadow animal panthera">
@@ -353,7 +356,6 @@
         </div>
         <div class="glacierBack"></div>
         <div class="glacierBack2"></div>
-        <div class="glacierLogo grid center"></div>
         <div class="wrapPicture">
           <div class="pictureLeft"></div>
           <div class="pictureRight"></div>
@@ -718,52 +720,44 @@
                   <div class="fistDivSite">
                     <div class="wrapPages">
                       <p> </p>
-                    </div><span>
-                       1</span>
+                    </div><span> </span>
                   </div>
                   <div class="fistDivSite">
                     <div class="wrapPages">
                       <p> </p>
-                    </div><span>
-                       1</span>
+                    </div><span> </span>
                   </div>
                   <div class="fistDivSite">
                     <div class="wrapPages">
                       <p> </p>
-                    </div><span>
-                       1</span>
+                    </div><span> </span>
                   </div>
                   <div class="fistDivSite">
                     <div class="wrapPages">
                       <p> </p>
-                    </div><span>
-                       1</span>
+                    </div><span> </span>
                   </div><i class="icon-cancel-circled-outline" id="count"></i>
                 </div>
                 <div class="site02">
                   <div class="fistDivSite">
                     <div class="wrapPages">
                       <p></p>
-                    </div><span>
-                       1</span>
+                    </div><span> </span>
                   </div>
                   <div class="fistDivSite">
                     <div class="wrapPages">
                       <p></p>
-                    </div><span>
-                       1</span>
+                    </div><span> </span>
                   </div>
                   <div class="fistDivSite">
                     <div class="wrapPages">
                       <p></p>
-                    </div><span>
-                       1</span>
+                    </div><span> </span>
                   </div>
                   <div class="fistDivSite">
                     <div class="wrapPages">
                       <p></p>
-                    </div><span>
-                       1</span>
+                    </div><span> </span>
                   </div>
                 </div>
               </div>
@@ -837,22 +831,21 @@
       </div>
       <!-- end footer-->
     </div>
-    <!-- end wrapper-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2|Comfortaa|Open+Sans">
     <link rel="stylesheet" href="fonts/fontello/css/myicon.css">
     <script>
       var ms=document.createElement("link");ms.rel="stylesheet";
-      ms.href="css/main.min.css";document.getElementsByTagName("head")[0].appendChild(ms);
+      ms.href="css/main.css";document.getElementsByTagName("head")[0].appendChild(ms);
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- nice scroll-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.5.1/jquery.nicescroll.min.js"></script>
     <!-- Magnific Popup core JS file-->
-   <!--  <script src="libs/html5shiv/html5shiv.min.js"></script>
+<!--     <script src="libs/html5shiv/html5shiv.min.js"></script>
     <script src="libs/is.min.js"></script>
     <script src="libs/Magnific/jquery.magnific-popup.min.js"></script>
     <script src="libs/scroll2Id/jquery.malihu.PageScroll2id.min.js"></script> -->
     <script src="js/libs.min.js" defer></script>
-    <script src="js/common.min.js" defer></script>
+    <script src="js/common.js" defer></script>
   </body>
 </html>
