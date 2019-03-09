@@ -2126,10 +2126,7 @@ jQuery.preloadImages = function()	{
   }
 };
 setTimeout(function() {
-	$.preloadImages(preloadImages);
-}, 2000)
-const preloadImages = [
-	"img/images/fields/1.webp",
+$.preloadImages("img/images/fields/1.webp",
 	"img/images/fields/2.webp",
 	"img/images/fields/3.webp",
 	"img/images/fields/4.webp",
@@ -2146,5 +2143,25 @@ const preloadImages = [
 	'img/images/Gavai1.webp',
 	'img/images/Gavai2.webp',
 	'img/images/kanari1.webp',
-	'img/images/kanari2.webp'
-]
+	'img/images/kanari2.webp');
+}, 1000)
+// const preloadImages = [
+// 	"img/images/fields/1.webp",
+// 	"img/images/fields/2.webp",
+// 	"img/images/fields/3.webp",
+// 	"img/images/fields/4.webp",
+// 	"img/images/fields/5.webp",
+// 	"img/images/fields/6.webp",
+// 	'img/images/bali1.webp',
+// 	'img/images/bali2.webp',
+// 	'img/images/dubay1.webp',
+// 	'img/images/dubay2.webp',
+// 	// 'img/images/maldives1.webp',
+// 	// 'img/images/maldives2.webp',
+// 	'img/images/seysheli1.webp',
+// 	'img/images/seysheli2.webp',
+// 	'img/images/Gavai1.webp',
+// 	'img/images/Gavai2.webp',
+// 	'img/images/kanari1.webp',
+// 	'img/images/kanari2.webp'
+// ]
