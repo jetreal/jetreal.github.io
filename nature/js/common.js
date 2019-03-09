@@ -120,7 +120,6 @@ $(document).ready(function() {
   });
 });
 ////////////////////////////////////////////////////////////
-
 // header bottom text scale function
 function film() {
 	var lDivDataObj = [
@@ -130,7 +129,7 @@ function film() {
 		{timer: 0, img: 'url(img/images/earth.webp)', txt: 'Земля', time: 24000}
 	]
 	var flagi = false;
-	var timerHeader5;
+	var timerHeader1, timerHeader2, timerHeader3, timerHeader4, timerHeader5;
 	function headerAnime(iDivDataObj) {
 		// change the state
 		for (var i = 0; i < lDivDataObj.length; i++) {
@@ -249,8 +248,6 @@ function film() {
 }
 film();
 
-	
-	
 ///////////////////////////////////////////////////////////
  
 
@@ -1312,7 +1309,6 @@ function startHideAngle() {
 $(document).ready(function() {
 	$(window).on('load resize', startHideAngle);
 });
-	
 /////////////////////////////////////
 //random balls
 // function changePlaceBalls() {
@@ -2111,3 +2107,44 @@ window.addEventListener('scroll', function() {
     body.classList.remove('disable-hover')
   },100);
 }, false);
+
+// lazy load
+$(document).ready(function() {
+	$("img.lazy").lazyload({
+	threshold : 300,
+	// event : "click"
+	// effect : "fadeIn"
+
+	
+	});
+});
+
+//создаем JQuery функцию, которая будет подгружать изображения в буфер
+jQuery.preloadImages = function()	{
+ 	for(var i = 0; i < arguments.length; i++) {
+  	jQuery("<img>").attr("src", arguments[ i ]);
+  }
+};
+setTimeout(function() {
+	$.preloadImages(preloadImages);
+}, 2000)
+const preloadImages = [
+	"img/images/fields/1.webp",
+	"img/images/fields/2.webp",
+	"img/images/fields/3.webp",
+	"img/images/fields/4.webp",
+	"img/images/fields/5.webp",
+	"img/images/fields/6.webp",
+	'img/images/bali1.webp',
+	'img/images/bali2.webp',
+	'img/images/dubay1.webp',
+	'img/images/dubay2.webp',
+	// 'img/images/maldives1.webp',
+	// 'img/images/maldives2.webp',
+	'img/images/seysheli1.webp',
+	'img/images/seysheli2.webp',
+	'img/images/Gavai1.webp',
+	'img/images/Gavai2.webp',
+	'img/images/kanari1.webp',
+	'img/images/kanari2.webp'
+]
