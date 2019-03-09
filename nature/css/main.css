@@ -5812,8 +5812,7 @@ input::-webkit-inner-spin-button {
     top: 0;
     right: 1px;
     /*height: auto;*/
-    overflow: hidden;
-    margin-bottom: -20px; }
+    overflow: hidden; }
   .wrapMenuBtn {
     grid-column: 2;
     grid-row: 1;
