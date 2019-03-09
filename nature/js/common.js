@@ -2109,16 +2109,13 @@ window.addEventListener('scroll', function() {
 }, false);
 
 // lazy load
-// $(document).ready(function() {
-// 	$("img.lazy").lazyload({
-// 	threshold : 300,
+$(document).ready(function() {
+	$("img.lazy").lazyload({
+	threshold : 400
 	// event : "click"
 	// effect : "fadeIn"
-
-	
-// 	});
-// });
-
+	});
+});
 //создаем JQuery функцию, которая будет подгружать изображения в буфер
 // jQuery.preloadImages = function()	{
 //  	for(var i = 0; i < arguments.length; i++) {
@@ -2126,25 +2123,8 @@ window.addEventListener('scroll', function() {
 //   }
 // };
 // setTimeout(function() {
-// $.preloadImages("img/images/fields/1.webp",
-// 	"img/images/fields/2.webp",
-// 	"img/images/fields/3.webp",
-// 	"img/images/fields/4.webp",
-// 	"img/images/fields/5.webp",
-// 	"img/images/fields/6.webp",
-// 	'img/images/bali1.webp',
-// 	'img/images/bali2.webp',
-// 	'img/images/dubay1.webp',
-// 	'img/images/dubay2.webp',
-// 	// 'img/images/maldives1.webp',
-// 	// 'img/images/maldives2.webp',
-// 	'img/images/seysheli1.webp',
-// 	'img/images/seysheli2.webp',
-// 	'img/images/Gavai1.webp',
-// 	'img/images/Gavai2.webp',
-// 	'img/images/kanari1.webp',
-// 	'img/images/kanari2.webp');
-// }, 1000)
+// 	$.preloadImages(preloadImages);
+// }, 2000)
 // const preloadImages = [
 // 	"img/images/fields/1.webp",
 // 	"img/images/fields/2.webp",
