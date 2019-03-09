@@ -2114,8 +2114,11 @@ $(document).ready(function() {
 	threshold : 400
 	// event : "click"
 	// effect : "fadeIn"
+
+	
 	});
 });
+
 //создаем JQuery функцию, которая будет подгружать изображения в буфер
 // jQuery.preloadImages = function()	{
 //  	for(var i = 0; i < arguments.length; i++) {
