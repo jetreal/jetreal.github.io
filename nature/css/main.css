@@ -5811,7 +5811,7 @@ input::-webkit-inner-spin-button {
     padding: 0;
     top: 0;
     right: 1px;
-    height: auto;
+    /*height: auto;*/
     overflow: hidden;
     margin-bottom: -20px; }
   .wrapMenuBtn {
