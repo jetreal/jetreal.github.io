@@ -2148,3 +2148,9 @@ $(document).ready(function() {
 // 	'img/images/kanari1.webp',
 // 	'img/images/kanari2.webp'
 // ]
+tt:setTimeout(function(){
+if(self!==null){
+self.delaylist[name].tt=0;
+fn.call();
+}
+},tm);
