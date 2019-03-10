@@ -1169,9 +1169,9 @@ function offonNiceScroll() {
 
 $(document).ready(function() {
 	$(window).on('load resize', function() {
-		offonNiceScroll();
-		menuF();
-		hideItem3();
+		offonNiceScroll() ;
+		menuF() ;
+		hideItem3() ;
 	});
 });
 
