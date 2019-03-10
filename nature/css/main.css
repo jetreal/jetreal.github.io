@@ -2985,6 +2985,7 @@ a.test-popup-link {
   padding: 0 0 0;
   top: 5px;
   width: 100%;
+  height: auto;
   position: relative;
   height: 97.5%;
   overflow-y: hidden;
@@ -5810,8 +5811,8 @@ input::-webkit-inner-spin-button {
   .wrapItem3 {
     padding: 0;
     top: 0;
-    right: 1px;
-    /*height: auto;*/
+    right: 0px;
+    height: auto;
     overflow: hidden; }
   .wrapMenuBtn {
     grid-column: 2;
