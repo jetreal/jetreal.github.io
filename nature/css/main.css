@@ -6001,9 +6001,17 @@ input::-webkit-inner-spin-button {
   .btnLeft button {
     top: 131px; } }
 
-@media only screen and (max-width: 400px) {
-  .g6Cont {
-    font-size: .85em; }
+@media only screen and (max-width: 420px) {
+  .f1Header:before{
+    top: 30px;
+    left: 42px;
+  }
+  .f1Header:after {
+    bottom: -270px;
+    left: 42px;
+  }
+
+  
   .item1 {
     font-size: .9em; }
   .littleLeft {
