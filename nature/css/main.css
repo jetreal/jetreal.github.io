@@ -6025,3 +6025,6 @@ input::-webkit-inner-spin-button {
     font-size: .8em; }
   .grid2 {
     font-size: .8em; } }
+  .footerRight p {
+    font-size: 1em;
+  }
