@@ -2985,7 +2985,6 @@ a.test-popup-link {
   padding: 0 0 0;
   top: 5px;
   width: 100%;
-  height: auto;
   position: relative;
   height: 97.5%;
   overflow-y: hidden;
@@ -6002,16 +6001,14 @@ input::-webkit-inner-spin-button {
     top: 131px; } }
 
 @media only screen and (max-width: 420px) {
-  .f1Header:before{
+  .f1Header:before {
     top: 30px;
-    left: 42px;
-  }
+    left: 42px; }
   .f1Header:after {
     bottom: -270px;
-    left: 42px;
-  }
-
-  
+    left: 42px; }
+  .g6Cont {
+    font-size: .85em; }
   .item1 {
     font-size: .9em; }
   .littleLeft {
@@ -6026,5 +6023,16 @@ input::-webkit-inner-spin-button {
   .grid2 {
     font-size: .8em; }
   .footerRight p {
-    font-size: 1.1em;
-  }
+    font-size: 1.1em; }
+  .icon-to-end {
+    top: 30px;
+    left: 0px;
+    font-size: 1.8em;
+    border: 1px solid gray;
+    -webkit-border-radius: 100%;
+            border-radius: 100%; }
+    .icon-to-end:before {
+      position: relative;
+      bottom: 1px; }
+    .icon-to-end:active {
+      background-color: green; } }
