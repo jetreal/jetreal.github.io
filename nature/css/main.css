@@ -4677,6 +4677,7 @@ input::-webkit-inner-spin-button {
   width: 180px;
   position: relative;
   display: grid;
+  font-size: 0.9em;
   -webkit-align-content: center;
       -ms-flex-line-pack: center;
           align-content: center;
