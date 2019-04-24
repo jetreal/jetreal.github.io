@@ -2109,15 +2109,15 @@ window.addEventListener('scroll', function() {
 }, false);
 
 // lazy load
-$(document).ready(function() {
-	$("img.lazy").lazyload({
-	threshold : 400
-	// event : "click"
-	// effect : "fadeIn"
+// $(document).ready(function() {
+// 	$("img.lazy").lazyload({
+// 	threshold : 400
+// 	// event : "click"
+// 	// effect : "fadeIn"
 
 	
-	});
-});
+// 	});
+// });
 
 //создаем JQuery функцию, которая будет подгружать изображения в буфер
 // jQuery.preloadImages = function()	{
