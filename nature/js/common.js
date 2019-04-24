@@ -1,9 +1,9 @@
 'use strict'
-// $(document).ready(function() {
-// 	setTimeout(function() {
-// 		$(window).trigger('resize');
-// 	},1000);
-// });
+$(document).ready(function() {
+	setTimeout(function() {
+		$(window).trigger('resize');
+	},1000);
+});
 
 // start forest function without flicker when reload page
 $(window).on('load', function() {
