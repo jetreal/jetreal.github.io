@@ -1,0 +1,15 @@
+.headerDiv {
+    text-align: center;
+    height: 100px;
+    margin: 0 auto;
+    width: 80%;
+    display: grid;
+    align-content: center;
+    background: linear-gradient(to left,#adb9b9,#fff,#adb9b9);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(31, 59, 17);
+    font-family: 'Ubuntu';
+    letter-spacing: .2em;
+    font-style: italic;
+  }
