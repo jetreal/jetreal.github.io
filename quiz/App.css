@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  height: 100vh;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 80px;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  color: white;
+  border-bottom: 1px solid white;
+}
+.App-header p {
+  font-size: 1.2em;
+  letter-spacing: .2em;
+}
+
+.App-link {
+  color: #61dafb;
+}

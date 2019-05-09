@@ -1,0 +1,14 @@
+
+.note-list {
+  margin: initial;
+  padding: initial;
+  list-style: none;
+  background: linear-gradient(to left,#adb9b9,#fff,#adb9b9);
+  margin: 0 auto;
+  width: 80%;
+}
+
+.note-list li {
+  position: relative;
+}
+

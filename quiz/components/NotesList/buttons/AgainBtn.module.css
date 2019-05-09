@@ -1,0 +1,23 @@
+.add-note {
+    /* display: block; */
+    height: 38px;
+    background: #f7f8f8;
+    border: none;
+    width: 100%;
+    max-width: 400px;
+    cursor: pointer;
+    outline: none;
+    z-index: 0;
+    margin: 0 auto;
+    border: 1px dashed gray;
+    opacity: 0.8;
+    transition: opacity .3s;
+    letter-spacing: .2em;
+    font-size: 1.4em;
+    border-radius: 10px;
+}
+.add-note:hover {
+    opacity: 1;
+    transition: opacity .3s;
+    background-color: rgb(208, 226, 194);
+}
