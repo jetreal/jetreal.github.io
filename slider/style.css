@@ -1,0 +1,112 @@
+body {
+	background: gray;
+	overflow-y: hidden;
+}
+
+.wrappDiv {
+	display: grid;
+	align-content: center;
+	height: 80vh;
+	transition: all .5s;
+}
+
+.slider {
+	width: 900px;
+	margin: 0 auto;
+	border: 1px solid gray;
+	height: 200px;
+	display: grid;
+	grid-template-columns: auto auto auto auto auto;
+	justify-content: center;
+	overflow: hidden;
+	box-shadow: 4px 4px 10px black;
+	position: relative;
+	z-index: 1;
+	border-radius: 5px;
+} 
+.slider:hover {
+	transition: transform .2s;
+}
+
+.slider p {
+	text-align: center;
+	position: relative;
+	top: -90px;
+	color: white;
+	font-size: 2em;
+	font-family: 'Sofia', cursive;
+	text-shadow: 3px -3px 5px white;
+	transition: all .3s;
+}
+.slider p:hover {
+	transition: all .3s;
+	transform: scale(1.1, 1.1);
+}
+
+@media screen and (max-width: 992px) {
+	.slider
+		{ 
+			grid-template-columns: auto auto auto auto;
+		  	width: 600px;
+		}
+}
+
+@media screen and (max-width: 768px) {
+	.slider
+		{ 
+			grid-template-columns: auto auto auto;
+		  	width: 300px;
+		}
+}
+
+.slider > div {
+	width: 300px;
+	transform: translateX(0px);
+}
+
+.slider img {
+	max-width: 100%;
+	height: 200px;
+
+}
+.slider div::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(2,2,2,.5);
+}
+
+.buttonLeft{
+	z-index: 1;
+	position: relative;
+	left: 50px;
+	position: absolute;
+	top: 100px;
+	border-radius: 100%;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	box-shadow: 4px 4px 10px black;
+}
+.buttonRight{
+	z-index: 1;
+	right: 50px;
+	position: absolute;
+	top: 100px;
+	border-radius: 100%;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	box-shadow: 4px 4px 10px black;
+}
+button:hover {
+	transition: all .1s;
+	transform: scale(.9, .9);
+}
+button:active {
+	background-color: lightblue;
+}
+
