@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.2bcbc5ac.chunk.css",
+    "main.css": "./static/css/main.2db0d54c.chunk.css",
     "main.js": "./static/js/main.df90054b.chunk.js",
     "main.js.map": "./static/js/main.df90054b.chunk.js.map",
     "runtime~main.js": "./static/js/runtime~main.d653cc00.js",
@@ -8,9 +8,9 @@
     "static/js/2.b229e4a4.chunk.js": "./static/js/2.b229e4a4.chunk.js",
     "static/js/2.b229e4a4.chunk.js.map": "./static/js/2.b229e4a4.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.f4490dd9183cef0ff94e8e0bc8efab8b.js": "./precache-manifest.f4490dd9183cef0ff94e8e0bc8efab8b.js",
+    "precache-manifest.9990b0d426039443fa4cf43e8514f081.js": "./precache-manifest.9990b0d426039443fa4cf43e8514f081.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/main.2bcbc5ac.chunk.css.map": "./static/css/main.2bcbc5ac.chunk.css.map",
+    "static/css/main.2db0d54c.chunk.css.map": "./static/css/main.2db0d54c.chunk.css.map",
     "static/media/leftSidebar.module.sass": "./static/media/backLeft2.300e9b23.jpg",
     "static/media/rightSidebar.module.sass": "./static/media/backRight.a9812764.jpg",
     "static/media/footer.module.sass": "./static/media/flow.48bd3a9c.jpg"
