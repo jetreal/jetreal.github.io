@@ -2086,7 +2086,7 @@ $(document).ready(function() {
 		(function() {
 		  $(window).on("load",function(){
 		    $("a[href*='#']").mPageScroll2id({
-		    	scrollSpeed: 300,
+		    	scrollSpeed: 700,
 		    	// onStart:function(){},
 		    	// onComplete:function(){}
 		    });
