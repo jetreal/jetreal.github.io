@@ -2127,7 +2127,7 @@ jQuery.preloadImages = function()	{
 };
 setTimeout(function() {
 	$.preloadImages(preloadImages);
-}, 700)
+}, 500)
 const preloadImages = [
 	"img/images/fields/1.webp",
 	"img/images/fields/2.webp",
