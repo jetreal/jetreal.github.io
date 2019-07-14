@@ -224,6 +224,7 @@ function film() {
 		 			fl = 0;
 		 			$('.wr17').css({'transform': 'scale(.71,.71)'});
 		 		}, 32000);
+
 		 	});
 
 	  } else if ($('html').outerWidth() < 700 && flagi == true) {
