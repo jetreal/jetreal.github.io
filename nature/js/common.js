@@ -2126,7 +2126,8 @@ jQuery.preloadImages = function()	{
   }
 };
 setTimeout(function() {
-	$.preloadImages("img/images/fields/1.webp",
+	$.preloadImages('img/images/button2.webp',
+	"img/images/kanari2.webp",
 	"img/images/fields/2.webp",
 	"img/images/fields/3.webp",
 	"img/images/fields/4.webp",
@@ -2141,6 +2142,7 @@ setTimeout(function() {
 	'img/images/Gavai1.webp',
 	'img/images/Gavai2.webp',
 	'img/images/kanari1.webp',
-	'img/images/kanari2.webp');
-}, 500)
+	'img/images/kanari2.webp',
+	);
+}, 250)
 
