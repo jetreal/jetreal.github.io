@@ -180,7 +180,7 @@ function film() {
 				'box-shadow': '3px 3px 6px #19B9F5, -3px -3px 6px #19B9F5,\
 					-3px 3px 6px #19B9F5, 3px -3px 6px #19B9F5'});
 			// css
-			$('.circleImg').attr({ 'src': '/img/images/button2.webp' });
+			$('.circleImg').attr({ 'src': 'img/images/button2.webp' });
 			$('.wr17 .into03, .wr17 .into04, .wr17 .into05, .wr17 .into06')
 				.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 			$('.bDiv').css('border', '1px solid #19B9F5');
@@ -190,7 +190,7 @@ function film() {
 				$('.circleImg').off('click');
 				$('.circleImg').one('click', offTimerHeader);
 				// css
-				$('.circleImg').attr('src', '/img/images/button3.webp');
+				$('.circleImg').attr('src', 'img/images/button3.webp');
 				$('.circleImg').css({
 					width: '150px', height: '150px',
 					'box-shadow': '3px 3px 6px gray, -3px -3px 6px gray,\
