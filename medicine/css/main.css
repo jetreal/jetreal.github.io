@@ -13,7 +13,7 @@ body {
 
 .firstSection {
   width: 100%;
-  background-image: url("images/mainBg.png");
+  background-image: url("../../images/mainBg.png");
   height: 750px;
   background-repeat: no-repeat;
   background-position: center;
@@ -30,7 +30,7 @@ body {
   position: absolute;
   left: 205px;
   top: 50px;
-  background-image: url("images/headerLogo.png");
+  background-image: url("../../images/headerLogo.png");
   background-repeat: no-repeat; }
 
 .wrapperNavBar {
@@ -204,7 +204,7 @@ body {
 .mobile {
   width: 332px;
   height: 644px;
-  background-image: url("images/mobile.png");
+  background-image: url("../../images/mobile.png");
   z-index: 1;
   display: block; }
   .mobile div:first-child {
@@ -308,7 +308,7 @@ body {
   position: absolute;
   top: -70px;
   width: 100%;
-  background-image: url("images/footerArc.png");
+  background-image: url("../../images/footerArc.png");
   background-repeat: no-repeat;
   background-position: center; }
 
@@ -348,22 +348,22 @@ body {
     background-position: center; }
 
 .icon1 {
-  background-image: url("images/item1.png"); }
+  background-image: url("../../images/item1.png"); }
 
 .icon2 {
-  background-image: url("images/item2.png"); }
+  background-image: url("../../images/item2.png"); }
 
 .icon3 {
-  background-image: url("images/item3.png"); }
+  background-image: url("../../images/item3.png"); }
 
 .icon4 {
-  background-image: url("images/item4.png"); }
+  background-image: url("../../images/item4.png"); }
 
 .icon5 {
-  background-image: url("images/item5.png"); }
+  background-image: url("../../images/item5.png"); }
 
 .icon6 {
-  background-image: url("images/item6.png"); }
+  background-image: url("../../images/item6.png"); }
 
 .icon_text {
   display: grid;
