@@ -1,0 +1,141 @@
+doctype html
+html(lang='en')
+  head
+    title test
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='css/main.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+    script(src='js/index.js', defer='')
+    script(src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous")
+    link(href='https://fonts.googleapis.com/css?family=Sofia', rel='stylesheet')
+  body
+    .elipsBindPoint
+      img(src="images/lines2.png" id="line1" alt="")
+    .firstSection
+
+      .header
+        .logo
+        .wrapperNavBar
+          .navBar
+            .item1
+              div
+                p.navTexts О сервисе
+              .underline
+            .item2
+              div
+                p.navTexts Функции
+              .underline
+            .item3
+              div
+                p.navTexts Возможности
+              .underline
+            .item4
+              div
+                p.navTexts Партнёры
+              .underline
+          .wrapButton
+            button
+              p
+                | Оставить заявку
+      .firstSectionCenterText
+        .headText
+          h1
+            | Расширяем возможности предоставления качественных медицинских услуг
+        .paragraphText
+          p
+            | "Дневник здоровья" - новый сервис для самоконтроля
+            br
+            | показателей состояния здоровья, разработанный для
+            br
+            | участников программы "Моё здоровье".
+        .wrapperButton
+          button
+            | Узнать больше
+      //- .elips1Down
+    .middleSection
+      .wrapperMobileAndText
+        .mobile
+          div
+            form(action="submit" )
+              input(text="text" placeholder="логин")
+              input(text="text" placeholder="пароль")
+              input(type="submit" value="Войти")
+        .others
+          h2
+            | Что такое "Дневник здоровья"?
+          p
+            | Дневник пациента - это удобный онлайн-сервис:  
+          ul
+            li
+              | Вносите результаты измерений вручную или с помощью
+              br
+              | интегрированных приборов
+            li
+              | Ведите персщнфльную медицинскую карту с историей
+              br
+              | ваших измерений
+            li
+              | Делитесь рузультатами измерений со специалистами
+              br
+              | для повышения эффективности лечения
+            li
+              | Получайте рекоменадации, созданные специально для вас
+          .wrapper2SectionButton
+            button
+              | Оставить заявку
+      .bindPoingPuls
+        img(src="images/puls.png" alt="")
+
+    .footerSection
+      .footerArc
+      .footerHeader
+        h3
+          | Функции приложения
+      .footerSection_items
+        div
+          .icon1
+          .icon_text
+            p
+              | Планирование графика
+              br
+              | приём лекарств
+        div
+          .icon2
+          .icon_text
+            p
+              | Уведомление врача
+              br
+              | об исполнении назначений
+        div
+          .icon3
+          .icon_text
+            p
+              | Ведение дневника
+              br
+              | самочувствия
+        div
+          .icon4
+          .icon_text
+            p
+              | Удалённое предоставление
+              br
+              | изменений врачу
+        div
+          .icon5
+          .icon_text
+            p
+              | Общение с врачами
+              br
+              | через встроенный месседжер
+        div
+          .icon6
+          .icon_text
+            p
+              | Получение уведомлений
+              br
+              | для выполнения назначений
+
+

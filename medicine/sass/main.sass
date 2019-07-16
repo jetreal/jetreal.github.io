@@ -1,0 +1,368 @@
+@import "media"
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    width: 1920px
+    background-color: gray
+    max-width: 1920px
+    min-width: 1366px
+    height: 2420px
+
+// firstSection
+.firstSection
+    width: 100%
+    background-image: url('/images/mainBg.png')
+    height: 750px
+    background-repeat: no-repeat
+    background-position: center
+    background-color: white
+.header
+    position: relative
+    width: 100%
+    height: 100px
+.logo
+    width: 200px
+    height: 50px
+    position: absolute
+    left: 205px
+    top: 50px
+    background-image: url('/images/headerLogo.png')
+    background-repeat: no-repeat
+.wrapperNavBar
+    position: relative
+    left: 100px
+    margin: 0 auto
+    width: 1000px
+    height: 100px
+    display: grid
+    grid-template-columns: auto 200px
+.navBar
+    position: relative
+    top: 32px
+    transform: translateX(10px)
+    width: auto
+    display: grid
+    justify-content: center
+    grid-column-gap: 40px
+    grid-template-columns: auto auto auto auto
+.item1, .item2, .item3, .item4
+
+    position: relative
+    width: auto
+    padding: 0 10px
+    height: 40px
+    display: grid
+    align-content: center
+    justify-content: center
+    cursor: pointer
+    & p
+
+        font-family: 'CeraRoundPro-Bold'
+        letter-spacing: .1em
+        font-size: 1.1rem
+        color: #fff
+
+
+// .item1
+//     left: 20px
+.underline
+    position: relative
+    width: 6px
+    height: 6px
+    margin: 0 auto
+    background-color: rgba(255, 255, 255, .8)
+    border-radius: 100px
+    transition: all .5s
+    // opacity: 0
+    z-index: 1
+    // pointer-events: none
+
+.wrapButton button
+    margin-top: 20px
+    background-color: Transparent
+    width: 200px
+    height: 56px
+    border: 1px solid rgba(255, 255, 255, .3)
+    top: 20px
+    dispay: grid
+    align-content: center
+    justify-content: center
+    border-radius: 35px
+    color: #fff
+    font-size: 1.1rem
+    transition: all .4s
+    background-color: rgba(0, 0, 0, .1)
+    font-family: 'CeraRoundPro-Bold'
+    &:hover
+        color: rgba(60, 60, 60, 1)
+        background-color: rgba(255, 255, 255, .8)
+        box-shadow: 2px 2px 2px rgba(10,10,10,.2), -2px -2px 2px rgba(10,10,10,.2), -2px 2px 2px rgba(10,10,10,.2), 2px -2px 2px rgba(10,10,10,.2)
+
+.elips1BindPoint
+    margin: 0 auto
+    position: relative
+    width: 0px
+    height: 50px
+    border: 1px solid black
+#line1
+    width: auto
+    position: absolute
+    top: 0px
+    left: 0px
+.firstSectionCenterText
+    width: 800px
+    height: 360px
+    margin: 0 auto
+    position: relative
+    top: 90px
+    color: white
+    line-height: 2em
+.headText
+    & h1
+        line-height: 1.75em
+        text-align: center
+        font-size: 2em
+        font-family: 'CeraRoundPro-Medium'
+        letter-spacing: .1em
+.paragraphText
+    margin-top: 30px
+    padding: 0 30px
+    & p
+        line-height: 1.5em
+        word-spacing: .2em
+        text-align: center
+        font-size: 1.7em
+        font-family: 'CeraRoundPro-Medium'
+        white-space: nowrap
+.wrapperButton
+    width: 180px
+    height: 60px
+    margin: 0 auto
+    margin-top: 50px
+    display: grid
+    justify-content: center
+    & button
+        border: 0px
+        out-line: none
+        border-radius: 35px
+        background-color: #E70067
+        width: 180px
+        height: 60px
+        color: #fff
+        font-size: 1.15em
+        transition: all 1s
+        box-shadow: 1px 1px 2px rgba(0,0,0,.5), -1px -1px 2px rgba(0,0,0,.5)
+        margin: 0 auto
+        font-family: 'Geometria-Medium'
+        &:hover
+            width: 260px
+            background-color: #C9005A
+// middleSection
+.middleSection
+    height: 950px
+    border: 1px solid rgb(250,250,255)
+    background-color: rgb(250, 250, 255)
+.wrapperMobileAndText
+    margin: 0 auto
+    margin-top: 150px
+    width: 950px
+    height: 620px
+    display: grid
+    grid-template-columns: auto auto
+    
+.mobile
+    width: 332px
+    height: 644px
+    background-image: url('/images/mobile.png')
+    z-index: 1
+    display: block
+    & div:first-child
+        position: relative
+        left: 42px
+        top: 334px
+    & form input
+        text-align: left
+        text-indent: 10px
+        height: 27px
+        width: 193px
+    & input:nth-child(2)
+        margin-top: 15px
+    & input:nth-child(3)
+        text-indent: 0px
+        margin-top: 16px
+        text-align: center
+        color: white
+        background-image: linear-gradient(#2568AE, #33467C)
+        border: 1px solid #33467C
+        cursor: pointer
+        &:hover
+            color: #1CB4E4
+        &:active
+            background-image: linear-gradient(#33467C, #2568AE)
+.others
+    width: 600px
+    height: 100%
+    color: #60759D
+    line-height: 1.6em
+    padding: 0 0 0 40px 
+    font-family: 'CeraRoundPro-Medium'
+    & h2
+        margin-top: 100px
+        font-size: 2em
+    & p
+        margin-top: 30px
+
+    & li
+        position: relative
+        margin-top: 16px
+        padding-left: 15px
+        list-style-type: none
+        &:before
+            position: absolute
+            top: 10px
+            content: " "
+            color: #74CEED
+            left: -15px
+            width: 5px
+            height: 5px
+            border-radius: 100%
+            background-color: #74CEED
+.wrapper2SectionButton
+    position: relative
+    left: 18px
+    width: 200px
+    height: 60px
+    // margin: 0 auto
+    margin-top: 50px
+    display: grid
+    justify-content: center
+    & button
+        border: 0px
+        out-line: none
+        border-radius: 40px
+        background-color: #E70067
+        width: 200px
+        height: 60px
+        color: #fff
+        font-size: 1.15em
+        transition: all 1s
+        box-shadow: 1px 1px 2px rgba(0,0,0,.5), -1px -1px 2px rgba(0,0,0,.5)
+        font-family: 'CeraRoundPro-Bold'
+        &:hover
+            width: 260px
+            background-color: #C9005A
+.bindPoingPuls
+    position: relative
+    margin: 0 auto
+    width: 0
+    height: 0
+    & img
+        position: absolute
+        top: -203px
+        left: 329px
+// footerSection
+.footerArc
+    height: 70px
+    position: absolute
+    top: -70px
+    width: 100%
+    background-image: url('/images/footerArc.png')
+    background-repeat: no-repeat
+    background-position: center
+
+.footerSection
+    top: -85px
+    position: relative
+    height: 715px
+    background-color: #F1F3FB
+    font-family: 'CeraRoundPro-Medium'
+
+.footerHeader
+    margin: 0 auto
+    width: 420px
+    height: auto
+    margin-top: 85px
+    & h3
+        font-size: 2em
+        text-align: center
+        letter-spacing: .12em
+        color: #60759D
+        
+.footerSection_items
+    margin: 0 auto
+    margin-top: 65px
+    width: 1040px
+    height: 420px
+    // border: 1px solid green
+    display: grid
+    grid-template-columns: auto auto auto
+    grid-template-rows: 210px 210px
+    & div
+        // border: 1px solid #CBE7F7
+    & div div:first-child
+        width: 80px
+        height: 80px
+        margin: 0 auto
+        border: 1px solid #CBE7F7
+        border-radius: 100%
+        background-repeat: no-repeat
+        background-position: center
+        
+.icon1
+    background-image: url('/images/item1.png')
+.icon2
+    background-image: url('/images/item2.png')
+.icon3
+    background-image: url('/images/item3.png')
+.icon4
+    background-image: url('/images/item4.png')
+.icon5
+    background-image: url('/images/item5.png')
+.icon6
+    background-image: url('/images/item6.png')
+.icon_text
+    display: grid
+    align-content: center
+    justify-content: center
+    height: auto
+    & p
+        text-align: center
+        margin-top: 25px
+        color: #60759D
+        line-height: 1.7em
+        font-size: 1.2em
+
+
+
+
+@font-face
+    font-family: 'font4fca61df8d93f64cf79fd4dc833bce1b'
+    src: url('https://nomail.com.ua/files/eot/4fca61df8d93f64cf79fd4dc833bce1b.eot?#iefix') format('embedded-opentype'), url('https://nomail.com.ua/files/woff/4fca61df8d93f64cf79fd4dc833bce1b.woff') format('woff'), url('https://nomail.com.ua/files/woff2/4fca61df8d93f64cf79fd4dc833bce1b.woff2') format('woff2')
+
+
+@font-face
+    font-family: 'CeraRoundPro-Bold'
+    src: local('CeraRoundPro-Bold'), url('https://nomail.com.ua/files/woff/4fca61df8d93f64cf79fd4dc833bce1b.woff') format('woff')
+
+
+@font-face 
+    font-family: 'fontd8ab35a62595177faf38ca532f8fe3e3'
+    src:    url('https://nomail.com.ua/files/eot/d8ab35a62595177faf38ca532f8fe3e3.eot?#iefix') format('embedded-opentype'), url('https://nomail.com.ua/files/woff/d8ab35a62595177faf38ca532f8fe3e3.woff') format('woff'), url('https://nomail.com.ua/files/woff2/d8ab35a62595177faf38ca532f8fe3e3.woff2') format('woff2')
+
+
+@font-face 
+    font-family: 'Geometria-Medium'
+    src: local('Geometria-Medium'), url('https://nomail.com.ua/files/woff/d8ab35a62595177faf38ca532f8fe3e3.woff') format('woff')
+
+@font-face 
+    font-family: 'fontfea79d41994908a221c6dcaa364e59dd'
+    src:    url('https://nomail.com.ua/files/eot/fea79d41994908a221c6dcaa364e59dd.eot?#iefix') format('embedded-opentype'), url('https://nomail.com.ua/files/woff/fea79d41994908a221c6dcaa364e59dd.woff') format('woff'), url('https://nomail.com.ua/files/woff2/fea79d41994908a221c6dcaa364e59dd.woff2') format('woff2')
+
+
+@font-face 
+    font-family: 'CeraRoundPro-Medium'  
+    src: local('CeraRoundPro-Medium'), url('https://nomail.com.ua/files/woff/fea79d41994908a221c6dcaa364e59dd.woff') format('woff')
