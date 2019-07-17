@@ -28,8 +28,8 @@ body {
   width: 200px;
   height: 50px;
   position: absolute;
-  left: 205px;
-  top: 50px;
+  left: 338px;
+  top: 29px;
   background-image: url("../images/headerLogo.png");
   background-repeat: no-repeat; }
 
@@ -141,23 +141,32 @@ body {
   line-height: 2em; }
 
 .headText h1 {
+  position: relative;
+  left: -20px;
   line-height: 1.75em;
   text-align: center;
   font-size: 2em;
-  font-family: 'CeraRoundPro-Medium';
- }
+  font-family: 'CeraRoundPro-Medium'; }
 
 .paragraphText {
   margin-top: 30px;
   padding: 0 30px; }
   .paragraphText p {
+    position: relative;
+    left: -5px;
+    -webkit-transform: translateX(-20px);
+        -ms-transform: translateX(-20px);
+            transform: translateX(-20px);
     line-height: 1.5em;
+    word-spacing: .1em;
     text-align: center;
-    font-size: 1.7em;
+    font-size: 1.3em;
     font-family: 'CeraRoundPro-Medium';
     white-space: nowrap; }
 
 .wrapperButton {
+  position: relative;
+  left: -16px;
   width: 180px;
   height: 60px;
   margin: 0 auto;
@@ -186,6 +195,32 @@ body {
     .wrapperButton button:hover {
       width: 260px;
       background-color: #C9005A; }
+
+.slideButton {
+  width: 70px;
+  height: 17px;
+  border: 1px solid #5489C3;
+  margin: 0 auto;
+  position: relative;
+  top: 220px;
+  left: -20px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: auto auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  grid-gap: 8px; }
+  .slideButton div {
+    width: 16px;
+    height: 1px;
+    border-top: 1px solid #5489C3; }
+  .slideButton div:nth-child(1) {
+    border-top: 1px solid white; }
 
 .middleSection {
   height: 950px;
