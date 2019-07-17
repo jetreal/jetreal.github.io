@@ -197,6 +197,7 @@ body {
       background-color: #C9005A; }
 
 .slideButton {
+  opacity: .5;
   width: 70px;
   height: 17px;
   border: 1px solid #5489C3;
