@@ -23,6 +23,7 @@ body {
 	position: relative;
 	z-index: 1;
 	border-radius: 5px;
+	background-color: black;
 } 
 .slider:hover {
 	transition: transform .2s;
