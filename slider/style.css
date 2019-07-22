@@ -8,12 +8,14 @@ body {
 	align-content: center;
 	height: 80vh;
 	transition: all .5s;
+	
+	
 }
 
 .slider {
 	width: 900px;
 	margin: 0 auto;
-	border: 1px solid gray;
+	/* border: 1px solid gray; */
 	height: 200px;
 	display: grid;
 	grid-template-columns: auto auto auto auto auto;
@@ -67,11 +69,10 @@ body {
 	border-right: 1px solid grba(20, 20, 20, 1);
 }
 
-
 .slider img {
 	max-width: 100%;
 	height: 200px;
-	border: 1px solid gray;
+
 }
 .slider div::before {
 	content: "";
