@@ -63,6 +63,8 @@ body {
 .slider > div {
 	width: 300px;
 	transform: translateX(0px);
+	border: 1px solid transparant;
+	border-right: 1px solid grba(20, 20, 20, 1);
 }
 
 .slider img {
