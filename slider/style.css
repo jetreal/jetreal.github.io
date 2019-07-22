@@ -82,6 +82,7 @@ body {
 }
 
 .buttonLeft{
+	outline: none;
 	z-index: 1;
 	position: relative;
 	left: 50px;
@@ -94,6 +95,7 @@ body {
 	box-shadow: 4px 4px 10px black;
 }
 .buttonRight{
+	outline: none;
 	z-index: 1;
 	right: 50px;
 	position: absolute;
