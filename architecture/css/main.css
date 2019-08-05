@@ -19,7 +19,7 @@
   left: 4px;
   width: 202px;
   height: 50px;
-  background-image: url("/images/header-logo.png"); }
+  background-image: url("../images/header-logo.png"); }
 
 .header-nav {
   display: inline-block;
@@ -90,7 +90,7 @@
     top: 3px;
     width: 15px;
     height: 20px;
-    background-image: url(/images/map-point.png); }
+    background-image: url(../images/map-point.png); }
 
 .presentation-section {
   display: grid;
@@ -108,13 +108,13 @@
 .slider-section__main-slider {
   width: 635px;
   height: 100%;
-  background-image: url("/images/mainSlider.jpg"); }
+  background-image: url("../images/mainSlider.jpg"); }
 
 .slider-nav-images {
   width: 125px; }
 
 .slider-nav-images__item {
-  background-image: url("/images/navImage.jpg");
+  background-image: url("../images/navImage.jpg");
   width: 125px;
   height: 112px; }
 
@@ -310,7 +310,7 @@
   grid-template-columns: 555px 555px; }
 
 .drawing-section-image-wiew__item {
-  background-image: url("/images/plan.png");
+  background-image: url("../images/plan.png");
   background-repeat: no-repeat;
   background-position: center;
   margin: 10px; }
@@ -323,7 +323,7 @@
   margin: 0 auto; }
 
 .want-to-change__plan {
-  background-image: url(/images/plans.png);
+  background-image: url(../images/plans.png);
   background-repeat: no-repeat;
   background-position: 0 25px; }
 
@@ -357,7 +357,7 @@
   width: 1920px;
   height: 680px;
   margin: 0 auto;
-  background-image: url("/images/formSectionBg.png");
+  background-image: url("../images/formSectionBg.png");
   background-repeat: no-repeat;
   background-position: 0 -10px; }
 
@@ -406,7 +406,7 @@
     position: absolute;
     width: 25px;
     height: 25px;
-    background-image: url(/images/inputManIcon.png);
+    background-image: url(../images/inputManIcon.png);
     background-repeat: no-repeat;
     top: 7px; }
 
@@ -417,7 +417,7 @@
     position: absolute;
     width: 25px;
     height: 25px;
-    background-image: url(/images/inputPhoneIcon.png);
+    background-image: url(../images/inputPhoneIcon.png);
     background-repeat: no-repeat;
     top: 7px; }
 
@@ -456,7 +456,7 @@
     -o-transition: .2s;
     transition: .2s; }
   .formSection-main__checkbox input + label:after {
-    content: attr(href= "/images/map-point.png");
+    content: attr(href= "../images/map-point.png");
     position: absolute;
     top: 3px;
     left: 1px;
@@ -475,7 +475,7 @@
     transition: .2s; }
   .formSection-main__checkbox input:checked + label:after {
     content: '';
-    background-image: url("/images/checked.png"); }
+    background-image: url("../images/checked.png"); }
   .formSection-main__checkbox p {
     font-size: .85em; }
 
@@ -557,7 +557,7 @@
   -webkit-box-shadow: 0 0 40px 0 #000105;
           box-shadow: 0 0 40px 0 #000105;
   font-size: 1.2em;
-  background-image: url(/images/play.png);
+  background-image: url(../images/play.png);
   background-repeat: no-repeat;
   background-size: cover; }
   .walk-around-center-button:hover {
@@ -605,12 +605,12 @@
   font-weight: bold; }
 
 .priceTable-checked {
-  background-image: url(/images/checkIcon.png);
+  background-image: url(../images/checkIcon.png);
   background-repeat: no-repeat;
   background-position: center; }
 
 .priceTable-unchecked {
-  background-image: url(/images/iconCross.png);
+  background-image: url(../images/iconCross.png);
   background-repeat: no-repeat;
   background-position: center; }
 
@@ -633,7 +633,7 @@
   margin: 0 auto; }
 
 .priceTable-section-pdf__icon {
-  background-image: url(/images/pdf_icon.png);
+  background-image: url(../images/pdf_icon.png);
   width: 74px;
   height: 74px;
   cursor: pointer;
@@ -689,16 +689,16 @@
   background-position: center; }
 
 .our-suggestion-item-section-item__icon_bg1 {
-  background-image: url(/images/suggestionIcon1.png); }
+  background-image: url(../images/suggestionIcon1.png); }
 
 .our-suggestion-item-section-item__icon_bg2 {
-  background-image: url(/images/suggestionIcon2.png); }
+  background-image: url(../images/suggestionIcon2.png); }
 
 .our-suggestion-item-section-item__icon_bg3 {
-  background-image: url(/images/suggestionIcon3.png); }
+  background-image: url(../images/suggestionIcon3.png); }
 
 .our-suggestion-item-section-item__icon_bg4 {
-  background-image: url(/images/suggestionIcon4.png); }
+  background-image: url(../images/suggestionIcon4.png); }
 
 .our-suggestion-item-section-item__header {
   text-align: center;
@@ -747,7 +747,7 @@
   margin: 24px 0 0 0;
   width: 233px;
   height: 151px;
-  background-image: url(/images/compass.png); }
+  background-image: url(../images/compass.png); }
 
 .submit-your-application-text-and-button {
   width: 323px; }
@@ -769,7 +769,7 @@
 .want-to-watch__image {
   width: 377px;
   height: 243px;
-  background-image: url(/images/bookAndMobile.png);
+  background-image: url(../images/bookAndMobile.png);
   background-position: 0 10px; }
 
 .want-to-watch-text-and-button {
