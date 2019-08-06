@@ -11,8 +11,7 @@
 
 .header-logo-section {
   width: 230px;
-  height: 100%;
-  oline: 1px solid green; }
+  height: 100%; }
 
 .header-logo-section__header-logo {
   position: relative;
@@ -23,19 +22,22 @@
 
 .header-nav {
   display: inline-block;
-  width: 280px;
+  width: 330px;
   font-size: .9em;
   margin-top: 25px;
   list-slyle-type: none; }
-  .header-nav span {
-    color: #b8b8b8; }
+  .header-nav a {
+    color: #00809E;
+    text-decoration: underline; }
+  .header-nav a:hover {
+    text-decoration: none; }
 
-.header-nav__imem {
+.header-nav__item {
   display: inline-block;
   font-family: 'MyriadProRegular';
   color: #b8b8b8; }
 
-.header-nav__imem_last-color {
+.header-nav__item_last-color {
   color: #393939; }
 
 .header-phone-section {
@@ -56,6 +58,8 @@
   height: 35px;
   font-size: 1.65em;
   font-family: 'Gilroy_ExtraBold'; }
+  .wrapp-phone-and-btn__phone:hover {
+    color: #0056B3; }
 
 .wrapp-phone-and-btn__button {
   color: #00809E;
@@ -69,9 +73,12 @@
   border: 1px solid #00809E;
   font-family: 'MyriadProBold';
   font-size: 1.1em;
-  line-height: 15px; }
+  line-height: 15px;
+  text-decoration: underline; }
   .wrapp-phone-and-btn__button:hover {
-    text-decoration: underline; }
+    text-decoration: none;
+    background-color: #00809E;
+    color: white; }
 
 .header-phone-section__down-txt {
   width: 170px;
@@ -82,7 +89,8 @@
   top: 20px;
   left: -10px;
   font-family: 'MyriadProRegular';
-  color: #8a8b8c; }
+  color: #8a8b8c;
+  text-decoration: underline; }
   .header-phone-section__down-txt:before {
     content: ' ';
     position: absolute;
@@ -105,18 +113,60 @@
   width: 760px;
   height: 100%; }
 
-.slider-section__main-slider {
+.slider-section-main-slider {
+  position: relative;
   width: 635px;
   height: 100%;
   background-image: url("../../images/mainSlider.jpg"); }
+
+.center-crosshair {
+  width: 80px;
+  height: 80px;
+  background-color: #F1F6F8;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-image: url(../../images/crosshair.png);
+  background-repeat: no-repeat;
+  background-position: center; }
+  .center-crosshair:hover {
+    opacity: .5; }
 
 .slider-nav-images {
   width: 125px; }
 
 .slider-nav-images__item {
+  position: relative;
+  display: grid;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-image: url("../../images/navImage.jpg");
   width: 125px;
-  height: 112px; }
+  height: 112px;
+  opacity: .5; }
+  .slider-nav-images__item:hover {
+    opacity: 1; }
+
+.slider-nav-images__item_active {
+  background-color: rgba(235, 145, 126, 0.7); }
+  .slider-nav-images__item_active:before {
+    opacity: 1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #EB917E; }
 
 .buttons-section {
   width: 350px;
@@ -141,6 +191,7 @@
   color: #676767; }
 
 .project-word__bottom-prise {
+  display: inline-block;
   margin-top: 10px;
   display: grid;
   -webkit-align-content: center;
@@ -151,12 +202,18 @@
   .project-word__bottom-prise p {
     font-size: 1.5em;
     font-weight: bold; }
+  .project-word__bottom-prise span {
+    padding: 0 0 0 4px;
+    font-size: 0.86em; }
 
 .buttons-section__button {
   height: 58px;
   width: 256px;
   margin: 0 auto; }
   .buttons-section__button button {
+    font-family: 'MyriadProRegular';
+    font-size: 1.1em;
+    letter-spacing: 0.05em;
     border-radius: 27px;
     background-image: -webkit-gradient(linear, left top, right top, from(#FD6446), to(#F2B967));
     background-image: -o-linear-gradient(left, #FD6446, #F2B967);
@@ -174,6 +231,7 @@
       background-image: linear-gradient(90deg, #FD6446, #FD6446); }
 
 .buttons-section__product-prise {
+  font-family: "Gilroy_Medium";
   height: 80px;
   display: grid;
   -webkit-align-content: end;
@@ -185,6 +243,10 @@
   .buttons-section__product-prise h6 {
     font-size: 1em;
     margin-bottom: 8px; }
+  .buttons-section__product-prise h6 .fas.fa-ruble-sign {
+    font-size: .76em; }
+  .buttons-section__product-prise p {
+    font-family: 'MyriadProRegular'; }
 
 .social-icons {
   display: grid;
@@ -202,6 +264,11 @@
   margin-left: 40px; }
 
 .social-icons__icons-item {
+  -webkit-transition: opacity .25s, -webkit-box-shadow .25s ease;
+  transition: opacity .25s, -webkit-box-shadow .25s ease;
+  -o-transition: opacity .25s, box-shadow .25s ease;
+  transition: opacity .25s, box-shadow .25s ease;
+  transition: opacity .25s, box-shadow .25s ease, -webkit-box-shadow .25s ease;
   width: 100%;
   height: 100%;
   margin: 0 1px;
@@ -217,7 +284,12 @@
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  opacity: .8;
   color: #fff; }
+  .social-icons__icons-item:hover {
+    -webkit-box-shadow: 1px 1px 1px rgba(100, 100, 100, 0.5);
+            box-shadow: 1px 1px 1px rgba(100, 100, 100, 0.5);
+    opacity: 1; }
 
 .social-icons__icons-item_bg1 {
   background-color: #4A76A8; }
@@ -248,7 +320,6 @@
   position: relative;
   width: 1110px;
   height: 835px;
-  border: 1px solid pink;
   margin: 0 auto; }
 
 .drawing-section__common-underline {
@@ -271,6 +342,9 @@
   height: 100%; }
 
 .drawing-section-navbar-ul__navbar-item {
+  font-family: 'Gilroy_Medium';
+  font-weight: Bold;
+  letter-spacing: 0.05em;
   height: 100%;
   display: grid;
   -webkit-align-content: center;
@@ -310,6 +384,7 @@
   grid-template-columns: 555px 555px; }
 
 .drawing-section-image-wiew__item {
+  position: relative;
   background-image: url("../../images/plan.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -330,11 +405,14 @@
 .want-to-change__text-and-button {
   padding: 10px; }
   .want-to-change__text-and-button p {
+    font-family: "MyriadProRegular";
     margin-top: 12px;
     letter-spacing: .05em;
     width: 70%;
     font-size: 1.3em; }
   .want-to-change__text-and-button button {
+    font-family: "Myriad_Pro_Bold";
+    font-weight: 'bold';
     border-radius: 40px;
     width: 280px;
     height: 60px;
@@ -378,7 +456,9 @@
   height: 165px;
   margin: 15px auto; }
   .formSection-main__text h2 {
-    font-size: 2em; }
+    font-size: 2em;
+    font-family: 'Gilroy_Medium';
+    letter-spacing: 0.06em; }
 
 .formSection-main__input {
   display: grid;
@@ -397,7 +477,8 @@
     background-color: rgba(0, 0, 0, 0);
     font-size: 1.5em;
     text-indent: 40px;
-    margin: 25px 0 0 0; }
+    margin: 25px 0 0 0;
+    font-family: "MyriadProRegular"; }
 
 .formSection-main__input_before-man {
   position: relative; }
@@ -479,6 +560,16 @@
   .formSection-main__checkbox p {
     font-size: .85em; }
 
+.leave-request {
+  font-family: 'MyriadProRegular';
+  -webkit-transform: translate(7px);
+      -ms-transform: translate(7px);
+          transform: translate(7px); }
+  .leave-request a {
+    text-decoration: none; }
+  .leave-request a:hover {
+    text-decoration: underline; }
+
 .formSection-main__button {
   width: 300px;
   height: 60px;
@@ -493,7 +584,8 @@
     height: 100%;
     color: #fff;
     text-transform: uppercase;
-    font-size: 1.5em; }
+    font-size: 1.5em;
+    font-family: "MyriadProRegular"; }
     .formSection-main__button button:hover {
       background-image: -webkit-gradient(linear, left top, right top, from(#FD6446), to(#FD6446));
       background-image: -o-linear-gradient(left, #FD6446, #FD6446);
@@ -542,7 +634,9 @@
   font-size: 1.8em;
   text-transform: uppercase;
   font-weight: bold;
-  color: #fff; }
+  color: #fff;
+  font-family: "Gilroy_Medium";
+  color: #242424; }
 
 .walk-around-center-button {
   display: block;
@@ -553,6 +647,7 @@
   border-radius: 12px;
   background-color: #fff;
   border: none;
+  outline: none;
   border-radius: 100%;
   -webkit-box-shadow: 0 0 40px 0 #000105;
           box-shadow: 0 0 40px 0 #000105;
@@ -561,7 +656,7 @@
   background-repeat: no-repeat;
   background-size: cover; }
   .walk-around-center-button:hover {
-    opacity: .8; }
+    opacity: .6; }
 
 .priceTable-section {
   position: relative;
@@ -574,9 +669,11 @@
   text-transform: uppercase;
   margin: 0 auto;
   padding-top: 145px;
-  font-size: 1.8em; }
+  font-size: 1.8em;
+  font-family: 'Gilroy_Medium'; }
 
 .priceTable-section-table {
+  font-family: 'MyriadProRegular';
   font-size: 1.15em;
   width: 1110px;
   height: 380px;
@@ -630,7 +727,8 @@
           align-content: center;
   width: 445px;
   height: 168px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  font-family: 'MyriadProRegular'; }
 
 .priceTable-section-pdf__icon {
   background-image: url(../../images/pdf_icon.png);
@@ -658,7 +756,6 @@
       text-decoration: underline; }
 
 .our-suggestions {
-  outline: 1px solid red;
   width: 1110px;
   height: 670px;
   margin: 0 auto; }
@@ -668,7 +765,8 @@
   height: 80px;
   margin: 10px 0 0 0;
   font-size: 2em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-family: 'Gilroy_Medium'; }
 
 .our-suggestion-item-section {
   margin: 50px 0 0 0;
@@ -679,7 +777,8 @@
 
 .our-suggestion-item-section-item {
   width: 255px;
-  height: 270px; }
+  height: 270px;
+  font-family: 'MyriadProRegular'; }
 
 .our-suggestion-item-section-item__icon {
   width: 50px;
@@ -706,16 +805,14 @@
   white-space: nowrap;
   margin: 20px auto; }
 
-.our-suggestion-item-section-item__text {
-  text-indent: 20px; }
-
 .buttonPlace {
   width: 350px;
   margin: 0 auto; }
 
 .buttonPlace__text {
   text-align: center;
-  font-size: 1.5em; }
+  font-size: 1.5em;
+  font-family: 'Myriad_Pro_Bold'; }
 
 .buttonPlace__button {
   display: block;
@@ -730,7 +827,8 @@
   border: none;
   color: #fff;
   font-weight: bold;
-  font-size: 1.2em; }
+  font-size: 1.2em;
+  line-height: 15px; }
   .buttonPlace__button:hover {
     background-image: -webkit-gradient(linear, left top, right top, from(#FD6446), to(#FD6446));
     background-image: -o-linear-gradient(left, #FD6446, #FD6446);
@@ -753,11 +851,13 @@
   width: 323px; }
 
 .submit-your-application-text-and-button__text {
+  font-family: "MyriadProRegular";
   margin: 24px auto;
   font-size: 1.4em; }
 
 .submit-your-application-text-and-button__button {
-  text-transform: uppercase; }
+  font-family: "Myriad_Pro_Bold";
+  line-height: 15px; }
 
 .want-to-watch {
   width: 780px;
@@ -773,12 +873,18 @@
   background-position: 0 10px; }
 
 .want-to-watch-text-and-button {
-  width: 406px; }
+  width: 406px;
+  font-family: "Myriad_Pro_Bold"; }
 
 .want-to-watch-text-and-button__text {
+  font-family: "MyriadProRegular";
   padding: 0 15px;
   font-size: 1.4em;
   margin: 45px auto 30px; }
+
+.want-to-watch-text-and-button__button {
+  line-height: 15px;
+  font-family: "Myriad_Pro_Bold"; }
 
 body {
   background-color: #CCCCCC;
@@ -796,6 +902,9 @@ body {
 ul {
   list-style-type: none; }
 
+a {
+  text-decoration: none; }
+
 .next {
   width: 1920px;
   height: 100px;
@@ -805,6 +914,18 @@ ul {
   font-family: "MyriadProRegular";
   src: url("/fonts/MyriadProRegular/MyriadProRegular/MyriadProRegular.eot");
   src: url("/fonts/MyriadProRegular/MyriadProRegular/MyriadProRegular.eot?#iefix") format("embedded-opentype"), url("/fonts/MyriadProRegular/MyriadProRegular/MyriadProRegular.woff") format("woff"), url("/fonts/MyriadProRegular/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Myriad_Pro_Bold";
+  src: url(/fonts/Myriad_Pro_Bold.otf) format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Gilroy_Medium";
+  src: url(/fonts/Gilroy-Medium.ttf) format("truetype");
   font-style: normal;
   font-weight: normal; }
 

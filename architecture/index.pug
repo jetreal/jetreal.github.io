@@ -22,13 +22,19 @@ html(lang='en')
         .header-logo-section
           .header-logo-section__header-logo
           ul.header-nav
-            li.header-nav__imem Главная
+            a(href="#")
+              li.header-nav__item
+              | Главная
             span  /
-            li.header-nav__imem строительтво
+            a(href="#")
+              li.header-nav__item
+              | строительтво
             span  /
-            li.header-nav__imem газобетон
+            a(href="#")
+              li.header-nav__item
+              | газобетон
             span  /
-            li.header-nav__imem.header-nav__imem_last-color 105.05
+            li.header-nav__item.header-nav__item_last-color проект 105.05
         .header-phone-section
           .wrapp-phone-and-btn
             .wrapp-phone-and-btn__phone 8  800 301 41 20
@@ -37,9 +43,11 @@ html(lang='en')
     // sliderSection section
     section.presentation-section
       .slider-section
-        .slider-section__main-slider
+        .slider-section-main-slider
+          .center-crosshair
         .slider-nav-images
           .slider-nav-images__item
+            img(src="/images/360.png" alt="").slider-nav-images__item_active
           .slider-nav-images__item
           .slider-nav-images__item
           .slider-nav-images__item
@@ -52,15 +60,19 @@ html(lang='en')
             br
             p.project-word__body_paragraphs технология: газобетон
             br
-            p.project-word__body_paragraphs обрая площать 198 м/кв
+            p.project-word__body_paragraphs
+              | обрая площать 198 м
+              sup 2
             br
             p.project-word__body_paragraphs 2 этажа
           .project-word__bottom-prise
             p 3 866 300
+              span.fas.fa-ruble-sign
           .buttons-section__button
             button получить смету
           .buttons-section__product-prise
-            h6 цена за проект: 42 000 р
+            h6 цена за проект: 42 000 
+              .fas.fa-ruble-sign
             p (рабочая документация AP + KP)
           .social-icons
             .social-icons__icons-item.social-icons__icons-item_bg1
@@ -92,7 +104,9 @@ html(lang='en')
           .drawing-section-navbar-ul__underline
       .drawing-section-image-wiew
         .drawing-section-image-wiew__item
+          .center-crosshair
         .drawing-section-image-wiew__item
+          .center-crosshair
       .want-to-change
         .want-to-change__plan
         .want-to-change__text-and-button
@@ -118,7 +132,7 @@ html(lang='en')
           input(type="checkbox" id="checkbox")
           label(for="checkbox")
           
-            div
+            div.leave-request
               p 
                 | Оставляя заявку, я даю своё согласие на 
                 span

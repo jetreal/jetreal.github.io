@@ -9,7 +9,6 @@
 .header-logo-section
     width: 230px
     height: 100%
-    oline: 1px solid green
 
 .header-logo-section__header-logo
     position: relative
@@ -19,25 +18,32 @@
     background-image: url('/images/header-logo.png')
 .header-nav
     display: inline-block
-    width: 280px
+    width: 330px
     font-size: .9em
     margin-top: 25px
     list-slyle-type: none
-    & span
-        color: #b8b8b8
+    & a
+        color: #00809E
+        text-decoration: underline
+    a:hover
+        text-decoration: none
+
+        
     
-.header-nav__imem
+.header-nav__item
     display: inline-block
     font-family: 'MyriadProRegular'
     color: #b8b8b8
-.header-nav__imem_last-color
+    & li
+        // text-decoration: none
+    
+.header-nav__item_last-color
     color: #393939
 .header-phone-section
     width: 355px
     height: 100%
 .wrapp-phone-and-btn
     display: inline-block
-
     color: #00809E
     width: 100%
     height: 34px
@@ -49,6 +55,8 @@
     height: 35px
     font-size: 1.65em
     font-family: 'Gilroy_ExtraBold'
+    &:hover
+        color: #0056B3
  
 .wrapp-phone-and-btn__button
     color: #00809E
@@ -63,8 +71,12 @@
     font-family: 'MyriadProBold'
     font-size: 1.1em
     line-height: 15px
+    text-decoration: underline
     &:hover
-        text-decoration: underline
+        text-decoration: none
+        background-color: #00809E
+        color: white
+
 .header-phone-section__down-txt
     width: 170px
     height: 25px
@@ -75,6 +87,7 @@
     left: -10px
     font-family: 'MyriadProRegular'
     color: #8a8b8c
+    text-decoration: underline
     &:before
         content: ' '
         position: absolute

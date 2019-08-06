@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>architecture Page</title>
+    <title>test task</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
@@ -18,11 +18,11 @@
       <header class="header">
         <div class="header-logo-section">
           <div class="header-logo-section__header-logo"></div>
-          <ul class="header-nav">
-            <li class="header-nav__imem">Главная</li><span> /</span>
-            <li class="header-nav__imem">строительтво</li><span> /</span>
-            <li class="header-nav__imem">газобетон</li><span> /</span>
-            <li class="header-nav__imem header-nav__imem_last-color">105.05</li>
+          <ul class="header-nav"><a href="#">
+              <li class="header-nav__item"></li>Главная</a><span> /</span><a href="#">
+              <li class="header-nav__item"></li>строительтво</a><span> /</span><a href="#">
+              <li class="header-nav__item"></li>газобетон</a><span> /</span>
+            <li class="header-nav__item header-nav__item_last-color">проект 105.05</li>
           </ul>
         </div>
         <div class="header-phone-section">
@@ -37,9 +37,11 @@
     <!-- sliderSection section-->
     <section class="presentation-section">
       <div class="slider-section">
-        <div class="slider-section__main-slider"></div>
+        <div class="slider-section-main-slider">
+          <div class="center-crosshair"></div>
+        </div>
         <div class="slider-nav-images">
-          <div class="slider-nav-images__item"></div>
+          <div class="slider-nav-images__item"><img class="slider-nav-images__item_active" src="/images/360.png" alt=""></div>
           <div class="slider-nav-images__item"></div>
           <div class="slider-nav-images__item"></div>
           <div class="slider-nav-images__item"></div>
@@ -51,17 +53,19 @@
           <div class="project-word__body">
             <p class="project-word__body_paragraphs">силь: лофт</p><br>
             <p class="project-word__body_paragraphs">технология: газобетон</p><br>
-            <p class="project-word__body_paragraphs">обрая площать 198 м/кв</p><br>
+            <p class="project-word__body_paragraphs">обрая площать 198 м<sup>2</sup></p><br>
             <p class="project-word__body_paragraphs">2 этажа</p>
           </div>
           <div class="project-word__bottom-prise">
-            <p>3 866 300</p>
+            <p>3 866 300<span class="fas fa-ruble-sign"></span></p>
           </div>
           <div class="buttons-section__button">
             <button>получить смету</button>
           </div>
           <div class="buttons-section__product-prise">
-            <h6>цена за проект: 42 000 р</h6>
+            <h6>цена за проект: 42 000 
+              <div class="fas fa-ruble-sign"></div>
+            </h6>
             <p>(рабочая документация AP + KP)</p>
           </div>
           <div class="social-icons">
@@ -91,8 +95,12 @@
         </ul>
       </div>
       <div class="drawing-section-image-wiew">
-        <div class="drawing-section-image-wiew__item"></div>
-        <div class="drawing-section-image-wiew__item"></div>
+        <div class="drawing-section-image-wiew__item">
+          <div class="center-crosshair"></div>
+        </div>
+        <div class="drawing-section-image-wiew__item">
+          <div class="center-crosshair"></div>
+        </div>
       </div>
       <div class="want-to-change">
         <div class="want-to-change__plan"></div>
@@ -117,7 +125,7 @@
         <div class="formSection-main__checkbox">
           <input type="checkbox" id="checkbox">
           <label for="checkbox">
-            <div>
+            <div class="leave-request">
               <p>
                  Оставляя заявку, я даю своё согласие на <span><a href="#">обработку персональных <br>данных </a></span>и соглашаюсь с <span><a href="#">политикой конфиденциальности</a></span></p>
             </div>
