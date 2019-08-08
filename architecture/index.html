@@ -8,7 +8,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/index.js" defer=""></script>
     <script src="https://kit.fontawesome.com/f90f7a5525.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="libs/Magnific/jquery.magnific-popup.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Sofia" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   </head>
@@ -41,10 +42,10 @@
           <div class="center-crosshair"></div>
         </div>
         <div class="slider-nav-images">
-          <div class="slider-nav-images__item"><img class="slider-nav-images__item_active" src="images/360.png" alt=""></div>
-          <div class="slider-nav-images__item"></div>
-          <div class="slider-nav-images__item"></div>
-          <div class="slider-nav-images__item"></div>
+          <div class="slider-nav-images__item" id="slider-nav-images-item1"><img class="slider-nav-images__item_active" src="images/360.png" alt=""></div>
+          <div class="slider-nav-images__item" id="slider-nav-images-item2"></div>
+          <div class="slider-nav-images__item" id="slider-nav-images-item3"></div>
+          <div class="slider-nav-images__item" id="slider-nav-images-item4"></div>
         </div>
       </div>
       <div class="buttons-section">
@@ -86,20 +87,24 @@
       <div class="drawing-section__common-underline"></div>
       <div class="drawing-section-navbar">
         <ul class="drawing-section-navbar-ul">
-          <li class="drawing-section-navbar-ul__navbar-item drawing-section-navbar-ul__navbar-item_active">Планировки</li>
-          <li class="drawing-section-navbar-ul__navbar-item">Описание проекта</li>
-          <li class="drawing-section-navbar-ul__navbar-item">3D планировки</li>
-          <div class="drawing-section-navbar-ul__underline drawing-section-navbar-ul__underline_unable"></div>
-          <div class="drawing-section-navbar-ul__underline"></div>
-          <div class="drawing-section-navbar-ul__underline"></div>
+          <li class="drawing-section-navbar-ul__navbar-item drawing-section-navbar-ul__navbar-item_active" id="draw-section-header1">Планировки</li>
+          <li class="drawing-section-navbar-ul__navbar-item" id="draw-section-header2">Описание проекта</li>
+          <li class="drawing-section-navbar-ul__navbar-item" id="draw-section-header3">3D планировки</li>
+          <div class="drawing-section-navbar-ul__underline drawing-section-navbar-ul__underline_unable" id="underline1"></div>
+          <div class="drawing-section-navbar-ul__underline" id="underline2"></div>
+          <div class="drawing-section-navbar-ul__underline" id="underline3"></div>
         </ul>
       </div>
-      <div class="drawing-section-image-wiew">
-        <div class="drawing-section-image-wiew__item">
-          <div class="center-crosshair"></div>
-        </div>
-        <div class="drawing-section-image-wiew__item">
-          <div class="center-crosshair"></div>
+      <div class="div-for-overflow">
+        <div class="wrapper-wiew-images">
+          <div class="drawing-section-image-wiew">
+            <div class="drawing-section-image-wiew__item drawing-section-image-wiew__item_bgLeft"><a class="magnific-popup-link" href="images/planLeft.png" data-effect="mfp-zoom-in"><img href="images/planLeft.png">
+                <div class="center-crosshair"></div></a></div>
+            <div class="drawing-section-image-wiew__item drawing-section-image-wiew__item_bgRight"><a class="magnific-popup-link" href="images/planRight.png" data-effect="mfp-zoom-in"><img href="images/planLeft.png">
+                <div class="center-crosshair"></div></a></div>
+          </div>
+          <div class="drawing-section-image-wiew__second"></div>
+          <div class="drawing-section-image-wiew__third"></div>
         </div>
       </div>
       <div class="want-to-change">

@@ -3,6 +3,7 @@
     width: 1110px
     height: 835px
     margin: 0 auto
+
 .drawing-section__common-underline
     position: absolute
     top: 98px
@@ -21,6 +22,7 @@
     grid-template-rows: 98px 2px
     width: 730px
     height: 100%
+
 .drawing-section-navbar-ul__navbar-item
     font-family: 'Gilroy_Medium'
     font-weight: Bold
@@ -29,10 +31,12 @@
     display: grid
     align-content: center
     text-align: center
+    cursor: pointer
 
 // active class
 .drawing-section-navbar-ul__navbar-item_active
     color: black
+    transition: color 1s 
     
 .drawing-section-navbar-ul__underline
     background-image: linear-gradient( 90deg, #FF5640, #F0C76C)
@@ -43,26 +47,50 @@
     opacity: 0
     transform: translateX(300px)
     transition: all .4s
-    transform: translateX(300px)
-    
-        
-// add this class for get underline
+
+//add this class for get underline
 .drawing-section-navbar-ul__underline_unable
     transform: translateX(0)
     opacity: 1
+
+.div-for-overflow
+    overflow: hidden
+    width: 1110px
+
+.wrapper-wiew-images
+    transition: transform .4s cubic-bezier(0,.65,0,.98)
+    width: 1110px
+    display: grid
+    grid-template-columns: auto auto auto
+    position: relative
+    left: 0
+
 .drawing-section-image-wiew
+    // transform: translateX(200px)
     height: 480px
     display: grid
     grid-template-columns: 555px 555px
-
+    
 .drawing-section-image-wiew__item
     position: relative
-    background-image: url('/images/plan.png')
     background-repeat: no-repeat
     background-position: center
     // background-size: cover
     margin: 10px
 
+.drawing-section-image-wiew__item_bgLeft
+    background-image: url('/images/planLeftMini.png')
+
+.drawing-section-image-wiew__item_bgRight
+    background-image: url('/images/planRightMini.png')
+
+.drawing-section-image-wiew__second
+    width: 1110px
+    background-color: blue
+    
+.drawing-section-image-wiew__third
+    width: 1110px
+    background-color: green
 .want-to-change
     display: grid
     grid-template-columns: 300px 300px

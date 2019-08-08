@@ -38,14 +38,17 @@
     background-image: url('/images/navImage.jpg')
     width: 125px
     height: 112px
-    opacity: .5
+    opacity: .6
+    cursor: pointer
     &:hover
         opacity: 1
+        transform: scale(1.02,1.02) 
 
 .slider-nav-images__item_active
     background-color: rgba(235, 145, 126,.7)
+    opacity: 1
+    transition: transform 1.7s
     &:before
-        opacity: 1
         content: ''
         position: absolute
         top: 0
@@ -53,8 +56,6 @@
         right: 0
         bottom: 0
         background-color: #EB917E
-    &:hover
-   
     // background: transparent
 /////////////////////
 .buttons-section
