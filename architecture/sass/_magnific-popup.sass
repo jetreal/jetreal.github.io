@@ -116,6 +116,18 @@ button.mfp-arrow
   z-index: 1046
   box-shadow: none
   touch-action: manipulation 
+button.mfp-arrow-left
+  background-image: url(/images/leftPopupArrow.png)
+  background-repeat: no-repeat
+  background-position: center
+
+button.mfp-arrow-right
+
+  background-image: url(/images/rightPopupArrow.png)
+  background-repeat: no-repeat
+  background-position: center
+
+
 
 button::-moz-focus-inner 
   padding: 0
@@ -189,7 +201,8 @@ button::-moz-focus-inner
     margin-top: 35px
     margin-left: 35px
     border: medium inset transparent 
-  .mfp-arrow:after 
+    
+  .mfp-arrow:after
     border-top-width: 13px
     border-bottom-width: 13px
     top: 8px 
@@ -197,15 +210,18 @@ button::-moz-focus-inner
     border-top-width: 21px
     border-bottom-width: 21px
     opacity: 0.7 
-
-.mfp-arrow-left 
-  left: 0 
-  .mfp-arrow-left:after 
+.mfp-arrow-left
+  left: 0
+  .mfp-arrow-left:after
     border-right: 17px solid #FFF
-    margin-left: 31px 
+    margin-left: 31px
+    
+
   .mfp-arrow-left:before 
     margin-left: 25px
-    border-right: 27px solid #3F3F3F 
+    border-right: 27px solid #3F3F3F
+
+    
 
 .mfp-arrow-right 
   right: 0 
@@ -214,6 +230,7 @@ button::-moz-focus-inner
     margin-left: 39px 
   .mfp-arrow-right:before 
     border-left: 27px solid #3F3F3F 
+
 
 .mfp-iframe-holder 
   padding-top: 40px

@@ -6,17 +6,21 @@ jQuery('.magnific-popup-link').magnificPopup({
         enabled: true,
         closeBtnInside: true,
         navigateByImgClick: true
+        
     },
     image: {
         titleSrc: 'title'
     },
+    zoom: {
+        enabled: true,
+    },
     removalDelay: 300,
     mainClass: 'mfp-fade mfp-with-zoom',
     disableOn: 748,
-    zoom: {
-        enabled: true,
-        duration: 300 // don't foget to change the duration also in CSS
-    }
+    // zoom: {
+    //     enabled: true,
+    //     duration: 300 // don't foget to change the duration also in CSS
+    // }
 });
 
 // подчёркивание
@@ -24,16 +28,11 @@ jQuery('.magnific-popup-link').magnificPopup({
 $(document).ready(function () {
     var onhover = function () {
         $('#draw-section-underline1').addClass('drawing-section-navbar-ul__underline_unable');
-        // $('#draw-section-header1').addClass('drawing-section-navbar-ul__navbar-item_active');
     }
     var offhover = function () {
         $('#draw-section-underline1').removeClass('drawing-section-navbar-ul__underline_unable')
-        // $('#draw-section-header1').removeClass('drawing-section-navbar-ul__navbar-item_active');
     }
-
-    // if ($('#draw-section-header1').hasClass('drawing-section-navbar-ul__underline_unable') === true) {
         $('#draw-section-header1').hover(onhover, offhover)
-    // }
 })
 
 $(document).ready(function () {
@@ -52,14 +51,14 @@ $(document).ready(function () {
 $(document).ready(function () {
     var onhover = function () {
         $('#draw-section-underline3').addClass('drawing-section-navbar-ul__underline_unable');
-        // $('#draw-section-header3').addClass('drawing-section-navbar-ul__navbar-item_active');
     }
     var offhover = function () {
         $('#draw-section-underline3').removeClass('drawing-section-navbar-ul__underline_unable')
-        // $('#draw-section-header3').removeClass('drawing-section-navbar-ul__navbar-item_active');
     }
     $('#draw-section-header3').hover(onhover, offhover)
 })
+
+  // 2я секция (слайдер проектов)
 
 $(document).ready(function () {
     $('.drawing-section-navbar-ul__navbar-item').on('click', function () {
@@ -73,7 +72,7 @@ $(document).ready(function () {
             $(this).addClass('drawing-section-navbar-ul__navbar-item_active')
             console.log(this.id.slice(-1))
         }
-        // изменение слайда
+        // изменение позиции слайда 2й секции
         switch(this.id.slice(-1)) {
             case ('1') : {
                 $('.wrapper-wiew-images').css({'transform': 'translateX(0px)'})
@@ -92,37 +91,72 @@ $(document).ready(function () {
     });
 });
 
+
+
+
    // перемещение актив класса превью менюшки
 $(document).ready(function() {
-    $('.slider-nav-images__item').on('click', function() {
-        $('.slider-nav-images__item_active').appendTo(this)
+    $('.slider-nav-images__item:gt(0)').on('click', function() {
+        // $('.slider-nav-images__item_active').appendTo(this)
         
         $(this).css('opacity', '1')
-        $('.slider-nav-images__item').not(this).css('opacity', '.6')
+        $('.slider-nav-images__item:gt(1)').not(this).css('opacity', '.6')
+        $('.popup-gallery').triggerHandler('click')
 
         // $('.slider-nav-images__item_active').css('transform', 'rotateY(360deg)')
     })
 })
-    
-    
 
-    let on = function() {
-        $(this).css('opacity', '1')
+
+
+
+   // имитируем нажатие по галирее
+for (let i=0; i<4; i++) {
+    function go(i) {
+        $("#slider-nav-images-item" + (i + 1)).on('click', function() {
+            $('.popup-gallery').eq(i).triggerHandler('click')
+        })
     }
+    go(i)
+}
+
+
+// зажигаем и тушим иконки
+function on() {
+    $(this).css('opacity', '1')
+}
+function leave() {
+    $('.slider-nav-images__item:empty').css('opacity', '.6')
+}
+$('.slider-nav-images__item').hover(on, leave)
+$(document).ready(function () {
+    $('#slider-nav-images-item1').triggerHandler('hover')
+})
+
+// magnific galery
+jQuery('.popup-gallery').magnificPopup({
+    type: 'image',
+    gallery: {
+        enabled: true,
+        closeBtnInside: true,
+        navigateByImgClick: true 
+    },
+    image: {
+        titleSrc: 'title'
+    },
+    removalDelay: 200,
+    mainClass: 'mfp-fade mfp-with-zoom',
+    // disableOn: 748
     
-    let leave = function() {
-        // $('.slider-nav-images__item_active').on('mouseenter', function() {
-        //     $('.slider-nav-images__item_active').css({'transform': 'rotateY(360deg)', 'transition': 'all 2s'})
-        // })
-        $('.slider-nav-images__item:empty').css('opacity', '.6')
-    }
-    $('.slider-nav-images__item').hover( on, leave )
-
-
-
+});
 
 
 $(document).ready(function() {
-    $('.slider-nav-images__item_active').trigger('click')
+    // отключаем клик у спрятанного изображения 
+    $('.popup-gallery').eq(0).off('click')
+    // имитируем клик по нему на кроссхэйре
+    $('.center-crosshair').on('click', function() {
+        $('.popup-gallery').eq(3).triggerHandler('click');
+    })
 })
 
