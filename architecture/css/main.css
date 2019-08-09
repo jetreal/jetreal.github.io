@@ -18,7 +18,7 @@
   left: 4px;
   width: 202px;
   height: 50px;
-  background-image: url("/images/header-logo.png"); }
+  background-image: url("../images/header-logo.png"); }
 
 .header-nav {
   display: inline-block;
@@ -98,7 +98,7 @@
     top: 3px;
     width: 15px;
     height: 20px;
-    background-image: url(/images/map-point.png); }
+    background-image: url(../images/map-point.png); }
 
 .presentation-section {
   display: grid;
@@ -150,7 +150,7 @@
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-image: url(/images/crosshair.png);
+  background-image: url(../images/crosshair.png);
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer; }
@@ -187,16 +187,16 @@
           transform: scale(1, 1); }
 
 #slider-nav-images-item1 {
-  background-image: url("/images/navImage1.jpg"); }
+  background-image: url("../images/navImage1.jpg"); }
 
 #slider-nav-images-item2 {
-  background-image: url("/images/navImage2.jpg"); }
+  background-image: url("../images/navImage2.jpg"); }
 
 #slider-nav-images-item3 {
-  background-image: url("/images/navImage3.jpg"); }
+  background-image: url("../images/navImage3.jpg"); }
 
 #slider-nav-images-item4 {
-  background-image: url("/images/navImage4.jpg"); }
+  background-image: url("../images/navImage4.jpg"); }
 
 .slider-nav-images__item_active {
   background-color: rgba(235, 145, 126, 0.7);
@@ -462,10 +462,10 @@
   margin: 10px; }
 
 .drawing-section-image-wiew__item_bgLeft {
-  background-image: url("/images/planLeftMini.png"); }
+  background-image: url("../images/planLeftMini.png"); }
 
 .drawing-section-image-wiew__item_bgRight {
-  background-image: url("/images/planRightMini.png"); }
+  background-image: url("../images/planRightMini.png"); }
 
 .drawing-section-image-wiew__second {
   width: 1110px;
@@ -483,7 +483,7 @@
   margin: 0 auto; }
 
 .want-to-change__plan {
-  background-image: url(/images/plans.png);
+  background-image: url(../images/plans.png);
   background-repeat: no-repeat;
   background-position: 0 25px; }
 
@@ -520,7 +520,7 @@
   width: 1920px;
   height: 680px;
   margin: 0 auto;
-  background-image: url("/images/formSectionBg.png");
+  background-image: url("../images/formSectionBg.png");
   background-repeat: no-repeat;
   background-position: 0 -10px; }
 
@@ -572,7 +572,7 @@
     position: absolute;
     width: 25px;
     height: 25px;
-    background-image: url(/images/inputManIcon.png);
+    background-image: url(../images/inputManIcon.png);
     background-repeat: no-repeat;
     top: 7px; }
 
@@ -583,7 +583,7 @@
     position: absolute;
     width: 25px;
     height: 25px;
-    background-image: url(/images/inputPhoneIcon.png);
+    background-image: url(../images/inputPhoneIcon.png);
     background-repeat: no-repeat;
     top: 7px; }
 
@@ -622,7 +622,7 @@
     -o-transition: .2s;
     transition: .2s; }
   .formSection-main__checkbox input + label:after {
-    content: attr(href= "/images/map-point.png");
+    content: attr(href= "../images/map-point.png");
     position: absolute;
     top: 3px;
     left: 1px;
@@ -641,7 +641,7 @@
     transition: .2s; }
   .formSection-main__checkbox input:checked + label:after {
     content: '';
-    background-image: url("/images/checked.png"); }
+    background-image: url("../images/checked.png"); }
   .formSection-main__checkbox p {
     font-size: .85em; }
 
@@ -737,7 +737,7 @@
   -webkit-box-shadow: 0 0 40px 0 #000105;
           box-shadow: 0 0 40px 0 #000105;
   font-size: 1.2em;
-  background-image: url(/images/play.png);
+  background-image: url(../images/play.png);
   background-repeat: no-repeat;
   background-size: cover; }
   .walk-around-center-button:hover {
@@ -787,12 +787,12 @@
   font-weight: bold; }
 
 .priceTable-checked {
-  background-image: url(/images/checkIcon.png);
+  background-image: url(../images/checkIcon.png);
   background-repeat: no-repeat;
   background-position: center; }
 
 .priceTable-unchecked {
-  background-image: url(/images/iconCross.png);
+  background-image: url(../images/iconCross.png);
   background-repeat: no-repeat;
   background-position: center; }
 
@@ -816,7 +816,7 @@
   font-family: 'MyriadProRegular'; }
 
 .priceTable-section-pdf__icon {
-  background-image: url(/images/pdf_icon.png);
+  background-image: url(../images/pdf_icon.png);
   width: 74px;
   height: 74px;
   cursor: pointer;
@@ -873,16 +873,16 @@
   background-position: center; }
 
 .our-suggestion-item-section-item__icon_bg1 {
-  background-image: url(/images/suggestionIcon1.png); }
+  background-image: url(../images/suggestionIcon1.png); }
 
 .our-suggestion-item-section-item__icon_bg2 {
-  background-image: url(/images/suggestionIcon2.png); }
+  background-image: url(../images/suggestionIcon2.png); }
 
 .our-suggestion-item-section-item__icon_bg3 {
-  background-image: url(/images/suggestionIcon3.png); }
+  background-image: url(../images/suggestionIcon3.png); }
 
 .our-suggestion-item-section-item__icon_bg4 {
-  background-image: url(/images/suggestionIcon4.png); }
+  background-image: url(../images/suggestionIcon4.png); }
 
 .our-suggestion-item-section-item__header {
   text-align: center;
@@ -930,7 +930,7 @@
   margin: 24px 0 0 0;
   width: 233px;
   height: 151px;
-  background-image: url(/images/compass.png); }
+  background-image: url(../images/compass.png); }
 
 .submit-your-application-text-and-button {
   width: 323px; }
@@ -954,7 +954,7 @@
 .want-to-watch__image {
   width: 377px;
   height: 243px;
-  background-image: url(/images/bookAndMobile.png);
+  background-image: url(../images/bookAndMobile.png);
   background-position: 0 10px; }
 
 .want-to-watch-text-and-button {
@@ -1001,26 +1001,26 @@ a {
 
 @font-face {
   font-family: "MyriadProRegular";
-  src: url("/fonts/MyriadProRegular/MyriadProRegular/MyriadProRegular.eot");
-  src: url("/fonts/MyriadProRegular/MyriadProRegular/MyriadProRegular.eot?#iefix") format("embedded-opentype"), url("/fonts/MyriadProRegular/MyriadProRegular/MyriadProRegular.woff") format("woff"), url("/fonts/MyriadProRegular/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+  src: url("../fonts/MyriadProRegular/MyriadProRegular/MyriadProRegular.eot");
+  src: url("../fonts/MyriadProRegular/MyriadProRegular/MyriadProRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadProRegular/MyriadProRegular/MyriadProRegular.woff") format("woff"), url("../fonts/MyriadProRegular/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal; }
 
 @font-face {
   font-family: "Myriad_Pro_Bold";
-  src: url(/fonts/Myriad_Pro_Bold.otf) format("truetype");
+  src: url(../fonts/Myriad_Pro_Bold.otf) format("truetype");
   font-style: normal;
   font-weight: normal; }
 
 @font-face {
   font-family: "Gilroy_Medium";
-  src: url(/fonts/Gilroy-Medium.ttf) format("truetype");
+  src: url(../fonts/Gilroy-Medium.ttf) format("truetype");
   font-style: normal;
   font-weight: normal; }
 
 @font-face {
   font-family: "Gilroy_ExtraBold";
-  src: url(/fonts/Gilroy_ExtraBold.otf) format("truetype");
+  src: url(../fonts/Gilroy_ExtraBold.otf) format("truetype");
   font-style: normal;
   font-weight: normal; }
 
@@ -1146,12 +1146,12 @@ button.mfp-arrow {
       touch-action: manipulation; }
 
 button.mfp-arrow-left {
-  background-image: url(/images/leftPopupArrow.png);
+  background-image: url(../images/leftPopupArrow.png);
   background-repeat: no-repeat;
   background-position: center; }
 
 button.mfp-arrow-right {
-  background-image: url(/images/rightPopupArrow.png);
+  background-image: url(../images/rightPopupArrow.png);
   background-repeat: no-repeat;
   background-position: center; }
 
