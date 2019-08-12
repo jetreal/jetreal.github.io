@@ -1,0 +1,162 @@
+html {
+  display: grid; }
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.wrapper {
+  margin: initial;
+  padding: initial;
+  height: 770px;
+  width: 100%;
+  max-width: 1920px;
+  background-image: url(../images/bg_top.jpg);
+  background-repeat: no-repeat;
+  background-size: center; }
+
+.wrapper-content {
+  position: relative;
+  margin: auto auto;
+  width: 920px;
+  height: 480px;
+  position: relative;
+  top: 120px;
+  background-image: url(../images/houseImage.png);
+  background-repeat: no-repeat;
+  background-position: -322px 110px; }
+
+.text-and-icon-Section {
+  width: 710px;
+  height: 395px; }
+
+.headers-bold {
+  height: 136px;
+  font-family: "Gilroy_Medium"; }
+  .headers-bold h1 {
+    font-family: "Gilroy_Medium";
+    font-size: 2.6em; }
+  .headers-bold h2 {
+    font-family: "Gilroy_ExtraBold";
+    font-size: 1.6em; }
+
+.top-Paragraph {
+  font-family: "MyriadProRegular";
+  width: 430px;
+  height: 60px;
+  font-size: 1em;
+  display: block;
+  margin: initial; }
+
+.icons {
+  width: 255px;
+  height: 108px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.icon {
+  cursor: pointer;
+  width: 65px;
+  height: 65px;
+  border-radius: 100%;
+  background-repeat: no-repeat; }
+
+.bottom-paragraph {
+  font-family: "MyriadProRegular";
+  width: 285px;
+  height: 50px;
+  font-size: 1em;
+  margin: initial; }
+
+.phone-number {
+  margin: initial;
+  height: 30px;
+  width: 190px;
+  font-size: 1.5em;
+  background-position: cover;
+  font-family: "Gilroy_Medium";
+  font-weight: bold; }
+
+.icon.bg-facebook {
+  background-image: url(../images/facebook.png); }
+
+.icon.bg-instagram {
+  background-image: url(../images/instagram.png); }
+
+.icon.bg-vk {
+  background-image: url(../images/vk.png); }
+
+/*==========  Desktop First Method  ==========*/
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .wrapper {
+    margin: 28px 0 0 0; }
+  .wrapper-content {
+    background-image: url(../images/houseImageWhite.png);
+    width: auto;
+    text-align: center; }
+  .wrapper-content * {
+    margin: 0 auto; } }
+
+@media only screen and (max-width: 720px) {
+  .text-and-icon-Section {
+    width: auto; } }
+
+@media only screen and (max-width: 630px) {
+  .headers-bold {
+    width: auto;
+    font-size: 1em; } }
+
+@media only screen and (max-width: 630px) {
+  .headers-bold h2 {
+    font-size: 1.2em; } }
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 440px) {
+  .top-Paragraph {
+    width: auto;
+    padding: 15px 15px 0; } }
+
+@media only screen and (max-width: 360px) {
+  h1 {
+    font-size: .9em; } }
+
+@media only screen and (max-width: 334px) {
+  .top-Paragraph {
+    margin: 50px 0 0 0; }
+  /*Disable Animation on Mobile Devices*/ }
+
+@font-face {
+  font-family: "MyriadProRegular";
+  src: url("/fonts/MyriadProRegular/MyriadProRegular/MyriadProRegular.eot");
+  src: url("/fonts/MyriadProRegular/MyriadProRegular/MyriadProRegular.eot?#iefix") format("embedded-opentype"), url("/fonts/MyriadProRegular/MyriadProRegular/MyriadProRegular.woff") format("woff"), url("/fonts/MyriadProRegular/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Myriad_Pro_Bold";
+  src: url(/fonts/Myriad_Pro_Bold.otf) format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Gilroy_Medium";
+  src: url(/fonts/Gilroy-Medium.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Gilroy_ExtraBold";
+  src: url(/fonts/Gilroy_ExtraBold.otf) format("truetype");
+  font-style: normal;
+  font-weight: normal; }
