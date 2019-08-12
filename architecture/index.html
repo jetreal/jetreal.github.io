@@ -14,6 +14,11 @@
     <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   </head>
   <body>
+    <div class="display">
+      <p id="width"></p>
+      <p id="height"></p>
+      <P id="changeSideImgwScroll"></P>
+    </div>
     <!-- header section-->
     <div class="wrapperApp">
       <header class="header">
@@ -35,7 +40,7 @@
         </div>
       </header>
     </div>
-    <!-- sliderSection section-->
+    <!-- sliderSection (sliderSection) section-->
     <section class="presentation-section">
       <div class="slider-section">
         <div class="slider-section-main-slider"><img class="slider-section-main-slider__Img slider-section-main-slider__Img_active" src="images/mainSlider1.jpg" alt="someImg"><a class="popup-gallery" href="images/mainSlider2.jpg"><img class="slider-section-main-slider__Img" src="images/mainSlider2.jpg" alt="someImg"></a><a class="popup-gallery" href="images/mainSlider3.jpg"><img class="slider-section-main-slider__Img" src="images/mainSlider3.jpg" alt="someImg"></a><a class="popup-gallery" href="images/mainSlider4.jpg"><img class="slider-section-main-slider__Img" src="images/mainSlider4.jpg" alt="someImg"></a><a class="popup-gallery" href="images/mainSlider1.jpg"><img src="images/mainSlider1.jpg" alt="someImg" id="presentationMainImg"></a>
@@ -55,11 +60,13 @@
             <p class="project-word__body_paragraphs">силь: лофт</p><br>
             <p class="project-word__body_paragraphs">технология: газобетон</p><br>
             <p class="project-word__body_paragraphs">обрая площать 198 м<sup>2</sup></p><br>
-            <p class="project-word__body_paragraphs">2 этажа</p>
+            <p class="project-word__body_paragraphs">2 этажа<span class="project-word__body_icons iconBed"></span><span class="countNumber">1</span><span class="project-word__body_icons iconBath"></span><span class="countNumber">1</span></p>
           </div>
           <div class="project-word__bottom-prise">
             <p>3 866 300<span class="fas fa-ruble-sign"></span></p>
           </div>
+        </div>
+        <div class="project-word-will-right">
           <div class="buttons-section__button">
             <button>получить смету</button>
           </div>
@@ -98,12 +105,14 @@
       <div class="div-for-overflow">
         <div class="wrapper-wiew-images">
           <div class="drawing-section-image-wiew">
-            <div class="drawing-section-image-wiew__item drawing-section-image-wiew__item_bgLeft"><a class="magnific-popup-link" href="images/planLeft.png" data-effect="mfp-zoom-in"><img href="images/planLeft.png">
+            <div class="drawing-section-image-wiew__item drawing-section-image-wiew__item_bgLeft"><a class="magnific-popup-link" href="images/planLeft.png" data-effect="mfp-zoom-in"><img src="images/planLeft.png">
                 <div class="center-crosshair"></div></a></div>
-            <div class="drawing-section-image-wiew__item drawing-section-image-wiew__item_bgRight"><a class="magnific-popup-link" href="images/planRight.png" data-effect="mfp-zoom-in"><img href="images/planLeft.png">
+            <div class="drawing-section-image-wiew__item drawing-section-image-wiew__item_bgRight"><a class="magnific-popup-link" href="images/planRight.png" data-effect="mfp-zoom-in"><img src="images/planLeft.png">
                 <div class="center-crosshair"></div></a></div>
           </div>
-          <div class="drawing-section-image-wiew__second"></div>
+          <div class="drawing-section-image-wiew__second">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, consequuntur illum id reprehenderit eum eligendi! Ad impedit deleniti numquam ut unde saepe. Repellendus expedita, asperiores inventore a esse reiciendis. Culpa!</p>
+          </div>
           <div class="drawing-section-image-wiew__third"></div>
         </div>
       </div>
@@ -115,6 +124,7 @@
         </div>
       </div>
     </section>
+    <!-- form section-->
     <section class="formSection">
       <div class="formSection-main">
         <div class="formSection-main__emptyDiv"></div>
@@ -132,7 +142,7 @@
           <label for="checkbox">
             <div class="leave-request">
               <p>
-                 Оставляя заявку, я даю своё согласие на <span><a href="#">обработку персональных <br>данных </a></span>и соглашаюсь с <span><a href="#">политикой конфиденциальности</a></span></p>
+                 Оставляя заявку, я даю своё согласие на <br class="formSection-br"><span><a href="#">обработку персональных <br class="formSection-br">данных </a></span>и соглашаюсь с <span><a href="#">политикой<br class="formSection-br">конфиденциальности </a></span></p>
             </div>
           </label>
         </div>
@@ -141,6 +151,7 @@
         </div>
       </div>
     </section>
+    <!-- walk virtual dom section-->
     <section class="walk-around-virual-house">
       <div class="walk-around-center-content">
         <div class="walk-around-text-and-button">
@@ -150,6 +161,7 @@
         </div>
       </div>
     </section>
+    <!-- table section-->
     <section class="priceTable-section">
       <h2 class="priceTable-section-header">цена, комплектация, варианты отделки</h2>
       <table class="priceTable-section-table">
@@ -189,8 +201,8 @@
           <td class="priceTable-checked"></td>
           <td class="priceTable-checked"></td>
         </tr>
+        <div class="table-smoke"></div>
       </table>
-      <div class="table-smoke"></div>
       <div class="priceTable-section-pdf"><a class="priceTable-section-pdf__icon"></a>
         <div class="priceTable-section-pdf__text">
           <p>Вы можете смотреть всю<br>таблицу <a><span>
@@ -198,6 +210,7 @@
         </div>
       </div>
     </section>
+    <!-- our_suggestions section-->
     <section class="our-suggestions">
       <h2 class="our-suggestions__header">что особенного<br>мы предлогаем?</h2>
       <div class="our-suggestion-item-section">
@@ -230,7 +243,7 @@
     <section class="submit-your-application">
       <div class="submit-your-application__image"></div>
       <div class="submit-your-application-text-and-button">
-        <p class="submit-your-application-text-and-button__text">Не определились с технологией<br>строительства дома?<br>Оставьте заявку и получите<br><span></span><b></b>сравнительную таблицу<br>по технологиям строительства</p>
+        <p class="submit-your-application-text-and-button__text">Не определились с технологией<br>строительства дома?<br>Оставьте заявку и получите<br><span class="bold"><a href="#">сравнительную таблицу<br>по технологиям строительства</a></span></p>
         <button class="submit-your-application-text-and-button__button buttonPlace__button">оставить заявку</button>
       </div>
     </section>
@@ -241,6 +254,5 @@
         <button class="want-to-watch-text-and-button__button buttonPlace__button">оставить заявку</button>
       </div>
     </section>
-    <section class="next">lorem</section>
   </body>
 </html>

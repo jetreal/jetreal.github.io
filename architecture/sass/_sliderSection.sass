@@ -1,15 +1,16 @@
 .presentation-section
     display: grid
     grid-template-columns: auto auto
-    width: 1110px
-    height: 448px
+    max-width: 1110px
     margin: 0 auto
+    overflow: hidden
 
 .slider-section
     display: grid
     grid-template-columns: auto auto
-    width: 760px
-    height: 448px
+    max-width: 760px
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .2), -2px -2px 2px rgba(0, 0, 0, .2), -2px 2px 2px rgba(0, 0, 0, .2), 2px -2px 2px rgba(0, 0, 0, .2)
+
 .slider-section-main-slider
     position: relative
     width: 635px
@@ -77,6 +78,7 @@
 .slider-nav-images__item:first-child
     transform: scale(1,1)
 
+
 #slider-nav-images-item1
     background-image: url('/images/navImage1.jpg')
 #slider-nav-images-item2
@@ -90,7 +92,10 @@
     background-color: rgba(235, 145, 126,.7)
     opacity: 1
     transition: transform 1.7s
+    transition: box-shadow 1s
     &:before
+        width: 100%
+        height: 100%
         content: ''
         position: absolute
         top: 0
@@ -98,9 +103,13 @@
         right: 0
         bottom: 0
         background-color: #EB917E
-
+    &:hover
+        box-shadow: 2px 2px 2px rgba(252, 108, 73, 1) inset, -2px -2px 2px rgba(252, 108, 73, 1) inset, -2px 2px 2px rgba(252, 108, 73, 1) inset, 2px -2px 2px rgba(252, 108, 73, 1) inset
+ 
 /////////////////////
 .buttons-section
+    display: grid
+    grid-template-rows: auto auto
     width: 350px
     height: 446px
 
@@ -121,6 +130,21 @@
     padding-left: 50px
     padding: 10px auto
     color: #676767
+.project-word__body_icons
+    width: 15px
+    height: 14px
+    display: inline-block
+    margin: 0 0 0 10px
+.countNumber
+    padding: 0 0 0 4px
+    font-family: 'MyriadProRegular'
+    font-weight: bold
+    
+.iconBed
+    background-image: url(/images/badIcon.png)
+.iconBath
+    background-image: url(/images/bathIcon.png)
+    
 .project-word__bottom-prise
     display: inline-block
     margin-top: 10px

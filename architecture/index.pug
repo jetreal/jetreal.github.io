@@ -15,6 +15,10 @@ html(lang='en')
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" 
         crossorigin="anonymous")
   body
+    .display
+      p#width
+      p#height
+      P#changeSideImgwScroll
     // header section
     .wrapperApp
       header.header
@@ -39,7 +43,7 @@ html(lang='en')
             .wrapp-phone-and-btn__phone 8  800 301 41 20
             button.wrapp-phone-and-btn__button заказать звонок
           .header-phone-section__down-txt Москва, Ленинская Слобода, 19 БЦ "Омега Плаза"
-    // sliderSection section
+    // sliderSection (sliderSection) section
     section.presentation-section
       .slider-section
         .slider-section-main-slider
@@ -73,9 +77,14 @@ html(lang='en')
               sup 2
             br
             p.project-word__body_paragraphs 2 этажа
+              span.project-word__body_icons.iconBed
+              span.countNumber 1
+              span.project-word__body_icons.iconBath
+              span.countNumber 1
           .project-word__bottom-prise
             p 3 866 300
               span.fas.fa-ruble-sign
+        .project-word-will-right
           .buttons-section__button
             button получить смету
           .buttons-section__product-prise
@@ -115,19 +124,22 @@ html(lang='en')
           .drawing-section-image-wiew
             .drawing-section-image-wiew__item.drawing-section-image-wiew__item_bgLeft
               a.magnific-popup-link( href="/images/planLeft.png" data-effect='mfp-zoom-in' )
-                img(href="/images/planLeft.png")
+                img(src="/images/planLeft.png")
                 .center-crosshair
             .drawing-section-image-wiew__item.drawing-section-image-wiew__item_bgRight
               a.magnific-popup-link( href="/images/planRight.png" data-effect='mfp-zoom-in' )
-                img(href="/images/planLeft.png")
+                img(src="/images/planLeft.png")
                 .center-crosshair
           .drawing-section-image-wiew__second
+            p
+              | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, consequuntur illum id reprehenderit eum eligendi! Ad impedit deleniti numquam ut unde saepe. Repellendus expedita, asperiores inventore a esse reiciendis. Culpa!
           .drawing-section-image-wiew__third
       .want-to-change
         .want-to-change__plan
         .want-to-change__text-and-button
           p Хотите изменить планировку?
           button хочу
+    // form section
     section.formSection
       .formSection-main
         .formSection-main__emptyDiv
@@ -147,21 +159,25 @@ html(lang='en')
         .formSection-main__checkbox
           input(type="checkbox" id="checkbox")
           label(for="checkbox")
-          
             div.leave-request
               p 
                 | Оставляя заявку, я даю своё согласие на 
+                br.formSection-br
                 span
                   a(href="#")
                     | обработку персональных 
-                    br
+                    br.formSection-br
         
                     | данных 
                 | и соглашаюсь с 
                 span
-                  a(href="#") политикой конфиденциальности
+                  a(href="#")
+                    | политикой
+                    br.formSection-br
+                    | конфиденциальности 
         .formSection-main__button
           button записаться
+    // walk virtual dom section
     section.walk-around-virual-house
       .walk-around-center-content
         .walk-around-text-and-button
@@ -170,6 +186,7 @@ html(lang='en')
             br
             | по виртуальному дому
           button.walk-around-center-button
+    // table section
     section.priceTable-section
       h2.priceTable-section-header цена, комплектация, варианты отделки
       table.priceTable-section-table
@@ -228,7 +245,7 @@ html(lang='en')
           td.priceTable-checked
           td.priceTable-checked
           td.priceTable-checked
-      .table-smoke
+        .table-smoke
       .priceTable-section-pdf
         a.priceTable-section-pdf__icon
         .priceTable-section-pdf__text
@@ -242,7 +259,7 @@ html(lang='en')
             |  Cсылка откроется
             br
             | в новом окне.
-
+    // our_suggestions section
     section.our-suggestions
       h2.our-suggestions__header
         | что особенного
@@ -323,11 +340,11 @@ html(lang='en')
           br
           | Оставьте заявку и получите
           br
-          span
-          b
-          | сравнительную таблицу
-          br
-          | по технологиям строительства
+          span.bold
+            a(href="#")
+              | сравнительную таблицу
+              br
+              | по технологиям строительства
         button.submit-your-application-text-and-button__button.buttonPlace__button
           | оставить заявку
     section.want-to-watch
@@ -345,7 +362,4 @@ html(lang='en')
 
 
 
-    section.next
-      | lorem
-
-
+    

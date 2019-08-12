@@ -1,18 +1,22 @@
 .formSection
     position: relative
-    width: 1920px
+    max-width: 1920px
     height: 680px
     margin: 0 auto
     background-image: url('/images/formSectionBg.png')
     background-repeat: no-repeat
+    background-size: cover
     background-position: 0 -10px
+    transition: all 1s
 
 .formSection-main
+    margin: 0 auto
     width: 540px
     height: 100%
-    position: absolute
-    left: 407px
     padding: 5px
+    position: relative
+    left: -300px
+    transition: left 1s
 .formSection-main__emptyDiv
     width: 100%
     height: 70px
@@ -36,14 +40,16 @@
     position: relative
     margin: 20px 0 0 0
     & input
-        text-indent: 30px
+        text-indent: 0px
         background: transtarent
         border: none
         background-color: rgba(0,0,0,0)
         font-size: 1.5em
-        text-indent: 40px
         margin: 25px 0 0 0
         font-family: "MyriadProRegular"
+        position: relative
+        left: 30px
+        max-width: 90%
     & a
 
     
@@ -142,3 +148,7 @@
         font-family: "MyriadProRegular"
         &:hover
             background-image: linear-gradient(90deg, #FD6446, #FD6446)
+
+
+br.formSection-br
+    display: none
