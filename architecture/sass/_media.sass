@@ -48,7 +48,6 @@
 	// .drawing-section-navbar-ul
 	// 	max-width: 768px
 	// 	margin: 0 auto
-	.drawing-section-navbar-ul
 
 	.div-for-overflow
 		display: block
@@ -58,8 +57,8 @@
 		max-width: 768px
 		height: auto
 		margin: 0 auto
-	// .drawing-section-navbar
-    // 	max-width: 768px
+	.drawing-section-navbar-ul
+    	max-width: 768px
 	.drawing-section-image-wiew
 		margin: 0 auto
 		max-width: 768px
@@ -80,7 +79,8 @@
 			z-index: 1
 	.drawing-section-image-wiew__second
 		width: 768px
-		
+	.drawing-section-image-wiew__third
+		width: 768px
 	.drawing-section-image-wiew__item_bgLeft
     	background-image: none
 
@@ -150,7 +150,7 @@
 		display: grid
 		grid-template-columns: auto
 		grid-template-rows: auto auto auto auto auto auto
-		// max-width: 730px
+		// max-width: 100%
 		height: 100%
 	.drawing-section-navbar
 		height: 150px
@@ -203,6 +203,7 @@
 		justify-content: center
 		text-align: center
 @media only screen and (max-width: 690px)
+
 	.slider-section
 		max-width: 480px
 		margin: 0 auto
@@ -218,17 +219,12 @@
 	.slider-section-main-slider
 		height: 370px
 		max-width: 480px
+	.drawing-section-navbar-ul__underline_unable
+		width: 40%
 	.presentation-section
 		max-width: 100%
 		height: auto
-@media only screen and (max-width: 600px)
-	.walk-around-center-content
-		max-width: 480px
-		height: 283px
-	.formSection
-		background-position: -750px -10px
-	.formSection-main
-    	left: 30px
+@media only screen and (max-width: 622px)
 	.want-to-change
 		grid-template-columns: auto
 		max-width: 100%
@@ -241,6 +237,16 @@
 		height: 120px
 	.want-to-change__text-and-button p
 		margin: 0 auto
+@media only screen and (max-width: 600px)
+	.formSection
+		background-position: -750px -10px
+	.formSection-main
+		max-width: 480px
+    	left: 30px
+	.walk-around-center-content
+		max-width: 480px
+		height: 283px
+	
 	.our-suggestion-item-section
 		grid-template-columns: auto
 	.submit-your-application
@@ -249,22 +255,6 @@
 	.submit-your-application__image
 		display: none
 	.submit-your-application-text-and-button__text
-		text-align: center
-	
-@media only screen and (max-width: 580px)
-	.header-phone-section__down-txt
-		display: none
-	.wrapp-phone-and-btn
-		position: relative
-		left: 25px
-		top: -14px
-    	display: block
-	.wrapp-phone-and-btn__phone
-		display: block
-		// margin: initial
-		padding: initial
-		max-width: 100%
-	.wrapp-phone-and-btn__button
 		text-align: center
 	.header
 		justify-content: center
@@ -282,6 +272,23 @@
 		width: 50px
 		height: 50px
 		background-image: url('/images/header-logo-mini.png')
+	
+	.header-phone-section__down-txt
+		display: none
+		
+	.wrapp-phone-and-btn
+		position: relative
+		left: 25px
+		top: -14px
+    	display: block
+	.wrapp-phone-and-btn__phone
+		display: block
+		// margin: initial
+		padding: initial
+		max-width: 100%
+	.wrapp-phone-and-btn__button
+		text-align: center
+// @media only screen and (max-width: 580px)
 @media only screen and (max-width: 520px)
 	.buttons-section
 		width: 100%
@@ -299,10 +306,11 @@
 	.project-word__bottom-prise
 		padding: 0 0 0 50px
 	.formSection-main
-    	left: 30px
+    	// left: 30px
 	.formSection-main h2
 		font-size: 1.7em
-	.formSection
+	.formSection-main
+		max-width: 450px
 		background-position: -780px -10px
 
 @media only screen and (max-width: 480px)
@@ -330,9 +338,12 @@
 	.drawing-section-image-wiew__second
 		max-width: 320px
 		margin: 0 auto
+	.center-crosshair
+		width: 60px
+		height: 60px
 	.walk-around-center-content
 		max-width: 320px
-		height: 188px
+		height: 225px
 	.walk-around-text-and-button h2
 		position: relative
 		top: 10px
@@ -342,18 +353,25 @@
 		position: relative
 		top: -8px
 	.formSection-main
-		width: 320px
+		max-width: 320px
 		margin: 0 auto
 		padding: initial
-		left: 5px
+		// left: 5px
 	.formSection-main__checkbox label
-		margin: 0 0 0 -120px
+		max-width: 240px
+		margin: 0 0 0 0
 	.formSection-main__input
 		max-width: 320px
 
 	.formSection-main h2
 		font-size: 1.1em
 		line-height: 1.7em
+	.leave-request
+		max-width: 240px
+	.formSection-main__checkbox
+		max-width: 300px
+		
+		
 	.formSection
 		background-position: -930px -10px
 
@@ -374,7 +392,14 @@
 	// 	max-width: 100%
 		height: 545px
 @media only screen and (max-width: 400px)
+	.buttonPlace
+		max-width: 320px
+	.project-word__header
+		max-width: 220px
+	.wrapp-phone-and-btn
+		max-width: 220px
 	.want-to-watch
+		max-width: 320px
 		justify-content: center
 	.want-to-watch__image
 		max-width: 320px
@@ -384,12 +409,20 @@
 		left: 40px
 		background-repeat: no-repeat
 		background-size: cover
-		
 	.want-to-watch-text-and-button
 		max-width: 100%
 	.want-to-watch-text-and-button__text
-		font-size: 1.125em
-		
+		font-size: 1em
+		max-width: 320px
+		margin: 30px auto
+	.header-nav__item
+		font-size: .9em
+		max-width: 200px
+	.header-nav
+		max-width: 305px
+@media only screen and (max-width: 360px)
+	.our-suggestions__header
+		left: 0px
 @media only screen and (max-width: 320px)
 	body
 		overflow-x: auto

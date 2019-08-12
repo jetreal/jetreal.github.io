@@ -47,6 +47,8 @@
     max-width: 768px;
     height: auto;
     margin: 0 auto; }
+  .drawing-section-navbar-ul {
+    max-width: 768px; }
   .drawing-section-image-wiew {
     margin: 0 auto;
     max-width: 768px;
@@ -64,6 +66,8 @@
       height: 100%;
       z-index: 1; }
   .drawing-section-image-wiew__second {
+    width: 768px; }
+  .drawing-section-image-wiew__third {
     width: 768px; }
   .drawing-section-image-wiew__item_bgLeft {
     background-image: none; }
@@ -203,18 +207,13 @@
   .slider-section-main-slider {
     height: 370px;
     max-width: 480px; }
+  .drawing-section-navbar-ul__underline_unable {
+    width: 40%; }
   .presentation-section {
     max-width: 100%;
     height: auto; } }
 
-@media only screen and (max-width: 600px) {
-  .walk-around-center-content {
-    max-width: 480px;
-    height: 283px; }
-  .formSection {
-    background-position: -750px -10px; }
-  .formSection-main {
-    left: 30px; }
+@media only screen and (max-width: 622px) {
   .want-to-change {
     grid-template-columns: auto;
     max-width: 100%;
@@ -226,7 +225,17 @@
     text-align: center;
     height: 120px; }
   .want-to-change__text-and-button p {
-    margin: 0 auto; }
+    margin: 0 auto; } }
+
+@media only screen and (max-width: 600px) {
+  .formSection {
+    background-position: -750px -10px; }
+  .formSection-main {
+    max-width: 480px;
+      max-width-left: 30px; }
+  .walk-around-center-content {
+    max-width: 480px;
+    height: 283px; }
   .our-suggestion-item-section {
     grid-template-columns: auto; }
   .submit-your-application {
@@ -238,21 +247,6 @@
   .submit-your-application__image {
     display: none; }
   .submit-your-application-text-and-button__text {
-    text-align: center; } }
-
-@media only screen and (max-width: 580px) {
-  .header-phone-section__down-txt {
-    display: none; }
-  .wrapp-phone-and-btn {
-    position: relative;
-    left: 25px;
-    top: -14px;
-      top-display: block; }
-  .wrapp-phone-and-btn__phone {
-    display: block;
-    padding: initial;
-    max-width: 100%; }
-  .wrapp-phone-and-btn__button {
     text-align: center; }
   .header {
     -webkit-box-pack: center;
@@ -269,7 +263,20 @@
   .header-logo-section__header-logo {
     width: 50px;
     height: 50px;
-    background-image: url("../images/header-logo-mini.png"); } }
+    background-image: url("../images/header-logo-mini.png"); }
+  .header-phone-section__down-txt {
+    display: none; }
+  .wrapp-phone-and-btn {
+    position: relative;
+    left: 25px;
+    top: -14px;
+      top-display: block; }
+  .wrapp-phone-and-btn__phone {
+    display: block;
+    padding: initial;
+    max-width: 100%; }
+  .wrapp-phone-and-btn__button {
+    text-align: center; } }
 
 @media only screen and (max-width: 520px) {
   .buttons-section {
@@ -288,11 +295,10 @@
     left: -10px; }
   .project-word__bottom-prise {
     padding: 0 0 0 50px; }
-  .formSection-main {
-    left: 30px; }
   .formSection-main h2 {
     font-size: 1.7em; }
-  .formSection {
+  .formSection-main {
+    max-width: 450px;
     background-position: -780px -10px; } }
 
 @media only screen and (max-width: 480px) {
@@ -322,9 +328,12 @@
   .drawing-section-image-wiew__second {
     max-width: 320px;
     margin: 0 auto; }
+  .center-crosshair {
+    width: 60px;
+    height: 60px; }
   .walk-around-center-content {
     max-width: 320px;
-    height: 188px; }
+    height: 225px; }
   .walk-around-text-and-button h2 {
     position: relative;
     top: 10px;
@@ -336,22 +345,33 @@
     position: relative;
     top: -8px; }
   .formSection-main {
-    width: 320px;
+    max-width: 320px;
     margin: 0 auto;
-    padding: initial;
-    left: 5px; }
+    padding: initial; }
   .formSection-main__checkbox label {
-    margin: 0 0 0 -120px; }
+    max-width: 240px;
+    margin: 0 0 0 0; }
   .formSection-main__input {
     max-width: 320px; }
   .formSection-main h2 {
     font-size: 1.1em;
     line-height: 1.7em; }
+  .leave-request {
+    max-width: 240px; }
+  .formSection-main__checkbox {
+    max-width: 300px; }
   .formSection {
     background-position: -930px -10px; } }
 
 @media only screen and (max-width: 400px) {
+  .buttonPlace {
+    max-width: 320px; }
+  .project-word__header {
+    max-width: 220px; }
+  .wrapp-phone-and-btn {
+    max-width: 220px; }
   .want-to-watch {
+    max-width: 320px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
@@ -366,7 +386,18 @@
   .want-to-watch-text-and-button {
     max-width: 100%; }
   .want-to-watch-text-and-button__text {
-    font-size: 1.125em; } }
+    font-size: 1em;
+    max-width: 320px;
+    margin: 30px auto; }
+  .header-nav__item {
+    font-size: .9em;
+    max-width: 200px; }
+  .header-nav {
+    max-width: 305px; } }
+
+@media only screen and (max-width: 360px) {
+  .our-suggestions__header {
+    left: 0px; } }
 
 @media only screen and (max-width: 320px) {
   body {
@@ -608,6 +639,8 @@
   height: 446px; }
 
 .project-word {
+  position: relative;
+  top: 4px;
   width: 100%;
   height: 250px; }
 
@@ -945,9 +978,8 @@
 
 .formSection-main {
   margin: 0 auto;
-  width: 540px;
+  max-width: 540px;
   height: 100%;
-  padding: 5px;
   position: relative;
   left: -300px;
   -webkit-transition: left 1s;
@@ -955,7 +987,7 @@
   transition: left 1s; }
 
 .formSection-main__emptyDiv {
-  width: 100%;
+  max-width: 100%;
   height: 70px; }
 
 .formSection-main__text {
@@ -1400,6 +1432,7 @@ br.formSection-br {
 
 .want-to-watch__image {
   max-width: 377px;
+  width: 377px;
   height: 243px;
   background-image: url(../images/bookAndMobile.png);
   background-position: 0 10px; }
@@ -1412,7 +1445,7 @@ br.formSection-br {
   font-family: "MyriadProRegular";
   padding: 0 15px;
   font-size: 1.4em;
-  margin: 45px auto 30px; }
+  margin: 45px 0 30px 0; }
 
 .want-to-watch-text-and-button__button {
   line-height: 15px;
@@ -1467,6 +1500,8 @@ br.formSection-br {
     max-width: 768px;
     height: auto;
     margin: 0 auto; }
+  .drawing-section-navbar-ul {
+    max-width: 768px; }
   .drawing-section-image-wiew {
     margin: 0 auto;
     max-width: 768px;
@@ -1484,6 +1519,8 @@ br.formSection-br {
       height: 100%;
       z-index: 1; }
   .drawing-section-image-wiew__second {
+    width: 768px; }
+  .drawing-section-image-wiew__third {
     width: 768px; }
   .drawing-section-image-wiew__item_bgLeft {
     background-image: none; }
@@ -1623,18 +1660,13 @@ br.formSection-br {
   .slider-section-main-slider {
     height: 370px;
     max-width: 480px; }
+  .drawing-section-navbar-ul__underline_unable {
+    width: 40%; }
   .presentation-section {
     max-width: 100%;
     height: auto; } }
 
-@media only screen and (max-width: 600px) {
-  .walk-around-center-content {
-    max-width: 480px;
-    height: 283px; }
-  .formSection {
-    background-position: -750px -10px; }
-  .formSection-main {
-    left: 30px; }
+@media only screen and (max-width: 622px) {
   .want-to-change {
     grid-template-columns: auto;
     max-width: 100%;
@@ -1646,7 +1678,17 @@ br.formSection-br {
     text-align: center;
     height: 120px; }
   .want-to-change__text-and-button p {
-    margin: 0 auto; }
+    margin: 0 auto; } }
+
+@media only screen and (max-width: 600px) {
+  .formSection {
+    background-position: -750px -10px; }
+  .formSection-main {
+    max-width: 480px;
+      max-width-left: 30px; }
+  .walk-around-center-content {
+    max-width: 480px;
+    height: 283px; }
   .our-suggestion-item-section {
     grid-template-columns: auto; }
   .submit-your-application {
@@ -1658,21 +1700,6 @@ br.formSection-br {
   .submit-your-application__image {
     display: none; }
   .submit-your-application-text-and-button__text {
-    text-align: center; } }
-
-@media only screen and (max-width: 580px) {
-  .header-phone-section__down-txt {
-    display: none; }
-  .wrapp-phone-and-btn {
-    position: relative;
-    left: 25px;
-    top: -14px;
-      top-display: block; }
-  .wrapp-phone-and-btn__phone {
-    display: block;
-    padding: initial;
-    max-width: 100%; }
-  .wrapp-phone-and-btn__button {
     text-align: center; }
   .header {
     -webkit-box-pack: center;
@@ -1689,7 +1716,20 @@ br.formSection-br {
   .header-logo-section__header-logo {
     width: 50px;
     height: 50px;
-    background-image: url("../images/header-logo-mini.png"); } }
+    background-image: url("../images/header-logo-mini.png"); }
+  .header-phone-section__down-txt {
+    display: none; }
+  .wrapp-phone-and-btn {
+    position: relative;
+    left: 25px;
+    top: -14px;
+      top-display: block; }
+  .wrapp-phone-and-btn__phone {
+    display: block;
+    padding: initial;
+    max-width: 100%; }
+  .wrapp-phone-and-btn__button {
+    text-align: center; } }
 
 @media only screen and (max-width: 520px) {
   .buttons-section {
@@ -1708,11 +1748,10 @@ br.formSection-br {
     left: -10px; }
   .project-word__bottom-prise {
     padding: 0 0 0 50px; }
-  .formSection-main {
-    left: 30px; }
   .formSection-main h2 {
     font-size: 1.7em; }
-  .formSection {
+  .formSection-main {
+    max-width: 450px;
     background-position: -780px -10px; } }
 
 @media only screen and (max-width: 480px) {
@@ -1742,9 +1781,12 @@ br.formSection-br {
   .drawing-section-image-wiew__second {
     max-width: 320px;
     margin: 0 auto; }
+  .center-crosshair {
+    width: 60px;
+    height: 60px; }
   .walk-around-center-content {
     max-width: 320px;
-    height: 188px; }
+    height: 225px; }
   .walk-around-text-and-button h2 {
     position: relative;
     top: 10px;
@@ -1756,22 +1798,33 @@ br.formSection-br {
     position: relative;
     top: -8px; }
   .formSection-main {
-    width: 320px;
+    max-width: 320px;
     margin: 0 auto;
-    padding: initial;
-    left: 5px; }
+    padding: initial; }
   .formSection-main__checkbox label {
-    margin: 0 0 0 -120px; }
+    max-width: 240px;
+    margin: 0 0 0 0; }
   .formSection-main__input {
     max-width: 320px; }
   .formSection-main h2 {
     font-size: 1.1em;
     line-height: 1.7em; }
+  .leave-request {
+    max-width: 240px; }
+  .formSection-main__checkbox {
+    max-width: 300px; }
   .formSection {
     background-position: -930px -10px; } }
 
 @media only screen and (max-width: 400px) {
+  .buttonPlace {
+    max-width: 320px; }
+  .project-word__header {
+    max-width: 220px; }
+  .wrapp-phone-and-btn {
+    max-width: 220px; }
   .want-to-watch {
+    max-width: 320px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
@@ -1786,7 +1839,18 @@ br.formSection-br {
   .want-to-watch-text-and-button {
     max-width: 100%; }
   .want-to-watch-text-and-button__text {
-    font-size: 1.125em; } }
+    font-size: 1em;
+    max-width: 320px;
+    margin: 30px auto; }
+  .header-nav__item {
+    font-size: .9em;
+    max-width: 200px; }
+  .header-nav {
+    max-width: 305px; } }
+
+@media only screen and (max-width: 360px) {
+  .our-suggestions__header {
+    left: 0px; } }
 
 @media only screen and (max-width: 320px) {
   body {
@@ -1797,8 +1861,7 @@ body {
   background-color: #CCCCCC;
   width: 100%;
   margin: 0 auto;
-  -webkit-tap-highlight-color: transparent;
-  overflow-x: hidden; }
+  -webkit-tap-highlight-color: transparent; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -1810,7 +1873,7 @@ button {
   outline: none; }
 
 .wrapperApp {
-  width: 100%;
+  max-width: 100%;
   margin: 0 auto; }
 
 ul {
@@ -1818,7 +1881,14 @@ ul {
 
 a {
   text-decoration: none;
-  color: initial; }
+  color: #5290F5; }
+
+.userSelect {
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important; }
 
 .display {
   position: -webkit-sticky;
@@ -2275,6 +2345,8 @@ img.mfp-img {
     max-width: 768px;
     height: auto;
     margin: 0 auto; }
+  .drawing-section-navbar-ul {
+    max-width: 768px; }
   .drawing-section-image-wiew {
     margin: 0 auto;
     max-width: 768px;
@@ -2292,6 +2364,8 @@ img.mfp-img {
       height: 100%;
       z-index: 1; }
   .drawing-section-image-wiew__second {
+    width: 768px; }
+  .drawing-section-image-wiew__third {
     width: 768px; }
   .drawing-section-image-wiew__item_bgLeft {
     background-image: none; }
@@ -2431,18 +2505,13 @@ img.mfp-img {
   .slider-section-main-slider {
     height: 370px;
     max-width: 480px; }
+  .drawing-section-navbar-ul__underline_unable {
+    width: 40%; }
   .presentation-section {
     max-width: 100%;
     height: auto; } }
 
-@media only screen and (max-width: 600px) {
-  .walk-around-center-content {
-    max-width: 480px;
-    height: 283px; }
-  .formSection {
-    background-position: -750px -10px; }
-  .formSection-main {
-    left: 30px; }
+@media only screen and (max-width: 622px) {
   .want-to-change {
     grid-template-columns: auto;
     max-width: 100%;
@@ -2454,7 +2523,17 @@ img.mfp-img {
     text-align: center;
     height: 120px; }
   .want-to-change__text-and-button p {
-    margin: 0 auto; }
+    margin: 0 auto; } }
+
+@media only screen and (max-width: 600px) {
+  .formSection {
+    background-position: -750px -10px; }
+  .formSection-main {
+    max-width: 480px;
+      max-width-left: 30px; }
+  .walk-around-center-content {
+    max-width: 480px;
+    height: 283px; }
   .our-suggestion-item-section {
     grid-template-columns: auto; }
   .submit-your-application {
@@ -2466,21 +2545,6 @@ img.mfp-img {
   .submit-your-application__image {
     display: none; }
   .submit-your-application-text-and-button__text {
-    text-align: center; } }
-
-@media only screen and (max-width: 580px) {
-  .header-phone-section__down-txt {
-    display: none; }
-  .wrapp-phone-and-btn {
-    position: relative;
-    left: 25px;
-    top: -14px;
-      top-display: block; }
-  .wrapp-phone-and-btn__phone {
-    display: block;
-    padding: initial;
-    max-width: 100%; }
-  .wrapp-phone-and-btn__button {
     text-align: center; }
   .header {
     -webkit-box-pack: center;
@@ -2497,7 +2561,20 @@ img.mfp-img {
   .header-logo-section__header-logo {
     width: 50px;
     height: 50px;
-    background-image: url("../images/header-logo-mini.png"); } }
+    background-image: url("../images/header-logo-mini.png"); }
+  .header-phone-section__down-txt {
+    display: none; }
+  .wrapp-phone-and-btn {
+    position: relative;
+    left: 25px;
+    top: -14px;
+      top-display: block; }
+  .wrapp-phone-and-btn__phone {
+    display: block;
+    padding: initial;
+    max-width: 100%; }
+  .wrapp-phone-and-btn__button {
+    text-align: center; } }
 
 @media only screen and (max-width: 520px) {
   .buttons-section {
@@ -2516,11 +2593,10 @@ img.mfp-img {
     left: -10px; }
   .project-word__bottom-prise {
     padding: 0 0 0 50px; }
-  .formSection-main {
-    left: 30px; }
   .formSection-main h2 {
     font-size: 1.7em; }
-  .formSection {
+  .formSection-main {
+    max-width: 450px;
     background-position: -780px -10px; } }
 
 @media only screen and (max-width: 480px) {
@@ -2550,9 +2626,12 @@ img.mfp-img {
   .drawing-section-image-wiew__second {
     max-width: 320px;
     margin: 0 auto; }
+  .center-crosshair {
+    width: 60px;
+    height: 60px; }
   .walk-around-center-content {
     max-width: 320px;
-    height: 188px; }
+    height: 225px; }
   .walk-around-text-and-button h2 {
     position: relative;
     top: 10px;
@@ -2564,22 +2643,33 @@ img.mfp-img {
     position: relative;
     top: -8px; }
   .formSection-main {
-    width: 320px;
+    max-width: 320px;
     margin: 0 auto;
-    padding: initial;
-    left: 5px; }
+    padding: initial; }
   .formSection-main__checkbox label {
-    margin: 0 0 0 -120px; }
+    max-width: 240px;
+    margin: 0 0 0 0; }
   .formSection-main__input {
     max-width: 320px; }
   .formSection-main h2 {
     font-size: 1.1em;
     line-height: 1.7em; }
+  .leave-request {
+    max-width: 240px; }
+  .formSection-main__checkbox {
+    max-width: 300px; }
   .formSection {
     background-position: -930px -10px; } }
 
 @media only screen and (max-width: 400px) {
+  .buttonPlace {
+    max-width: 320px; }
+  .project-word__header {
+    max-width: 220px; }
+  .wrapp-phone-and-btn {
+    max-width: 220px; }
   .want-to-watch {
+    max-width: 320px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
@@ -2594,7 +2684,18 @@ img.mfp-img {
   .want-to-watch-text-and-button {
     max-width: 100%; }
   .want-to-watch-text-and-button__text {
-    font-size: 1.125em; } }
+    font-size: 1em;
+    max-width: 320px;
+    margin: 30px auto; }
+  .header-nav__item {
+    font-size: .9em;
+    max-width: 200px; }
+  .header-nav {
+    max-width: 305px; } }
+
+@media only screen and (max-width: 360px) {
+  .our-suggestions__header {
+    left: 0px; } }
 
 @media only screen and (max-width: 320px) {
   body {

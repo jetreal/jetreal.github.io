@@ -5,8 +5,7 @@ jQuery('.magnific-popup-link').magnificPopup({
     gallery: {
         enabled: true,
         closeBtnInside: true,
-        navigateByImgClick: true
-        
+        navigateByImgClick: true  
     },
     image: {
         titleSrc: 'title'
@@ -16,11 +15,6 @@ jQuery('.magnific-popup-link').magnificPopup({
     },
     removalDelay: 300,
     mainClass: 'mfp-fade mfp-with-zoom',
-    disableOn: 748,
-    // zoom: {
-    //     enabled: true,
-    //     duration: 300 // don't foget to change the duration also in CSS
-    // }
 });
 
 // подчёркивание
@@ -89,9 +83,10 @@ $(document).ready(function () {
                 }
             }
                 break;
+
+                // после добавление стетьего слайта нужно будет изменить значение translateX -2220px  .. ..  640px
             case ('3') : {
                 $('.wrapper-wiew-images').css({'transform': 'translateX(0px)'})
-
             }
                 break;
             default: $('.wrapper-wiew-images').css({'transform': 'translateX(0px)'})
@@ -173,7 +168,7 @@ $(document).ready(function() {
 // адаптивность
 
 $(window).on('load resize', function() {
-    if ($(window).outerWidth() < 1135) {
+    if ($(window).outerWidth() < 1144) {
         $('.buttons-section__button').insertAfter($('.buttons-section'));
         $('.project-word__bottom-prise').prependTo($('.project-word-will-right'))
     } else {
@@ -186,7 +181,7 @@ $(window).on('load resize', function() {
 $(document).ready(function () {
 
     $(window).on('load resize', function () {
-        if ($(window).outerWidth() < 743.9999999999) {
+        if ($(window).outerWidth() < 752) {
             $('#underline1').insertAfter($('#draw-section-header1'))
             $('#underline2').insertAfter($('#draw-section-header2'))
             // $('#underline3').insertAfter($('#draw-section-header3'))
