@@ -1,0 +1,379 @@
+doctype html
+html(lang='en')
+  head
+    title test task
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='css/main.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+    script(src='js/index.js', defer='')
+    script(src="https://kit.fontawesome.com/f90f7a5525.js")
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
+    script(src='libs/Magnific/jquery.magnific-popup.min.js')
+    link(href='https://fonts.googleapis.com/css?family=Sofia', rel='stylesheet')
+    link(href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" 
+        crossorigin="anonymous")
+  body
+    .display
+      p#width
+      p#height
+      P#changeSideImgwScroll
+    // header section
+    .wrapperApp
+      header.header
+        .header-logo-section
+          .header-logo-section__header-logo
+          ul.header-nav
+            a(href="#")
+              li.header-nav__item
+              | Главная
+            span  /
+            a(href="#")
+              li.header-nav__item
+              | строительтво
+            span  /
+            a(href="#")
+              li.header-nav__item
+              | газобетон
+            span  /
+            li.header-nav__item.header-nav__item_last-color проект 105.05
+        .header-phone-section
+          .wrapp-phone-and-btn
+            .wrapp-phone-and-btn__phone 8  800 301 41 20
+            button.wrapp-phone-and-btn__button заказать звонок
+          .header-phone-section__down-txt Москва, Ленинская Слобода, 19 БЦ "Омега Плаза"
+    // sliderSection (sliderSection) section
+    section.presentation-section
+      .slider-section
+        .slider-section-main-slider
+          img(src="/images/mainSlider1.jpg" alt="someImg").slider-section-main-slider__Img.slider-section-main-slider__Img_active
+          a.popup-gallery(href='/images/mainSlider2.jpg')
+            img(src="/images/mainSlider2.jpg" alt="someImg").slider-section-main-slider__Img
+          a.popup-gallery(href='/images/mainSlider3.jpg')
+            img(src="/images/mainSlider3.jpg" alt="someImg").slider-section-main-slider__Img
+          a.popup-gallery(href='/images/mainSlider4.jpg')
+            img(src="/images/mainSlider4.jpg" alt="someImg").slider-section-main-slider__Img
+          a.popup-gallery(href='/images/mainSlider1.jpg')
+            img(src="/images/mainSlider1.jpg" alt="someImg" id=('presentationMainImg'))
+          .center-crosshair
+        .slider-nav-images
+          .slider-nav-images__item#slider-nav-images-item1
+            img(src="/images/360.png" alt="").slider-nav-images__item_active
+          .slider-nav-images__item#slider-nav-images-item2
+          .slider-nav-images__item#slider-nav-images-item3
+          .slider-nav-images__item#slider-nav-images-item4
+      .buttons-section
+        .project-word
+          .project-word__header
+            b Проект 100.05
+          .project-word__body
+            p.project-word__body_paragraphs силь: лофт
+            br
+            p.project-word__body_paragraphs технология: газобетон
+            br
+            p.project-word__body_paragraphs
+              | обрая площать 198 м
+              sup 2
+            br
+            p.project-word__body_paragraphs 2 этажа
+              span.project-word__body_icons.iconBed
+              span.countNumber 1
+              span.project-word__body_icons.iconBath
+              span.countNumber 1
+          .project-word__bottom-prise
+            p 3 866 300
+              span.fas.fa-ruble-sign
+        .project-word-will-right
+          .buttons-section__button
+            button получить смету
+          .buttons-section__product-prise
+            h6 цена за проект: 42 000 
+              .fas.fa-ruble-sign
+            p (рабочая документация AP + KP)
+          .social-icons
+            .social-icons__icons-item.social-icons__icons-item_bg1
+              i(class="fab fa-vk")
+            .social-icons__icons-item.social-icons__icons-item_bg2
+              i.fab.fa-odnoklassniki
+            .social-icons__icons-item.social-icons__icons-item_bg3
+              i.fas.fa-at
+            .social-icons__icons-item.social-icons__icons-item_bg4
+              i.fab.fa-twitter
+            .social-icons__icons-item.social-icons__icons-item_bg5
+              i.fab.fa-facebook-f
+            .social-icons__icons-item.social-icons__icons-item_bg6
+              i.fas.fa-pencil-alt
+            .social-icons__icons-item.social-icons__icons-item_bg7
+              i.fab.fa-linkedin-in
+            .social-icons__icons-item.social-icons__icons-item_bg8
+              i.fab.fa-pinterest-p
+    // drawing section
+    section.drawing-section
+      .drawing-section__common-underline
+      .drawing-section-navbar
+        ul.drawing-section-navbar-ul
+          li.drawing-section-navbar-ul__navbar-item(id='draw-section-header1').drawing-section-navbar-ul__navbar-item_active Планировки
+          li.drawing-section-navbar-ul__navbar-item(id='draw-section-header2') Описание проекта
+          li.drawing-section-navbar-ul__navbar-item(id='draw-section-header3') 3D планировки
+          .drawing-section-navbar-ul__underline#underline1.drawing-section-navbar-ul__underline_unable
+          .drawing-section-navbar-ul__underline#underline2
+          .drawing-section-navbar-ul__underline#underline3
+      .div-for-overflow
+        .wrapper-wiew-images
+          .drawing-section-image-wiew
+            .drawing-section-image-wiew__item.drawing-section-image-wiew__item_bgLeft
+              a.magnific-popup-link( href="/images/planLeft.png" data-effect='mfp-zoom-in' )
+                img(src="/images/planLeft.png")
+                .center-crosshair
+            .drawing-section-image-wiew__item.drawing-section-image-wiew__item_bgRight
+              a.magnific-popup-link( href="/images/planRight.png" data-effect='mfp-zoom-in' )
+                img(src="/images/planLeft.png")
+                .center-crosshair
+          .drawing-section-image-wiew__second
+            p
+              | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, consequuntur illum id reprehenderit eum eligendi! Ad impedit deleniti numquam ut unde saepe. Repellendus expedita, asperiores inventore a esse reiciendis. Culpa!
+          .drawing-section-image-wiew__third
+      .want-to-change
+        .want-to-change__plan
+        .want-to-change__text-and-button
+          p Хотите изменить планировку?
+          button хочу
+    // form section
+    section.formSection
+      .formSection-main
+        .formSection-main__emptyDiv
+        .formSection-main__text
+          h2
+            | Запишитесь на встречу с
+            br
+            | архитектором и получите
+            br
+            | разработку планировочных
+            br
+            | решений БЕСПЛАТНО!
+        .formSection-main__input.formSection-main__input_before-man
+          input(type="text" placeholder="Введите имя").
+        .formSection-main__input.formSection-main__input_before-phone
+          input(type="text" placeholder="Введите телефон").
+        .formSection-main__checkbox
+          input(type="checkbox" id="checkbox")
+          label(for="checkbox")
+            div.leave-request
+              p 
+                | Оставляя заявку, я даю своё согласие на 
+                br.formSection-br
+                span
+                  a(href="#")
+                    | обработку персональных 
+                    br.formSection-br
+        
+                    | данных 
+                | и соглашаюсь с 
+                span
+                  a(href="#")
+                    | политикой
+                    br.formSection-br
+                    | конфиденциальности 
+        .formSection-main__button
+          button записаться
+    // walk virtual dom section
+    section.walk-around-virual-house
+      .walk-around-center-content
+        .walk-around-text-and-button
+          h2.walk-around-center-content__header 
+            | прогуляйтесь
+            br
+            | по виртуальному дому
+          button.walk-around-center-button
+    // table section
+    section.priceTable-section
+      h2.priceTable-section-header цена, комплектация, варианты отделки
+      table.priceTable-section-table
+        tr
+          th.ofBg
+          th 
+            | Коробка
+            br
+            | 1 221 970 руб.
+          th
+            | Теплый контур
+            br
+            | 2 065 530 руб.
+          th
+            | С внешней
+            br
+            | отделкой
+          th
+            | Улучшунный
+            br
+            | с внешней отделкой
+        tr
+          td.bold Инженерные коммуникации
+          td
+          td
+          td
+          td
+        tr
+          td
+            | Точки налализации на 1-щь этаже строения
+            br
+            | (прокладка под афтном застройки и отвот
+            br
+            | на 2 метра за границу фундамента)
+          td.priceTable-unchecked
+          td.priceTable-checked
+          td.priceTable-checked 
+          td.priceTable-checked
+        tr
+          td
+            | Ввод воды в бойлерную (прокладка ПНД
+            br
+            | трубы и отвод на 2 метра). Монтаж
+            br
+            | закладной под ввод электрокабеля
+          td.priceTable-unchecked
+          td.priceTable-checked
+          td.priceTable-checked 
+          td.priceTable-checked
+        tr
+          td
+            | Технологические отверстия под монтаж
+            br
+            | шахт дымохода и вытяжных вентканалов
+          td.priceTable-checked
+          td.priceTable-checked
+          td.priceTable-checked
+          td.priceTable-checked
+        .table-smoke
+      .priceTable-section-pdf
+        a.priceTable-section-pdf__icon
+        .priceTable-section-pdf__text
+          p
+            | Вы можете смотреть всю
+            br
+            | таблицу 
+            a
+              span 
+                | Здесь.
+            |  Cсылка откроется
+            br
+            | в новом окне.
+
+
+    // вставка первой секции 
+
+    // our_suggestions section
+    section.our-suggestions
+      h2.our-suggestions__header
+        | что особенного
+        br
+        | мы предлагаем?
+      .our-suggestion-item-section
+        .our-suggestion-item-section-item
+          .our-suggestion-item-section-item__icon.our-suggestion-item-section-item__icon_bg1
+          h4.our-suggestion-item-section-item__header
+            | Выполняем строительство
+            br
+            | "под ключ"
+          p.our-suggestion-item-section-item__text
+            | Строим дома "под ключ" от
+            br
+            | проекта до внутренней отделки.
+            br
+            | Вам останется только занести мебель.
+        .our-suggestion-item-section-item
+          .our-suggestion-item-section-item__icon.our-suggestion-item-section-item__icon_bg2
+          h4.our-suggestion-item-section-item__header
+            | Энергоэффективный
+            br
+            | Умный Дом
+          p.our-suggestion-item-section-item__text
+            | Му являемся производителями
+            br
+            | оборудования и ПО системы 
+            br
+            | Умный дом. Наши проектировщики имеют
+            br
+            | сертификаты "Пассивного
+            br
+            | домостроения".
+        .our-suggestion-item-section-item
+          .our-suggestion-item-section-item__icon.our-suggestion-item-section-item__icon_bg3
+          h4.our-suggestion-item-section-item__header
+            | Видеонаблидение
+            br
+            | за объектом 24/7
+          p.our-suggestion-item-section-item__text
+            | Видеонаблюдение за объектом в
+            br
+            | режиме реального времени за
+            br
+            | строительство Вашего дома с
+            br
+            | доступом ши любой точки мира.
+        .our-suggestion-item-section-item
+          .our-suggestion-item-section-item__icon.our-suggestion-item-section-item__icon_bg4
+          h4.our-suggestion-item-section-item__header
+            | Фиксированная смета
+            br
+            | по договору
+          p.our-suggestion-item-section-item__text
+            | Прозрачное ценообразование
+            br
+            | никаких доплат в процессе
+            br
+            | работы. Поэтапная оплата.
+            br
+            | Гарантия соблюдения сроков.
+            br
+            | Гаратния наботы - 5 лет.
+      .buttonPlace
+        p.buttonPlace__text
+          | Хотите обсудить проект
+          br
+          | c архитектором
+        button.buttonPlace__button хочу
+
+
+    // вставка второй секции
+
+
+    section.submit-your-application
+      .submit-your-application__image
+      .submit-your-application-text-and-button
+        p.submit-your-application-text-and-button__text
+          | Не определились с технологией
+          br
+          | строительства дома?
+          br
+          | Оставьте заявку и получите
+          br
+          span.bold
+            a(href="#")
+              | сравнительную таблицу
+              br
+              | по технологиям строительства
+        button.submit-your-application-text-and-button__button.buttonPlace__button
+          | оставить заявку
+
+
+    // вставка 3-й секции
+
+
+    section.want-to-watch
+      .want-to-watch__image
+      .want-to-watch-text-and-button
+        p.want-to-watch-text-and-button__text
+          | Хотите посмотреть все наши проекты?
+          br
+          | Оставьте заявку и мы пришлём Вам
+          br
+          | каталог проектов
+        button.want-to-watch-text-and-button__button.buttonPlace__button
+          | оставить заявку
+
+
+
+
+    

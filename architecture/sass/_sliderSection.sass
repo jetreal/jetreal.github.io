@@ -1,0 +1,251 @@
+.presentation-section
+    display: grid
+    grid-template-columns: auto auto
+    max-width: 1110px
+    margin: 0 auto
+    overflow: hidden
+
+.slider-section
+    display: grid
+    grid-template-columns: auto auto
+    max-width: 760px
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .2), -2px -2px 2px rgba(0, 0, 0, .2), -2px 2px 2px rgba(0, 0, 0, .2), 2px -2px 2px rgba(0, 0, 0, .2)
+
+.slider-section-main-slider
+    position: relative
+    width: 635px
+    height: 100%
+    // background-image: url('/images/mainSlider1.jpg')
+.popup-gallery
+    // pointer-events: none
+
+
+.arrowLeft
+    +b(red)
+    width: 20px
+    height: 20px
+    z-index: 10
+.arrowRight
+    +b(red)
+    width: 20px
+    height: 20px
+    z-index: 10
+.slider-section-main-slider__Img
+    position: relative
+    width: 100%
+    height: 448px
+    display: none
+.slider-section-main-slider__Img_active
+    display: block
+
+
+.center-crosshair
+    width: 80px
+    height: 80px
+    background-color: #F1F6F8
+    border-radius: 100%
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    background-image: url(/images/crosshair.png)
+    background-repeat: no-repeat
+    background-position: center
+    cursor: pointer
+    & a img
+        // display: none
+        // opacity: 0
+        // visibility: hidden
+        // position: absolute
+        // left: -4000px
+    &:hover
+        opacity: .5
+
+.slider-nav-images
+    width: 125px
+.slider-nav-images__item
+    position: relative
+    +c
+    // background-image: url('/images/navImage4.jpg')
+    width: 125px
+    height: 112px
+    opacity: .6
+    cursor: pointer
+    &:hover
+        opacity: 1
+        transform: scale(1.02,1.02)
+        z-index: 1
+.slider-nav-images__item:first-child
+    transform: scale(1,1)
+
+
+#slider-nav-images-item1
+    background-image: url('/images/navImage1.jpg')
+#slider-nav-images-item2
+    background-image: url('/images/navImage2.jpg')
+#slider-nav-images-item3
+    background-image: url('/images/navImage3.jpg')
+#slider-nav-images-item4
+    background-image: url('/images/navImage4.jpg')
+
+.slider-nav-images__item_active
+    background-color: rgba(235, 145, 126,.7)
+    opacity: 1
+    transition: transform 1.7s
+    transition: box-shadow 1s
+    &:before
+        width: 100%
+        height: 100%
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background-color: #EB917E
+    &:hover
+        box-shadow: 2px 2px 2px rgba(252, 108, 73, 1) inset, -2px -2px 2px rgba(252, 108, 73, 1) inset, -2px 2px 2px rgba(252, 108, 73, 1) inset, 2px -2px 2px rgba(252, 108, 73, 1) inset
+ 
+/////////////////////
+.buttons-section
+    display: grid
+    grid-template-rows: auto auto
+    width: 350px
+    height: 446px
+
+.project-word
+    position: relative
+    top: 4px
+    width: 100%
+    height: 250px
+.project-word__header
+    padding-left: 50px
+    height: 50px
+    font-size: 1.5em
+    font-family: 'MyriadProRegular'
+    font-weight: bold
+    letter-spacing: .05em
+.project-word__body
+
+.project-word__body_paragraphs
+    font-family: 'MyriadProRegular'
+    padding-left: 50px
+    padding: 10px auto
+    color: #676767
+.project-word__body_icons
+    width: 15px
+    height: 14px
+    display: inline-block
+    margin: 0 0 0 10px
+.countNumber
+    padding: 0 0 0 4px
+    font-family: 'MyriadProRegular'
+    font-weight: bold
+    
+.iconBed
+    background-image: url(/images/badIcon.png)
+.iconBath
+    background-image: url(/images/bathIcon.png)
+    
+.project-word__bottom-prise
+    display: inline-block
+    margin-top: 10px
+    display: grid
+    align-content: center
+    height: 78px
+    padding-left: 50px
+    & p
+        font-size: 1.5em
+        font-weight: bold
+    & span
+        padding: 0 0 0 4px
+        font-size: 0.86em
+.buttons-section__button
+    height: 58px
+    width: 256px
+    margin: 0 auto
+    & button
+        font-family: 'MyriadProRegular'
+        font-size: 1.1em
+        letter-spacing: 0.05em
+        border-radius: 27px
+        background-image: linear-gradient(90deg, #FD6446, #F2B967)
+        margin: 0 auto
+        width: 100%
+        height: 100%
+        text-transform: uppercase
+        border: none
+        color: #fff
+        font-weight: bold
+        &:hover
+            background-image: linear-gradient(90deg, #FD6446, #FD6446)
+.buttons-section__product-prise
+    font-family: "Gilroy_Medium"
+    height: 80px
+    display: grid 
+    align-content: end
+    padding: 7px
+    & h6, p
+        padding-left: 40px
+    & h6
+        font-size: 1em
+        margin-bottom: 8px
+    & h6 .fas.fa-ruble-sign
+        font-size: .76em
+    & p
+        font-family: 'MyriadProRegular'
+.social-icons
+    display: grid
+    grid-template-columns: auto auto auto auto auto auto auto auto
+    grid-gap: 2px
+    justify-content: center
+    align-content: center
+    height: 40px
+    width: 230px
+    margin-left: 40px
+.social-icons__icons-item
+    transition: opacity .25s, box-shadow .25s ease
+    width: 100%
+    height: 100%
+    margin: 0 1px
+    width: 24px
+    height: 24px
+    cursor: pointer
+    border-radius: 4px
+    display: grid
+    align-content: center
+    justify-content: center
+    opacity: .8
+    color: #fff
+    &:hover
+        box-shadow: 1px 1px 1px rgba(100, 100, 100, .5)
+        opacity: 1
+.social-icons__icons-item_bg1
+    background-color: #4A76A8
+.social-icons__icons-item_bg2
+    background-color: #F6AB3F
+    font-size: .8em
+.social-icons__icons-item_bg3
+    background-color: #5887B3
+.social-icons__icons-item_bg4
+    background-color: #15AABF
+.social-icons__icons-item_bg5
+    background-color: #6078AE
+.social-icons__icons-item_bg6
+    background-color: #86ADCF
+.social-icons__icons-item_bg7
+    background-color: #338EB7
+.social-icons__icons-item_bg8
+    background-color: #D74A4B
+
+
+
+#presentationMainImg
+    position: absolute
+    z-index: 1
+    opacity: 0
+    pointer-events: none
+
+            
+        
+    

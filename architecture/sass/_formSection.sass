@@ -1,0 +1,154 @@
+.formSection
+    position: relative
+    max-width: 1920px
+    height: 680px
+    margin: 0 auto
+    background-image: url('/images/formSectionBg.png')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: 0 -10px
+    transition: all 1s
+
+.formSection-main
+    margin: 0 auto
+    max-width: 540px
+    height: 100%
+    // padding: 5px
+    position: relative
+    left: -300px
+    transition: left 1s
+.formSection-main__emptyDiv
+    max-width: 100%
+    height: 70px
+   
+.formSection-main__text
+    padding: initial
+    width: 100%
+    height: 165px
+    margin: 15px auto
+    & h2
+        font-size: 2em
+        font-family: 'Gilroy_Medium'
+        letter-spacing: 0.06em
+
+.formSection-main__input
+    display: grid
+    align-content: end
+    width: 420px
+    height: 36px
+    border-bottom: 1px solid #C6C7C7
+    position: relative
+    margin: 20px 0 0 0
+    & input
+        text-indent: 0px
+        background: transtarent
+        border: none
+        background-color: rgba(0,0,0,0)
+        font-size: 1.5em
+        margin: 25px 0 0 0
+        font-family: "MyriadProRegular"
+        position: relative
+        left: 30px
+        max-width: 90%
+    & a
+
+    
+.formSection-main__input_before-man
+    position: relative
+    &:before
+        content: ''
+        position: absolute
+        width: 25px
+        height: 25px
+        background-image: url(/images/inputManIcon.png)
+        background-repeat: no-repeat
+        top: 7px
+.formSection-main__input_before-phone
+    position: relative
+    &:before
+        content: ''
+        position: absolute
+        width: 25px
+        height: 25px
+        background-image: url(/images/inputPhoneIcon.png)
+        background-repeat: no-repeat
+        top: 7px
+
+.formSection-main__checkbox
+    position: relative
+    width: 420px
+    height: 32px
+    display: grid
+    grid-template-columns: auto auto
+    align-content: center
+    margin: 45px 0 0 0
+    & input
+        vertical-align: middle
+        outline: none
+        width: 22px
+        height: 22px
+        border: 1px solid #727271
+        border-radius: 16px
+        z-index: -1
+        opacity: 0
+    & label
+    & input + label:before 
+        content: ''
+        position: absolute
+        top: 3px
+        left: 1px
+        width: 22px
+        height: 22px
+        border: 1px solid gray
+        border-radius: 7px
+        background: transparent
+        box-shadow: inset 0 2px 3px rgba(0,0,0,.2)
+        transition: .2s
+    & input:checked + label:before 
+
+
+    & input + label:after
+        content: attr(href="/images/map-point.png")
+        position: absolute
+        top: 3px
+        left: 1px
+        width: 22px
+        height: 22px
+        order: 1px solid gray
+        border-radius: 7px
+        background: transparent
+        box-shadow: 0 2px 5px rgba(0,0,0,.3)
+        transition: .2s
+    & input:checked + label:after
+        content: ''
+        background-image: url('/images/checked.png')
+
+    & p
+        font-size: .85em
+.leave-request
+    font-family: 'MyriadProRegular'
+    transform: translate(7px)
+    & a
+        text-decoration: none
+    & a:hover
+        text-decoration: underline
+.formSection-main__button
+    width: 300px
+    height: 60px
+    margin: 56px 0
+    & button
+        background-image: linear-gradient(90deg, #FD6446, #F2B967)
+        border: none
+        border-radius: 27px
+        width: 100%
+        height: 100%
+        color: #fff
+        text-transform: uppercase
+        font-size: 1.5em
+        font-family: "MyriadProRegular"
+        &:hover
+            background-image: linear-gradient(90deg, #FD6446, #FD6446)
+
+
+br.formSection-br
+    display: none

@@ -1,0 +1,99 @@
+
+.header
+    max-width: 1110px
+    height: 130px
+    display: grid
+    grid-template-columns: auto auto
+    justify-content: space-between
+    margin: 0 auto
+    transition: all 1s
+.header-logo-section
+    width: 230px
+    height: 100%
+
+.header-logo-section__header-logo
+    position: relative
+    left: 4px
+    width: 202px
+    height: 50px
+    background-image: url('/images/header-logo.png')
+.header-nav
+    display: inline-block
+    width: 310px
+    font-size: .9em
+    margin-top: 25px
+    list-slyle-type: none
+    & a
+        color: #00809E
+        text-decoration: underline
+    a:hover
+        text-decoration: none
+
+        
+    
+.header-nav__item
+    display: inline-block
+    font-family: 'MyriadProRegular'
+    color: #b8b8b8
+    & li
+        // text-decoration: none
+    
+.header-nav__item_last-color
+    color: #393939
+.header-phone-section
+    width: 355px
+    height: 100%
+.wrapp-phone-and-btn
+    display: inline-block
+    color: #00809E
+    width: 100%
+    height: 34px
+.wrapp-phone-and-btn__phone
+    display: inline-block
+    position: relative
+    top: 12px
+    width: 200px
+    height: 35px
+    font-size: 1.65em
+    font-family: 'Gilroy_ExtraBold'
+    &:hover
+        color: #0056B3
+ 
+.wrapp-phone-and-btn__button
+    color: #00809E
+    display: inline-block
+    position: relative
+    top: 7px
+    width: 140px
+    height: 22px
+    border-radius: 12px
+    background-color: transparent
+    border: 1px solid #00809E
+    font-family: 'MyriadProBold'
+    font-size: 1.1em
+    line-height: 15px
+    text-decoration: underline
+    &:hover
+        text-decoration: none
+        background-color: #00809E
+        color: white
+
+.header-phone-section__down-txt
+    width: 170px
+    height: 25px
+    float: right
+    font-size: .84em
+    position: relative
+    top: 20px
+    left: -10px
+    font-family: 'MyriadProRegular'
+    color: #8a8b8c
+    text-decoration: underline
+    &:before
+        content: ' '
+        position: absolute
+        left: -26px
+        top: 3px
+        width: 15px
+        height: 20px
+        background-image: url(/images/map-point.png)
