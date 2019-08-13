@@ -66,19 +66,21 @@ $(document).ready(function () {
             $(this).addClass('drawing-section-navbar-ul__navbar-item_active')
         }
         // изменение позиции слайда 2й секции
+
+
         switch(this.id.slice(-1)) {
             case ('1') : {
                 $('.wrapper-wiew-images').css({'transform': 'translateX(0px)'})
             }
                 break;
             case ('2') : {
-                if ($(window).outerWidth() >= 1135) {
-                    $('.wrapper-wiew-images').css({'transform': 'translateX(-1110px)'})
-                } else if ( $(window).outerWidth() < 1135 && $(window).outerWidth() >= 769 ) {
+                if ($(window).outerWidth() >= 1144) {
+                    $('.wrapper-wiew-images').css({'transform': 'translateX(-1113px)'})
+                } else if ( $(window).outerWidth() < 1144 && $(window).outerWidth() >= 752 ) {
                     $('.wrapper-wiew-images').css({'transform': 'translateX(-768px)'})
-                } else if ( $(window).outerWidth() < 768 && $(window).outerWidth() >= 481) {
+                } else if ( $(window).outerWidth() < 752 && $(window).outerWidth() >= 464) {
                     $('.wrapper-wiew-images').css({'transform': 'translateX(-384px)'})
-                } else if ( $(window).outerWidth() < 480) {
+                } else if ( $(window).outerWidth() < 464) {
                     $('.wrapper-wiew-images').css({'transform': 'translateX(-320px)'})
                 }
             }
@@ -93,6 +95,40 @@ $(document).ready(function () {
         }
     });
 });
+
+$(document).ready(function () {
+    $(window).on('load resize', function () {
+        switch(true) {
+            case ($('.drawing-section-navbar-ul__underline#underline1').hasClass('drawing-section-navbar-ul__underline_unable')) : {
+                $('.wrapper-wiew-images').css({'transform': 'translateX(0px)'})
+            }
+                break;
+            case ($('.drawing-section-navbar-ul__underline#underline2').hasClass('drawing-section-navbar-ul__underline_unable')) : {
+                if ($(window).outerWidth() >= 1144) {
+                    $('.wrapper-wiew-images').css({'transform': 'translateX(-1113px)'})
+                } else if ( $(window).outerWidth() < 1144 && $(window).outerWidth() >= 752 ) {
+                    $('.wrapper-wiew-images').css({'transform': 'translateX(-768px)'})
+                } else if ( $(window).outerWidth() < 752 && $(window).outerWidth() >= 464) {
+                    $('.wrapper-wiew-images').css({'transform': 'translateX(-384px)'})
+                } else if ( $(window).outerWidth() < 464) {
+                    $('.wrapper-wiew-images').css({'transform': 'translateX(-320px)'})
+                }
+            }
+                break;
+
+                // после добавление стетьего слайта нужно будет изменить значение translateX -2220px  .. ..  640px
+            case ($('.drawing-section-navbar-ul__underline#underline3').hasClass('drawing-section-navbar-ul__underline_unable')) : {
+                $('.wrapper-wiew-images').css({'transform': 'translateX(0px)'})
+            }
+                break;
+            default: $('.wrapper-wiew-images').css({'transform': 'translateX(0px)'})
+        }
+            
+                // после добавление стетьего слайта нужно будет изменить значение translateX -2220px  .. ..  640px
+
+        
+            })
+        })
 
 
 
@@ -205,15 +241,15 @@ $(document).ready(function () {
     });
 });
 
-// $(document).ready(function () {
-//     $(window).on('load resize', function () {
-//         if ($(window).outerWidth() < 564) {
-//             $('.header-nav').insertAfter($('.header'))
-//         } else {
-           
-//         }
-//     });
-// });
+$(document).ready(function () {
+    $(window).on('load resize', function () {
+        if ($(window).outerWidth() < 784) {
+            $('.slider-nav-images__item_active').attr('src', 'images/360w.png')
+        } else {
+            $('.slider-nav-images__item_active').attr('src', 'images/360.png')
+        }
+    });
+});
 
 
 
@@ -229,7 +265,3 @@ $(window).on('load resize', function(){
 	$('#height').html(height + 'px');
 });
 
-// $(document).ready(() => {
-//     let x = $('.want-to-watch__image').attr('class', 'want')
-//     console.log(x)
-// })
