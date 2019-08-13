@@ -17,45 +17,6 @@ jQuery('.magnific-popup-link').magnificPopup({
     mainClass: 'mfp-fade mfp-with-zoom',
 });
 
-// подчёркивание
-
-// $(document).ready(function () {
-//     var onhover = function () {
-//         $('#draw-section-underline1').addClass('drawing-section-navbar-ul__underline_unable');
-//     }
-//     var offhover = function () {
-//         $('#draw-section-underline1').removeClass('drawing-section-navbar-ul__underline_unable')
-//     }
-//         $('#draw-section-header1').hover(onhover, offhover)
-// })
-
-// $(document).ready(function () {
-//     var onhover = function () {
-//         $('#draw-section-underline2').addClass('drawing-section-navbar-ul__underline_unable');
-//         // $('#draw-section-header2').addClass('drawing-section-navbar-ul__navbar-item_active');
-//     }
-//     var offhover = function () {
-//         $('#draw-section-underline2').removeClass('drawing-section-navbar-ul__underline_unable')
-//         // $('#draw-section-header2').removeClass('drawing-section-navbar-ul__navbar-item_active');
-//     }
-//     $('#draw-section-header2').hover(onhover, offhover)
-
-// })
-
-// $(document).ready(function () {
-//     var onhover = function () {
-//         $('#draw-section-underline3').addClass('drawing-section-navbar-ul__underline_unable');
-//     }
-//     var offhover = function () {
-//         $('#draw-section-underline3').removeClass('drawing-section-navbar-ul__underline_unable')
-//     }
-//     $('#draw-section-header3').hover(onhover, offhover)
-// })
-
-  // 2я секция (слайдер проектов)
-
-
-
   // смена подчёркивания
 $(document).ready(function () {
     $('.drawing-section-navbar-ul__navbar-item').on('click', function () {
@@ -70,7 +31,7 @@ $(document).ready(function () {
         }
 
 
-        // изменение позиции слайда 2й секции
+    // изменение позиции слайда 2й секции
         switch (this.id.slice(-1)) {
             case ('1'): {
                 $('.wrapper-wiew-images').css({ 'transform': 'translateX(0px)' })
@@ -98,6 +59,8 @@ $(document).ready(function () {
         }
     });
 });
+
+
         // изменение позиции слайда 2й секции при ресайзе
 $(document).ready(function () {
     $(window).on('load resize', function () {
@@ -184,6 +147,8 @@ var magnific = function() {
     });
 }
 magnific()
+
+
   // имитация клика по первой иконки для отображения первого изображения по клику на кросхэйр
 $('.popup-gallery').eq(0).off('click');
 
@@ -240,18 +205,3 @@ $(document).ready(function () {
         }
     });
 });
-
-    // временное отображение ширины высоты и скролла. 
-
-// var scrolled;
-// window.onscroll = function() {
-//   scrolled = window.pageYOffset || document.documentElement.scrollTop;
-//   document.getElementById('changeSideImgwScroll').innerHTML = scrolled + 'px';
-// }
-// $(window).on('load resize', function(){
-// 	var width = $('html').outerWidth();
-// 	var height = $(window).height();
-// 	$('#width').html(width + 'px');
-// 	$('#height').html(height + 'px');
-// });
-
