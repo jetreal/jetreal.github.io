@@ -1910,6 +1910,7 @@ br.formSection-br {
   font-weight: normal; }
 
 body {
+  background-color: #CCCCCC;
   width: 100%;
   margin: 0 auto;
   -webkit-tap-highlight-color: transparent; }
