@@ -166,31 +166,16 @@ $(document).ready(function () {
   // перемещение кнопки перевой секции вниз и цены с левой стороны в правую
   $(window).on('load resize', function() {
     var x = $('.presentation-section').css('grid-template-columns');
-    console.log(x)
     switch(true) {
-        case (x === "760px"): {
+        case (x.length < 10): {
             $('.buttons-section__button').insertAfter($('.buttons-section'));
             $('.project-word__bottom-prise').prependTo($('.project-word-will-right'))
-        }
-        case (x === "635px"): {
-            $('.buttons-section__button').insertAfter($('.buttons-section'));
-            $('.project-word__bottom-prise').prependTo($('.project-word-will-right'))
-        }
-        case (x === "480px"): {
-            $('.buttons-section__button').insertAfter($('.buttons-section'));
-            $('.project-word__bottom-prise').prependTo($('.project-word-will-right'))
-        }
-        case (x === "320px"): {
-            $('.buttons-section__button').insertAfter($('.buttons-section'));
-            $('.project-word__bottom-prise').prependTo($('.project-word-will-right'))
-        }
+        }   
             break;
-        case (x !== "760px" || "635px" || "480px" || "320px" ): {
+        default: {
             $('.buttons-section__button').prependTo($('.project-word-will-right'))
             $('.project-word__bottom-prise').appendTo($('.project-word'))
         }
-            break;
-            default: return 
     }   
 });
   // перемещение underline'a второй секции
