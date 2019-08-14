@@ -165,6 +165,7 @@ $(document).ready(function () {
 // адаптивность 
   // перемещение кнопки перевой секции вниз и цены с левой стороны в правую
 $(window).on('load resize', function() {
+    var x = $('.presentation-section').css('grid-template-columns');
     if (x == "760px" || "480px" || "320px") {
         $('.buttons-section__button').insertAfter($('.buttons-section'));
         $('.project-word__bottom-prise').prependTo($('.project-word-will-right'))
