@@ -165,10 +165,10 @@ $(document).ready(function () {
 // адаптивность 
   // перемещение кнопки перевой секции вниз и цены с левой стороны в правую
 $(window).on('load resize', function() {
-    if ($(window).outerWidth() < 1144) {
+    if (x == "760px" || "480px" || "320px") {
         $('.buttons-section__button').insertAfter($('.buttons-section'));
         $('.project-word__bottom-prise').prependTo($('.project-word-will-right'))
-    } else {
+    } if (x == "760px 350px") {
         $('.buttons-section__button').prependTo($('.project-word-will-right'))
         $('.project-word__bottom-prise').appendTo($('.project-word'))
     }
