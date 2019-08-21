@@ -101,8 +101,12 @@ var onGumburgerClick = function () {
       $('.gumburger__top-line').css({ 'transform': 'rotateZ(0deg)' })
       $('.gumburger__bottom-line').css({ 'transform': 'scale(1 , 1)' })
       // убирание бокового меню и фон
-      $('.mobileNav-wrapper-items').css({ 'transform': 'translateX(0px) translateY(500px)' })
+      $('.mobileNav-wrapper-items').css({ 'transform': 'translateX(0px) translateY(300px)' })
       $('.mobileNav, .mobileNav-wrapper-items__empty-div').css({ 'opacity': '0' })
+      // сворачиваем все открытые подменюшки
+      $('.mobileNav-hidden-menu').css('display', 'none')
+      $('.mobileNav-item__arrow').css('transform', 'rotateZ(0deg')
+      $('.mobileNav-item__has-hidden-menu').css('box-shadow', 'initial')
     }
       break;
   }
@@ -123,6 +127,10 @@ $(document).ready(function () {
       // скрываем мобильное меню и фон
       $('.mobileNav-wrapper-items').css({ 'transform': 'translateX(460px, 50px)' })
       $('.mobileNav, .mobileNav-wrapper-items__empty-div').css({ 'opacity': '0' })
+      // сворачиваем все открытые подменюшки
+      $('.mobileNav-hidden-menu').css('display', 'none')
+      $('.mobileNav-item__arrow').css('transform', 'rotateZ(0deg')
+      $('.mobileNav-item__has-hidden-menu').css('box-shadow', 'initial')
     }
   })
 })
