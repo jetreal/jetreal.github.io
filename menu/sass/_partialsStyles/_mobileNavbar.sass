@@ -1,0 +1,75 @@
+.mobileNav
+  position: relative
+  right: 0px
+  top: 50px
+  width: 320px
+  height: 2000px
+  float: right
+  color: #616264
+  overflow-x: hidden
+  overflow-y: hidden
+  background-color: rgba( 0, 0, 0, .2)
+  opacity: 0
+  transition: opacity .5s cubic-bezier(0,.99,.23,.97)
+.mobileNav-wrapper-items
+  transition: transform .4s cubic-bezier(0,.99,.23,.97)
+  position: absolute
+  width: 100%
+  height: 100%
+  transform: translate(460px, 50px)
+.mobileNav-wrapper-items__empty-div
+  opacity: 0
+  width: 320px
+  height: 50px
+  position: absolute
+  right: 0px
+  top: 0px
+  background-color: rgba( 0, 0, 0, .2)
+  transition: opacity .5s cubic-bezier(0,.99,.23,.97)
+.mobileNav-item
+  font-family: "Gilroy_Medium"
+  text-transform: uppercase
+  letter-spacing: .03em
+  text-align: center
+  color: black
+  width: 96%
+  margin: 0 auto
+  border-bottom: 2px solid #B4B5B4
+  border-top: 2px solid transparent
+  height: 46px
+  display: grid
+  cursor: pointer
+  +c
+  &:hover
+    transform: scale(1.03,1.03)
+.mobileNav-item__arrow
+  display: inline-block
+  background-image: url(/images/menu_arrow_black.png)
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+  width: 8px
+  height: 8px
+  position: relative
+  top: -2px
+  left: 8px
+  transition: transform .2s ease-in-out
+.mobileNav-hidden-menu
+  display: none
+  font-family: "Gilroy_Medium"
+  width: 96%
+  height: auto
+  text-align: center
+  transition: all 1s
+  & h3
+    cursor: pointer
+    padding: 10px 0
+    text-decoration: underline
+    color: black
+    &:hover
+      color: #3493AB
+  & p
+    padding: 0 0 20px 0
+    color: black
+    &:hover
+      color: #3493AB
