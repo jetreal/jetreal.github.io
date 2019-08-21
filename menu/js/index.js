@@ -51,6 +51,18 @@ $(document).ready(function () {
   })
 })
 
+jQuery(function($){
+	$(document).mouseup(function (e){ // событие клика по веб-документу
+		var div = $("#mobileNav"); // тут указываем ID элемента
+		if (!div.is(e.target) // если клик был не по нашему блоку
+		    && div.has(e.target).length === 0) { // и не по его дочерним элементам
+          hideSidebar() // скрываем его
+		}
+	});
+});
+
+
+
 // переключение на мобильное меню при ресайзе при ширине < 992px
 $(document).ready(function () {
   $(window).on('load resize', function () {
