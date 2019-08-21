@@ -45,7 +45,7 @@ $(document).ready(function () {
     var Y = e.pageY;
     if (Y > 60) {
       outHide()
-      hideSidebar()
+      // hideSidebar()
       
     }
   })
