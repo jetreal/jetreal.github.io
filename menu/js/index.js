@@ -149,6 +149,8 @@ $(document).ready(function () {
         $('.mobileNav-hidden-menu').css('display', 'none')
         $('.mobileNav-item__arrow').css('transform', 'rotateZ(0deg')
         // появление кликнутой подменю
+        $('.mobileNav-item__has-hidden-menu').css('box-shadow', 'initial')
+        $(this).css('box-shadow', '2px 2px 2px rgba(10,10,10,.2) inset, -2px -2px 2px rgba(10,10,10,.2) inset')
         $(this).next('.mobileNav-hidden-menu').css('display', 'block')
         $(this).find('.mobileNav-item__arrow').css('transform', 'rotateZ(90deg')
         // изменение флага
@@ -157,6 +159,7 @@ $(document).ready(function () {
         break;
       case (isOpenLink === true): {
         // скрытие активной менюшки
+        $(this).css('box-shadow', 'initial')
         $(this).next('.mobileNav-hidden-menu').css('display', 'none')
         $(this).find('.mobileNav-item__arrow').css('transform', 'rotateZ(0deg')
         isOpenLink = false;
