@@ -45,20 +45,11 @@ $(document).ready(function () {
     var Y = e.pageY;
     if (Y > 60) {
       outHide()
+      hideSidebar()
+      
     }
   })
 })
-
-// $(document).mousemove(function(e){
-//   var X = e.pageX; // положения по оси X
-//   var Y = e.pageY; // положения по оси Y
-//   console.log("X: " + X + " Y: " + Y); // вывод результата в консоль 
-
-//   if (Y > 1000) {
-//     outHide()
-//     // navbarFlag = false;
-//   }
-// });
 
 // переключение на мобильное меню при ресайзе при ширине < 992px
 $(document).ready(function () {
@@ -96,21 +87,28 @@ var onGumburgerClick = function () {
     }
       break;
     case (isMenu === false): {
-      // анимация гамбургера
-      $('.gumburger__center-line').css({ 'transform': 'scale(1 , 1)' })
-      $('.gumburger__top-line').css({ 'transform': 'rotateZ(0deg)' })
-      $('.gumburger__bottom-line').css({ 'transform': 'scale(1 , 1)' })
-      // убирание бокового меню и фон
-      $('.mobileNav-wrapper-items').css({ 'transform': 'translateX(0px) translateY(300px)' })
-      $('.mobileNav, .mobileNav-wrapper-items__empty-div').css({ 'opacity': '0' })
-      // сворачиваем все открытые подменюшки
-      $('.mobileNav-hidden-menu').css('display', 'none')
-      $('.mobileNav-item__arrow').css('transform', 'rotateZ(0deg')
-      $('.mobileNav-item__has-hidden-menu').css('box-shadow', 'initial')
+      // скрыть сайдбар
+      hideSidebar()
     }
       break;
   }
 }
+  var hideSidebar = function() {
+    // анимация гамбургера
+    $('.gumburger__center-line').css({ 'transform': 'scale(1 , 1)' })
+    $('.gumburger__top-line').css({ 'transform': 'rotateZ(0deg)' })
+    $('.gumburger__bottom-line').css({ 'transform': 'scale(1 , 1)' })
+    // убирание бокового меню и фон
+    $('.mobileNav-wrapper-items').css({ 'transform': 'translateX(0px) translateY(300px)' })
+    $('.mobileNav, .mobileNav-wrapper-items__empty-div').css({ 'opacity': '0' })
+    // сворачиваем все открытые подменюшки
+    $('.mobileNav-hidden-menu').css('display', 'none')
+    $('.mobileNav-item__arrow').css('transform', 'rotateZ(0deg')
+    $('.mobileNav-item__has-hidden-menu').css('box-shadow', 'initial')
+  }
+
+
+
 // старт функции гамбургера
 $(document).ready(function () {
   $('.gumburger').on('click', onGumburgerClick)
