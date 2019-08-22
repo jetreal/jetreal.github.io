@@ -187,9 +187,10 @@ $(document).ready(function () {
     prevClickElem = $(this).next('.mobileNav-hidden-menu').attr('id');
   });
 });
-// скрытие sidebar'a при клике на любую из его ссылок
+// скрытие sidebar'a при клике на любую из его ссылок, а также скрытие top nava
 $(document).ready(function () {
-  $('.mobileNav-wrapper-items a').on('click', function () {
+  $('.mobileNav-wrapper-items a, .navbar a').on('click', function () {
     hideSidebar()
+    outHide()
   })
 })
