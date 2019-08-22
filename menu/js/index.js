@@ -40,16 +40,16 @@ $(document).ready(function () {
   })
 })
 
-  // закрыть подменюшки при клике за их пределами
+// закрыть подменюшки при клике за их пределами
 jQuery(function ($) {
   $(document).mouseup(function (e) { // событие клика по веб-документу
-      var div = $(".navbar"); // тут указываем ID элемента
-      if (!div.is(e.target) && e.target.className !== 'gumburger' && e.target.className !== 'gumburger__top-line' &&
+    var div = $(".navbar"); // тут указываем ID элемента
+    if (!div.is(e.target) && e.target.className !== 'gumburger' && e.target.className !== 'gumburger__top-line' &&
       e.target.className !== 'gumburger__center-line' && e.target.className !== 'gumburger__bottom-line'  // если клик был не по нашему блоку
-        && div.has(e.target).length === 0) { // и не по его дочерним элементам
-          outHide(); // скрываем его
-      }
-    });
+      && div.has(e.target).length === 0) { // и не по его дочерним элементам
+      outHide(); // скрываем его
+    }
+  });
 });
 
 // переключение на мобильное меню при ресайзе. при ширине < 992px
@@ -91,36 +91,35 @@ var onGumburgerClick = function () {
     case (isMenu === true): {
       // скрыть сайдбар
       hideSidebar()
-      
     }
       break;
   }
 }
-  var hideSidebar = function() {
-    // анимация гамбургера
-    $('.gumburger__center-line').css({ 'transform': 'scale(1 , 1)' })
-    $('.gumburger__top-line').css({ 'transform': 'rotateZ(0deg)' })
-    $('.gumburger__bottom-line').css({ 'transform': 'scale(1 , 1)' })
-    // убирание бокового меню и фон
-    $('.mobileNav-wrapper-items').css({ 'transform': 'translateX(0px) translateY(300px)', 'pointer-events': 'none' })
-    $('.mobileNav, .mobileNav-wrapper-items__empty-div').css({ 'opacity': '0' })
-    // сворачиваем все открытые подменюшки
-    $('.mobileNav-hidden-menu').css('display', 'none')
-    $('.mobileNav-item__arrow').css('transform', 'rotateZ(0deg')
-    $('.mobileNav-item__has-hidden-menu').css('box-shadow', 'initial')
-    isMenu = false
-  }
+var hideSidebar = function () {
+  // анимация гамбургера
+  $('.gumburger__center-line').css({ 'transform': 'scale(1 , 1)' })
+  $('.gumburger__top-line').css({ 'transform': 'rotateZ(0deg)' })
+  $('.gumburger__bottom-line').css({ 'transform': 'scale(1 , 1)' })
+  // убирание бокового меню и фон
+  $('.mobileNav-wrapper-items').css({ 'transform': 'translateX(0px) translateY(300px)', 'pointer-events': 'none' })
+  $('.mobileNav, .mobileNav-wrapper-items__empty-div').css({ 'opacity': '0' })
+  // сворачиваем все открытые подменюшки
+  $('.mobileNav-hidden-menu').css('display', 'none')
+  $('.mobileNav-item__arrow').css('transform', 'rotateZ(0deg')
+  $('.mobileNav-item__has-hidden-menu').css('box-shadow', 'initial')
+  isMenu = false
+}
 
-  // закрытие sidebar'a при клике за его пределами
+// закрытие sidebar'a при клике за его пределами
 jQuery(function ($) {
   $(document).mouseup(function (e) { // событие клика по веб-документу
-      var div = $("#mobileNav"); // тут указываем ID элемента
-      if (!div.is(e.target) && e.target.className !== 'gumburger' && e.target.className !== 'gumburger__top-line' &&
+    var div = $("#mobileNav"); // тут указываем ID элемента
+    if (!div.is(e.target) && e.target.className !== 'gumburger' && e.target.className !== 'gumburger__top-line' &&
       e.target.className !== 'gumburger__center-line' && e.target.className !== 'gumburger__bottom-line'  // если клик был не по нашему блоку
-        && div.has(e.target).length === 0) { // и не по его дочерним элементам
-        hideSidebar(); // скрываем его
-      }
-    });
+      && div.has(e.target).length === 0) { // и не по его дочерним элементам
+      hideSidebar(); // скрываем его
+    }
+  });
 });
 
 // старт функции гамбургера
@@ -178,7 +177,7 @@ $(document).ready(function () {
       case (isOpenLink === true): {
         // скрытие активной менюшки
         $(this).css('box-shadow', 'initial')
-        $(this).next('.mobileNav-hidden-menu').css({'display': 'none'})
+        $(this).next('.mobileNav-hidden-menu').css({ 'display': 'none' })
         $(this).find('.mobileNav-item__arrow').css('transform', 'rotateZ(0deg')
         isOpenLink = false;
       }
@@ -188,4 +187,9 @@ $(document).ready(function () {
     prevClickElem = $(this).next('.mobileNav-hidden-menu').attr('id');
   });
 });
-
+// скрытие sidebar'a при клике на любую из его ссылок
+$(document).ready(function () {
+  $('.mobileNav-wrapper-items a').on('click', function () {
+    hideSidebar()
+  })
+})
