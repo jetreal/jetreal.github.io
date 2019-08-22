@@ -423,7 +423,7 @@ body {
   margin: 0 auto;
   -webkit-tap-highlight-color: transparent;
   overflow-x: hidden;
-  height: auto; }
+  height: 2000px; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -444,7 +444,8 @@ ul {
 
 a {
   color: white;
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: default; }
 
 .userSelect {
   -webkit-touch-callout: none !important;
@@ -492,7 +493,7 @@ a {
   -webkit-transition: all 1s;
   -o-transition: all 1s;
   transition: all 1s;
-  z-index: 1;
+  z-index: 2;
   cursor: pointer; }
 
 .gumburger__top-line {
@@ -679,18 +680,14 @@ a {
     left: -10px;
     padding: 0 0 15px 30px; }
 
-.mobileNav {
-  position: relative;
-  right: 0px;
-  top: 50px;
-  width: 320px;
-  height: auto;
-  float: right;
-  color: #616264;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  background-color: #fafafa;
+.mobileNav-wrapper-items__empty-div {
   opacity: 0;
+  width: 320px;
+  height: 50px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background-color: #fafafa;
   -webkit-transition: all 0.5s cubic-bezier(0, 0.99, 0.23, 0.97);
   -o-transition: all 0.5s cubic-bezier(0, 0.99, 0.23, 0.97);
   transition: all 0.5s cubic-bezier(0, 0.99, 0.23, 0.97); }
@@ -703,22 +700,12 @@ a {
   transition: transform 0.4s cubic-bezier(0, 0.99, 0.23, 0.97), -webkit-transform 0.4s cubic-bezier(0, 0.99, 0.23, 0.97);
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: auto;
   -webkit-transform: translate(460px, 50px);
       -ms-transform: translate(460px, 50px);
-          transform: translate(460px, 50px); }
-
-.mobileNav-wrapper-items__empty-div {
-  opacity: 0;
-  width: 320px;
-  height: 50px;
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  background-color: #fafafa;
-  -webkit-transition: all 0.5s cubic-bezier(0, 0.99, 0.23, 0.97);
-  -o-transition: all 0.5s cubic-bezier(0, 0.99, 0.23, 0.97);
-  transition: all 0.5s cubic-bezier(0, 0.99, 0.23, 0.97); }
+          transform: translate(460px, 50px);
+  margin: initial;
+  z-index: 3px; }
 
 .mobileNav-item {
   font-family: "Gilroy_Medium";
@@ -783,6 +770,7 @@ a {
     .mobileNav-hidden-menu h3:hover {
       color: #3493AB; }
   .mobileNav-hidden-menu p {
+    cursor: pointer;
     padding: 0 0 20px 0;
     color: black; }
     .mobileNav-hidden-menu p:hover {

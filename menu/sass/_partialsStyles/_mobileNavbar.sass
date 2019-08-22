@@ -1,22 +1,17 @@
-.mobileNav
-  position: relative
-  right: 0px
-  top: 50px
-  width: 320px
-  height: auto
-  float: right
-  color: #616264
-  overflow-x: hidden
-  overflow-y: hidden
-  background-color: rgb( 250, 250, 250)
-  opacity: 0
-  transition: all .5s cubic-bezier(0,.99,.23,.97)
-.mobileNav-wrapper-items
-  transition: transform .4s cubic-bezier(0,.99,.23,.97)
-  position: absolute
-  width: 100%
-  height: 100%
-  transform: translate(460px, 50px)
+// .mobileNav
+//   z-index: 1
+//   position: relative
+//   right: 0px
+//   top: 50px
+//   width: 320px
+//   height: auto
+//   float: right
+//   color: #616264
+//   overflow-x: hidden
+//   overflow-y: hidden
+//   background-color: rgb( 250, 250, 250)
+//   opacity: 0
+//   transition: all .5s cubic-bezier(0,.99,.23,.97)
 .mobileNav-wrapper-items__empty-div
   opacity: 0
   width: 320px
@@ -26,6 +21,14 @@
   top: 0px
   background-color: rgb( 250, 250, 250)
   transition: all .5s cubic-bezier(0,.99,.23,.97)
+.mobileNav-wrapper-items
+  transition: transform .4s cubic-bezier(0,.99,.23,.97)
+  position: absolute
+  width: 100%
+  height: auto
+  transform: translate(460px, 50px)
+  margin: initial
+  z-index: 3px
 .mobileNav-item
   font-family: "Gilroy_Medium"
   text-transform: uppercase
@@ -42,7 +45,7 @@
   background-color: rgb( 250, 250, 250)
   +c
   &:hover
-    transform: scale(1.03,1.03)
+    transform: scale(1.03, 1.03)
 .mobileNav-item__arrow
   display: inline-block
   background-image: url(/images/menu_arrow_black.png)
@@ -64,8 +67,8 @@
   transition: all 1s
   background-color: rgb( 250, 250, 250)
   margin: 0 auto
-  
   & h3
+    
     cursor: pointer
     padding: 10px 0
     text-decoration: underline
@@ -73,6 +76,7 @@
     &:hover
       color: #3493AB
   & p
+    cursor: pointer
     padding: 0 0 20px 0
     color: black
     &:hover

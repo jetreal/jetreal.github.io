@@ -39,31 +39,20 @@ $(document).ready(function () {
     navbarFlag = false;
   })
 })
-// при клике на body убрать подменю если координаты клика мыши ниже 60px по высоте 
-$(document).ready(function () {
-  $('body').on('click', function (e) {
-    var Y = e.pageY;
-    if (Y > 60) {
-      outHide()
-      // hideSidebar()
-      
-    }
-  })
-})
 
-// jQuery(function($){
-// 	$(document).mouseup(function (e){ // событие клика по веб-документу
-// 		var div = $("#mobileNav"); // тут указываем ID элемента
-// 		if (!div.is(e.target) // если клик был не по нашему блоку
-// 		    && div.has(e.target).length === 0) { // и не по его дочерним элементам
-//           hideSidebar() // скрываем его
-// 		}
-// 	});
-// });
+  // закрыть подменюшки при клике за их пределами
+jQuery(function ($) {
+  $(document).mouseup(function (e) { // событие клика по веб-документу
+      var div = $(".navbar"); // тут указываем ID элемента
+      if (!div.is(e.target) && e.target.className !== 'gumburger' && e.target.className !== 'gumburger__top-line' &&
+      e.target.className !== 'gumburger__center-line' && e.target.className !== 'gumburger__bottom-line'  // если клик был не по нашему блоку
+        && div.has(e.target).length === 0) { // и не по его дочерним элементам
+          outHide(); // скрываем его
+      }
+    });
+});
 
-
-
-// переключение на мобильное меню при ресайзе при ширине < 992px
+// переключение на мобильное меню при ресайзе. при ширине < 992px
 $(document).ready(function () {
   $(window).on('load resize', function () {
     if ($(window).outerWidth() < 992) {
@@ -86,21 +75,23 @@ $(document).ready(function () {
 // выезд мобильного меню и затемнение bg
 var isMenu = false;
 var onGumburgerClick = function () {
-  isMenu = !isMenu
+
   switch (true) {
-    case (isMenu === true): {
+    case (isMenu === false): {
       // анимация гамбургера
       $('.gumburger__center-line').css({ 'transform': 'scale(0 , 0)' })
       $('.gumburger__top-line').css({ 'transform': 'rotateZ(405deg) translate(7px, 7px)' })
       $('.gumburger__bottom-line').css({ 'transform': 'rotateZ(-45deg) translate(7px, -7px)' })
       // появление бокового меню
-      $('.mobileNav-wrapper-items').css({ 'transform': 'translateX(0px) translateY(50px)' })
+      $('.mobileNav-wrapper-items').css({ 'transform': 'translateX(0px) translateY(50px)', 'pointer-events': 'auto' })
       $('.mobileNav, .mobileNav-wrapper-items__empty-div').css({ 'opacity': '1' })
+      isMenu = true
     }
       break;
-    case (isMenu === false): {
+    case (isMenu === true): {
       // скрыть сайдбар
       hideSidebar()
+      
     }
       break;
   }
@@ -111,19 +102,30 @@ var onGumburgerClick = function () {
     $('.gumburger__top-line').css({ 'transform': 'rotateZ(0deg)' })
     $('.gumburger__bottom-line').css({ 'transform': 'scale(1 , 1)' })
     // убирание бокового меню и фон
-    $('.mobileNav-wrapper-items').css({ 'transform': 'translateX(0px) translateY(300px)' })
+    $('.mobileNav-wrapper-items').css({ 'transform': 'translateX(0px) translateY(300px)', 'pointer-events': 'none' })
     $('.mobileNav, .mobileNav-wrapper-items__empty-div').css({ 'opacity': '0' })
     // сворачиваем все открытые подменюшки
     $('.mobileNav-hidden-menu').css('display', 'none')
     $('.mobileNav-item__arrow').css('transform', 'rotateZ(0deg')
     $('.mobileNav-item__has-hidden-menu').css('box-shadow', 'initial')
+    isMenu = false
   }
 
-
+  // закрытие sidebar'a при клике за его пределами
+jQuery(function ($) {
+  $(document).mouseup(function (e) { // событие клика по веб-документу
+      var div = $("#mobileNav"); // тут указываем ID элемента
+      if (!div.is(e.target) && e.target.className !== 'gumburger' && e.target.className !== 'gumburger__top-line' &&
+      e.target.className !== 'gumburger__center-line' && e.target.className !== 'gumburger__bottom-line'  // если клик был не по нашему блоку
+        && div.has(e.target).length === 0) { // и не по его дочерним элементам
+        hideSidebar(); // скрываем его
+      }
+    });
+});
 
 // старт функции гамбургера
 $(document).ready(function () {
-  $('.gumburger').on('click', onGumburgerClick)
+  $('.gumburger, gumburger div').on('click', onGumburgerClick)
 })
 
 // при возвращение к большому экрану скрытие мобильного меню
@@ -135,7 +137,7 @@ $(document).ready(function () {
       $('.gumburger__top-line').css({ 'transform': 'rotateZ(0deg)' })
       $('.gumburger__bottom-line').css({ 'transform': 'scale(1 , 1)' })
       // скрываем мобильное меню и фон
-      $('.mobileNav-wrapper-items').css({ 'transform': 'translateX(460px, 50px)' })
+      $('.mobileNav-wrapper-items').css({ 'transform': 'translateX(460px, 50px)', 'pointer-events': 'none' })
       $('.mobileNav, .mobileNav-wrapper-items__empty-div').css({ 'opacity': '0' })
       // сворачиваем все открытые подменюшки
       $('.mobileNav-hidden-menu').css('display', 'none')
@@ -145,9 +147,7 @@ $(document).ready(function () {
   })
 })
 
-
 ///////////////////////////////////////////////////////
-
 
 // логика раскрытия ссылок
 var isOpenLink = false;
@@ -178,7 +178,7 @@ $(document).ready(function () {
       case (isOpenLink === true): {
         // скрытие активной менюшки
         $(this).css('box-shadow', 'initial')
-        $(this).next('.mobileNav-hidden-menu').css('display', 'none')
+        $(this).next('.mobileNav-hidden-menu').css({'display': 'none'})
         $(this).find('.mobileNav-item__arrow').css('transform', 'rotateZ(0deg')
         isOpenLink = false;
       }
