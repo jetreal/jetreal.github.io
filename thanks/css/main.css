@@ -129,15 +129,15 @@ body {
 
 @media only screen and (max-width: 360px) {
   h1 {
-    font-size: .9em;
+    font-size: .8em;
    }
   .headers-bold h2 { 
     padding: 0 20px;
   } }
 
-@media only screen and (max-width: 334px) {
+/* @media only screen and (max-width: 334px) {
   .top-Paragraph {
-    margin: 50px 0 0 0; }
+    margin: 50px 0 0 0; } */
   /*Disable Animation on Mobile Devices*/ }
 
 @font-face {
