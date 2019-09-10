@@ -1,49 +1,49 @@
 @font-face {
   font-family: "MyriadProRegular";
-  src: url("/fonts/MyriadProRegular/MyriadProRegular/MyriadProRegular.eot");
-  src: url("/fonts/MyriadProRegular/MyriadProRegular/MyriadProRegular.eot?#iefix") format("embedded-opentype"), url("/fonts/MyriadProRegular/MyriadProRegular/MyriadProRegular.woff") format("woff"), url("/fonts/MyriadProRegular/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+  src: url("../fonts/MyriadProRegular/MyriadProRegular/MyriadProRegular.eot");
+  src: url("../fonts/MyriadProRegular/MyriadProRegular/MyriadProRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadProRegular/MyriadProRegular/MyriadProRegular.woff") format("woff"), url("../fonts/MyriadProRegular/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal; }
 
 @font-face {
   font-family: "Myriad_Pro_Bold";
-  src: url(/fonts/Myriad_Pro_Bold.otf) format("truetype");
+  src: url(../fonts/Myriad_Pro_Bold.otf) format("truetype");
   font-style: normal;
   font-weight: normal; }
 
 @font-face {
   font-family: "Gilroy_Medium";
-  src: url(/fonts/Gilroy-Medium.ttf) format("truetype");
+  src: url(../fonts/Gilroy-Medium.ttf) format("truetype");
   font-style: normal;
   font-weight: normal; }
 
 @font-face {
   font-family: "Gilroy_ExtraBold";
-  src: url(/fonts/Gilroy_ExtraBold.otf) format("truetype");
+  src: url(../fonts/Gilroy_ExtraBold.otf) format("truetype");
   font-style: normal;
   font-weight: normal; }
 
 @font-face {
   font-family: "Roboto_bold";
-  src: url(/fonts/Roboto-Bold.ttf) format("truetype");
+  src: url(../fonts/Roboto-Bold.ttf) format("truetype");
   font-style: normal;
   font-weight: normal; }
 
 @font-face {
   font-family: "Roboto_regular";
-  src: url(/fonts/Roboto-Regular.ttf) format("truetype");
+  src: url(../fonts/Roboto-Regular.ttf) format("truetype");
   font-style: normal;
   font-weight: normal; }
 
 @font-face {
   font-family: "Roboto_italic";
-  src: url(/fonts/Roboto-Italic.ttf) format("truetype");
+  src: url(../fonts/Roboto-Italic.ttf) format("truetype");
   font-style: normal;
   font-weight: normal; }
 
 @font-face {
   font-family: "Open_sans";
-  src: url(/fonts/OpenSans-Regular.ttf) format("truetype");
+  src: url(../fonts/OpenSans-Regular.ttf) format("truetype");
   font-style: normal;
   font-weight: normal; }
 
@@ -285,29 +285,29 @@ a {
   position: absolute;
   left: 8px;
   top: 16px;
-  background-image: url(/images/headerIcon1.png);
+  background-image: url(../images/headerIcon1.png);
   background-repeat: no-repeat;
   z-index: 1;
   width: 27px;
   height: 30px; }
 
 #navBar2-id1::before {
-  background-image: url(/images/headerIcon1.png); }
+  background-image: url(../images/headerIcon1.png); }
 
 #navBar2-id2::before {
-  background-image: url(/images/headerIcon2.png); }
+  background-image: url(../images/headerIcon2.png); }
 
 #navBar2-id3::before {
-  background-image: url(/images/headerIcon3.png); }
+  background-image: url(../images/headerIcon3.png); }
 
 #navBar2-id4::before {
-  background-image: url(/images/headerIcon4.png); }
+  background-image: url(../images/headerIcon4.png); }
 
 #navBar2-id5::before {
-  background-image: url(/images/headerIcon5.png); }
+  background-image: url(../images/headerIcon5.png); }
 
 #navBar2-id6::before {
-  background-image: url(/images/headerIcon6.png); }
+  background-image: url(../images/headerIcon6.png); }
 
 .navBar2__arrow {
   width: 14px;
@@ -315,7 +315,7 @@ a {
   position: absolute;
   right: 10px;
   top: 23px;
-  background-image: url(/images/navBar2arrow.png);
+  background-image: url(../images/navBar2arrow.png);
   background-repeat: no-repeat;
   -webkit-transition: -webkit-transform 1s;
   transition: -webkit-transform 1s;
@@ -525,22 +525,22 @@ a {
   padding: 16px 0 0 0; }
 
 #factors-of-creation__icon1 {
-  background-image: url(/images/firstPageIconSprite.png);
+  background-image: url(../images/firstPageIconSprite.png);
   background-repeat: no-repeat;
   background-position: -1px 36px; }
 
 #factors-of-creation__icon2 {
-  background-image: url(/images/firstPageIconSprite.png);
+  background-image: url(../images/firstPageIconSprite.png);
   background-repeat: no-repeat;
   background-position: -72px 36px; }
 
 #factors-of-creation__icon3 {
-  background-image: url(/images/firstPageIconSprite.png);
+  background-image: url(../images/firstPageIconSprite.png);
   background-repeat: no-repeat;
   background-position: -145px 36px; }
 
 #factors-of-creation__icon4 {
-  background-image: url(/images/firstPageIconSprite.png);
+  background-image: url(../images/firstPageIconSprite.png);
   background-repeat: no-repeat;
   background-position: -218px 36px; }
 
@@ -600,22 +600,22 @@ a {
   padding: 16px 0 0 0; }
 
 #factors-of-creation__icon1 {
-  background-image: url(/images/firstPageIconSprite.png);
+  background-image: url(../images/firstPageIconSprite.png);
   background-repeat: no-repeat;
   background-position: -1px 36px; }
 
 #factors-of-creation__icon2 {
-  background-image: url(/images/firstPageIconSprite.png);
+  background-image: url(../images/firstPageIconSprite.png);
   background-repeat: no-repeat;
   background-position: -72px 36px; }
 
 #factors-of-creation__icon3 {
-  background-image: url(/images/firstPageIconSprite.png);
+  background-image: url(../images/firstPageIconSprite.png);
   background-repeat: no-repeat;
   background-position: -145px 36px; }
 
 #factors-of-creation__icon4 {
-  background-image: url(/images/firstPageIconSprite.png);
+  background-image: url(../images/firstPageIconSprite.png);
   background-repeat: no-repeat;
   background-position: -218px 36px; }
 
@@ -760,7 +760,7 @@ a {
   margin: 30px 0 0 0; }
 
 .how-we-noticed-card-item__icon {
-  background-image: url(/images/icon4.png);
+  background-image: url(../images/icon4.png);
   background-position: 0 30px;
   background-repeat: no-repeat;
   width: 70px;
@@ -959,28 +959,28 @@ a {
   background-repeat: no-repeat; }
 
 #readyRefrigeration-items__img1 {
-  background-image: url(/images/readySection1.jpg); }
+  background-image: url(../images/readySection1.jpg); }
 
 #readyRefrigeration-items__img2 {
-  background-image: url(/images/readySection2.jpg); }
+  background-image: url(../images/readySection2.jpg); }
 
 #readyRefrigeration-items__img3 {
-  background-image: url(/images/readySection3.jpg); }
+  background-image: url(../images/readySection3.jpg); }
 
 #readyRefrigeration-items__img4 {
-  background-image: url(/images/readySection4.jpg); }
+  background-image: url(../images/readySection4.jpg); }
 
 #readyRefrigeration-items__img5 {
-  background-image: url(/images/readySection5.jpg); }
+  background-image: url(../images/readySection5.jpg); }
 
 #readyRefrigeration-items__img6 {
-  background-image: url(/images/readySection6.jpg); }
+  background-image: url(../images/readySection6.jpg); }
 
 #readyRefrigeration-items__img7 {
-  background-image: url(/images/readySection7.jpg); }
+  background-image: url(../images/readySection7.jpg); }
 
 #readyRefrigeration-items__img8 {
-  background-image: url(/images/readySection8.jpg); }
+  background-image: url(../images/readySection8.jpg); }
 
 .readyRefrigeration-items__img {
   background-repeat: no-repeat;
@@ -1040,19 +1040,19 @@ a {
   background-color: #fff; }
 
 #make-under-key-item1 {
-  background-image: url(/images/makeUnderKey1.jpg); }
+  background-image: url(../images/makeUnderKey1.jpg); }
 
 #make-under-key-item2 {
-  background-image: url(/images/makeUnderKey2.jpg); }
+  background-image: url(../images/makeUnderKey2.jpg); }
 
 #make-under-key-item3 {
-  background-image: url(/images/makeUnderKey3.jpg); }
+  background-image: url(../images/makeUnderKey3.jpg); }
 
 #make-under-key-item4 {
-  background-image: url(/images/makeUnderKey4.jpg); }
+  background-image: url(../images/makeUnderKey4.jpg); }
 
 #make-under-key-item5 {
-  background-image: url(/images/makeUnderKey5.jpg); }
+  background-image: url(../images/makeUnderKey5.jpg); }
 
 .make-under-key-item__text {
   background-color: #fff;
