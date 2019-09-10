@@ -1,0 +1,40 @@
+extends ../_pug_layouts/home
+
+block styles
+  link(rel="stylesheet", href="../css/contactsPage/contactsPage.css")
+
+block content
+  .contacts-page
+    nav.contacts-page-bread-crumbs
+      ul
+        a(href="../index.html"): li Главная
+        span |
+        li Контакты
+    .contacts-page-contacts-and-map
+      .contacts-page-contacts
+        h4 Контакты
+        h5 наши реквизиты:
+        p ИП Чернятин Никита Михайлович
+        p ОГРНИП: 312501221300018
+        p ИНН: 501206557489
+        p По всем вопросам, обращайтесь по телефонам:
+
+        p +7(925)036-90-08
+        p +7(495)120-75-72
+
+        p Холодильные системы, 2000г.
+
+      .contacts-page-map
+        script.contactsPage-map(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afd69c68583f375df25774e1b802f34d2487c58b7e782a1dcd3df0181a18194c3&amp;max-width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true")
+    .contacts-page-form-wrapper
+      .contacts-page-form
+        .contacts-page-form-header
+          h4 Оставьте заявку и наш менеджер свяжется с вами и поможет с выбором
+        form.contacts-page-form-form(action="" method="post")
+          input(type="text" placeholder="Имя" required)
+          input(type="text" placeholder="Телефон" required)
+          input(type="submit" value="заказать звонок")
+
+
+block scripts
+  script(src='../js/contactsPage.js', defer='')

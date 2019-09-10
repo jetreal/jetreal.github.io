@@ -1,0 +1,50 @@
+@import "mixins"
+
+.break-head
+    max-width: 100%
+    height: auto
+    background-color: #004CAF
+    text-align: center
+    color: white
+.break-head-wrapper
+    font-family: 'Open_sans'
+    display: grid  
+    grid-template-areas: 'headerh2 headerh2' 'pleft pright'
+    & div:nth-child(1)
+        grid-area: headerh2
+        width: auto
+        height: auto
+        padding: 0 0 20px 0
+        +c
+        font-size: 1.5em
+
+    & div:nth-child(2)
+        grid-area: pleft
+        width: auto
+        height: auto
+        +c
+        font-size: 1.3em
+        
+    & div:nth-child(3)
+        grid-area: pright
+        width: auto
+        height: auto
+        +c
+        font-size: 1.3em
+.break-head__arrow
+    width: 30px
+    height: 30px
+    margin: 30px auto 0
+    & img
+        width: 100%
+        height: auto
+        animation: downArrow 4s infinite
+        position: relative
+        top: 0px
+@keyframes downArrow 
+    0%
+        top: -10px
+    50%
+        top: 5px
+    100%
+        top: -10px

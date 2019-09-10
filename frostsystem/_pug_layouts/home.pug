@@ -1,0 +1,36 @@
+doctype html
+html(lang='en')
+  head
+    title frost
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='../libs/OwlCarousel/dist/assets/owl.carousel.min.css')
+    link(rel='stylesheet' href='../libs/OwlCarousel/dist/assets/owl.theme.default.min.css')
+    link(rel='stylesheet', href='../css/home/home.css')
+    link(rel='stylesheet' href='../_grid.min.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+    script(src='../js/index.js', defer='')
+    script(src="https://kit.fontawesome.com/f90f7a5525.js")
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
+    script(src='../libs/Magnific/jquery.magnific-popup.min.js')
+    script(src='../libs/OwlCarousel/dist/owl.carousel.min.js')
+
+    block styles
+
+  body
+    .navBar__toggle
+      p
+        | menu
+    .display
+      #width
+      #height
+      #scroll
+    .wrapperAll
+      include ../_pug_partials/main_page/header
+
+      block content
+
+      include ../_pug_partials/main_page/footer
+
+
+    block scripts

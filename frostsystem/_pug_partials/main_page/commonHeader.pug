@@ -1,0 +1,26 @@
+header.header
+  .header__logo
+    img(src='/images/headerLogo.png')
+  .header__input
+    input(type="text" placeholder="поиск")
+  .header-phone
+    .header-phone__icons-and-phone
+      .header-phone__icons
+        img(src="/images/viber.png", alt="")
+        img(src="/images/telegram.png", alt="")
+        img(src="/images/whatsapp.png", alt="")
+      .header-phone__top-phone
+        p 8 (955) 036-90-08
+    .header-phone__bottom-phone
+        p 8 (499) 955-43-35
+
+nav.navBar
+  ul
+    a.navbar__a(href="_pug_pages/contacts.html" style="{pointer-events: none;}"): li.navBar__active-li
+      | Контакты
+    a(href=""): li
+      | О нас
+    a(href=""): li
+      | Гарантии и тех. обслуживание
+    a(href=""): li
+      | Статьи
