@@ -1,0 +1,204 @@
+
+@import "fonts"
+@import "base"
+@import "normalize"
+@import "mixins"
+
+
+//////////////////////////////
+
+.j-header
+  max-width: 1180px
+  min-height: 96px
+  margin: 0 auto
+  position: relative
+  top: 20px
+  background-color: #fff
+  display: grid
+  grid-template-columns: auto auto
+@media (max-width: 1200px)
+  .j-header
+    grid-template-columns: auto
+    min-height: 156px
+    gird-gap: 20px
+
+.j-header-logo
+  display: flex
+  width: 140px
+  height: 52px
+  position: relative
+  top: 22px
+  cursor: pointer
+
+@media (max-width: 1200px)
+  .j-header-logo
+    margin: 0 auto
+    top: 12px
+
+.j-header-logo__img
+  background-image: url(/images/header_logo.png)
+  background-repeat: no-repeat
+  width: 52px
+  height: 52px
+
+.j-header-logo__text
+  width: 80px
+  height: 38px
+  background-image: url(/images/header_logo_text.png)
+  background-repeat: no-repeat
+  position: relative
+  top: 8px
+  left: 4px
+  font-family: Montserrat
+  
+.j-header-phones-and-button-section
+  width: 100%
+  display: flex
+  flex-flow: wrap
+  grid-template-columns: auto auto auto
+  justify-content: end
+  grid-gap: 15px
+  position: relative
+  top: 15px
+  padding:
+@media (max-width: 1200px)
+  .j-header-phones-and-button-section
+    justify-content: center
+@media (max-width: 992px)
+  .j-header-phones-and-button-section
+    display: flex
+
+.j-header-phones-and-button-section-phone
+  width: 300px
+  height: 42px
+  font-family: Montserrat
+  display: grid
+  grid-template-areas: 'text phonenumber' 'text description'
+
+.j-header-phones-and-button-section__text
+  width: 80px
+  grid-area: text
+  font-family: Montserrat
+  font-size: .86rem
+  position: relative
+  top: 4px
+  line-height: 1.2rem
+  transition: text-shadow 1s
+  &:hover
+    text-shadow: 1px 1px 1px gray
+
+.j-header-phones-and-button-section__phonenumber
+  grid-area: phonenumber
+  font-size: 1.5rem
+
+.j-header-phones-and-button-section__description
+  grid-area: description
+  font-size: .8rem
+
+.j-header-phones-and-button-section--phone-color
+  color: #333333
+.j-header-phones-and-button-section--violet-color
+  color: #A33292
+.j-header-phones-and-button-section--red-color
+  color: #E40C10
+.j-header-phones-and-button-section--grey-color
+  color: #828282
+
+.j-header-phones-and-button-section-button
+  width: 300px
+  height: 42px
+  font-family: Montserrat
+  display: grid
+  grid-template-columns: auto auto auto
+  align-content: center
+  
+.j-header-phones-and-button-section-button-icon
+  width: 21px
+  height: 19px
+  background-image: url(/images/telegramm-icon.png)
+  background-repeat: no-repeat
+  position: relative
+  top: 7px
+
+.j-header-phones-and-button-section-button-text
+  font-size: .8rem
+  & p
+    font-family: Montserrat
+    cursor: pointer
+    &:hover
+      text-shadow: 1px 1px 1px gray
+.j-header-phones-and-button-section-button-btn
+  width: 152px
+  height: 29px
+  display: grid
+  & button
+    align-content: center 
+    width: 100%
+    height: 100%
+    font-family: Montserrat
+    color: #ffffff
+    background-image: linear-gradient(to right, #AC277D, #E20110 87.9%, #FAC502)
+    border-radius: 8px
+    outline: none
+    border: 0px
+    font-size: .8rem
+    transition: all .3s
+    cursor: pointer
+    &:hover
+      background-image: linear-gradient(to right, #E20110 87.9%, #FAC502)
+      text-shadow: 1px 1px grey
+.j-gamburger
+  width: 22px
+  height: 18px
+  position: absolute
+  left: -87px
+  top: 8px
+  background-image: url(/images/gamburger.png)
+  cursor: pointer
+.j-navbar
+  position: relative
+  width: 80%
+  height: 22px
+  margin: 0 auto
+  letter-spacing: .02rem
+  & ul
+    grid-gap: 20px
+    padding: 10px 0 0 
+    font-family: Montserrat
+    max-width: 100%
+    display: grid
+    grid-template-columns: auto auto auto auto auto auto auto
+    position: relative
+    left: -13px
+    font-size: .86rem
+    font-weight: bold
+@media (max-width: 992px)
+  .j-navbar ul
+    display: none
+.j-navbar__li
+  transition: .3s
+  &:hover
+    color: #E40C10
+    transition: color .5s
+    cursor: pointer
+    text-shadow: 1px 1px 1px gray
+.j-star
+  background-image: url(/images/star.png)
+  width: 20px
+  height: 20px
+  position: relative
+  bottom: 20px
+  left: -30px
+  transition: all 1s
+  &:hover
+    transform: rotate(-360deg)
+
+
+///////////////////////////////
+
+@import "displayPapams"
+// @import "magnific-popup"
+@import "media"
+
+
+
