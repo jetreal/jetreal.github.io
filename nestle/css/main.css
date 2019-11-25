@@ -1629,7 +1629,6 @@ template {
     padding: 28px 0;
     margin: 0 auto;
     max-width: 960px;
-    outline: 1px solid green;
     min-height: inherit;
     display: grid;
     grid-template-columns: auto;
