@@ -952,6 +952,7 @@ template {
             box-shadow: 3px 3px 3px rgba(50, 50, 50, 0.2); }
 
 .j-third-section {
+  margin: 0 auto;
   min-height: 636px;
   max-width: 100%;
   background-image: url("../images/thirdsection_bg.webp");
