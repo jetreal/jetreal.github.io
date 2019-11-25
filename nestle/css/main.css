@@ -515,7 +515,7 @@ template {
 .for-snow__paralax1 {
   widows: inherit;
   height: 715px;
-  background-image: url(../images/paralax.png);
+  background-image: url(../images/paralax.webp);
   background-repeat: no-repeat;
   background-position: center;
   margin: 0 auto; }
@@ -523,7 +523,7 @@ template {
 .for-snow__paralax2 {
   widows: inherit;
   height: 715px;
-  background-image: url(../images/paralax2.png);
+  background-image: url(../images/paralax2.webp);
   background-repeat: no-repeat;
   background-position: center;
   margin: 0 auto; }
@@ -532,7 +532,7 @@ template {
   position: relative;
   max-width: 100%;
   min-height: 785px;
-  background-image: url(../images/first_bg1.png);
+  background-image: url(../images/first_bg1.webp);
   background-position: center;
   background-size: cover; }
 
@@ -551,7 +551,7 @@ template {
 .j-header__left-logo {
   width: 210px;
   height: 140px;
-  background-image: url(../images/left_logo.png);
+  background-image: url(../images/left_logo.webp);
   background-repeat: no-repeat;
   background-position: center; }
 
@@ -585,7 +585,7 @@ template {
 .j-header__right-logo {
   width: 150px;
   height: 140px;
-  background-image: url(../images/right_logo.png);
+  background-image: url(../images/right_logo.webp);
   background-repeat: no-repeat;
   background-position: center;
   -webkit-transition: all 1s ease;
@@ -693,7 +693,7 @@ template {
   -webkit-transition: .2s;
   -o-transition: .2s;
   transition: .2s;
-  background-image: url("../images/checkbox_bg.png");
+  background-image: url("../images/checkbox_bg.webp");
   background-repeat: no-repeat;
   background-size: cover; }
 
@@ -709,7 +709,7 @@ template {
   -o-transition: .5s;
   transition: .5s;
   opacity: 0;
-  background-image: url("../images/checkbox.png");
+  background-image: url("../images/checkbox.webp");
   background-repeat: no-repeat;
   background-size: contain; }
 
@@ -718,7 +718,7 @@ template {
 
 .j-firstsection-form__left-item2 input:checked ~ label:after {
   opacity: 1;
-  background-image: url("../images/checkbox.png"); }
+  background-image: url("../images/checkbox.webp"); }
 
 .j-firstsection-form__left-item2:focus + label:before {
   -webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2), 0 0 0 3px rgba(255, 255, 0, 0.7);
@@ -875,15 +875,15 @@ template {
 
 .j-unic-content-card--bg1 {
   grid-area: a;
-  background-image: url("../images/card_bg1.png"); }
+  background-image: url("../images/card_bg1.webp"); }
 
 .j-unic-content-card--bg2 {
   grid-area: b;
-  background-image: url("../images/card_bg2.png"); }
+  background-image: url("../images/card_bg2.webp"); }
 
 .j-unic-content-card--bg3 {
   grid-area: c;
-  background-image: url("../images/card_bg3.png"); }
+  background-image: url("../images/card_bg3.webp"); }
 
 .j-unic-content-card__icon {
   width: 80px;
@@ -907,18 +907,18 @@ template {
 
 .j-unic-content-card__icon--bg1 {
   grid-area: a;
-  background-image: url(../images/card_icon1.png);
+  background-image: url(../images/card_icon1.webp);
   background-position: 7px 9px; }
 
 .j-unic-content-card__icon--bg2 {
   grid-area: b;
-  background-image: url(../images/card_icon2.png);
+  background-image: url(../images/card_icon2.webp);
   position: relative;
   top: -3px; }
 
 .j-unic-content-card__icon--bg3 {
   grid-area: c;
-  background-image: url(../images/card_icon3.png); }
+  background-image: url(../images/card_icon3.webp); }
 
 .j-unic-content-card__h3 {
   padding: 10px;
@@ -954,7 +954,7 @@ template {
 .j-third-section {
   min-height: 636px;
   max-width: 100%;
-  background-image: url("../images/thirdsection_bg.jpg");
+  background-image: url("../images/thirdsection_bg.webp");
   padding: 45px 0 0;
   background-position: center; }
 
@@ -974,7 +974,7 @@ template {
   display: grid;
   width: 110px;
   height: 60px;
-  background-image: url("../images/nestle_logo.png");
+  background-image: url("../images/nestle_logo.webp");
   position: absolute;
   left: 60px;
   top: 10px;
@@ -1292,10 +1292,10 @@ template {
   background-position: center; }
 
 .j-fourth-section-card__img--srcleft {
-  background-image: url(../images/four_section_item11.png); }
+  background-image: url(../images/four_section_item11.webp); }
 
 .j-fourth-section-card__img--srcright {
-  background-image: url(../images/four_section_item22.png); }
+  background-image: url(../images/four_section_item22.webp); }
 
 .j-fourth-section-card__h4 {
   text-align: center;
@@ -1424,7 +1424,7 @@ template {
   grid-area: a;
   width: 175px;
   height: 50px;
-  background-image: url("../images/footer_logo.png");
+  background-image: url("../images/footer_logo.webp");
   background-repeat: no-repeat; }
 
 .j-footer-center__logo--margin-r {
@@ -1814,7 +1814,7 @@ template {
   .j-third-section-main-center__text {
     font-size: .9rem; }
   .j-header__left-logo {
-    background-image: url(../images/nestle_logo.png);
+    background-image: url(../images/nestle_logo.webp);
     width: 150px; }
   .j-h1-wrapper {
     position: relative;
