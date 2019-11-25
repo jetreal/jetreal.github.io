@@ -66,7 +66,7 @@ function showMenu() {
   gflag = !gflag
   switch(gflag) {
     case false :
-      $('#gambMenu').css({"opacity":"0", "right":"-5000px"})
+      $('#gambMenu').css({"opacity":"0"})
       $('.wrapperAll').css({"opacity":"1"}).removeClass('wrBlack')
       break
     case true :
@@ -83,7 +83,7 @@ $(window).on('load resize', function() {
     $('#gambMenu').css({"opacity":"1", "right":"0px", "z-index":"60"})
     $('.wrapperAll').css({"opacity":"1"}).removeClass('wrBlack')
   } else {
-    $('#gambMenu').css({"opacity":"0", "right":"-5000px"})
+    $('#gambMenu').css({"opacity":"0"})
   }
 })
 
