@@ -1256,7 +1256,7 @@ template {
     height: 114px; }
 
 .j-third-section-main-center-question-navdots {
-  z-index: 10;
+  z-index: 3;
   width: 120px;
   height: 14px;
   position: relative;
