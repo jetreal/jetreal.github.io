@@ -1,3 +1,4 @@
+
 // параметры 
 var elem = document.getElementById('snows1') // здесь Id контейнера
 var elem2 = document.getElementById('snows2') // здесь Id контейнера
@@ -26,29 +27,16 @@ document.onmousemove = function (e) {
   document.getElementById('mouseY').innerHTML = Y + ': mouseY'
 
   // паралакс эффект
-
   // elem.style.transform = 'translateX(' + X/10 + 'px)' + ' translateY(' + Y/10 + 'px)';
-
 }
-// получение координат верхнего левого угла контейнера относительно окна
-// var elem = document.getElementById('textDiv') // здесь Id контейнера
-// function getCoords(elem) { // кроме IE8-
-//   var box = elem.getBoundingClientRect();
-//   var top = box.top + pageYOffset;
-//   var left = box.left + pageXOffset;
-//   document.getElementById('clientX').innerHTML = top + ': clientX'
-//   document.getElementById('clientY').innerHTML = left + ': clientY'
-// }
-// getCoords(elem);
 
-
-
+// библиотечный сниппет 
 $(document).ready(function() {
 	if ($(window).outerWidth() > 768) {
 		(function() {
 		  $(window).on("load",function(){
 		    $("a[href*='#']").mPageScroll2id({
-		    	scrollSpeed: 1500,
+		    	scrollSpeed: 1000,
 		    	// onStart:function(){},
 		    	// onComplete:function(){}
 		    });
@@ -57,7 +45,21 @@ $(document).ready(function() {
 	} 
 });
 
+// переключение меню, точек слайдера
+$(document).ready(function() {
+  $(".j-third-section-main-center-question-navdots__item").on("click", function(
+    e
+  ) {
+    $(".j-third-section-main-center-question-navdots div").removeClass(
+      "j-third-section-main-center-question-navdots__item--active"
+    );
+    $(e.target).addClass(
+      "j-third-section-main-center-question-navdots__item--active"
+    );
+  });
+});
 
+// функция всплювающего меню гамбургера
 $(document).ready(function() {
   $('#gamburger').on('click', showMenu);
 })
@@ -74,9 +76,10 @@ function showMenu() {
       $('.wrapperAll').css({"opacity":"1"}).addClass('wrBlack')
       break
     default: return
-    }
+  }
 }
 
+// восстановление меню при ресайзе
 $(window).on('load resize', function() {
   if ($(window).outerWidth() > 992) {
     // remove tag <a> and replace content without <a>
@@ -87,9 +90,8 @@ $(window).on('load resize', function() {
   }
 })
 
-
-
 // disable hovers and click events when scrolling
+// Функция отключения событий клика при скролле увеличивает производительность во время скролла
 var body = document.body,
     timer;
 window.addEventListener('scroll', function() {
@@ -109,3 +111,50 @@ $(window).one('load', function() {
     $('.wrapperLoader').fadeOut('slow');
   },250);
 });
+
+
+var target = $('#main');
+var target2 = $('#unic');
+var target3 = $('#third');
+var target4 = $('#four');
+var targetPos = target.offset().top;
+var targetPos2 = target2.offset().top;
+var targetPos3 = target3.offset().top;
+var targetPos4 = target4.offset().top;
+
+var winScrollTop
+$(window).scroll(function() {
+  winScrollTop = $(this).scrollTop();
+  line()
+})
+
+function line() {
+  if (winScrollTop == 0) {
+    $(".j-third-section-main-left-side-vertical-line").css("top", "-120px");
+    $(".j-third-section-main-left-side-circles__item").removeClass(
+      "j-third-section-main-left-side-circles__item--active"
+    );
+    $("#l1").addClass("j-third-section-main-left-side-circles__item--active");
+  }
+  if (winScrollTop + 3 > targetPos2) {
+    $(".j-third-section-main-left-side-vertical-line").css("top", "-80px");
+    $(".j-third-section-main-left-side-circles__item").removeClass(
+      "j-third-section-main-left-side-circles__item--active"
+    );
+    $("#l2").addClass("j-third-section-main-left-side-circles__item--active");
+  }
+  if (winScrollTop + 3 > targetPos3) {
+    $(".j-third-section-main-left-side-vertical-line").css("top", "-50px");
+    $(".j-third-section-main-left-side-circles__item").removeClass(
+      "j-third-section-main-left-side-circles__item--active"
+    );
+    $("#l3").addClass("j-third-section-main-left-side-circles__item--active");
+  }
+  if (winScrollTop + 3 > targetPos4) {
+    $(".j-third-section-main-left-side-vertical-line").css("top", "-20px");
+    $(".j-third-section-main-left-side-circles__item").removeClass(
+      "j-third-section-main-left-side-circles__item--active"
+    );
+    $("#l4").addClass("j-third-section-main-left-side-circles__item--active");
+  }
+}
