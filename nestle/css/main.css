@@ -713,7 +713,7 @@ template {
   z-index: 1;
   content: '';
   position: absolute;
-  top: -2px;
+  top: 3px;
   left: -40px;
   width: 25px;
   height: 25px;
