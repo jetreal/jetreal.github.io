@@ -1,3 +1,4 @@
+
 // параметры 
 var elem = document.getElementById('snows1') // здесь Id контейнера
 var elem2 = document.getElementById('snows2') // здесь Id контейнера
@@ -26,9 +27,7 @@ document.onmousemove = function (e) {
   document.getElementById('mouseY').innerHTML = Y + ': mouseY'
 
   // паралакс эффект
-
   // elem.style.transform = 'translateX(' + X/10 + 'px)' + ' translateY(' + Y/10 + 'px)';
-
 }
 // получение координат верхнего левого угла контейнера относительно окна
 // var elem = document.getElementById('textDiv') // здесь Id контейнера
@@ -41,20 +40,30 @@ document.onmousemove = function (e) {
 // }
 // getCoords(elem);
 
-
-
 $(document).ready(function() {
 	if ($(window).outerWidth() > 768) {
 		(function() {
 		  $(window).on("load",function(){
 		    $("a[href*='#']").mPageScroll2id({
-		    	scrollSpeed: 1500,
+		    	scrollSpeed: 1000,
 		    	// onStart:function(){},
 		    	// onComplete:function(){}
 		    });
 		  });
 		})(jQuery);
 	} 
+});
+$(document).ready(function() {
+  $(".j-third-section-main-center-question-navdots__item").on("click", function(
+    e
+  ) {
+    $(".j-third-section-main-center-question-navdots div").removeClass(
+      "j-third-section-main-center-question-navdots__item--active"
+    );
+    $(e.target).addClass(
+      "j-third-section-main-center-question-navdots__item--active"
+    );
+  });
 });
 
 
@@ -74,8 +83,9 @@ function showMenu() {
       $('.wrapperAll').css({"opacity":"1"}).addClass('wrBlack')
       break
     default: return
-    }
+  }
 }
+
 
 $(window).on('load resize', function() {
   if ($(window).outerWidth() > 992) {
@@ -86,8 +96,6 @@ $(window).on('load resize', function() {
     $('#gambMenu').css({"opacity":"0"})
   }
 })
-
-
 
 // disable hovers and click events when scrolling
 var body = document.body,
@@ -102,10 +110,36 @@ window.addEventListener('scroll', function() {
   },100);
 }, false);
 
-
 //preloader
 $(window).one('load', function() {
   setTimeout(function() {
     $('.wrapperLoader').fadeOut('slow');
   },250);
 });
+
+var target = $('#main');
+var target2 = $('#unic');
+var target3 = $('#third');
+var target4 = $('#four');
+var targetPos = target.offset().top;
+var targetPos2 = target2.offset().top;
+var targetPos3 = target3.offset().top;
+var targetPos4 = target4.offset().top;
+
+var winScrollTop
+$(window).scroll(function() {
+  winScrollTop = $(this).scrollTop();
+  line("#l1", "-120px", targetPos)
+  line("#l2", "-50px", targetPos2)
+  line("#l3", "-80px", targetPos3)
+  line("#l4", "-20px", targetPos4)
+})
+function line(className, top, pos) {
+  if (winScrollTop > pos) {
+    $(".j-third-section-main-left-side-vertical-line").css("top", top);
+    $(".j-third-section-main-left-side-circles__item").removeClass(
+      "j-third-section-main-left-side-circles__item--active"
+    );
+    $(className).addClass("j-third-section-main-left-side-circles__item--active");
+  }
+}
