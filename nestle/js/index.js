@@ -14,18 +14,18 @@ window.onscroll = function () {
   elem3.style.transform = 'translateY(' + scrolled*(-.8) + 'px)';
   elem4.style.transform = 'translateY(' + scrolled*(-.9) + 'px)';
 }
-$(window).on('load resize', function () {
-  var width = $('html').outerWidth();
-  var height = $(window).height();
-  $('#width').html(width + 'px : width');
-  $('#height').html(height + 'px : height');
-});
+// $(window).on('load resize', function () {
+//   var width = $('html').outerWidth();
+//   var height = $(window).height();
+//   $('#width').html(width + 'px : width');
+//   $('#height').html(height + 'px : height');
+// });
 
-document.onmousemove = function (e) {
-  var X = e.pageX;
-  var Y = e.pageY;
-  document.getElementById('mouseX').innerHTML = X + ': mouseX'
-  document.getElementById('mouseY').innerHTML = Y + ': mouseY'
+// document.onmousemove = function (e) {
+//   var X = e.pageX;
+//   var Y = e.pageY;
+//   document.getElementById('mouseX').innerHTML = X + ': mouseX'
+//   document.getElementById('mouseY').innerHTML = Y + ': mouseY'
 
   // паралакс эффект
   // elem.style.transform = 'translateX(' + X/10 + 'px)' + ' translateY(' + Y/10 + 'px)';
