@@ -71,10 +71,12 @@ function showMenu() {
     case false :
       $('#gambMenu').css({"opacity":"0"})
       $('.wrapperAll').css({"opacity":"1"}).removeClass('wrBlack')
+      $('.j-third-section-main-center-question-navdots').css('z-index', '3')
       break
     case true :
       $('#gambMenu').css({"opacity":"1", "right":"0px", "z-index":"60"})
       $('.wrapperAll').css({"opacity":"1"}).addClass('wrBlack')
+      $('.j-third-section-main-center-question-navdots').css('z-index', '1')
       break
     default: return
   }
