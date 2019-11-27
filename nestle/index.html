@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="libs/wow/animate.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="libs/wow/wow.min.js" defer=""></script>
     <script src="js/index.js" defer=""></script>
     <script src="https://kit.fontawesome.com/f90f7a5525.js"></script>
     <script src="libs/scroll2Id/jquery.malihu.PageScroll2id.min.js"></script>
@@ -43,7 +45,7 @@
     </div>
     <!-- header section-->
     <div class="wrapperAll">
-      <aside class="j-third-section-main-left-side">
+      <aside class="j-third-section-main-left-side wow zoomIn" data-wow-delay="2s">
         <div class="j-third-section-main-left-side-vertical-line"></div>
         <div class="j-third-section-main-left-side-circles"><a href="#main">
             <div class="j-third-section-main-left-side-circles__item j-third-section-main-left-side-circles__item--active" id="l1"></div></a><a href="#unic">
@@ -74,13 +76,13 @@
       </div>
       <section class="j-first-section" id="main">
         <div class="for-snow">
-          <div class="for-snow__paralax1" id="snows1"></div>
+          <div class="for-snow__paralax1 wow fadeInUp" id="snows1" data-wow-delay="0.5s"></div>
           <div class="for-snow__paralax2" id="snows2"></div>
           <div class="for-snow__paralax1" id="snows3"></div>
           <div class="for-snow__paralax2" id="snows4"></div>
         </div>
         <header class="j-header">
-          <div class="j-header__left-logo"></div>
+          <div class="j-header__left-logo wow flipInY" data-wow-delay="1s"></div>
           <div class="j-header-center-menu">
             <nav>
               <ul>
@@ -90,7 +92,7 @@
               </ul>
             </nav>
           </div>
-          <div class="j-header__right-logo"></div>
+          <div class="j-header__right-logo wow flip" data-wow-delay="1s"></div>
         </header>
         <div class="j-h1-wrapper">
           <h1 class="j-h1">Не пропускайте ничего важного<br>для вас и вашего малыша!</h1>
@@ -131,20 +133,20 @@
       <section class="j-unic-content" id="unic">
         <h2 class="j-h1">Уникальный контент</h2>
         <div class="j-unic-content-cardwrapper">
-          <div class="j-unic-content-card j-unic-content-card--bg1">
-            <div class="j-unic-content-card__icon j-unic-content-card__icon--bg1"></div>
-            <h3 class="j-unic-content-card__h3">Беременность</h3>
+          <div class="j-unic-content-card j-unic-content-card--bg1 wow fadeInUp">
+            <div class="j-unic-content-card__icon wow bounceIn j-unic-content-card__icon--bg1" data-wow-offset="200"></div>
+            <h2 class="j-unic-content-card__h3">Беременность</h2>
             <p class="j-unic-content-card__p">Поздравляем, ты скоро станешь<br>мамой! Беременность - это самый<br>важный и волнинельный момент<br>в жизни. Советы Клуба помогут<br>тебе растить здоровых и<br>радостных детей.</p>
             <button class="j-unic-content-card__button">Узнать больше</button>
           </div>
-          <div class="j-unic-content-card j-unic-content-card--bg2">
-            <div class="j-unic-content-card__icon j-unic-content-card__icon--bg2"></div>
+          <div class="j-unic-content-card j-unic-content-card--bg2 wow fadeInUp">
+            <div class="j-unic-content-card__icon wow heartBeat j-unic-content-card__icon--bg2" data-wow-offset="200"></div>
             <h3 class="j-unic-content-card__h3">Питание ребёнка</h3>
             <p class="j-unic-content-card__p">Правильное питание детей на<br>первом году жизни - залог<br>гармоничного развития и<br>формирования крепкого<br>иммунитета.</p>
             <button class="j-unic-content-card__button">Узнать больше</button>
           </div>
-          <div class="j-unic-content-card j-unic-content-card--bg3">
-            <div class="j-unic-content-card__icon j-unic-content-card__icon--bg3"></div>
+          <div class="j-unic-content-card j-unic-content-card--bg3 wow fadeInUp">
+            <div class="j-unic-content-card__icon wow bounceIn j-unic-content-card__icon--bg3" data-wow-offset="200"></div>
             <h3 class="j-unic-content-card__h3">Здоровье</h3>
             <p class="j-unic-content-card__p">При воспитании малыша у<br>родителей могут возникнуть<br>вопросы: Наши специалисты<br>готовы помочь вам и маленькой<br>революции в вашей повседневной<br>жизни!</p>
             <button class="j-unic-content-card__button">Узнать больше</button>
@@ -152,7 +154,7 @@
         </div>
       </section>
       <section class="j-third-section" id="third">
-        <div class="j-third-section-topline">
+        <div class="j-third-section-topline wow fadeInLeft">
           <div class="j-third-section-topline-gamburger" id="gamburger">
             <div class="j-third-section-topline-gamburger__line"></div>
             <div class="j-third-section-topline-gamburger__line"></div>
@@ -186,11 +188,11 @@
             <p class="j-third-section-main-center__text">Ответы на вопросы по питанию.<br>24 часа в сутки, 7 дней в неделю специалисты отвечают на вопросы мам.</p>
             <button class="j-third-section-main-center__button">Спросить</button>
             <div class="j-third-section-main-center-question">
-              <div class="j-third-section-main-center-question-req">
+              <div class="j-third-section-main-center-question-req wow pulse">
                 <h3>Вопрос:</h3>
                 <p>Lorem ipsum - это текст-"рыба". часто используемый<br>в печати и вэб-дизайне?</p>
               </div>
-              <div class="j-third-section-main-center-question-res">
+              <div class="j-third-section-main-center-question-res wow pulse">
                 <div class="j-third-section-main-center-question-res-image"><img src="images/woman_foto.webp" alt=""></div>
                 <div class="j-third-section-main-center-question-res__texts">
                   <h3>Сухорева Надежда Дмитриевна:</h3>
@@ -213,13 +215,13 @@
           <h2 class="j-fourth-section-h1">Конкурсы и дегустации</h2>
         </div>
         <div class="j-fourth-section-cards-wrap">
-          <div class="j-fourth-section-card j-fourth-section-card--modify1">
+          <div class="j-fourth-section-card j-fourth-section-card--modify1 wow fadeInLeft">
             <div class="j-fourth-section-card__img j-fourth-section-card__img--srcleft"></div>
             <h4 class="j-fourth-section-card__h4 j-fourth-section-card__h4--padding">Акция "Moя первая ложечка Gerber"</h4>
             <p class="j-fourth-section-card__p">Lorem Ipsum - это текст-"рыба", часто используемый в<br>печати и вэб-дизайне. Lorem Ipsum является стандартной<br>"рыбой" для текстов на латинице с начала XVI века</p>
             <button class="j-fourth-section-card__button">Узнать больше</button>
           </div>
-          <div class="j-fourth-section-card">
+          <div class="j-fourth-section-card wow fadeInRight">
             <div class="j-fourth-section-card__img j-fourth-section-card__img--srcright"></div>
             <h4 class="j-fourth-section-card__h4 j-fourth-section-card__h4--padding">Акция "Moя первая ложечка Gerber"</h4>
             <p class="j-fourth-section-card__p">Lorem Ipsum - это текст-"рыба", часто используемый в<br>печати и вэб-дизайне. Lorem Ipsum является стандартной<br>"рыбой" для текстов на латинице с начала XVI века</p>
@@ -238,7 +240,7 @@
           </div>
           <div class="j-footer-form-center-icons">
             <h4 class="j-footer-form-center-form__h3 j-footer-form-center-icons__h4--text-right">Мы в социальной сетях</h4>
-            <div class="j-social-icon-icons">
+            <div class="j-social-icon-icons wow flash">
               <div class="j-social-icon-icons__item j-social-icon-icons__item--color1"><i class="fab fa-facebook-f"></i></div>
               <div class="j-social-icon-icons__item j-social-icon-icons__item--color2 utube-bgc"><i class="fab fa-youtube"></i></div>
               <div class="j-social-icon-icons__item j-social-icon-icons__item--color3"><i class="fab fa-vk"></i></div>

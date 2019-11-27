@@ -1,4 +1,5 @@
-
+// init wow 
+new WOW().init()
 // параметры 
 var elem = document.getElementById('snows1') // здесь Id контейнера
 var elem2 = document.getElementById('snows2') // здесь Id контейнера
@@ -158,3 +159,7 @@ function line() {
     $("#l4").addClass("j-third-section-main-left-side-circles__item--active");
   }
 }
+
+// if (is.not.firefox()) { 
+//   $('label:after').css('top', '-5px')
+// }
