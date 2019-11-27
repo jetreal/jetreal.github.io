@@ -8,7 +8,7 @@ var elem4 = document.getElementById('snows4') // здесь Id контейне�
 var scrolled;
 window.onscroll = function () {
   scrolled = window.pageYOffset || document.documentElement.scrollTop;
-  document.getElementById('scroll').innerHTML = scrolled + 'px : scroll';
+  // document.getElementById('scroll').innerHTML = scrolled + 'px : scroll';
   elem.style.transform = 'translateY(' + scrolled*(-.6) + 'px)';
   elem2.style.transform = 'translateY(' + scrolled*(-.7) + 'px)';
   elem3.style.transform = 'translateY(' + scrolled*(-.8) + 'px)';
