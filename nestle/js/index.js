@@ -29,7 +29,7 @@ window.onscroll = function () {
 
   // паралакс эффект
   // elem.style.transform = 'translateX(' + X/10 + 'px)' + ' translateY(' + Y/10 + 'px)';
-}
+// }
 
 // библиотечный сниппет 
 $(document).ready(function() {
