@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>gsap</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fonts/fontello/css/fontello.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Raleway&amp;display=swap" rel="stylesheet">
+    <style>
+      .wrapperLoader {
+      	transition: opacity .5s;
+      	position: fixed;
+      	background-color: rgb(0,0,0);
+      	top: 0;
+      	bottom: 0;
+      	left: 0;
+      	right: 0;
+      	z-index: 9999;
+      	display: grid;
+      	align-content: center;
+      	justify-content: center;
+      }
+      .loader img {
+      	width: 100%;
+      	height: auto;
+      	transform: scale(1);
+      	animation: scale 4s linear infinite;
+      }
+      @keyframes scale {
+      	from {transform: scale(1);}
+      	to {transform: scale(1.5);}
+      }
+      
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="js/js-gsap.js" defer=""></script>
+  </head>
+  <body>
+    <div class="wrapperLoader" id="prel">
+      <div class="loader"><img src="images/mainBG2.webp" alt=""></div>
+    </div>
+    <div class="wrapp-Texts">
+      <button class="pause-anim">pause</button>
+      <button class="restart-anim">restart</button>
+      <button class="reverse-anim">reverse</button>
+      <button class="resume-anim">resume</button>
+      <button class="play-anim">play</button>
+      <div class="topText">
+        <p><span>Professional</span><span>-</span><span>grade</span><span> </span><span>JavaScript</span><span> </span><span>animation</span><span> </span><span>for</span><span> </span><span>the</span><span> </span><span>modern</span><span> </span><span>web.</span></p>
+      </div>
+      <div class="bottomText">
+        <p><span>HTML5, </span><span> </span><span>SVG,</span><span> </span><span>jQuery,</span><span> </span><span>Canvas,</span><span> </span><span>CSS,</span><span> </span><span>new browsers,</span><span> </span><span>old browsers,</span><span> </span><span>React,</span><span> </span><span>Vue,</span><span> </span><span>EaseLJS,</span><span> </span><span>mobile,</span><span> </span><span>and</span><span> </span><span>more -</span><span> </span><span>GSAP</span><span> </span><span>gets</span><span> </span><span>along</span><span> </span><span>with</span><span> </span><span>them</span><span> </span><span>famously.</span></p>
+      </div>
+    </div>
+    <!-- header section-->
+    <div class="wrapperImages">
+      <div class="nine-clock">
+        <p> <span>0</span><span class="hours">8</span><span> </span><span>:</span><span class="minutes">10</span><br><i class="icon-clock" crossorigin="anonymous"></i></p>
+      </div>
+      <div class="wrapp-box">
+        <div class="wrapp-box-wrapper-text">
+          <div class="wrapp-box__down-text"><span>I</span><span>t</span><span> </span><span>h</span><span>a</span><span>p</span><span>p</span><span>e</span><span>n</span><span>s</span><span> </span><span>e</span><span>v</span><span>e</span><span>r</span><span>y</span><span> </span><span>d</span><span>a</span><span>y</span><span>s</span><span>!</span></div>
+        </div>
+        <p class="wrapp-box-display-text"><span class="colo1">.</span><span class="colo1">w</span><span class="colo1">r</span><span class="colo1">a</span><span class="colo1">p</span><span class="colo1">p</span><span class="colo1">-</span><span class="colo1">b</span><span class="colo1">o</span><span class="colo1">x</span><br><span class="pl-20 colo2">p</span><span class="colo2">o</span><span class="colo2">s</span><span class="colo2">i</span><span class="colo2">t</span><span class="colo2">i</span><span class="colo2">o</span><span class="colo2">n</span><span>:</span><span> </span><span class="colo5">r</span><span class="colo5">e</span><span class="colo5">l</span><span class="colo5">a</span><span class="colo5">t</span><span class="colo5">i</span><span class="colo5">v</span><span class="colo5">e</span><br><span class="pl-20 colo2">w</span><span class="colo2">i</span><span class="colo2">d</span><span class="colo2">t</span><span class="colo2">h</span><span>:</span><span> </span><span class="colo3">6</span><span class="colo3">0</span><span class="colo3">0</span><span class="colo4">p</span><span class="colo4">x  </span><br><span class="pl-20 colo2">h</span><span class="colo2">e</span><span class="colo2">i</span><span class="colo2">g</span><span class="colo2">h</span><span class="colo2">t</span><span>: </span><span> </span><span class="colo3">4</span><span class="colo3">0</span><span class="colo3">0</span><span class="colo4">p</span><span class="colo4">x</span><br><span class="pl-20 colo2">m</span><span class="colo2">a</span><span class="colo2">r</span><span class="colo2">g</span><span class="colo2">i</span><span class="colo2">n</span><span>:</span><span> </span><span class="colo3">0</span><span> </span><span class="colo5">a</span><span class="colo5">u</span><span class="colo5">t</span><span class="colo5">o</span></p>
+        <div class="wrapp-box-foto foto1">
+          <p> <span class="colo1">.</span><span class="colo1">f</span><span class="colo1">o</span><span class="colo1">t</span><span class="colo1">o</span><span class="colo1">5</span><br><span class="pl-20 colo2">p</span><span class="colo2">o</span><span class="colo2">s</span><span class="colo2">i</span><span class="colo2">t</span><span class="colo2">i</span><span class="colo2">o</span><span class="colo2">n</span><span>:</span><span> </span><span class="colo5">a</span><span class="colo5">b</span><span class="colo5">s</span><span class="colo5">o</span><span class="colo5">l</span><span class="colo5">u</span><span class="colo5">t</span><span class="colo5">e</span><br><span class="pl-20 colo2">t</span><span class="colo2">o</span><span class="colo2">p</span><span>:</span><span> </span><span class="colo3">2</span><span class="colo3">0</span><span class="colo4">p</span><span class="colo4">x</span><br><span class="pl-20 colo2">l</span><span class="colo2">e</span><span class="colo2">f</span><span class="colo2">t</span><span>:</span><span> </span><span class="colo3">2</span><span class="colo3">0</span><span class="colo4">p</span><span class="colo4">x</span><br><span class="pl-20 colo2">z</span><span class="colo2">-</span><span class="colo2">i</span><span class="colo2">n</span><span class="colo2">d</span><span class="colo2">e</span><span class="colo2">x</span><span>:</span><span> </span><span class="colo3">5</span></p>
+        </div>
+        <div class="wrapp-box-foto foto2">
+          <p><span>d</span><span>i</span><span>s</span><span>p</span><span>l</span><span>a</span><span>y</span><span>:</span><span> </span><span>b</span><span>l</span><span>o</span><span>c</span><span>k</span><br><span>o</span><span>v</span><span>e</span><span>r</span><span>f</span><span>l</span><span>o</span><span>w</span><span>:</span><span> </span><span>h</span><span>i</span><span>d</span><span>d</span><span>e</span><span>n</span></p>
+        </div>
+        <div class="wrapp-box-foto foto3">
+          <p><span>n</span><span>p</span><span>m</span><span> </span><span>i</span><span>n</span><span>s</span><span>t</span><span>a</span><span>l</span><span>l</span><span> </span><span>|</span></p>
+        </div>
+        <div class="wrapp-box-foto foto4">
+          <p><span class="iconPreloader"><i class="icon-spin5" crossorigin="anonymous"></i></span><br><span>Loading</span><span class="spanDots">...</span><br><span>please wait a minute</span></p>
+        </div>
+        <div class="wrapp-box-foto foto5"></div>
+      </div>
+    </div>
+  </body>
+</html>
