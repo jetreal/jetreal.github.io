@@ -10,20 +10,27 @@
     <!-- header section-->
     <div class="wrapperAll">
       <div class="displayParams">
-        <p id="width"> </p>
-        <p id="height"> </p>
-        <p id="scroll"> </p>
-        <p id="mouseX"> </p>
-        <p id="mouseY"></p>
-        <P id="clientX"></P>
-        <P id="clientY"></P>
+        <p id="clientX"></p>
+        <p id="clientY"></p>
       </div>
       <ul class="box box-draggable">
-        <li class="box-item draggable-item draggable-item--uno"></li>
-        <li class="box-item draggable-item draggable-item--duo"></li>
-        <li class="box-item draggable-item draggable-item--tre"></li>
-        <li class="box-item draggable-item draggable-item--quatto"></li>
+        <li class="box-item draggable-item draggable-item--uno">1</li>
+        <li class="box-item draggable-item draggable-item--duo">2</li>
+        <li class="box-item draggable-item draggable-item--tre">3</li>
+        <li class="box-item draggable-item draggable-item--quatto">4</li>
       </ul>
+      <div class="wrapperMap">
+        <div class="map">
+          <div class="map-conner map--top-left"></div>
+          <div class="map-conner map--top-right"></div>
+          <div class="map-conner map--bottom-left"></div>
+          <div class="map-conner map--bottom-right"></div>
+          <div class="map-item1"></div>
+        </div>
+      </div>
+      <div id="block">
+        <div id="block_resize"></div>
+      </div>
       <script src="https://cdn.jsdelivr.net/npm/gsap@3.0.1/dist/gsap.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.2/Draggable.js"></script>
       <script src="js/gsap.js" defer=""></script>
