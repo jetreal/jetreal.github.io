@@ -27,7 +27,8 @@ body {
   width: 100%;
   max-height: 3000px;
   margin: 0 auto;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: transparent;
+  background-color: #828282; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -48,6 +49,63 @@ ul {
   -moz-user-select: none !important;
   -ms-user-select: none !important;
   user-select: none !important; }
+
+.j-leftLine {
+  width: 0;
+  outline: 2px solid red;
+  height: 100%;
+  position: absolute;
+  overflow: visible; }
+
+.j-rightLine {
+  width: 0;
+  outline: 2px solid yellow;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  overflow: visible; }
+
+.j-topLine {
+  height: 0px;
+  outline: 2px solid green;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  overflow: visible; }
+
+.j-bottomLine {
+  height: 0px;
+  outline: 2px solid black;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  overflow: visible; }
+
+.j-centerVLine {
+  position: absolute;
+  left: 50%;
+  margin: 0 auto;
+  width: 0px;
+  outline: 2px solid black;
+  height: 100%;
+  overflow: visible; }
+
+.j-centerHLine {
+  position: absolute;
+  top: 50%;
+  margin: 0 auto;
+  width: 100%;
+  outline: 2px solid black;
+  height: 0px;
+  overflow: visible; }
+
+.j-centerVLine__testball {
+  outline: 2px solid black;
+  position: absolute;
+  top: 50%;
+  left: 130px;
+  width: 30px;
+  height: 30px; }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -444,105 +502,75 @@ template {
 [hidden] {
   display: none; }
 
-span {
+.resizable {
+  width: 500px;
+  height: 300px;
   position: absolute;
-  top: -20px;
-  right: -20px; }
+  z-index: 1; }
+  .resizable .resizers {
+    width: 100%;
+    height: 100%;
+    border: 3px solid #4286f4;
+    overflow: hidden;
+    background-color: #1E1E1E; }
 
-.displayParams {
-  width: 100px;
-  height: 100px;
-  color: black;
-  position: fixed;
-  left: 0;
-  top: 0; }
+.resizable .resizers .resizer {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+  border: 3px solid #4286f4;
+  position: absolute; }
 
-.box-draggable {
-  border: 2px solid whitesmoke;
-  width: 90%;
-  min-height: 380px;
-  min-width: 600px;
-  resize: both;
-  overflow: hidden;
-  margin: 0 auto;
-  position: relative;
-  right: 0;
-  top: 50px; }
+.resizable .resizers .resizer.top-left {
+  left: -5px;
+  top: -5px;
+  cursor: nwse-resize; }
 
-.box-draggable .draggable-item {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
-  opacity: 0.5;
-  border: 1px solid green; }
+.resizable .resizers .resizer.top-right {
+  right: -5px;
+  top: -5px;
+  cursor: nesw-resize; }
 
-.wrapper {
-  position: relative;
-  max-width: 1360px;
-  outline: 1px solid limegreen;
+.resizable .resizers .resizer.bottom-left {
+  left: -5px;
+  bottom: -5px;
+  cursor: nesw-resize; }
+
+.resizable .resizers .resizer.bottom-right {
+  right: -5px;
+  bottom: -5px;
+  cursor: nwse-resize; }
+
+.wrapperAll {
+  max-width: 1344px;
+  min-height: 1050px;
+  outline: 1px solid green; }
+
+.j-wrap-content {
   display: grid;
-  grid-template-columns: auto auto; }
-
-.btn-table {
-  width: 70px;
-  height: 50px;
-  margin: 80px auto;
-  display: block; }
-
-.wrapperMap {
-  overflow: hidden;
-  -webkit-box-shadow: 2px 2px 2px 2px rgba(20, 20, 20, 0.7) inset, -2px -2px 2px 2px rgba(20, 20, 20, 0.7) inset;
-          box-shadow: 2px 2px 2px 2px rgba(20, 20, 20, 0.7) inset, -2px -2px 2px 2px rgba(20, 20, 20, 0.7) inset;
-  width: 808px;
-  border: 1px solid red; }
-
-.side-bar {
-  width: 200px;
-  min-height: 700px;
-  border: 1px solid pink; }
-
-.map {
-  position: relative;
-  margin: 0 auto;
-  width: 700px;
-  min-width: 300px;
-  min-height: 150px;
-  max-height: 200px;
-  outline: 1px solid pink;
-  resize: both;
+  grid-template-columns: 200px auto;
   overflow: hidden; }
 
-.map-conner {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border: 1px solid green; }
+.j-wrap-content-sidebar {
+  z-index: 2;
+  width: 200px;
+  min-height: 400px;
+  outline: 1px solid silver;
+  background: rgba(10, 4, 4, 0.5); }
 
-.map--top-left {
-  left: -4px;
-  top: -4px; }
+.j-wrap-content-sidebar__add-table-btn {
+  width: 80px;
+  height: 50px;
+  background-color: #fff;
+  text-align: center;
+  display: block;
+  margin: 0 auto; }
 
-.map--top-right {
-  right: -4px;
-  top: -4px; }
-
-.map--bottom-left {
-  left: -4px;
-  bottom: -4px; }
-
-.map--bottom-right {
-  right: -4px;
-  bottom: -4px; }
-
-.map-item1 {
-  width: 100px;
-  height: 100px;
-  outline: 1px solid green; }
+.j-wrap-content-map {
+  border: 3px solid red;
+  position: relative;
+  overflow: hidden; }
 
 .displayParams {
   position: fixed;
@@ -550,10 +578,6 @@ span {
   outline: 1px solid lightblue;
   width: auto;
   min-height: 100px; }
-
-body {
-  background: gray;
-  min-height: 2000px; }
 
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */
