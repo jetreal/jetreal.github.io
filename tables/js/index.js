@@ -51,8 +51,31 @@ function makeResizableDiv(div) {
     function resize(e) {
 
       if (currentResizer.classList.contains('bottom-right')) {
+        getParentCenter()
+        getCornerCoords()
+
         const width = original_width + (e.pageX - original_mouse_x);
         const height = original_height + (e.pageY - original_mouse_y)
+
+        if (
+          wrapperWidth - draggedMap.offsetWidth > sumPosAndTranslLeft 
+        ) {
+          element.style.width = (width + 10) + 'px'
+          // element.style.left = (original_x - 10) + (e.pageX - original_mouse_x) + 'px'
+          var clickEvent = new Event('mouseup'); //создаем событие
+          window.dispatchEvent(clickEvent); //имитируем 
+          return
+        }
+        if (
+          wrapperHeight - draggedMap.offsetHeight > sumPosAndTranslTop
+        ) {
+          element.style.height = (height + 10) + 'px'
+          // element.style.top = (original_y + 10) + (e.pageY - original_mouse_y) + 'px'
+          var clickEvent = new Event('mouseup'); //создаем событие
+          window.dispatchEvent(clickEvent); //имитируем 
+          return
+        }
+
         if (width > minimum_size) {
           element.style.width = width + 'px'
         }
@@ -61,8 +84,31 @@ function makeResizableDiv(div) {
         }
       }
       else if (currentResizer.classList.contains('bottom-left')) {
+        getParentCenter()
+        getCornerCoords()
+
         const height = original_height + (e.pageY - original_mouse_y)
         const width = original_width - (e.pageX - original_mouse_x)
+
+        if (
+          sumPosAndTranslLeft > wrapperWidth 
+        ) {
+          element.style.width = (width + 10) + 'px'
+          element.style.left = (original_x - 10) + (e.pageX - original_mouse_x) + 'px'
+          var clickEvent = new Event('mouseup'); //создаем событие
+          window.dispatchEvent(clickEvent); //имитируем 
+          return
+        }
+        if (
+          wrapperHeight - draggedMap.offsetHeight > sumPosAndTranslTop
+        ) {
+          element.style.height = (height + 10) + 'px'
+          element.style.top = (original_y + 10) + (e.pageY - original_mouse_y) + 'px'
+          var clickEvent = new Event('mouseup'); //создаем событие
+          window.dispatchEvent(clickEvent); //имитируем 
+          return
+        }
+
         if (height > minimum_size) {
           element.style.height = height + 'px'
         }
@@ -73,8 +119,31 @@ function makeResizableDiv(div) {
         }
       }
       else if (currentResizer.classList.contains('top-right')) {
+        getParentCenter()
+        getCornerCoords()
+  
         const width = original_width + (e.pageX - original_mouse_x)
         const height = original_height - (e.pageY - original_mouse_y)
+
+        if (
+          wrapperWidth - draggedMap.offsetWidth > sumPosAndTranslLeft 
+        ) {
+          element.style.width = (width + 10) + 'px'
+          // element.style.left = (original_x + 10) + (e.pageX - original_mouse_x) + 'px'
+          var clickEvent = new Event('mouseup'); //создаем событие
+          window.dispatchEvent(clickEvent); //имитируем 
+          return
+        }
+        if (
+          wrapperHeight < sumPosAndTranslTop
+        ) {
+          element.style.height = (height + 10) + 'px'
+          element.style.top = (original_y - 10) + (e.pageY - original_mouse_y) + 'px'
+          var clickEvent = new Event('mouseup'); //создаем событие
+          window.dispatchEvent(clickEvent); //имитируем 
+          return
+        }
+
         if (width > minimum_size) {
           element.style.width = width + 'px'
         }
@@ -84,8 +153,32 @@ function makeResizableDiv(div) {
         }
       }
       else {
+       
         const width = original_width - (e.pageX - original_mouse_x)
         const height = original_height - (e.pageY - original_mouse_y)
+
+        getParentCenter()
+        getCornerCoords()
+       
+        if (
+          sumPosAndTranslLeft > wrapperWidth 
+        ) {
+          element.style.width = (width + 10) + 'px'
+          element.style.left = (original_x - 10) + (e.pageX - original_mouse_x) + 'px'
+          var clickEvent = new Event('mouseup'); //создаем событие
+          window.dispatchEvent(clickEvent); //имитируем 
+          return
+        }
+        if (
+          wrapperHeight < sumPosAndTranslTop
+        ) {
+          element.style.height = (height + 10) + 'px'
+          element.style.top = (original_y - 10) + (e.pageY - original_mouse_y) + 'px'
+          var clickEvent = new Event('mouseup'); //создаем событие
+          window.dispatchEvent(clickEvent); //имитируем 
+          return
+        }
+
         if (width > minimum_size) {
           element.style.width = width + 'px'
           element.style.left = original_x + (e.pageX - original_mouse_x) + 'px'
@@ -94,6 +187,7 @@ function makeResizableDiv(div) {
           element.style.height = height + 'px'
           element.style.top = original_y + (e.pageY - original_mouse_y) + 'px'
         }
+ 
       }
     }
 
@@ -112,9 +206,7 @@ makeResizableDiv('.resizable')
   const addTableBtn = document.querySelector('.j-wrap-content-sidebar__add-table-btn');
 
   mapConner.forEach(item => {
-    item.addEventListener('mousedown', function() {
-      Draggable.get(draggedMap).disable()
-    })
+  
     item.addEventListener('mouseover', function() {
       Draggable.get(draggedMap).disable()
     })
@@ -165,9 +257,9 @@ makeResizableDiv('.resizable')
 
   
   function dragMap() {
-    // console.log(Draggable.get(draggedMap).deltaX)
+
     Draggable.create( draggedMap, {
-      
+      onStart: onDrag,
       onDrag: onDrag,
 
     })
@@ -186,9 +278,11 @@ makeResizableDiv('.resizable')
 
   let sumPosAndTranslLeft;
   let sumPosAndTranslTop;
+  let posLeft;
+  let posTop;
   function getCornerCoords() {
-    const posLeft = draggedMap.offsetLeft; // координата position , без транслейт  
-    const posTop = draggedMap.offsetTop;
+    posLeft = draggedMap.offsetLeft; // координата position , без транслейт  
+    posTop = draggedMap.offsetTop;
     const transform = draggedMap.style.transform || 'translate(0px, 0px)';
     
     let x = getTranslateXValue(transform)  // координата транслейта

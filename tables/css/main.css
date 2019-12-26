@@ -508,6 +508,8 @@ template {
   min-height: 200px;
   height: 300px;
   position: absolute;
+  top: 50px;
+  left: 100px;
   z-index: 1;
   -webkit-transform: translate(0px, 0px);
       -ms-transform: translate(0px, 0px);
@@ -580,7 +582,15 @@ template {
 .j-wrap-content-map {
   border: 3px solid red;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  display: grid;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .displayParams {
   position: fixed;
