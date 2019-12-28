@@ -1,6 +1,4 @@
 
-  
-
 // параметры 
 var scrolled;
 window.onscroll = function () {
@@ -523,5 +521,5 @@ btnTable.addEventListener('click', function() {
   draggable()
 })
 
-
+/////
 
