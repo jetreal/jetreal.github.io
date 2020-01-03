@@ -1409,17 +1409,25 @@ function onConflictItemsWithOther(el) {
         return item.itemTranslateLeft + item.positionLeft + item.itemWidth > itemposLeft + itemTranslateLeft &&
           item.itemTranslateLeft + item.positionLeft < itemposLeft + itemTranslateLeft + itemWidth
       })
-      // console.log(itemsThatBottom)
+
       const itemsOnConflictLine = itemsThatBottom
       const nearestItems = itemsOnConflictLine.map(item => {
         return item.positionTop + item.itemTranslateTop
       })
-      
+      const nearestObjHeight = itemsThatBottom.find(item => item.positionTop + item.itemTranslateTop == nearestItems)
+
+      let neareastH;
+      if (nearestObjHeight) {
+        neareastH = nearestObjHeight.itemHeight || 0;
+      }
+   
       const BottomSideNearestItemCoord = Math.min(...nearestItems)
-      if (itemHeight + itemposTop + itemTranslateTop > BottomSideNearestItemCoord ) {
+      if (itemHeight + itemposTop + itemTranslateTop > BottomSideNearestItemCoord &&
+          itemposTop + itemTranslateTop < BottomSideNearestItemCoord + (neareastH)) {
           var clickEvent = new Event('mouseup'); // создаем событие drop'a
           window.dispatchEvent(clickEvent); // имитируем 
           console.log('slam')
+          console.log(BottomSideNearestItemCoord)
       }
     }
     onBottomConflict()
