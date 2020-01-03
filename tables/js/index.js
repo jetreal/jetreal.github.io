@@ -1,7 +1,5 @@
 
-  
-
-// параметры 
+// параметры //
 var scrolled;
 window.onscroll = function () {
   scrolled = window.pageYOffset || document.documentElement.scrollTop;
