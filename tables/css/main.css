@@ -513,8 +513,8 @@ template {
 
 .resizable-wall {
   outline: 1px solid rgba(200, 200, 200, 0.5);
-  position: absolute;
-  z-index: 1007; }
+  position: absolute
+ }
 
 .resizable-wall-window-top-and-bottom {
   position: relative;
