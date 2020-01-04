@@ -79,12 +79,12 @@ function makeResizableDiv(div) {
           window.dispatchEvent(clickEvent); // имитируем 
         }
 
-        if (maxAboutWidth > width - 10) {
+        if (maxAboutWidth > width - 40) {
           dropResizeRight()
           return
         }
         
-        if (maxAboutHeight > height - 10) {
+        if (maxAboutHeight > height - 40) {
           dropResizeBottom()
           return
         }
@@ -138,12 +138,12 @@ function makeResizableDiv(div) {
           window.dispatchEvent(clickEvent); // имитируем 
         }
 
-        if (maxAboutWidth > width - 10) {
+        if (maxAboutWidth > width - 40) {
           dropResizeRight()
           return
         }
         
-        if (maxAboutHeight > height - 10) {
+        if (maxAboutHeight > height - 40) {
           dropResizeBottom()
           return
         }
@@ -198,12 +198,12 @@ function makeResizableDiv(div) {
         const width = original_width + (e.pageX - original_mouse_x)
         const height = original_height - (e.pageY - original_mouse_y)
 
-        if (maxAboutWidth > width - 10) {
+        if (maxAboutWidth > width - 40) {
           dropResizeRight()
           return
         }
 
-        if (maxAboutHeight > height - 10) {
+        if (maxAboutHeight > height - 40) {
           dropResizeBottom()
           return
         }
@@ -254,12 +254,12 @@ function makeResizableDiv(div) {
           window.dispatchEvent(clickEvent); // имитируем 
         }
 
-        if (maxAboutWidth > width - 10) {
+        if (maxAboutWidth > width - 40) {
           dropResizeRight()
           return
         }
         
-        if (maxAboutHeight > height - 10) {
+        if (maxAboutHeight > height - 40) {
           dropResizeBottom()
           return
         }
@@ -492,6 +492,7 @@ function draggable() {
       boxItems.forEach(item => {
         item.style.color = 'blue'
         item.style.pointerEvents = 'auto'
+
         
       })
 /////////////////////////////////////////
@@ -522,7 +523,9 @@ const tlPress = new TimelineMax(); // для примера что можно с
   tlPress.to(this.target, 0.1, {
     scale: 1,
     opacity: 1,
+    zIndex: 1000,
     ease: Power4.easeIn
+
   })
 
   if (this.target.style.opacity < 1) {
@@ -1671,7 +1674,8 @@ function onShowTableAnimation(div) {
     y: (draggedMap.offsetHeight / 2) - 50,
     opacity: 0.6,
     // rotation: 250,
-    scale: 0.76
+    scale: 0.76,
+    zIndex: 1005
 
   };
   TweenMax.fromTo(div, 1, option1, option2);
