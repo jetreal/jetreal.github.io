@@ -1,26 +1,26 @@
 
 
 
-// параметры 
+// параметры скролла
 var scrolled;
 window.onscroll = function () {
   scrolled = window.pageYOffset || document.documentElement.scrollTop;
   document.getElementById('scroll').innerHTML = scrolled + 'px : scroll';
 
 }
+// ширина, высота окна
 $(window).on('load resize', function () {
   var width = $('html').outerWidth();
   var height = $(window).height();
   $('#width').html(width + 'px : width');
   $('#height').html(height + 'px : height');
 });
-
+// координаты мыши
 document.onmousemove = function (e) {
   var X = e.pageX;
   var Y = e.pageY;
   document.getElementById('mouseX').innerHTML = X + ': mouseX'
   document.getElementById('mouseY').innerHTML = Y + ': mouseY'
-
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
@@ -28,7 +28,7 @@ document.onmousemove = function (e) {
 
 /*Make resizable div by Hung Nguyen*/  // and restrict to center by me //
 
-
+// функция ресайза карты
 function makeResizableDiv(div) {
   const element = document.querySelector(div);
   const resizers = document.querySelectorAll(div + ' .resizer')
@@ -215,7 +215,6 @@ function makeResizableDiv(div) {
           return
         }
 
-
         if (
           wrapperHeight < sumPosAndTranslTop
         ) {
@@ -327,8 +326,8 @@ function disableDragMap(corners) {
 
   // dragDisable(sides)
 }
-// disableDragMap(mapConner)
-disableDragMap(sides)
+disableDragMap(mapConner)
+// disableDragMap(sides)
 
 // ограничение карты до центра
 function onDragRestrictMap() {
@@ -450,7 +449,7 @@ function getMaxRangeItem() {
 }
 getMaxRangeItem()
 
-// вычисление координат углов карты
+// вычисление координат сторон карты
 let sumPosAndTranslLeft;
 let sumPosAndTranslTop;
 function getCornerCoords() {
@@ -464,9 +463,9 @@ function getCornerCoords() {
   sumPosAndTranslLeft = x + posLeft   // сумма координат транслейта и position
   sumPosAndTranslTop = y + posTop
 }
-getParentCenter()
 getCornerCoords()
-// парсинг данных css translate на переменные
+
+// парсинг данных css translate на 2 переменные
 function getTranslateXValue(translateString) {
   var n = translateString.indexOf("(");
   var n1 = translateString.indexOf(",");
@@ -521,7 +520,7 @@ draggable()
 
 var xx = 0;
 var yy = 0;
-// вычисление старновых координат стола по которому кликнули
+// вычисление стартовых координат стола по которому кликнули
 function onPress() {
   xx = this.x;
   yy = this.y;
@@ -530,7 +529,7 @@ function onPress() {
   tlPress.to(this.target, 0.1, {
     scale: 1,
     opacity: 1,
-    zIndex: 1000,
+    // zIndex: 1000,
     ease: Power4.easeIn
 
   })
@@ -1248,7 +1247,7 @@ function disableDraggableParent() {
 disableDraggableParent()
 
 // функции отключения перетаскивания карты и столов
-function dragDisable(map = mapDraggble, collection) {
+function dragDisable(map, collection) {
   map.disable();
 
   collection.forEach(item => {
@@ -1267,8 +1266,6 @@ function dragEnable(map, collection) {
 function inputsHandler(el) {
 
   let tableText = document.querySelector(el + ' .tebleTextP')
-
-
 
   const tableInput = document.querySelector(el + ' .tableText__input')
 
@@ -1601,21 +1598,40 @@ function onCreateItem() {
 let windowsDrag = document.querySelectorAll('.windowsDrag')
 const windowTopRestrictor = document.querySelector('.resizable-wall.resizable-wall--top')
 let windowDraggble;
-function dragWindow(items, restricter) {
-  
+let startX;
+let startY;
+function dragWindow(items, restricter, type) {
     windowDraggble = Draggable.create(items, {
+      type: type,
       onDragStart: function () {
-        mapDraggble.disable()
+        mapDraggble.disable();
+        startX = this.x;
+        startY = this.y;
+
       },
       onRelease: function () {
         mapDraggble.enable()
       },
+      onDragEnd: function () {
+        
+        /////////////////////////////////////////
+        // Действие при столкновении столов
+        items.forEach(item => {
+          if (this.hitTest(item)) {
+            TweenMax.to(this.target, .1, {
+              x: startX,
+              y: startY
+              // rotate: 90
+            });
+          }
+        })
+      },
       bounds: restricter
     })
 
- 
 }
-dragWindow(windowsDrag, windowTopRestrictor)
+
+dragWindow(windowsDrag, windowTopRestrictor, 'x')
 
 
 //////////////////////////////////////////////////////////
@@ -1628,6 +1644,7 @@ function createWindow() {
   // создание обвёртки
   const topSide = document.querySelector(".resizable-wall")
   const window = document.createElement('div');
+  window.style.display = 'block'
   const windowId = window.id = 'id' + Date.now()
   console.log(windowId)
   window.classList.add(windowId);
@@ -1652,11 +1669,11 @@ function createWindow() {
   innerDiv.appendChild(corner3)
   innerDiv.appendChild(corner4)
 
-
   topSide.appendChild(window)
 
   const tableTextDiv = document.createElement('div');
-  tableTextDiv.classList.add('tableText');
+  tableTextDiv.classList.add('tableText', 'window-text');
+  tableTextDiv.style.display = 'block'
   const tableText = document.createElement('p');
   tableText.innerHTML = 'text'
   tableText.classList.add('tebleTextP');
@@ -1664,7 +1681,7 @@ function createWindow() {
   window.appendChild(tableTextDiv)
   // input
   const tableInput = document.createElement('input');
-  tableInput.classList.add('tableText__input');
+  tableInput.classList.add('tableText__input', 'window-input');
   tableInput.type = 'text'
   tableInput.name = 'tableText'
   tableInput.value = ''
@@ -1693,22 +1710,8 @@ function createWindow() {
   windowsDrag = document.querySelectorAll('.windowsDrag')
   disableWindowParent(sides)
   makeresizableWindowDiv('.' + windowId)
-  dragWindow(windowsDrag, windowTopRestrictor)
+  dragWindow(windowsDrag, windowTopRestrictor, 'x')
   inputsHandler('.' + windowId)
-
-  //  corners = document.querySelectorAll('.resizerTable')
-  //  boxItems = document.querySelectorAll( '.box-item' );
-  //  getAllItemCoords() // обновление массива с координатами столов
-  //  disableDraggableParent()
-  //  tables = document.querySelectorAll('.resizerTablesTable')
-
-  //  draggable()   // добавление нового стола в объект с перетаскиванием.
-  //  makeresizableTableDiv('.' + windowId)
-  //  // tableTexts = document.querySelectorAll('.tebleTextP') // обновление текска стола с инпутами
-  //  inputsHandler('.' + windowId)
-  //  onConflictItemsWithOther()
-  //  // onConflictItemWithMap()
-  //  onShowTableAnimation('.' + windowId)
 
 }
 
@@ -1732,11 +1735,11 @@ function onShowTableAnimation(div) {
     y: (draggedMap.offsetHeight / 2) - 50,
     opacity: 0.6,
     // rotation: 250,
-    scale: 0.76,
+    scale: 0.96,
     zIndex: 1005
 
   };
-  TweenMax.fromTo(div, 1, option1, option2);
+  TweenMax.fromTo(div, .2, option1, option2);
 }
 
 //////////////////////////////////////////////////////////
@@ -1808,23 +1811,18 @@ function makeresizableWindowDiv(div) {
 makeresizableWindowDiv('.resizableWindowWrapper')
 ///////////////////////////////////////////////////////
 
-// const collectionWindowItems = document.querySelectorAll('.resizerWindowInner')
+const collectionWindowItems = document.querySelectorAll('.resizerWindowInner')
+
 function disableWindowParent(elems) {
   elems.forEach(item => {
-
     item.addEventListener('mouseover', disable)
     item.addEventListener('mouseout', enable)
-
   })
 
   function disable() {
-    console.log('g')
-    console.log(mapDraggble)
-    console.log(windowDraggble)
     dragDisable(mapDraggble, windowDraggble)
   }
   function enable() {
-    console.log('gg')
     dragEnable(mapDraggble, windowDraggble)
   }
 }
