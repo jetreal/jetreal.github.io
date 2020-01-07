@@ -641,7 +641,7 @@ template {
   background-color: #fff;
   text-align: center;
   display: block;
-  margin: 0 auto; }
+  margin: 5px auto; }
 
 .j-wrap-content-map {
   border: 3px solid red;
@@ -898,7 +898,6 @@ template {
       -ms-transform: translate(0px, 0px);
           transform: translate(0px, 0px);
   background-color: green;
-  border-radius: 0 0 16px 16px;
   display: none; }
 
 .resizerWindowInner {
@@ -910,13 +909,24 @@ template {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-radius: 0 0 16px 16px;
   width: 100%;
   height: 100%;
   border: 1px solid #4286f4;
   overflow: visible;
   background-color: gray;
   position: absolute; }
+
+.resizableWindowWrapper--top {
+  border-radius: 0 0 16px 16px; }
+
+.resizableWindowWrapper--bottom {
+  border-radius: 16px 16px 0 0; }
+
+.resizableWindowWrapper--left {
+  border-radius: 0 16px 16px 0; }
+
+.resizableWindowWrapper--right {
+  border-radius: 16px 0 0 16px; }
 
 .resizerWindow {
   width: 10px;
@@ -925,7 +935,7 @@ template {
   background: white;
   border: 3px solid #4286f4;
   position: absolute;
-  z-index: 1; }
+  z-index: 1010; }
 
 .resizerWindow.left-side {
   left: -5px;

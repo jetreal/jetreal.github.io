@@ -1619,7 +1619,7 @@ function dragWindow(items, restricter, type) {
         
 
         if (this.target.style.opacity < 1) {
-          windowButton.addEventListener('click', createWindow)
+          windowButtonTop.addEventListener('click', createWindow)
         }
       },
       onDragStart: function () {
@@ -1653,31 +1653,42 @@ dragWindow(windowsDrag, windowTopRestrictor, 'x')
 
 //////////////////////////////////////////////////////////
 
-const windowButton = document.querySelector('#addWindow')
+const windowButtonTop = document.querySelector('#addWindowTop')
+const windowButtonTopBottom = document.querySelector('#addWindowTopBottom')
+const windowButtonTopLeft = document.querySelector('#addWindowTopLeft')
+const windowButtonTopRight = document.querySelector('#addWindowTopRight')
 
-windowButton.addEventListener('click', createWindow)
+windowButtonTop.addEventListener('click', function() {
+  createWindow(".resizable-wall--top", "resizableWindowWrapper--top")
+  })
+windowButtonTopBottom.addEventListener('click', function() {
+  createWindow(".resizable-wall--bottom", "resizableWindowWrapper--bottom")
+})
 
-function createWindow() {
+// 1 направление ,
+function createWindow(sideClass, borderClass) {
+
   // создание обвёртки
-  const topSide = document.querySelector(".resizable-wall")
+  const side = document.querySelector(sideClass)
   const window = document.createElement('div');
   window.style.display = 'block'
   const windowId = window.id = 'id' + Date.now()
   console.log(windowId)
   window.classList.add(windowId);
   window.classList.add('resizableWindowWrapper', 'box-item');
+  window.classList.add(borderClass);
   window.classList.add('windowsDrag');
   // врутренности ресайзер и уголки
   const innerDiv = document.createElement('div');
-  innerDiv.classList.add('resizerWindowInner');
+  innerDiv.classList.add('resizerWindowInner', borderClass );
   window.appendChild(innerDiv)
 
   const corner1 = document.createElement('div');
   corner1.classList.add('resizerWindow', 'left-side');
   const corner2 = document.createElement('div');
-  corner2.classList.add('resizerWindow', 'top-side');
+  // corner2.classList.add('resizerWindow', 'top-side');
   const corner3 = document.createElement('div');
-  corner3.classList.add('resizerWindow', 'bottom-side');
+  // corner3.classList.add('resizerWindow', 'bottom-side');
   const corner4 = document.createElement('div');
   corner4.classList.add('resizerWindow', 'right-side');
 
@@ -1686,7 +1697,7 @@ function createWindow() {
   innerDiv.appendChild(corner3)
   innerDiv.appendChild(corner4)
 
-  topSide.appendChild(window)
+  side.appendChild(window)
 
   const tableTextDiv = document.createElement('div');
   tableTextDiv.classList.add('tableText', 'window-text');
@@ -1713,16 +1724,13 @@ function createWindow() {
   let removed;
   windowDel.addEventListener('click', function () {
     removed = window.parentNode.removeChild(window)
-    console.log(removed)
     itemCoords = itemCoords.filter(item => item.id != removed.id)
     boxItems = document.querySelectorAll('.box-item');
-    console.log(itemCoords)
-
   })
 
 
-  //  // draggedMap.appendChild(div)
-  //  // oбновеление коллекции
+
+  // oбновеление коллекции
   boxItems = document.querySelectorAll('.box-item')
   sides = document.querySelectorAll('.resizerWindow')
   windowsDrag = document.querySelectorAll('.windowsDrag')
@@ -1734,15 +1742,13 @@ function createWindow() {
   onConflictItemsWithOther()
   onShowWindowAnimation('.' + windowId)
 
-  windowButton.removeEventListener('click', createWindow)
+  windowButtonTop.removeEventListener('click', createWindow)
 }
 
 /////////////////////////////////////////////////////////
 
 function onShowTableAnimation(div) {
 
-
-  // const table = document.querySelectorAll(".box-item");
   const option1 = {
     x: 0,
     y: 0,
@@ -1764,9 +1770,6 @@ function onShowTableAnimation(div) {
 }
 
 //////////////////////////////////////////////////////////
-
-
-
 
 
 function makeresizableWindowDiv(div) {
@@ -1884,8 +1887,9 @@ function windowsOnConflict(el) {
         console.log(topSideElement.offsetLeft)
   
 
-        const itemsThatRight = itemsWithoutCurrent.filter(item => {
-          return item.itemTranslateLeft + item.positionLeft > itemposLeft + itemTranslateLeft
+        const itemsThatRight = itemsWithoutCurrent.filter(item => { return item.itemTranslateTop + item.positionTop + item.itemHeight > itemposTop + itemTranslateTop &&
+          item.itemTranslateTop + item.positionTop < itemposTop + itemTranslateTop + itemHeight &&
+           item.itemTranslateLeft + item.positionLeft > itemposLeft + itemTranslateLeft
         })
         const itemsOnConflictLine = itemsThatRight
         const nearestItems = itemsOnConflictLine.map(item => {
@@ -1894,7 +1898,7 @@ function windowsOnConflict(el) {
   
         let leftSideNearestItemCoord;
         leftSideNearestItemCoord = Math.min(...nearestItems)
-        console.log(topSideElement.offsetWidth)
+        console.log(itemsThatRight)
         console.log(itemWidth + itemposLeft + itemTranslateLeft)
         switch (true) {
           case (leftSideNearestItemCoord !== undefined &&
@@ -1914,8 +1918,9 @@ function windowsOnConflict(el) {
       onRightConflict()
 
       function onLeftConflict() {
-        const itemsThatLeft = itemsWithoutCurrent.filter(item => {
-          return item.itemTranslateLeft + item.positionLeft < itemposLeft + itemTranslateLeft
+        const itemsThatLeft = itemsWithoutCurrent.filter(item => {return item.itemTranslateTop + item.positionTop + item.itemHeight > itemposTop + itemTranslateTop &&
+          item.itemTranslateTop + item.positionTop < itemposTop + itemTranslateTop + itemHeight &&
+          item.itemTranslateLeft + item.positionLeft < itemposLeft + itemTranslateLeft
         })
         const nearestItems = itemsThatLeft.map(item => {
           return item.positionLeft + item.itemTranslateLeft
