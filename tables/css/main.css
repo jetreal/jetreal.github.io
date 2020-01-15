@@ -506,7 +506,7 @@ input {
   outline: none; }
 
 #addTable {
-  background-image: url(../images/table.jpg);
+  background-image: url(../images/table.webp);
   background-size: cover;
   width: 100px;
   height: 100px;
@@ -514,7 +514,7 @@ input {
   margin-top: 20px; }
 
 #addElement {
-  background-image: url(../images/elem.jpg);
+  background-image: url(../images/elem.webp);
   background-size: cover;
   width: 80px;
   height: 80px;
