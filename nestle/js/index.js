@@ -193,9 +193,9 @@ function line() {
 // скрыть меню при масщтабировании
 function hideLeftMenu() {
   if (window.innerHeight > 950) {
-    $('.j-third-section-main-left-side').css('opacity', '0')
+    $('.j-third-section-main-left-side').css({'opacity': '0', 'pointer-events': 'none'})
   } else {
-    $('.j-third-section-main-left-side').css('opacity', '1')
+    $('.j-third-section-main-left-side').css({'opacity': '1', 'pointer-events': 'auto'})
   }
 }
 $(window).on('load resize', hideLeftMenu)
