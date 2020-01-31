@@ -1546,7 +1546,7 @@ template {
     height: 42px;
     position: absolute;
     right: 20px;
-    top: -20px;
+    top: 20px;
     background-position: center;
     z-index: 5;
     display: grid;
