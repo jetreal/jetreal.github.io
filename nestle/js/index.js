@@ -1,4 +1,5 @@
 // horizontal progress function
+
 window.onload = function(){
   var progressLine = document.getElementById("progress-line");
   var body = document.body,
