@@ -190,6 +190,15 @@ function line() {
   }
 }
 
+// скрыть меню при масщтабировании
+function hideLeftMenu() {
+  if (window.innerHeight > 950) {
+    $('.j-third-section-main-left-side').css('opacity', '0')
+  } else {
+    $('.j-third-section-main-left-side').css('opacity', '1')
+  }
+}
+$(window).on('load resize', hideLeftMenu)
 // if (is.not.firefox()) { 
 //   $('label:after').css('top', '-5px')
 // }
