@@ -507,6 +507,7 @@ template {
 .wrapperAll {
   position: relative;
   margin: 0 auto;
+  margin-top: -4px;
   height: 100%; }
 
 .j-leftLine {
