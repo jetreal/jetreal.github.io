@@ -492,6 +492,18 @@ template {
 [hidden] {
   display: none; }
 
+#progress-line {
+  z-index: 100;
+  display: block;
+  border-radius: 10px;
+  background-color: #6CC1E5;
+  width: 0%;
+  height: 4px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0; }
+
 .wrapperAll {
   position: relative;
   margin: 0 auto;
@@ -518,10 +530,13 @@ template {
   height: 0;
   overflow: visible;
   margin: 0 auto;
-  pointer-events: none; }
+  pointer-events: none;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s; }
 
 .for-snow__paralax1 {
-  widows: inherit;
+  width: inherit;
   height: 715px;
   background-image: url(../images/paralax.webp);
   background-repeat: no-repeat;
@@ -529,7 +544,7 @@ template {
   margin: 0 auto; }
 
 .for-snow__paralax2 {
-  widows: inherit;
+  width: inherit;
   height: 715px;
   background-image: url(../images/paralax2.webp);
   background-repeat: no-repeat;
@@ -557,7 +572,6 @@ template {
           justify-content: space-between; }
 
 .j-header__left-logo {
-  z-index: 1;
   width: 210px;
   height: 140px;
   background-image: url(../images/left_logo.webp);
@@ -565,7 +579,9 @@ template {
   background-position: center;
   -webkit-transition: all 1s ease;
   -o-transition: all 1s ease;
-  transition: all 1s ease; }
+  transition: all 1s ease;
+  z-index: 1;
+  pointer-events: none; }
 
 .j-header-center-menu {
   width: auto;
@@ -603,7 +619,6 @@ template {
   -webkit-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease; }
-
 
 .j-h1-wrapper {
   display: block;
@@ -1892,7 +1907,7 @@ template {
     font-size: .9rem; }
   .j-h1-wrapper {
     position: relative;
-    left: 3px;
+    left: 16px;
     padding: 0 3px;
     width: 320px;
     margin: 0; }

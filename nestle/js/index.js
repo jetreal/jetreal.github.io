@@ -1,3 +1,31 @@
+// horizontal progress function
+window.onload = function(){
+  var progressLine = document.getElementById("progress-line");
+  var body = document.body,
+      html = document.documentElement,
+      viewportHeight = window.innerHeight;
+
+  var documentHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+  
+  var scrollTopValue = function(){
+    return (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+  }
+  
+  window.addEventListener("scroll", function(){
+    var scroll = scrollTopValue();
+    var progress = (scroll / (documentHeight - viewportHeight))*100;
+    progressLine.style.width = progress + "%";
+  });
+  
+  window.addEventListener("resize", function(){
+    body = document.body;
+    html = document.documentElement;
+    viewportHeight = window.innerHeight;
+    documentHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+  });
+}
+/////////////////////////////////////////////////////////////////
+
 // init wow 
 new WOW().init()
 // параметры 
@@ -28,7 +56,7 @@ document.onmousemove = function (e) {
   document.getElementById('mouseY').innerHTML = Y + ': mouseY'
 
   // паралакс эффект
-  // elem.style.transform = 'translateX(' + X/10 + 'px)' + ' translateY(' + Y/10 + 'px)';
+  // elem.style.transform = 'translateX(' + X/100 + 'px)' + ' translateY(' + Y/10 + 'px)';
 }
 
 // библиотечный сниппет 
@@ -60,7 +88,7 @@ $(document).ready(function() {
   });
 });
 
-// функция всплювающего меню гамбургера
+// функция всплывающего меню гамбургера
 $(document).ready(function() {
   $('#gamburger').on('click', showMenu);
 })
