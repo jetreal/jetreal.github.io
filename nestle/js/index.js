@@ -192,7 +192,7 @@ function line() {
 
 // скрыть меню при масщтабировании
 function hideLeftMenu() {
-  if (window.innerHeight > 900) {
+  if (window.innerWidth < 900) {
     $('.j-third-section-main-left-side').css({'opacity': '0', 'pointer-events': 'none'})
   } else {
     $('.j-third-section-main-left-side').css({'opacity': '1', 'pointer-events': 'auto'})
