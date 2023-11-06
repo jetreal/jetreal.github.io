@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/twisted/static/css/main.5918e12e.css",
-    "main.js": "/twisted/static/js/main.a5258ef9.js",
+    "main.js": "/twisted/static/js/main.edf2e317.js",
     "static/js/787.49104792.chunk.js": "/twisted/static/js/787.49104792.chunk.js",
     "static/media/columns.jpg": "/twisted/static/media/columns.b41e66ceb00b8c67e21c.jpg",
     "static/media/mainBgCut.jpg": "/twisted/static/media/mainBgCut.5b1c16b926d499292d62.jpg",
@@ -31,11 +31,11 @@
     "static/media/Language.png": "/twisted/static/media/Language.6a4cc1148dc4f5324936.png",
     "index.html": "/twisted/index.html",
     "main.5918e12e.css.map": "/twisted/static/css/main.5918e12e.css.map",
-    "main.a5258ef9.js.map": "/twisted/static/js/main.a5258ef9.js.map",
+    "main.edf2e317.js.map": "/twisted/static/js/main.edf2e317.js.map",
     "787.49104792.chunk.js.map": "/twisted/static/js/787.49104792.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5918e12e.css",
-    "static/js/main.a5258ef9.js"
+    "static/js/main.edf2e317.js"
   ]
 }
