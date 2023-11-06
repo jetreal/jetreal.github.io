@@ -1,15 +1,41 @@
 {
   "files": {
-    "main.css": "/twisted/static/css/main.3ce812e7.css",
-    "main.js": "/twisted/static/js/main.11dc8790.js",
-    "static/js/787.3d680921.chunk.js": "/twisted/static/js/787.3d680921.chunk.js",
+    "main.css": "/twisted/static/css/main.5918e12e.css",
+    "main.js": "/twisted/static/js/main.a5258ef9.js",
+    "static/js/787.49104792.chunk.js": "/twisted/static/js/787.49104792.chunk.js",
+    "static/media/columns.jpg": "/twisted/static/media/columns.b41e66ceb00b8c67e21c.jpg",
+    "static/media/mainBgCut.jpg": "/twisted/static/media/mainBgCut.5b1c16b926d499292d62.jpg",
+    "static/media/desired turn.jpg": "/twisted/static/media/desired turn.d94abf6e0975fc54e381.jpg",
+    "static/media/roundBefore.jpg": "/twisted/static/media/roundBefore.d1557f0f58c09d64d7c7.jpg",
+    "static/media/Number of rows.jpg": "/twisted/static/media/Number of rows.d400542374e6bbdb8466.jpg",
+    "static/media/sideSquare.jpg": "/twisted/static/media/sideSquare.278d5ca2308db66e0591.jpg",
+    "static/media/desired column height.jpg": "/twisted/static/media/desired column height.f7cb7dcd70e07fc414d6.jpg",
+    "static/media/seam height.jpg": "/twisted/static/media/seam height.279f133b76819941926a.jpg",
+    "static/media/mainBg.jpg": "/twisted/static/media/mainBg.077677dd9d913ba7e202.jpg",
+    "static/media/brick height.jpg": "/twisted/static/media/brick height.b738d0eeda476679abc8.jpg",
+    "static/media/logo.png": "/twisted/static/media/logo.c83280586981ae114d11.png",
+    "static/media/plumb pattern.jpg": "/twisted/static/media/plumb pattern.71b295299a12cc0ff9ab.jpg",
+    "static/media/Diagonal of a square.jpg": "/twisted/static/media/Diagonal of a square.2ab8752deb219f3081b5.jpg",
+    "static/media/Circumcircle radius.jpg": "/twisted/static/media/Circumcircle radius.7e2ae72375833bf9224b.jpg",
+    "static/media/line segment 1.jpg": "/twisted/static/media/line segment 1.8207a03cf3f98ae310c6.jpg",
+    "static/media/Rotation angle.jpg": "/twisted/static/media/Rotation angle.25482767fc5d2fe22128.jpg",
+    "static/media/line segment 2.jpg": "/twisted/static/media/line segment 2.ae1acdc54af290f30b8b.jpg",
+    "static/media/size C.jpg": "/twisted/static/media/size C.2032915f473cc0a33935.jpg",
+    "static/media/chord.jpg": "/twisted/static/media/chord.04d4ebce12cf0557df77.jpg",
+    "static/media/Opposite rotation angle.jpg": "/twisted/static/media/Opposite rotation angle.ca137f74df0e03d33fa5.jpg",
+    "static/media/size B.jpg": "/twisted/static/media/size B.c605897277e50e5f8182.jpg",
+    "static/media/size A.jpg": "/twisted/static/media/size A.c17fe967e205ce012648.jpg",
+    "static/media/Angle E.jpg": "/twisted/static/media/Angle E.6f0a147c51d5e2b8466c.jpg",
+    "static/media/Angle D.jpg": "/twisted/static/media/Angle D.e722b4825f9f695c8e3c.jpg",
+    "static/media/Language.jpg": "/twisted/static/media/Language.63e9ffb4ce9873d6ea21.jpg",
+    "static/media/Language.png": "/twisted/static/media/Language.6a4cc1148dc4f5324936.png",
     "index.html": "/twisted/index.html",
-    "main.3ce812e7.css.map": "/twisted/static/css/main.3ce812e7.css.map",
-    "main.11dc8790.js.map": "/twisted/static/js/main.11dc8790.js.map",
-    "787.3d680921.chunk.js.map": "/twisted/static/js/787.3d680921.chunk.js.map"
+    "main.5918e12e.css.map": "/twisted/static/css/main.5918e12e.css.map",
+    "main.a5258ef9.js.map": "/twisted/static/js/main.a5258ef9.js.map",
+    "787.49104792.chunk.js.map": "/twisted/static/js/787.49104792.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3ce812e7.css",
-    "static/js/main.11dc8790.js"
+    "static/css/main.5918e12e.css",
+    "static/js/main.a5258ef9.js"
   ]
 }
