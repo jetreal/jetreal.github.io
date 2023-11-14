@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/twisted/static/css/main.b23917d0.css",
-    "main.js": "/twisted/static/js/main.b7656d1a.js",
+    "main.js": "/twisted/static/js/main.d4f4aab7.js",
     "static/js/787.49104792.chunk.js": "/twisted/static/js/787.49104792.chunk.js",
     "static/media/columns.jpg": "/twisted/static/media/columns.b41e66ceb00b8c67e21c.jpg",
     "static/media/mainBgCut.jpg": "/twisted/static/media/mainBgCut.5b1c16b926d499292d62.jpg",
@@ -29,13 +29,14 @@
     "static/media/Angle D.jpg": "/twisted/static/media/Angle D.e722b4825f9f695c8e3c.jpg",
     "static/media/Language.jpg": "/twisted/static/media/Language.63e9ffb4ce9873d6ea21.jpg",
     "static/media/Language.png": "/twisted/static/media/Language.6a4cc1148dc4f5324936.png",
+    "static/media/jewel.jpg": "/twisted/static/media/jewel.6a84cdbbb0a3cdeede30.jpg",
     "index.html": "/twisted/index.html",
     "main.b23917d0.css.map": "/twisted/static/css/main.b23917d0.css.map",
-    "main.b7656d1a.js.map": "/twisted/static/js/main.b7656d1a.js.map",
+    "main.d4f4aab7.js.map": "/twisted/static/js/main.d4f4aab7.js.map",
     "787.49104792.chunk.js.map": "/twisted/static/js/787.49104792.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b23917d0.css",
-    "static/js/main.b7656d1a.js"
+    "static/js/main.d4f4aab7.js"
   ]
 }
