@@ -1,1 +1,0 @@
-Sitemap: https://jetreal.github.io/jekyll/sitemap.xml
